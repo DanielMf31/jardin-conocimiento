@@ -13,3 +13,7 @@ replit.nix
 # Vault Obsidian
 .obsidian/
 .trash/
+
+# Python
+__pycache__/
+*.pyc
