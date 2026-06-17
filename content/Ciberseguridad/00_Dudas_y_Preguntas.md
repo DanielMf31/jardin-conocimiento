@@ -8,7 +8,7 @@ source: manual
 aliases: [Dudas Ciberseguridad]
 ---
 
-# ❓ Dudas y Preguntas — Ciberseguridad
+# Dudas y Preguntas — Ciberseguridad
 
 > Log vivo de dudas al estudiar/practicar. Apunta la pregunta; al resolverla, enlaza al doc
 > que la responde y muévela a "Resueltas".

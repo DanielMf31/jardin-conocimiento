@@ -8,7 +8,7 @@ source: claude-code
 aliases: [gitlab-vs-github, comparativa-git-platforms, alternativas-gitlab]
 ---
 
-# 🔀 GitLab vs alternativas: qué aprender
+# GitLab vs alternativas: qué aprender
 
 ## Por qué importa esta pregunta
 
@@ -18,13 +18,13 @@ Saber cuándo usar cada uno — y qué vale la pena aprender en profundidad — 
 
 ---
 
-## 🗺️ El panorama: qué plataforma hace qué
+## El panorama: qué plataforma hace qué
 
 Todas comparten el núcleo: repositorios Git + pull/merge requests + sistema de CI/CD. Las diferencias están en el **alcance** (¿solo repositorios o plataforma DevOps completa?), el **modelo de despliegue** (SaaS / auto-alojado / ambos) y el **coste de operación**.
 
 ---
 
-## 📊 Tabla comparativa
+## Tabla comparativa
 
 | Criterio | **GitLab** | **GitHub** | **Gitea / Forgejo** | **Bitbucket** |
 |---|---|---|---|---|
@@ -33,13 +33,13 @@ Todas comparten el núcleo: repositorios Git + pull/merge requests + sistema de 
 | **Alcance** | Plataforma DevOps completa (issues, CI, registry, security, pages, packages…) | Repositorios + Actions + Marketplace muy rico | Repositorios Git básico + CI limitado (Forgejo tiene más) | Repositorios + Pipelines + integración Jira/Confluence |
 | **CI/CD nativo** | GitLab CI/CD (`.gitlab-ci.yml`) — muy potente y maduro | GitHub Actions (`.github/workflows/*.yml`) — ecosistema de actions enorme | Forgejo Actions (compatible con GitHub Actions) / Gitea CI rudimentario | Bitbucket Pipelines (YAML, menos potente) |
 | **Mantenimiento si autoalojas** | Alto: actualizaciones frecuentes, migración DB, mucha RAM | Medio (GitHub Enterprise es costoso) | Muy bajo: binario único, actualizar = reemplazar binario | N/A en Cloud; alto en Data Center |
-| **Mercado laboral** | ★★★★☆ (muy demandado en empresas medianas/corporativo europeo) | ★★★★★ (dominante en OSS, startups, EE.UU.) | ★★☆☆☆ (homelab, comunidades pequeñas) | ★★★☆☆ (entornos Atlassian, legacy) |
+| **Mercado laboral** | (muy demandado en empresas medianas/corporativo europeo) | (dominante en OSS, startups, EE.UU.) | (homelab, comunidades pequeñas) | (entornos Atlassian, legacy) |
 | **Gratis en SaaS** | Sí, tier Free con CI (400 min/mes) | Sí, muy generoso (Actions gratis en repos públicos) | N/A (autoalojado) | Sí (límite de usuarios y minutos) |
 | **Community/OSS** | GitLab CE es open-source (core) | Cerrado (solo GitHub Enterprise es propietario) | Forgejo es fork comunitario de Gitea, 100% FOSS | Cerrado (Atlassian) |
 
 ---
 
-## 🎯 Cuándo usar cada uno
+## Cuándo usar cada uno
 
 ### GitLab
 **Úsalo cuando:**
@@ -81,7 +81,7 @@ Todas comparten el núcleo: repositorios Git + pull/merge requests + sistema de 
 
 ---
 
-## 🏠 Qué autoalojar: la decisión correcta
+## Qué autoalojar: la decisión correcta
 
 La regla práctica:
 
@@ -104,7 +104,7 @@ La regla práctica:
 
 ---
 
-## 💼 Qué tiene valor de mercado aprender
+## Qué tiene valor de mercado aprender
 
 Esta es la pregunta más importante y la que menos se responde directamente.
 
@@ -146,7 +146,7 @@ Lo que **no** vale la pena profundizar para el mercado: Bitbucket Pipelines (nic
 
 ---
 
-## 🧪 Bloques de código: sintaxis equivalente
+## Bloques de código: sintaxis equivalente
 
 ### Pipeline mínimo: build + test
 
@@ -211,7 +211,7 @@ Los dos pipelines hacen lo mismo. La diferencia clave: en GitLab los stages son 
 
 ---
 
-## ⚠️ Errores comunes al elegir plataforma
+## Errores comunes al elegir plataforma
 
 | Error | Por qué es un error | Alternativa |
 |---|---|---|
@@ -223,7 +223,7 @@ Los dos pipelines hacen lo mismo. La diferencia clave: en GitLab los stages son 
 
 ---
 
-## 🔧 Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 **Para app web (FastAPI + React + Docker):**
 - Ya tienes Docker Compose: el siguiente paso natural es un pipeline CI que construya y testee la imagen en cada push.

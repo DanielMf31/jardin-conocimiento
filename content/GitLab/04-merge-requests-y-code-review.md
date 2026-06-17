@@ -8,7 +8,7 @@ source: claude-code
 aliases: [MR GitLab, merge request, code review GitLab]
 ---
 
-# 🔀 Merge Requests y Code Review
+# Merge Requests y Code Review
 
 ## Por qué existe esto (el problema que resuelve)
 

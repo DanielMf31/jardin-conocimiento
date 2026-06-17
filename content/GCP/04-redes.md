@@ -8,7 +8,7 @@ source: claude-code
 aliases: [GCP Redes, VPC GCP, Cloud Networking GCP]
 ---
 
-# 🌐 Redes en GCP
+# Redes en GCP
 
 ## ¿Por qué importa esta capa?
 
@@ -24,7 +24,7 @@ Antes de provisionar una sola VM o base de datos, defines la red. Es el mismo or
 
 ---
 
-## 🗺️ VPC y Subredes
+## VPC y Subredes
 
 ### ¿Qué es una VPC?
 
@@ -75,7 +75,7 @@ gcloud compute networks subnets list --network=mi-vpc
 
 ---
 
-## 🔥 Firewall Rules
+## Firewall Rules
 
 Las firewall rules en GCP son **stateful** (si permites entrada en un puerto, la respuesta de salida se permite automáticamente) y se aplican a nivel de **VPC**, no de subred ni de VM individual. Se dirigen a instancias mediante **network tags** o **service accounts**, lo cual es más flexible que los Security Groups de AWS.
 
@@ -126,7 +126,7 @@ gcloud compute firewall-rules list --filter="network=mi-vpc"
 
 ---
 
-## 🛣️ Rutas (Routes)
+## Rutas (Routes)
 
 Las rutas determinan cómo viaja el tráfico dentro y fuera de la VPC. GCP crea rutas automáticas:
 - Ruta de **subred local** (dentro de la subred, sin gateway)
@@ -146,7 +146,7 @@ gcloud compute routes create ruta-on-prem \
 
 ---
 
-## ⚖️ Cloud Load Balancing
+## Cloud Load Balancing
 
 ### El problema que resuelve
 
@@ -210,7 +210,7 @@ gcloud compute forwarding-rules create fr-web \
 
 ---
 
-## 🌍 Cloud DNS
+## Cloud DNS
 
 **Cloud DNS** es el servicio DNS gestionado de GCP. Funciona como Route 53 de AWS. Puedes usarlo para:
 - **DNS público**: resolver tu dominio `tuapp.com` desde internet
@@ -241,7 +241,7 @@ gcloud dns managed-zones create zona-interna \
 
 ---
 
-## 🚀 Cloud CDN
+## Cloud CDN
 
 **Cloud CDN** (Content Delivery Network) cachea contenido en los PoPs (puntos de presencia) de Google en todo el mundo. Se integra directamente con el **Global HTTP(S) Load Balancer** — lo activas como una opción del backend service, no es un servicio separado.
 
@@ -270,7 +270,7 @@ gcloud compute url-maps invalidate-cdn-cache urlmap-web \
 
 ---
 
-## 🔒 Cloud NAT
+## Cloud NAT
 
 **El problema**: las VMs en subredes privadas (sin IP pública) no pueden salir a internet para descargar paquetes, llamar APIs externas, etc. Tampoco queremos exponerlas con IP pública.
 
@@ -294,7 +294,7 @@ gcloud compute routers nats create nat-gateway \
 
 ---
 
-## 🔗 Conectividad Híbrida
+## Conectividad Híbrida
 
 Cuando necesitas conectar tu red on-premise (datacenter, oficina, hardware físico) con tu VPC en GCP.
 
@@ -366,7 +366,7 @@ Interconnect es costoso (se paga por puerto + tráfico). Justificado si mueves t
 
 ---
 
-## 🏗️ Cómo se conecta una arquitectura típica
+## Cómo se conecta una arquitectura típica
 
 Ejemplo: aplicación web con backend y base de datos.
 
@@ -404,7 +404,7 @@ Cloud NAT:
 
 ---
 
-## ⚠️ Errores y costes comunes
+## Errores y costes comunes
 
 | Error | Consecuencia | Prevención |
 |---|---|---|
@@ -422,7 +422,7 @@ Cloud NAT:
 
 ---
 
-## 🛠️ Aplícalo / Práctica
+## Aplícalo / Práctica
 
 1. **Lab básico VPC**: crea una VPC custom con dos subredes en regiones distintas. Lanza una VM en cada subred. Verifica que se pingen por IP privada sin abrir puertos a internet (usa IAP para SSH).
 

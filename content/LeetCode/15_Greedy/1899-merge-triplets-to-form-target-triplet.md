@@ -14,7 +14,7 @@ neetcode_order: 6
 
 # LeetCode 1899 — Merge Triplets to Form Target Triplet
 
-> 🎯 **Sexto problema de Greedy**. Combinar triplets via `max` componente a componente para formar `target`. Greedy: descartar triplets que **excedan** target en cualquier componente.
+> **Sexto problema de Greedy**. Combinar triplets via `max` componente a componente para formar `target`. Greedy: descartar triplets que **excedan** target en cualquier componente.
 
 ## Enunciado
 

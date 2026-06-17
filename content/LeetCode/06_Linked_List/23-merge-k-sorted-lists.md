@@ -14,7 +14,7 @@ neetcode_order: 10
 
 # LeetCode 23 — Merge K Sorted Lists
 
-> 🎯 **Décimo problema del patrón Linked List — primer Hard del patrón**. Generalización de [[21-merge-two-sorted-lists]] a **K listas**. Dos soluciones óptimas: heap (priority queue) y divide-and-conquer. Ambas O(n log k) — útiles saberlas las dos.
+> **Décimo problema del patrón Linked List — primer Hard del patrón**. Generalización de [[21-merge-two-sorted-lists]] a **K listas**. Dos soluciones óptimas: heap (priority queue) y divide-and-conquer. Ambas O(n log k) — útiles saberlas las dos.
 
 ## Enunciado
 
@@ -65,7 +65,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n log k)** — n nodos totales, cada heappush/pop es O(log k).
 - **Espacio: O(k)** — heap.
-- **Veredicto:** ✅ **la canónica**.
+- **Veredicto:** [OK] **la canónica**.
 
 ### Por qué `(val, i, node)` y no solo `(val, node)`
 
@@ -107,7 +107,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n log k)** — log(k) "rondas", cada una procesa todos los n nodos.
 - **Espacio: O(1)** extra (excluyendo recursión si la usaras; iterativo es O(1)).
-- **Veredicto:** ✅ alternativa elegante. **Útil saber ambas** porque en algunos contextos divide-and-conquer es preferible (paralelizable, sin necesidad de heap).
+- **Veredicto:** [OK] alternativa elegante. **Útil saber ambas** porque en algunos contextos divide-and-conquer es preferible (paralelizable, sin necesidad de heap).
 
 ---
 

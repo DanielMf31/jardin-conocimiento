@@ -14,7 +14,7 @@ neetcode_order: 8
 
 # LeetCode 287 — Find the Duplicate Number
 
-> 🎯 **Octavo problema del patrón Linked List** — y un giro brillante: aplicar **Floyd's cycle detection** (de [[141-linked-list-cycle]]) **sobre un array**, tratándolo como linked list virtual. Es uno de los problemas más elegantes de NeetCode.
+> **Octavo problema del patrón Linked List** — y un giro brillante: aplicar **Floyd's cycle detection** (de [[141-linked-list-cycle]]) **sobre un array**, tratándolo como linked list virtual. Es uno de los problemas más elegantes de NeetCode.
 
 ## Enunciado
 
@@ -54,7 +54,7 @@ class Solution:
             seen.add(num)
 ```
 
-❌ Viola la restricción O(1) espacio.
+[NO] Viola la restricción O(1) espacio.
 
 ---
 
@@ -90,9 +90,9 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)**.
 - **Espacio: O(1)**.
-- **Veredicto:** ✅ **la canónica**. Cumple ambas restricciones.
+- **Veredicto:** [OK] **la canónica**. Cumple ambas restricciones.
 
-> 💡 **Es el mismo algoritmo que en [[141-linked-list-cycle]] + LC 142**, aplicado a un array como si fuera linked list. Si entendiste aquellos, este es un giro de perspectiva.
+> **Es el mismo algoritmo que en [[141-linked-list-cycle]] + LC 142**, aplicado a un array como si fuera linked list. Si entendiste aquellos, este es un giro de perspectiva.
 
 ---
 

@@ -8,7 +8,7 @@ source: manual
 aliases: [Dudas Desarrollo Software]
 ---
 
-# ❓ Dudas y Preguntas — Desarrollo de Software
+# Dudas y Preguntas — Desarrollo de Software
 
 > Log vivo de dudas que surgen al estudiar el clúster. Apunta la pregunta; al resolverla,
 > enlaza al doc que la responde y muévela a "Resueltas".

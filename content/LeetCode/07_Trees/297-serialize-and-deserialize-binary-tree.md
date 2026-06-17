@@ -14,7 +14,7 @@ neetcode_order: 15
 
 # LeetCode 297 — Serialize and Deserialize Binary Tree
 
-> 🎯 **Decimoquinto y último problema del patrón Trees — el más completo del bloque**. Combina recursión preorder + parsing + recursión inversa. **Conexión directa con [[271-encode-and-decode-strings]]** (mismo patrón de codec). Cierra el patrón Trees.
+> **Decimoquinto y último problema del patrón Trees — el más completo del bloque**. Combina recursión preorder + parsing + recursión inversa. **Conexión directa con [[271-encode-and-decode-strings]]** (mismo patrón de codec). Cierra el patrón Trees.
 
 ## Enunciado
 
@@ -82,7 +82,7 @@ class Codec:
 **Análisis:**
 - **Tiempo: O(n)** ambos.
 - **Espacio: O(n)** por el string + recursión.
-- **Veredicto:** ✅ la canónica.
+- **Veredicto:** [OK] la canónica.
 
 ### Por qué preorder funciona y no inorder
 
@@ -108,7 +108,7 @@ Ambos son **codecs**: serialize/deserialize de una estructura compleja en un str
 
 ---
 
-## Cierre del patrón Trees 🎉
+## Cierre del patrón Trees
 
 | # | Problema | Idea distintiva |
 |---|---|---|
@@ -142,4 +142,4 @@ Ambos son **codecs**: serialize/deserialize de una estructura compleja en un str
 - [ ] Leído
 - [ ] Escritos serialize y deserialize desde cero
 - [ ] Resuelto en LeetCode
-- [ ] **Patrón Trees cerrado** ✅
+- [ ] **Patrón Trees cerrado** [OK]

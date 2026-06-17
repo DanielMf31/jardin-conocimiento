@@ -14,8 +14,8 @@ neetcode_order: 6
 
 # LeetCode 853 — Car Fleet
 
-> 🎯 **Sexto problema del patrón Stack**. Aplica el truco de **sort + procesar en orden** combinado con stack. La clave conceptual está en el modelo físico del problema: cuando un coche más rápido alcanza a uno más lento, **se ralentiza al mismo paso** y forman una "flota". Es un problema más matemático que algorítmico.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Sexto problema del patrón Stack**. Aplica el truco de **sort + procesar en orden** combinado con stack. La clave conceptual está en el modelo físico del problema: cuando un coche más rápido alcanza a uno más lento, **se ralentiza al mismo paso** y forman una "flota". Es un problema más matemático que algorítmico.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -78,7 +78,7 @@ class Solution:
 | ¿Por qué procesar de delante a atrás? | El coche más adelantado dicta el ritmo. Si el de atrás llega antes, lo alcanza |
 | ¿Importa el orden del input? | NO — hay que ordenarlos por posición |
 
-> 💡 **El insight clave**: en lugar de simular físicamente, calcular **el tiempo que cada coche tardaría en llegar al destino sin obstáculos** (ETA). Procesar de adelante a atrás (mayor a menor posición). Si el coche actual tiene ETA ≤ el coche de delante, **lo alcanza** y forma la misma flota.
+> **El insight clave**: en lugar de simular físicamente, calcular **el tiempo que cada coche tardaría en llegar al destino sin obstáculos** (ETA). Procesar de adelante a atrás (mayor a menor posición). Si el coche actual tiene ETA ≤ el coche de delante, **lo alcanza** y forma la misma flota.
 
 ---
 
@@ -133,13 +133,13 @@ Inicial: fleets=0, current_fleet_eta=0
   12.0 > 7.0 → nuevo fleet
   fleets=3, current_fleet_eta=12.0
 
-Return 3 ✅
+Return 3 [OK]
 ```
 
 **Análisis:**
 - **Tiempo: O(n log n)** — sort domina.
 - **Espacio: O(n)** — el zip + sort.
-- **Veredicto:** ✅ **la canónica**. Limpia y eficiente.
+- **Veredicto:** [OK] **la canónica**. Limpia y eficiente.
 
 ---
 
@@ -162,9 +162,9 @@ class Solution:
 
 **Análisis:** mismo O(n log n).
 
-**Veredicto:** ✅ funcionalmente equivalente. Más explícita en el patrón "stack". Es la que NeetCode usa en su explicación.
+**Veredicto:** [OK] funcionalmente equivalente. Más explícita en el patrón "stack". Es la que NeetCode usa en su explicación.
 
-> 💡 **El stack guarda los "líderes" de cada fleet**. Su tamaño al final es el número de fleets.
+> **El stack guarda los "líderes" de cada fleet**. Su tamaño al final es el número de fleets.
 
 ---
 
@@ -245,8 +245,8 @@ Por eso **`current_fleet_eta` solo se actualiza cuando hay un nuevo fleet** — 
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. **Sort + tracking de ETA** | **O(n log n)** | O(n) | ✅ La directa |
-| 2. **Sort + stack explícito** | **O(n log n)** | O(n) | ✅ Más visual del patrón |
+| 1. **Sort + tracking de ETA** | **O(n log n)** | O(n) | [OK] La directa |
+| 2. **Sort + stack explícito** | **O(n log n)** | O(n) | [OK] Más visual del patrón |
 
 ---
 

@@ -14,7 +14,7 @@ neetcode_order: 5
 
 # LeetCode 19 — Remove Nth Node From End of List
 
-> 🎯 **Quinto problema del patrón Linked List**. Introduce el **two-pointer con offset**: dos punteros separados por una distancia fija que avanzan al mismo ritmo. Patrón muy útil para "k-ésimo desde el final" sin pasar dos veces por la lista.
+> **Quinto problema del patrón Linked List**. Introduce el **two-pointer con offset**: dos punteros separados por una distancia fija que avanzan al mismo ritmo. Patrón muy útil para "k-ésimo desde el final" sin pasar dos veces por la lista.
 
 ## Enunciado
 
@@ -107,13 +107,13 @@ slow=3, fast=None  ← slow está antes del nodo a eliminar (4)
 
 slow.next = slow.next.next  →  3.next = 5
 
-Resultado: dummy → 1 → 2 → 3 → 5 ✅
+Resultado: dummy → 1 → 2 → 3 → 5 [OK]
 ```
 
 **Análisis:**
 - **Tiempo: O(n)** — una sola pasada.
 - **Espacio: O(1)**.
-- **Veredicto:** ✅ **la canónica**.
+- **Veredicto:** [OK] **la canónica**.
 
 ### Por qué `n + 1` y no `n`
 

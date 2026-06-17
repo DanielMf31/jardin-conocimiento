@@ -1,8 +1,8 @@
 # 04 — Replication y sharding
 
-> 📚 **Doc 4 del cluster Database Internals**. Cómo escalas tu DB cuando un solo nodo no aguanta. Replication para disponibilidad/lecturas, sharding para escribir más.
-> 🔥 **Frecuencia interview**: aparece en system design siempre. "Cómo escalas tu DB a 100K req/s", "qué pasa si tu DB principal cae".
-> ⏱️ **Tiempo de lectura estimado**: 40-55 min.
+> **Doc 4 del cluster Database Internals**. Cómo escalas tu DB cuando un solo nodo no aguanta. Replication para disponibilidad/lecturas, sharding para escribir más.
+> **Frecuencia interview**: aparece en system design siempre. "Cómo escalas tu DB a 100K req/s", "qué pasa si tu DB principal cae".
+> **Tiempo de lectura estimado**: 40-55 min.
 
 ---
 

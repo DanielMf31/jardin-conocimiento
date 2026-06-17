@@ -8,7 +8,7 @@ source: claude-code
 aliases: [Manifiesto Agil, Agile, mentalidad agil]
 ---
 
-# 📜 Manifiesto Agil y mentalidad
+# Manifiesto Agil y mentalidad
 
 ## ¿Por qué existe el Manifiesto?
 
@@ -20,7 +20,7 @@ En febrero de 2001, 17 desarrolladores experimentados se reunieron en Utah (EEUU
 
 ---
 
-## 🧭 Los 4 Valores
+## Los 4 Valores
 
 El Manifiesto dice literalmente: *"Valoramos los elementos de la izquierda por encima de los de la derecha."* Importante: no dice que los de la derecha no tengan valor. Dice qué gana cuando hay tensión.
 
@@ -84,7 +84,7 @@ El Manifiesto dice literalmente: *"Valoramos los elementos de la izquierda por e
 
 ---
 
-## 📐 Los 12 Principios
+## Los 12 Principios
 
 Los principios son la aplicación concreta de los valores. Se agrupan naturalmente en cuatro bloques temáticos:
 
@@ -124,7 +124,7 @@ Los principios son la aplicación concreta de los valores. Se agrupan naturalmen
 
 ---
 
-## 🧠 Mentalidad Agil vs. ejecutar rituales
+## Mentalidad Agil vs. ejecutar rituales
 
 Esta es la distinción más importante y la que más se malentiende en la industria.
 
@@ -152,7 +152,7 @@ Esto se llama **Cargo Cult Agile**: copiar la forma externa sin entender el prop
 
 ---
 
-## ❌ Qué NO es ser Agil
+## [NO] Qué NO es ser Agil
 
 Estos malentendidos son extremadamente comunes, especialmente viniendo de formación más estructurada (ingeniería clásica, hardware):
 
@@ -167,7 +167,7 @@ Estos malentendidos son extremadamente comunes, especialmente viniendo de formac
 
 ---
 
-## ⚠️ Errores comunes al adoptar Agile
+## Errores comunes al adoptar Agile
 
 1. **Confundir velocidad (velocity) con progreso real**: el equipo "completa muchos puntos" pero no entrega valor al usuario.
 2. **El cliente desaparece después del kick-off**: se contrata Agile pero el cliente solo aparece al final. Rompe el valor 3.
@@ -177,7 +177,7 @@ Estos malentendidos son extremadamente comunes, especialmente viniendo de formac
 
 ---
 
-## 🔧 Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 ### app web (React + FastAPI + Docker)
 - **Valor 2 en práctica**: en lugar de documentar todos los endpoints antes de escribir, define el contrato mínimo (OpenAPI schema básico) e itera. Documenta las decisiones de arquitectura que SÍ importan (por qué MongoDB para alimentos, por qué Redis para caché).

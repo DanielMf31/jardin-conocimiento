@@ -1,8 +1,8 @@
 # 04 — JWT y session management
 
-> 📚 **Doc 4 (último) del cluster Security**. Cómo gestionas usuarios autenticados sin pisarte. JWT vs sessions tradicionales, refresh tokens, revocation, los trade-offs que casi todo developer mete mal.
-> 🔥 **Frecuencia interview**: aparece siempre en backend interviews. "Diferencia JWT vs session", "cómo invalidas un JWT".
-> ⏱️ **Tiempo de lectura estimado**: 35-50 min.
+> **Doc 4 (último) del cluster Security**. Cómo gestionas usuarios autenticados sin pisarte. JWT vs sessions tradicionales, refresh tokens, revocation, los trade-offs que casi todo developer mete mal.
+> **Frecuencia interview**: aparece siempre en backend interviews. "Diferencia JWT vs session", "cómo invalidas un JWT".
+> **Tiempo de lectura estimado**: 35-50 min.
 
 ---
 
@@ -372,7 +372,7 @@ Si no puedes → relee.
 
 ---
 
-## ¡Cluster Security completado! 🎉
+## ¡Cluster Security completado!
 
 4 docs:
 - `01-tls-handshake-detallado` — TLS 1.3 paso a paso.

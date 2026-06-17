@@ -14,7 +14,7 @@ neetcode_order: 6
 
 # LeetCode 269 — Alien Dictionary
 
-> 🎯 **Sexto y último problema de Advanced Graphs — Hard**. Combina **construcción de grafo a partir de string comparison** + **topological sort**.
+> **Sexto y último problema de Advanced Graphs — Hard**. Combina **construcción de grafo a partir de string comparison** + **topological sort**.
 
 ## Enunciado
 
@@ -62,7 +62,7 @@ class Solution:
 
 ---
 
-## Cierre Advanced Graphs 🎉
+## Cierre Advanced Graphs
 
 | # | Problema | Algoritmo |
 |---|---|---|
@@ -85,4 +85,4 @@ class Solution:
 - [ ] Leído
 - [ ] Implementado desde cero
 - [ ] Resuelto en LeetCode
-- [ ] **Patrón Advanced Graphs cerrado** ✅
+- [ ] **Patrón Advanced Graphs cerrado** [OK]

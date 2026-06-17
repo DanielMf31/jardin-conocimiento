@@ -8,13 +8,13 @@ source: claude-code
 aliases: [HTB Starting Point, Starting Point README, HTB SP]
 ---
 
-# 🏁 HTB Starting Point — guía, patrones y progreso
+# HTB Starting Point — guía, patrones y progreso
 
 Las máquinas **Very Easy** tuteladas de Hack The Box: tu **rampa de entrada** a las máquinas reales
 después de Bandit/Leviathan/Natas. Aquí tienes el writeup de las 25 máquinas (Tier 0→2) y, lo más
 importante para ti, **la síntesis de los patrones y la teoría** que se repiten en todas.
 
-> ⚖️ HTB es un laboratorio **legal y autorizado**. Todo esto es para aprender a **defender y diseñar mejor**.
+> HTB es un laboratorio **legal y autorizado**. Todo esto es para aprender a **defender y diseñar mejor**.
 
 ## Cómo se juega
 1. Te conectas a la VPN de HTB (`sudo openvpn starting_point.ovpn`) y lanzas (`Spawn`) la máquina → te da una **IP** (dinámica).
@@ -25,7 +25,7 @@ importante para ti, **la síntesis de los patrones y la teoría** que se repiten
 
 ---
 
-## 🧠 La teoría: el método y los patrones (LO IMPORTANTE)
+## La teoría: el método y los patrones (LO IMPORTANTE)
 
 ### El bucle que se repite SIEMPRE
 ```
@@ -63,11 +63,11 @@ Las vías clásicas que verás una y otra vez:
 - **Script programado escribible** → markup.
 - **Lección**: principio de mínimo privilegio, `sudo` específico, mínimos SUID, no reutilizar credenciales, permisos correctos en scripts.
 
-> 💡 Tu reflejo como dev ante cada máquina: *"¿cómo lo habría evitado yo en el código/config?"* Eso es **purple team** y es lo que te hace escribir software que no se rompe.
+> Tu reflejo como dev ante cada máquina: *"¿cómo lo habría evitado yo en el código/config?"* Eso es **purple team** y es lo que te hace escribir software que no se rompe.
 
 ---
 
-## 📚 Writeups por tier
+## Writeups por tier
 **Tier 0 — un solo servicio, sin privesc (la mecánica básica)**
 - [[HTB_Starting_Point/01-meow]] — Telnet sin password
 - [[HTB_Starting_Point/02-fawn]] — FTP anónimo
@@ -99,8 +99,8 @@ Las vías clásicas que verás una y otra vez:
 - [[HTB_Starting_Point/24-markup]] — XXE → clave SSH → script escribible
 - [[HTB_Starting_Point/25-base]] — type juggling PHP → upload → sudo GTFOBins
 
-## 📋 Mi progreso (rellena a mano)
-| # | Máquina | Tier | Skill principal | ✓ |
+## Mi progreso (rellena a mano)
+| # | Máquina | Tier | Skill principal | |
 |---|---|---|---|---|
 | 01 | meow | 0 | telnet | |
 | 02 | fawn | 0 | ftp | |
@@ -128,7 +128,7 @@ Las vías clásicas que verás una y otra vez:
 | 24 | markup | 2 | xxe | |
 | 25 | base | 2 | type juggling | |
 
-## 🧰 Recursos que valen oro
+## Recursos que valen oro
 - **IppSec** (YouTube) — vídeo-writeup de casi toda máquina HTB retirada.
 - **0xdf.gitlab.io** — writeups escritos, muy didácticos.
 - **HackTricks** (book.hacktricks.xyz) — referencia "cómo hago X".

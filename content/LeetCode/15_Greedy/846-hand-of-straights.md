@@ -14,7 +14,7 @@ neetcode_order: 5
 
 # LeetCode 846 — Hand of Straights
 
-> 🎯 **Quinto problema de Greedy**. ¿Se pueden formar grupos consecutivos de tamaño k? Greedy: empezar siempre desde el **menor disponible**.
+> **Quinto problema de Greedy**. ¿Se pueden formar grupos consecutivos de tamaño k? Greedy: empezar siempre desde el **menor disponible**.
 
 ## Enunciado
 

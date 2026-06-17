@@ -14,8 +14,8 @@ neetcode_order: 1
 
 # LeetCode 217 — Contains Duplicate
 
-> 🎯 **Primer problema del NeetCode 150**. Patrón: **Arrays & Hashing**, sub-patrón **Hash Set / "lo he visto antes"**.
-> 📚 Este archivo sigue tu estilo de aprendizaje: solución primero, patrón abstraído, replicar sin mirar al final.
+> **Primer problema del NeetCode 150**. Patrón: **Arrays & Hashing**, sub-patrón **Hash Set / "lo he visto antes"**.
+> Este archivo sigue tu estilo de aprendizaje: solución primero, patrón abstraído, replicar sin mirar al final.
 
 ## Enunciado
 
@@ -85,7 +85,7 @@ class Solution:
 - **Espacio: O(1)** — no usamos estructuras auxiliares.
 - **Veredicto:** rechazado en entrevista para este problema. Con `n = 10^5`, son hasta **10^10 operaciones** → ~100 segundos. LeetCode te da `Time Limit Exceeded`.
 
-> 💡 **Lección:** "funcionar" no es lo mismo que "ser aceptable". Casi todos los problemas LeetCode admiten una solución brute force; el ejercicio es encontrar la **idiomática**.
+> **Lección:** "funcionar" no es lo mismo que "ser aceptable". Casi todos los problemas LeetCode admiten una solución brute force; el ejercicio es encontrar la **idiomática**.
 
 ---
 
@@ -108,7 +108,7 @@ class Solution:
 - **Espacio: O(1)** auxiliar (Python `.sort()` ordena in-place; si usaras `sorted(nums)` sería O(n)).
 - **Veredicto:** aceptable. Pasa los tests de LeetCode. Pero **modifica el input** (efecto secundario), lo cual a veces no se quiere.
 
-> ⚠️ **Trampa**: `nums.sort()` muta `nums`. `sorted(nums)` crea una copia. Saber la diferencia es la clase de detalle que un entrevistador te puede preguntar.
+> **Trampa**: `nums.sort()` muta `nums`. `sorted(nums)` crea una copia. Saber la diferencia es la clase de detalle que un entrevistador te puede preguntar.
 
 ---
 
@@ -201,7 +201,7 @@ Todas usan el **mismo patrón base** con pequeñas variantes:
 | **49. Group Anagrams** | "Agrupar por clave canónica" — dict de listas |
 | **347. Top K Frequent Elements** | "Frecuencia + top K" — Counter + heap |
 
-> 📌 **Patrón maestro**: Arrays & Hashing es el patrón **fundacional**. Cuando lo dominas, una buena parte de los problemas Easy y Medium se reducen a "¿qué guardo en mi dict/set para responder esta pregunta?".
+> **Patrón maestro**: Arrays & Hashing es el patrón **fundacional**. Cuando lo dominas, una buena parte de los problemas Easy y Medium se reducen a "¿qué guardo en mi dict/set para responder esta pregunta?".
 
 ---
 
@@ -214,7 +214,7 @@ Estos son los detalles de Python y CS que el problema te enseña, además del pa
 | Operación | Coste | Ejemplo |
 |---|---|---|
 | `s = set()` — crear vacío | O(1) | |
-| `s = {1, 2, 3}` — crear con literal | O(k) donde k = nº elementos | ⚠️ `{}` solo es **dict vacío**, NO set vacío |
+| `s = {1, 2, 3}` — crear con literal | O(k) donde k = nº elementos | `{}` solo es **dict vacío**, NO set vacío |
 | `x in s` | O(1) promedio | clave del patrón |
 | `s.add(x)` | O(1) promedio | |
 | `s.remove(x)` | O(1) promedio | error si no existe |
@@ -249,10 +249,10 @@ Regla: **inmutables hashables, mutables no**. Si necesitas meter una lista en un
 
 | Solución | Tiempo | Espacio | Modifica input | Veredicto |
 |---|---|---|---|---|
-| 1. Fuerza bruta | O(n²) | O(1) | No | ❌ TLE en LeetCode |
-| 2. Ordenar | O(n log n) | O(1) | **Sí** | ⚠️ Aceptable, efecto secundario |
-| 3. Hash set | **O(n)** | O(n) | No | ✅ **La idiomática** |
-| 4. `len(set(nums))` | O(n) | O(n) | No | ✅ Elegante, mejor explicar antes |
+| 1. Fuerza bruta | O(n²) | O(1) | No | [NO] TLE en LeetCode |
+| 2. Ordenar | O(n log n) | O(1) | **Sí** | Aceptable, efecto secundario |
+| 3. Hash set | **O(n)** | O(n) | No | [OK] **La idiomática** |
+| 4. `len(set(nums))` | O(n) | O(n) | No | [OK] Elegante, mejor explicar antes |
 
 ---
 
@@ -286,7 +286,7 @@ Estas variantes son las que vas a ver explícitamente en problemas posteriores. 
 
 ## Solución en C++ — contraste con Python
 
-> 📘 Añadido para ver las diferencias de lenguaje. Mismo algoritmo, distinta semántica. Código compilable en [`217-contains-duplicate.cpp`](217-contains-duplicate.cpp).
+> Añadido para ver las diferencias de lenguaje. Mismo algoritmo, distinta semántica. Código compilable en [`217-contains-duplicate.cpp`](217-contains-duplicate.cpp).
 
 ```cpp
 class Solution {

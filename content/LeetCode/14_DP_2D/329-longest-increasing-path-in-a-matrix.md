@@ -14,7 +14,7 @@ neetcode_order: 8
 
 # LeetCode 329 — Longest Increasing Path in a Matrix
 
-> 🎯 **Octavo problema de DP 2-D — Hard**. **DFS + memoization** sobre grid. El camino más largo siguiendo valores crecientes.
+> **Octavo problema de DP 2-D — Hard**. **DFS + memoization** sobre grid. El camino más largo siguiendo valores crecientes.
 
 ## Enunciado
 

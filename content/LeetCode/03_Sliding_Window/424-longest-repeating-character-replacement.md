@@ -14,8 +14,8 @@ neetcode_order: 3
 
 # LeetCode 424 — Longest Repeating Character Replacement
 
-> 🎯 **Tercer problema del patrón Sliding Window**. Introduce el truco mental más bonito del patrón: la **frecuencia del carácter más común** dentro de la ventana, y usar el dato `len_ventana - max_freq` como "número de caracteres a reemplazar". Si entiendes este truco, entiendes 4-5 problemas más.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Tercer problema del patrón Sliding Window**. Introduce el truco mental más bonito del patrón: la **frecuencia del carácter más común** dentro de la ventana, y usar el dato `len_ventana - max_freq` como "número de caracteres a reemplazar". Si entiendes este truco, entiendes 4-5 problemas más.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -62,7 +62,7 @@ class Solution:
 | ¿Sensible a mayúsculas? | Solo hay mayúsculas en este problema |
 | ¿Cuántos caracteres distintos? | Hasta 26 (alfabeto inglés mayúsculas) |
 
-> 💡 **Reformulación clave**: para una ventana cualquiera, el **carácter más frecuente** dentro de ella es el "objetivo" hacia el que reemplazar. Si la ventana mide `L` y el más frecuente aparece `max_freq` veces, necesitas reemplazar `L - max_freq` caracteres. Si `L - max_freq <= k`, **la ventana es válida**.
+> **Reformulación clave**: para una ventana cualquiera, el **carácter más frecuente** dentro de ella es el "objetivo" hacia el que reemplazar. Si la ventana mide `L` y el más frecuente aparece `max_freq` veces, necesitas reemplazar `L - max_freq` caracteres. Si `L - max_freq <= k`, **la ventana es válida**.
 
 ---
 
@@ -87,7 +87,7 @@ Imagina una ventana cualquiera, por ejemplo `"AABAB"` (5 caracteres). Cuenta cad
 
 **Número de reemplazos necesarios** = `len_ventana - max_freq` = `5 - 3 = 2`.
 
-> 🎯 **Invariante mágica**: una ventana es **válida** si `len_ventana - max_freq <= k`.
+> **Invariante mágica**: una ventana es **válida** si `len_ventana - max_freq <= k`.
 >
 > En palabras: "el número de caracteres que NO son el dominante es ≤ que mis comodines disponibles".
 
@@ -136,12 +136,12 @@ class Solution:
 | | | {A:2, B:2} | 2 | 4 | 2 | 1 | **SÍ** → quitar A, left=4 | 4 | 4 |
 | | | {A:1, B:2} | 2 | 3 | 1 | 1 | NO | 4 | 4 |
 
-Resultado: `4` ✅.
+Resultado: `4` [OK].
 
 **Análisis:**
 - **Tiempo: O(n · 26)** = O(n) — el `max(count.values())` es O(26) constante porque el alfabeto es fijo.
 - **Espacio: O(26)** = O(1) — Counter de 26 letras.
-- **Veredicto:** ✅ correcta. Pero hay una optimización sutil:
+- **Veredicto:** [OK] correcta. Pero hay una optimización sutil:
 
 ### Trace completo de la Solución 1 con `s = "AABABBA", k = 1`
 
@@ -154,7 +154,7 @@ Estado inicial: `count = {}`, `left = 0`, `best = 0`.
 
 **right=0, char='A'**:
 - count = {A:1}, len=1, max_freq=1
-- `1 - 1 = 0 ≤ 1` ✓ válida (0 reemplazos necesarios)
+- `1 - 1 = 0 ≤ 1` válida (0 reemplazos necesarios)
 - best = 1
 
 ```
@@ -163,7 +163,7 @@ Estado inicial: `count = {}`, `left = 0`, `best = 0`.
 
 **right=1, char='A'**:
 - count = {A:2}, len=2, max_freq=2
-- `0 ≤ 1` ✓
+- `0 ≤ 1`
 - best = 2
 
 ```
@@ -172,7 +172,7 @@ Estado inicial: `count = {}`, `left = 0`, `best = 0`.
 
 **right=2, char='B'**:
 - count = {A:2, B:1}, len=3, max_freq=2
-- `3 - 2 = 1 ≤ 1` ✓ (1 reemplazo: la B)
+- `3 - 2 = 1 ≤ 1` (1 reemplazo: la B)
 - best = 3
 
 ```
@@ -181,8 +181,8 @@ Estado inicial: `count = {}`, `left = 0`, `best = 0`.
 
 **right=3, char='A'**:
 - count = {A:3, B:1}, len=4, max_freq=3
-- `4 - 3 = 1 ≤ 1` ✓
-- best = 4 ⭐
+- `4 - 3 = 1 ≤ 1`
+- best = 4
 
 ```
 [AABA]           ← 1 reemplazo (la B), válida
@@ -190,12 +190,12 @@ Estado inicial: `count = {}`, `left = 0`, `best = 0`.
 
 **right=4, char='B'**:
 - count = {A:3, B:2}, len=5, max_freq=3
-- `5 - 3 = 2 > 1` ✗ **inválida** (necesitas 2 reemplazos, solo tienes 1)
+- `5 - 3 = 2 > 1` **inválida** (necesitas 2 reemplazos, solo tienes 1)
 - **SHRINK con while**:
   - Quitar s[0]='A': count = {A:2, B:2}, left=1, len=4, max_freq=2
-  - `4 - 2 = 2 > 1` ✗ aún inválida
+ - `4 - 2 = 2 > 1` aún inválida
   - Quitar s[1]='A': count = {A:1, B:2}, left=2, len=3, max_freq=2
-  - `3 - 2 = 1 ≤ 1` ✓ → salir del while
+ - `3 - 2 = 1 ≤ 1` → salir del while
 - best = max(4, 3) = 4
 
 ```
@@ -204,7 +204,7 @@ Estado inicial: `count = {}`, `left = 0`, `best = 0`.
 
 **right=5, char='B'**:
 - count = {A:1, B:3}, len=4, max_freq=3
-- `4 - 3 = 1 ≤ 1` ✓
+- `4 - 3 = 1 ≤ 1`
 - best = max(4, 4) = 4
 
 ```
@@ -213,11 +213,11 @@ Estado inicial: `count = {}`, `left = 0`, `best = 0`.
 
 **right=6, char='A'**:
 - count = {A:2, B:3}, len=5, max_freq=3
-- `5 - 3 = 2 > 1` ✗
+- `5 - 3 = 2 > 1`
 - **SHRINK**: quitar s[2]='B' (left=3), quitar s[3]='A' (left=4) → válida con len=3
 - best = 4
 
-**Resultado: 4** ✅. El óptimo es `"AABA"` (reemplazar B por A) o `"BABB"` (reemplazar A por B).
+**Resultado: 4** [OK]. El óptimo es `"AABA"` (reemplazar B por A) o `"BABB"` (reemplazar A por B).
 
 ---
 
@@ -246,12 +246,12 @@ class Solution:
         return best
 ```
 
-> 🎯 **Detalle muy importante**: aquí `if`, no `while`. Cuando `len - max_freq > k`, avanzamos `left` UNA vez. La ventana **mantiene su tamaño** (right también acaba de avanzar). Solo crece cuando encuentra una buena combinación.
+> **Detalle muy importante**: aquí `if`, no `while`. Cuando `len - max_freq > k`, avanzamos `left` UNA vez. La ventana **mantiene su tamaño** (right también acaba de avanzar). Solo crece cuando encuentra una buena combinación.
 
 **Análisis:**
 - **Tiempo: O(n)** — una pasada lineal.
 - **Espacio: O(26)** = O(1).
-- **Veredicto:** ✅ **la óptima**. El truco "max_freq solo crece" es **señal de seniority** en entrevista.
+- **Veredicto:** [OK] **la óptima**. El truco "max_freq solo crece" es **señal de seniority** en entrevista.
 
 ### Por qué la Solución 2 funciona aunque `max_freq` esté "desactualizado"
 
@@ -269,10 +269,10 @@ El resultado: `best` solo se actualiza con ventanas legítimamente válidas, y s
 
 **right=4, char='B'** (la primera vez que se necesita shrink):
 - count = {A:3, B:2}, max_freq = max(3, 2) = **3**
-- len = 5 (right=4, left=0): `5 - 3 = 2 > 1` ✗ → SHRINK **un solo paso** con `if`:
+- len = 5 (right=4, left=0): `5 - 3 = 2 > 1` → SHRINK **un solo paso** con `if`:
   - Quitar s[0]='A' → count = {A:2, B:2}, left=1
 - Ahora la ventana es `s[1..4] = "ABAB"`, len = 4
-- ⚠️ `max_freq` sigue siendo **3** aunque el real ahora es 2 (las dos A's y dos B's empatan)
+- `max_freq` sigue siendo **3** aunque el real ahora es 2 (las dos A's y dos B's empatan)
 - best = max(4, 4) = 4
 
 ```
@@ -282,7 +282,7 @@ Estado tras iter 4:
 
 **right=5, char='B'**:
 - count = {A:2, B:3}, max_freq = max(3, 3) = 3 (esta vez el real coincide con el estimado)
-- len = 5: `5 - 3 = 2 > 1` ✗ → SHRINK 1 paso:
+- len = 5: `5 - 3 = 2 > 1` → SHRINK 1 paso:
   - Quitar s[1]='A' → count = {A:1, B:3}, left=2
 - best = max(4, 4) = 4
 
@@ -292,16 +292,16 @@ Estado tras iter 4:
 
 **right=6, char='A'**:
 - count = {A:2, B:3}, max_freq = max(3, 2) = **3** (B sigue siendo el máximo real)
-- len = 5: `5 - 3 = 2 > 1` ✗ → SHRINK:
+- len = 5: `5 - 3 = 2 > 1` → SHRINK:
   - Quitar s[2]='B' → count = {A:2, B:2}, left=3
-- ⚠️ `max_freq` sigue siendo 3 aunque ahora el real es 2 (empate A=B=2) ← **desactualizado**
+- `max_freq` sigue siendo 3 aunque ahora el real es 2 (empate A=B=2) ← **desactualizado**
 - best = max(4, 4) = 4
 
 ```
    [BBA]         ← max_freq estimado = 3, real = 2
 ```
 
-**Resultado: 4** ✅. **Mismo resultado que Solución 1**, con un `max_freq` "mintiendo" en algunas iteraciones — pero sin afectar al `best`.
+**Resultado: 4** [OK]. **Mismo resultado que Solución 1**, con un `max_freq` "mintiendo" en algunas iteraciones — pero sin afectar al `best`.
 
 ### Visualización del invariante en Solución 2
 
@@ -386,7 +386,7 @@ Es contraintuitivo pero correcto. Sirve como **invariante débil** que basta par
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
 | 1. Sliding window con `max(count.values())` | O(n · 26) | O(26) | Funciona, costantes peores |
-| 2. **Sliding window con `max_freq` mantenido** | **O(n)** | O(26) | ✅ La óptima |
+| 2. **Sliding window con `max_freq` mantenido** | **O(n)** | O(26) | [OK] La óptima |
 
 ---
 

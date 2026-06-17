@@ -14,7 +14,7 @@ neetcode_order: 9
 
 # LeetCode 146 — LRU Cache
 
-> 🎯 **Noveno problema del patrón Linked List** — y **uno de los problemas de diseño MÁS preguntados en entrevistas tecnicas** de toda la historia. La solución óptima combina **doubly linked list + hash map** para tener get/put en O(1). Es uno de los pocos problemas donde implementarlo te enseña algo de un sistema real (cachés en CPUs, Redis, sistemas operativos).
+> **Noveno problema del patrón Linked List** — y **uno de los problemas de diseño MÁS preguntados en entrevistas tecnicas** de toda la historia. La solución óptima combina **doubly linked list + hash map** para tener get/put en O(1). Es uno de los pocos problemas donde implementarlo te enseña algo de un sistema real (cachés en CPUs, Redis, sistemas operativos).
 
 ## Enunciado
 
@@ -110,7 +110,7 @@ class LRUCache:
 **Análisis:**
 - **get / put: O(1)** ambas operaciones.
 - **Espacio: O(capacity)**.
-- **Veredicto:** ✅ **la canónica**. La que demuestra dominio total del problema.
+- **Veredicto:** [OK] **la canónica**. La que demuestra dominio total del problema.
 
 ### Por qué doubly linked list (no singly)
 
@@ -148,7 +148,7 @@ class LRUCache:
 
 **Análisis:** O(1) ambas operaciones (OrderedDict internamente usa doubly linked list + hash).
 
-**Veredicto:** ✅ funciona y es 1/4 del código. **PERO**: en entrevista, **NO la uses**. El entrevistador quiere ver que sabes implementar LRU desde cero (que entiendes la estructura interna). Úsala solo si te lo permiten explícitamente o si ya implementaste la 1 antes.
+**Veredicto:** [OK] funciona y es 1/4 del código. **PERO**: en entrevista, **NO la uses**. El entrevistador quiere ver que sabes implementar LRU desde cero (que entiendes la estructura interna). Úsala solo si te lo permiten explícitamente o si ya implementaste la 1 antes.
 
 ---
 

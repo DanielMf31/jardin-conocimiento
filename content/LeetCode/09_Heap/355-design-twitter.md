@@ -14,7 +14,7 @@ neetcode_order: 6
 
 # LeetCode 355 — Design Twitter
 
-> 🎯 **Sexto problema del patrón Heap**. **Diseño de sistema en miniatura**. Combina dict + heap. Buena práctica para entrevistas de "design X".
+> **Sexto problema del patrón Heap**. **Diseño de sistema en miniatura**. Combina dict + heap. Buena práctica para entrevistas de "design X".
 
 ## Enunciado
 

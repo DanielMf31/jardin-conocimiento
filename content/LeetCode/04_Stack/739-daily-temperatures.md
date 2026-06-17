@@ -14,8 +14,8 @@ neetcode_order: 5
 
 # LeetCode 739 — Daily Temperatures
 
-> 🎯 **Quinto problema del patrón Stack** y la introducción canónica al **stack monotónico**, una estructura mental que reaparece en MUCHOS problemas (LC 84, LC 496, LC 84, LC 901). Si entendiste la deque monotónica de [[239-sliding-window-maximum]], esto es la versión "stack" del mismo concepto.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Quinto problema del patrón Stack** y la introducción canónica al **stack monotónico**, una estructura mental que reaparece en MUCHOS problemas (LC 84, LC 496, LC 84, LC 901). Si entendiste la deque monotónica de [[239-sliding-window-maximum]], esto es la versión "stack" del mismo concepto.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -85,7 +85,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n²)** — TLE con n = 10^5 (10^10 operaciones).
 - **Espacio: O(1)** extra (excluyendo output).
-- **Veredicto:** ❌ TLE.
+- **Veredicto:** [NO] TLE.
 
 ---
 
@@ -155,13 +155,13 @@ i=7, temp=73:
   push 7                    stack=[6, 7]
 
 Final: stack=[6,7] (estos índices NUNCA encontraron mayor)
-answer=[1, 1, 4, 2, 1, 1, 0, 0] ✅
+answer=[1, 1, 4, 2, 1, 1, 0, 0] [OK]
 ```
 
 **Análisis:**
 - **Tiempo: O(n)** — análisis amortizado: cada índice entra y sale del stack **a lo sumo una vez**. Total ≤ 2n operaciones.
 - **Espacio: O(n)** — el stack puede tener todos los índices en el peor caso (array decreciente).
-- **Veredicto:** ✅ **la canónica**.
+- **Veredicto:** [OK] **la canónica**.
 
 ---
 
@@ -240,8 +240,8 @@ Stack es un caso especial de deque (sin la restricción de ventana).
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Fuerza bruta | O(n²) | O(1) | ❌ TLE |
-| 2. **Stack monotónico decreciente** | **O(n)** | O(n) | ✅ La canónica |
+| 1. Fuerza bruta | O(n²) | O(1) | [NO] TLE |
+| 2. **Stack monotónico decreciente** | **O(n)** | O(n) | [OK] La canónica |
 
 ---
 

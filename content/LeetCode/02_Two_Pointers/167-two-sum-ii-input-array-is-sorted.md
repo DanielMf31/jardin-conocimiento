@@ -14,8 +14,8 @@ neetcode_order: 2
 
 # LeetCode 167 — Two Sum II - Input Array Is Sorted
 
-> 🎯 **Segundo problema del patrón Two Pointers**. Es **el problema hermano** de [[1-two-sum]] con una sola diferencia: el array está **ordenado**. Esa diferencia cambia completamente la solución óptima: **two pointers O(1) espacio** en lugar de hash map O(n).
-> 📚 Es uno de los problemas más útiles para interiorizar **cuándo usar two pointers vs hash map**.
+> **Segundo problema del patrón Two Pointers**. Es **el problema hermano** de [[1-two-sum]] con una sola diferencia: el array está **ordenado**. Esa diferencia cambia completamente la solución óptima: **two pointers O(1) espacio** en lugar de hash map O(n).
+> Es uno de los problemas más útiles para interiorizar **cuándo usar two pointers vs hash map**.
 
 ## Enunciado
 
@@ -66,14 +66,14 @@ class Solution:
 | Pregunta | Respuesta |
 |---|---|
 | ¿Qué tipo devuelve? | `List[int]` con **dos índices 1-indexed** |
-| ⚠️ ¿1-indexed o 0-indexed? | **1-indexed** (cuidado, distinto de [[1-two-sum]]) |
+| ¿1-indexed o 0-indexed? | **1-indexed** (cuidado, distinto de [[1-two-sum]]) |
 | ¿Está ordenado? | **SÍ — clave del problema** |
 | ¿Hay duplicados? | Sí pueden existir |
 | ¿Pueden ser negativos? | Sí (rango -1000 a 1000) |
 | ¿Solución única? | Sí, garantizada |
 | Restricción nueva | **O(1) espacio extra** — descarta hash map |
 
-> 💡 **El detalle "ordenado" cambia todo**: con array ordenado, dos punteros pueden navegar por el espacio de pares en O(n) usando la **monotonía** del orden, sin necesitar memoria auxiliar.
+> **El detalle "ordenado" cambia todo**: con array ordenado, dos punteros pueden navegar por el espacio de pares en O(n) usando la **monotonía** del orden, sin necesitar memoria auxiliar.
 
 ---
 
@@ -96,7 +96,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)**.
 - **Espacio: O(n)** — viola la restricción.
-- **Veredicto:** ❌ No es la respuesta esperada. **Ignora la información clave del problema** (que está ordenado).
+- **Veredicto:** [NO] No es la respuesta esperada. **Ignora la información clave del problema** (que está ordenado).
 
 ---
 
@@ -129,12 +129,12 @@ class Solution:
 |---|---|---|---|---|---|---|
 | 1 | 0 | 3 | 2 | 15 | 17 | suma > target → right-- |
 | 2 | 0 | 2 | 2 | 11 | 13 | suma > target → right-- |
-| 3 | 0 | 1 | 2 | 7 | 9 | ✅ encontrado, return [1, 2] |
+| 3 | 0 | 1 | 2 | 7 | 9 | [OK] encontrado, return [1, 2] |
 
 **Análisis:**
 - **Tiempo: O(n)** — cada puntero se mueve como mucho n veces.
 - **Espacio: O(1)** — solo dos índices.
-- **Veredicto:** ✅ **la óptima**. Cumple las restricciones del problema.
+- **Veredicto:** [OK] **la óptima**. Cumple las restricciones del problema.
 
 ### Por qué funciona — argumento de corrección
 
@@ -182,12 +182,12 @@ def two_pointers_ordenado(arr, target):
 | Problema LeetCode | Variación |
 |---|---|
 | **1. Two Sum** | Mismo problema pero array **NO ordenado** → hash map |
-| **15. 3Sum** ⭐ | Triplete que suma 0 → ordenar + fix uno + two pointers |
+| **15. 3Sum** | Triplete que suma 0 → ordenar + fix uno + two pointers |
 | **16. 3Sum Closest** | Triplete con suma más cercana al target |
 | **18. 4Sum** | Cuarteto que suma target → 2 fixes + two pointers |
 | **611. Valid Triangle Number** | Triángulos válidos en array ordenado → two pointers |
 
-> 🎯 **3Sum, 4Sum se reducen a este patrón fixeando elementos** y aplicando two pointers en el resto. Esta es **la base** de toda la familia "K-Sum".
+> **3Sum, 4Sum se reducen a este patrón fixeando elementos** y aplicando two pointers en el resto. Esta es **la base** de toda la familia "K-Sum".
 
 ---
 
@@ -222,8 +222,8 @@ LeetCode normalmente usa 0-indexed. Este problema **explícitamente** pide 1-ind
 
 | Solución | Tiempo | Espacio | Cumple restricción | Veredicto |
 |---|---|---|---|---|
-| 1. Hash map | O(n) | O(n) | ❌ | Funciona pero no usa la información de orden |
-| 2. **Two pointers** | **O(n)** | **O(1)** | ✅ | ✅ La óptima |
+| 1. Hash map | O(n) | O(n) | [NO] | Funciona pero no usa la información de orden |
+| 2. **Two pointers** | **O(n)** | **O(1)** | [OK] | [OK] La óptima |
 
 ---
 

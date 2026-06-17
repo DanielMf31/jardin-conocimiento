@@ -14,7 +14,7 @@ neetcode_order: 1
 
 # LeetCode 1584 — Min Cost to Connect All Points
 
-> 🎯 **Primer problema de Advanced Graphs**. **Minimum Spanning Tree (MST)** clásico. Dos algoritmos: **Prim's** (greedy + heap) y **Kruskal's** (sort + Union-Find).
+> **Primer problema de Advanced Graphs**. **Minimum Spanning Tree (MST)** clásico. Dos algoritmos: **Prim's** (greedy + heap) y **Kruskal's** (sort + Union-Find).
 
 ## Enunciado
 

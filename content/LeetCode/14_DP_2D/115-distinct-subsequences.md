@@ -14,7 +14,7 @@ neetcode_order: 9
 
 # LeetCode 115 — Distinct Subsequences
 
-> 🎯 **Noveno problema de DP 2-D — Hard**. ¿Cuántas formas hay de obtener `t` como **subsecuencia** de `s`? DP 2-D similar a LCS.
+> **Noveno problema de DP 2-D — Hard**. ¿Cuántas formas hay de obtener `t` como **subsecuencia** de `s`? DP 2-D similar a LCS.
 
 ## Enunciado
 

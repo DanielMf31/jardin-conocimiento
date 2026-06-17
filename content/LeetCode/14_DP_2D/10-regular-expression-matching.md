@@ -14,7 +14,7 @@ neetcode_order: 11
 
 # LeetCode 10 — Regular Expression Matching
 
-> 🎯 **Undécimo y último problema de DP 2-D — Hard**. Matchear regex con `'.'` (cualquier char) y `'*'` (0+ del previo). DP 2-D con casuística.
+> **Undécimo y último problema de DP 2-D — Hard**. Matchear regex con `'.'` (cualquier char) y `'*'` (0+ del previo). DP 2-D con casuística.
 
 ## Enunciado
 
@@ -58,7 +58,7 @@ class Solution:
 
 ---
 
-## Cierre DP 2-D 🎉
+## Cierre DP 2-D
 
 | # | Problema | Idea distintiva |
 |---|---|---|
@@ -85,4 +85,4 @@ class Solution:
 - [ ] Leído
 - [ ] Implementado desde cero
 - [ ] Resuelto en LeetCode
-- [ ] **Patrón DP 2-D cerrado** ✅
+- [ ] **Patrón DP 2-D cerrado** [OK]

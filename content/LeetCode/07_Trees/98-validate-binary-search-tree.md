@@ -14,7 +14,7 @@ neetcode_order: 11
 
 # LeetCode 98 — Validate Binary Search Tree
 
-> 🎯 **Undécimo problema del patrón Trees**. Trampa clásica: "es BST si left.val < node.val < right.val". **Eso NO basta** — el BST exige la propiedad sobre TODO el subárbol, no solo los hijos directos. La solución pasa **bounds (lower, upper)** top-down.
+> **Undécimo problema del patrón Trees**. Trampa clásica: "es BST si left.val < node.val < right.val". **Eso NO basta** — el BST exige la propiedad sobre TODO el subárbol, no solo los hijos directos. La solución pasa **bounds (lower, upper)** top-down.
 
 ## Enunciado
 

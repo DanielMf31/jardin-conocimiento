@@ -1,8 +1,8 @@
 # 02 — Caching strategies
 
-> 📚 **Doc 2 del cluster System Design Patterns**. Cómo guardar datos cerca para ir más rápido. Patrón ubicuo: del CPU L1 cache al CDN global.
-> 🔥 **Frecuencia interview**: aparece SIEMPRE en system design. "Cómo aceleras X" → respuesta incluye cache.
-> ⏱️ **Tiempo de lectura estimado**: 40-55 min.
+> **Doc 2 del cluster System Design Patterns**. Cómo guardar datos cerca para ir más rápido. Patrón ubicuo: del CPU L1 cache al CDN global.
+> **Frecuencia interview**: aparece SIEMPRE en system design. "Cómo aceleras X" → respuesta incluye cache.
+> **Tiempo de lectura estimado**: 40-55 min.
 
 ---
 

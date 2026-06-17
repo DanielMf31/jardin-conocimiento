@@ -8,13 +8,13 @@ source: claude-code
 aliases: [README Desarrollo Software]
 ---
 
-# 🛠️ Clúster: Desarrollo de Software
+# Clúster: Desarrollo de Software
 
 Proceso y metodología de desarrollo: del SDLC y Agile a Scrum/Kanban, historias de usuario,
 métricas, DevOps y las prácticas de ingeniería que sostienen la entrega.
 
 ## Punto de entrada
-👉 [[MOC_Desarrollo_Software]] — índice completo + roadmap de aprendizaje.
+ [[MOC_Desarrollo_Software]] — índice completo + roadmap de aprendizaje.
 
 ## Cómo recorrerlo
 1. **Base**: [[01-sdlc-e-historia]] → [[02-manifiesto-agil]] → [[03-scrum]].

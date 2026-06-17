@@ -14,8 +14,8 @@ neetcode_order: 7
 
 # LeetCode 238 — Product of Array Except Self
 
-> 🎯 **Séptimo problema del NeetCode 150 en Arrays & Hashing**. Es la introducción al patrón **Prefix / Suffix products** (versión multiplicativa de prefix sums). Un patrón fundamental que vuelve a aparecer en sumas de subarrays, ranges queries, y muchísimos problemas Medium/Hard.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Séptimo problema del NeetCode 150 en Arrays & Hashing**. Es la introducción al patrón **Prefix / Suffix products** (versión multiplicativa de prefix sums). Un patrón fundamental que vuelve a aparecer en sumas de subarrays, ranges queries, y muchísimos problemas Medium/Hard.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -45,7 +45,7 @@ Output: [0, 0, 9, 0, 0]
 - `-30 <= nums[i] <= 30`
 - **El producto de cualquier prefijo o sufijo de `nums` cabe en un `int` de 32 bits**.
 
-> 💡 **Follow-up**: ¿puedes hacerlo en **O(1) espacio extra** (sin contar el array de salida)?
+> **Follow-up**: ¿puedes hacerlo en **O(1) espacio extra** (sin contar el array de salida)?
 
 **Plantilla:**
 ```python
@@ -90,7 +90,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n²)** — viola la restricción.
 - **Espacio: O(1)** extra.
-- **Veredicto:** ❌ TLE con n = 10^5.
+- **Veredicto:** [NO] TLE con n = 10^5.
 
 ---
 
@@ -113,7 +113,7 @@ def productExceptSelf(self, nums):
 2. **Manejar ceros caso por caso es feo**: hay que distinguir 0 ceros / 1 cero / ≥2 ceros.
 3. **División es operación cara** comparada con suma/multiplicación a nivel de hardware.
 
-> 📌 **Lección**: cuando un enunciado prohíbe una operación, casi siempre es porque (a) revela un patrón más interesante, o (b) la operación falla en un edge case crítico.
+> **Lección**: cuando un enunciado prohíbe una operación, casi siempre es porque (a) revela un patrón más interesante, o (b) la operación falla en un edge case crítico.
 
 ---
 
@@ -155,7 +155,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)** — tres recorridos lineales.
 - **Espacio: O(n)** extra (los dos arrays auxiliares).
-- **Veredicto:** ✅ correcta y clara. Cumple O(n) tiempo pero no el follow-up de O(1) espacio.
+- **Veredicto:** [OK] correcta y clara. Cumple O(n) tiempo pero no el follow-up de O(1) espacio.
 
 ### Desglose detallado de la Solución 3 — paso por paso con índices
 
@@ -232,7 +232,7 @@ list(range(5, 0, -1))        # [5, 4, 3, 2, 1]                step=-1: hacia atr
 list(range(5, -1, -1))       # [5, 4, 3, 2, 1, 0]             ojo: stop=-1 incluye 0
 ```
 
-> ⚠️ **Para descender hasta `0` inclusive** tienes que usar `stop=-1`, no `stop=0`. Porque `stop` **no se incluye**: si pusieras `range(5, 0, -1)` te quedas en 1, no llegas a 0.
+> **Para descender hasta `0` inclusive** tienes que usar `stop=-1`, no `stop=0`. Porque `stop` **no se incluye**: si pusieras `range(5, 0, -1)` te quedas en 1, no llegas a 0.
 
 Aplicado al código: con `n = 4`,
 
@@ -320,10 +320,10 @@ result:      [24,  12,   8,   6]
 ```
 
 **Verificación**:
-- `result[0] = 24 = 2*3*4` ✅
-- `result[1] = 12 = 1*3*4` ✅
-- `result[2] = 8 = 1*2*4` ✅
-- `result[3] = 6 = 1*2*3` ✅
+- `result[0] = 24 = 2*3*4` [OK]
+- `result[1] = 12 = 1*3*4` [OK]
+- `result[2] = 8 = 1*2*4` [OK]
+- `result[3] = 6 = 1*2*3` [OK]
 
 #### Regla mental — cuándo bucle hacia adelante, cuándo hacia atrás
 
@@ -427,7 +427,7 @@ Estado tras pasada 1:
                               (lo que hay a la izquierda de cada índice)
 ```
 
-> 💡 **Observación clave**: tras la pasada 1, `answer[i]` es el producto de **todo lo que está estrictamente a la izquierda** de `i`. Para `i=0`, no hay nada a la izquierda → 1. Para `i=3`, hay 1*2*3 = 6.
+> **Observación clave**: tras la pasada 1, `answer[i]` es el producto de **todo lo que está estrictamente a la izquierda** de `i`. Para `i=0`, no hay nada a la izquierda → 1. Para `i=3`, hay 1*2*3 = 6.
 
 #### Pasada 2 — suffix backward (`range(3, -1, -1)` → `[3, 2, 1, 0]`)
 
@@ -476,14 +476,14 @@ i=0:
 
 Estado final:
   Índice:      0   1  2  3
-  answer:    [24, 12, 8, 6]    ✅
+  answer:    [24, 12, 8, 6]    [OK]
 ```
 
 **Verificación**:
-- `answer[0] = 24 = 2*3*4` ✅
-- `answer[1] = 12 = 1*3*4` ✅
-- `answer[2] = 8 = 1*2*4` ✅
-- `answer[3] = 6 = 1*2*3` ✅
+- `answer[0] = 24 = 2*3*4` [OK]
+- `answer[1] = 12 = 1*3*4` [OK]
+- `answer[2] = 8 = 1*2*4` [OK]
+- `answer[3] = 6 = 1*2*3` [OK]
 
 ### Resumen visual: cómo evoluciona `answer` en las dos pasadas
 
@@ -531,7 +531,7 @@ El mismo razonamiento aplica a la pasada 2 con `suffix`: primero multiplicas `an
 **Análisis:**
 - **Tiempo: O(n)** — dos pasadas lineales.
 - **Espacio: O(1)** extra — solo dos variables `prefix` y `suffix`.
-- **Veredicto:** ✅ **la óptima**. Cumple las dos restricciones (O(n) tiempo, O(1) espacio extra). Es la respuesta esperada en entrevistas tecnicas.
+- **Veredicto:** [OK] **la óptima**. Cumple las dos restricciones (O(n) tiempo, O(1) espacio extra). Es la respuesta esperada en entrevistas tecnicas.
 
 ---
 
@@ -575,7 +575,7 @@ Donde `combinar` puede ser `+`, `*`, `max`, `min`, etc., y `identidad` es el ele
 | **84. Largest Rectangle in Histogram** | Prefix-stack (siguiente menor a izquierda/derecha) |
 | **152. Maximum Product Subarray** | Producto **continuo** con tracking de min/max |
 
-> 🎯 **Patrón maestro**: prefix/suffix arrays + sumas acumulativas son la base de **decenas** de problemas Medium y Hard. Los tres patrones de prefix más útiles: prefix sum, prefix max/min, prefix product. Cuando los interiorices, muchos problemas se vuelven mecánicos.
+> **Patrón maestro**: prefix/suffix arrays + sumas acumulativas son la base de **decenas** de problemas Medium y Hard. Los tres patrones de prefix más útiles: prefix sum, prefix max/min, prefix product. Cuando los interiorices, muchos problemas se vuelven mecánicos.
 
 ---
 
@@ -628,10 +628,10 @@ for i in range(n):
 
 | Solución | Tiempo | Espacio extra | Cumple restricciones | Veredicto |
 |---|---|---|---|---|
-| 1. Fuerza bruta | O(n²) | O(1) | ❌ TLE | No |
-| 2. Con división | O(n) | O(1) | ❌ Prohibida | Solo discusión |
-| 3. **Prefix + Suffix arrays** | O(n) | O(n) | ✅ tiempo, ❌ espacio | ✅ Aceptable |
-| 4. **Prefix + Suffix in-place** | **O(n)** | **O(1)** | ✅✅ | ✅ La óptima |
+| 1. Fuerza bruta | O(n²) | O(1) | [NO] TLE | No |
+| 2. Con división | O(n) | O(1) | [NO] Prohibida | Solo discusión |
+| 3. **Prefix + Suffix arrays** | O(n) | O(n) | [OK] tiempo, [NO] espacio | [OK] Aceptable |
+| 4. **Prefix + Suffix in-place** | **O(n)** | **O(1)** | [OK][OK] | [OK] La óptima |
 
 ---
 

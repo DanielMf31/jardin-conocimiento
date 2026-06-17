@@ -111,7 +111,7 @@ Nouveau y el driver propietario/open no pueden coexistir. El blacklist garantiza
 
 En modo **on-demand**, la Intel renderiza el escritorio y Wayland compositor; la NVIDIA está en D3cold (apagada) hasta que una aplicación la solicita explícitamente. Es el modo correcto para Hyprland en portátil.
 
-> **Tu sistema:** `prime-select query` → `on-demand`. ✓
+> **Tu sistema:** `prime-select query` → `on-demand`.
 
 ---
 

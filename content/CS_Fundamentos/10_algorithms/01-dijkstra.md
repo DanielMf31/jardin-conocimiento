@@ -109,7 +109,7 @@ Visualmente:
 
 | Nodo | dist | procesado | heap |
 |---|---|---|---|
-| A | 0 | ✓ | [(1, D), (4, B)] |
+| A | 0 | | [(1, D), (4, B)] |
 | B | 4 | no | |
 | C | ∞ | no | |
 | D | 1 | no | |
@@ -119,20 +119,20 @@ Visualmente:
 
 | Nodo | dist | procesado | heap |
 |---|---|---|---|
-| A | 0 | ✓ | [(4, B), (4, C)] |
+| A | 0 | | [(4, B), (4, C)] |
 | B | 4 | no | |
 | C | 4 | no | |
-| D | 1 | ✓ | |
+| D | 1 | | |
 
 **Paso 3**: sacar (4, B). Vecinos:
 - B→C: nuevo dist = 4+2 = 6, pero dist[C] ya es 4. **No mejora**, no actualizar.
 
 | Nodo | dist | procesado | heap |
 |---|---|---|---|
-| A | 0 | ✓ | [(4, C)] |
-| B | 4 | ✓ | |
+| A | 0 | | [(4, C)] |
+| B | 4 | | |
 | C | 4 | no | |
-| D | 1 | ✓ | |
+| D | 1 | | |
 
 **Paso 4**: sacar (4, C). C no tiene vecinos.
 

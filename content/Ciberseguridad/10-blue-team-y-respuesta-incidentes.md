@@ -8,7 +8,7 @@ source: claude-code
 aliases: [blue team, respuesta incidentes, IR, SOC]
 ---
 
-# 🛡️ Blue Team y Respuesta a Incidentes
+# Blue Team y Respuesta a Incidentes
 
 ## ¿Por qué existe esto?
 
@@ -20,7 +20,7 @@ Desde la óptica de un desarrollador/ingeniero: entender Blue Team te hace escri
 
 ---
 
-## 🗺️ Panorama: los tres colores
+## Panorama: los tres colores
 
 | Equipo | Rol | Mentalidad |
 |---|---|---|
@@ -32,7 +32,7 @@ El **Purple Team** no es un equipo separado sino un modo de operar: el Red Team 
 
 ---
 
-## 🏢 SOC — Security Operations Center
+## SOC — Security Operations Center
 
 El SOC (Centro de Operaciones de Seguridad) es la "sala de control" defensiva. Puede ser interno, externalizado (MSSP — Managed Security Service Provider) o híbrido.
 
@@ -53,7 +53,7 @@ Sin un SOC, los logs se generan y nadie los lee — una situación muy común en
 
 ---
 
-## 📊 SIEM — Centralizar y Correlacionar Logs
+## SIEM — Centralizar y Correlacionar Logs
 
 **SIEM** (Security Information and Event Management) es la tecnología central del Blue Team. Hace dos cosas:
 
@@ -101,7 +101,7 @@ Esas reglas son el núcleo del trabajo de detección. Frameworks como **SIGMA** 
 
 ---
 
-## 🔍 Logging y Detección — Qué registrar y por qué
+## Logging y Detección — Qué registrar y por qué
 
 ### El problema del logging malo
 
@@ -139,7 +139,7 @@ Un log que solo dice `"Error: login failed"` no sirve para investigar nada.
 
 ---
 
-## 🚨 Ciclo de Respuesta a Incidentes (IR)
+## Ciclo de Respuesta a Incidentes (IR)
 
 El estándar de la industria (NIST SP 800-61) define 6 fases. Memorizarlas como un ciclo, no como pasos lineales:
 
@@ -221,7 +221,7 @@ La fase que más se salta y la que más valor aporta a largo plazo.
 
 ---
 
-## 🔬 Forense Digital Básico
+## Forense Digital Básico
 
 La forense digital es la disciplina de **recolectar y analizar evidencias digitales** preservando su integridad para que sean válidas (en un proceso legal o en una investigación interna).
 
@@ -261,7 +261,7 @@ Si la evidencia va a usarse legalmente, cada transferencia/acceso debe documenta
 
 ---
 
-## 🦠 Defensa contra Ransomware
+## Defensa contra Ransomware
 
 El **ransomware** cifra tus archivos y pide rescate para devolver la clave. Es una de las amenazas más destructivas para organizaciones y particulares.
 
@@ -305,7 +305,7 @@ La regla **3-2-1 de backups**:
 
 ---
 
-## 🔴🔵🟣 Red Team vs Blue Team vs Purple Team (en detalle)
+## (dificil) Red Team vs Blue Team vs Purple Team (en detalle)
 
 | Aspecto | Red Team | Blue Team | Purple Team |
 |---|---|---|---|
@@ -330,7 +330,7 @@ El **Red Team** en un contexto profesional no es "hackear libremente" — opera 
 
 ---
 
-## Aplícalo / Practica 🧪
+## Aplícalo / Practica
 
 **CTFs y laboratorios:**
 - **Blue Team Labs Online** (blueteamlabs.online): laboratorios específicos de análisis de logs, forense e IR

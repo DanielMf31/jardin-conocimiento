@@ -1,8 +1,8 @@
 # 01 — Load balancing
 
-> 📚 **Doc 1 del cluster System Design Patterns**. El patrón #1 que aparece en TODA system design entrevistas tecnicas. Sin load balancer no hay sistema escalable.
-> 🔥 **Frecuencia interview**: aparece SIEMPRE. Si te preguntan "diseña Twitter" o "diseña X", el LB es de las primeras decisiones.
-> ⏱️ **Tiempo de lectura estimado**: 40-55 min.
+> **Doc 1 del cluster System Design Patterns**. El patrón #1 que aparece en TODA system design entrevistas tecnicas. Sin load balancer no hay sistema escalable.
+> **Frecuencia interview**: aparece SIEMPRE. Si te preguntan "diseña Twitter" o "diseña X", el LB es de las primeras decisiones.
+> **Tiempo de lectura estimado**: 40-55 min.
 
 ---
 
@@ -18,10 +18,10 @@
 
 **Efectos**:
 
-- ✅ **Escalado horizontal**: añade más backends y el LB los usa.
-- ✅ **Alta disponibilidad**: si 1 backend cae, el LB enruta a otros.
-- ✅ **Mantenimiento sin downtime**: drenas un backend para actualizarlo.
-- ✅ **Distribución geográfica** (en LBs avanzados).
+- [OK] **Escalado horizontal**: añade más backends y el LB los usa.
+- [OK] **Alta disponibilidad**: si 1 backend cae, el LB enruta a otros.
+- [OK] **Mantenimiento sin downtime**: drenas un backend para actualizarlo.
+- [OK] **Distribución geográfica** (en LBs avanzados).
 
 ---
 

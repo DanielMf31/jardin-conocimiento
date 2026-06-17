@@ -14,7 +14,7 @@ neetcode_order: 12
 
 # LeetCode 416 — Partition Equal Subset Sum
 
-> 🎯 **Duodécimo y último problema de DP 1-D**. **0-1 knapsack** clásico: ¿podemos llenar exactamente `sum/2` con los elementos? Cada elemento se usa **a lo sumo una vez**.
+> **Duodécimo y último problema de DP 1-D**. **0-1 knapsack** clásico: ¿podemos llenar exactamente `sum/2` con los elementos? Cada elemento se usa **a lo sumo una vez**.
 
 ## Enunciado
 
@@ -47,7 +47,7 @@ class Solution:
 
 ---
 
-## Cierre DP 1-D 🎉
+## Cierre DP 1-D
 
 | # | Problema | Idea distintiva |
 |---|---|---|
@@ -75,4 +75,4 @@ class Solution:
 - [ ] Leído
 - [ ] Implementado desde cero
 - [ ] Resuelto en LeetCode
-- [ ] **Patrón DP 1-D cerrado** ✅
+- [ ] **Patrón DP 1-D cerrado** [OK]

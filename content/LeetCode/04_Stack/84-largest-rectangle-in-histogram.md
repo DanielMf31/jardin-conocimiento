@@ -14,8 +14,8 @@ neetcode_order: 7
 
 # LeetCode 84 — Largest Rectangle in Histogram
 
-> 🎯 **Séptimo y último problema del patrón Stack — el Hard del patrón**. Es **el problema más difícil de Stack** y **uno de los más importantes** porque la técnica de "stack monotónico para áreas" se generaliza a problemas 2D (LC 85 Maximal Rectangle). Aprendelo bien y desbloqueas una familia entera de problemas.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Séptimo y último problema del patrón Stack — el Hard del patrón**. Es **el problema más difícil de Stack** y **uno de los más importantes** porque la técnica de "stack monotónico para áreas" se generaliza a problemas 2D (LC 85 Maximal Rectangle). Aprendelo bien y desbloqueas una familia entera de problemas.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -71,7 +71,7 @@ class Solution:
 | Edge case 1 | Una sola barra → área = `heights[0]` |
 | Edge case 2 | Todas iguales → área = `n * heights[0]` |
 
-> 💡 **El insight clave**: para cada barra `i`, el rectángulo más alto que la usa como altura mínima se extiende desde la primera barra **estrictamente menor a su izquierda** hasta la primera barra **estrictamente menor a su derecha** (ambas exclusivas). Si encontramos esos dos índices para cada `i`, el área de cada candidato se calcula en O(1).
+> **El insight clave**: para cada barra `i`, el rectángulo más alto que la usa como altura mínima se extiende desde la primera barra **estrictamente menor a su izquierda** hasta la primera barra **estrictamente menor a su derecha** (ambas exclusivas). Si encontramos esos dos índices para cada `i`, el área de cada candidato se calcula en O(1).
 
 ---
 
@@ -95,7 +95,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n²)** — TLE con n = 10^5.
 - **Espacio: O(1)**.
-- **Veredicto:** ❌ TLE.
+- **Veredicto:** [NO] TLE.
 
 ---
 
@@ -124,7 +124,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n²)** peor caso (array todo iguales).
 - **Espacio: O(1)**.
-- **Veredicto:** ❌ TLE pero más cerca conceptualmente de la solución óptima.
+- **Veredicto:** [NO] TLE pero más cerca conceptualmente de la solución óptima.
 
 ---
 
@@ -209,13 +209,13 @@ pop 5: width = 6 - 4 - 1 = 1, area = 3 * 1 = 3, best=10
 pop 4: width = 6 - 1 - 1 = 4, area = 2 * 4 = 8, best=10
 pop 1: width = 6 (stack vacío), area = 1 * 6 = 6, best=10
 
-Return 10 ✅
+Return 10 [OK]
 ```
 
 **Análisis:**
 - **Tiempo: O(n)** — análisis amortizado: cada índice entra y sale del stack a lo sumo una vez.
 - **Espacio: O(n)**.
-- **Veredicto:** ✅ **la canónica**. La que demuestra dominio del patrón.
+- **Veredicto:** [OK] **la canónica**. La que demuestra dominio del patrón.
 
 ---
 
@@ -243,7 +243,7 @@ class Solution:
 
 **Análisis:** mismo O(n).
 
-**Veredicto:** ✅ más limpia. **Trick de "sentinel"** — añadir un valor que fuerza el cierre. Útil en muchos problemas de stack.
+**Veredicto:** [OK] más limpia. **Trick de "sentinel"** — añadir un valor que fuerza el cierre. Útil en muchos problemas de stack.
 
 ---
 
@@ -284,7 +284,7 @@ def stack_monotonica_areas(arr):
 | **42. Trapping Rain Water** | "Inverso": agua atrapada (stack monotónica decreciente) |
 | **901. Online Stock Span** | Stack monotónico en streaming |
 
-> 🎯 **LC 85 (Maximal Rectangle)** se resuelve aplicando LC 84 a cada fila tratada como histograma. Es el "siguiente nivel" de este problema.
+> **LC 85 (Maximal Rectangle)** se resuelve aplicando LC 84 a cada fila tratada como histograma. Es el "siguiente nivel" de este problema.
 
 ---
 
@@ -324,10 +324,10 @@ Si el stack queda vacío después del pop, no hay límite izquierdo → `width =
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Fuerza bruta doble bucle | O(n²) | O(1) | ❌ TLE |
-| 2. Expandir desde cada barra | O(n²) | O(1) | ❌ TLE peor caso |
-| 3. **Stack monotónico clásico** | **O(n)** | O(n) | ✅ La canónica |
-| 4. **Stack monotónico con sentinel** | **O(n)** | O(n) | ✅ Más limpia |
+| 1. Fuerza bruta doble bucle | O(n²) | O(1) | [NO] TLE |
+| 2. Expandir desde cada barra | O(n²) | O(1) | [NO] TLE peor caso |
+| 3. **Stack monotónico clásico** | **O(n)** | O(n) | [OK] La canónica |
+| 4. **Stack monotónico con sentinel** | **O(n)** | O(n) | [OK] Más limpia |
 
 ---
 
@@ -354,7 +354,7 @@ Si el stack queda vacío después del pop, no hay límite izquierdo → `width =
 
 ---
 
-## Cierre del patrón Stack 🎉
+## Cierre del patrón Stack
 
 Has llegado al **último problema del cuarto patrón del NeetCode 150**. Resumen de los **7 problemas**:
 
@@ -390,4 +390,4 @@ Has llegado al **último problema del cuarto patrón del NeetCode 150**. Resumen
 - [ ] Justificada la fórmula de width
 - [ ] Trace mental con array decreciente y creciente
 - [ ] Resuelto en LeetCode con éxito
-- [ ] **Patrón Stack cerrado** ✅
+- [ ] **Patrón Stack cerrado** [OK]

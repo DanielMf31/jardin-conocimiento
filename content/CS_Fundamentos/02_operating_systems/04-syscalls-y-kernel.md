@@ -1,8 +1,8 @@
 # 04 — Syscalls y kernel
 
-> 📚 **Doc 4 del cluster Operating Systems**. La frontera entre tu código y el SO. Cada vez que abres un archivo, lees un socket o creas un proceso, atraviesas esta frontera.
-> 🔥 **Frecuencia interview**: pregunta clásica "¿qué pasa cuando llamas read()?", debugging con strace.
-> ⏱️ **Tiempo de lectura estimado**: 35-50 min.
+> **Doc 4 del cluster Operating Systems**. La frontera entre tu código y el SO. Cada vez que abres un archivo, lees un socket o creas un proceso, atraviesas esta frontera.
+> **Frecuencia interview**: pregunta clásica "¿qué pasa cuando llamas read()?", debugging con strace.
+> **Tiempo de lectura estimado**: 35-50 min.
 
 ---
 

@@ -14,7 +14,7 @@ neetcode_order: 8
 
 # LeetCode 678 — Valid Parenthesis String
 
-> 🎯 **Octavo y último problema de Greedy**. Como [[20-valid-parentheses]] pero con **wildcards `'*'`** (puede ser `(`, `)` o vacío). Greedy: trackear **rango** de posibles open counts.
+> **Octavo y último problema de Greedy**. Como [[20-valid-parentheses]] pero con **wildcards `'*'`** (puede ser `(`, `)` o vacío). Greedy: trackear **rango** de posibles open counts.
 
 ## Enunciado
 
@@ -49,7 +49,7 @@ Como `*` puede ser cualquiera, mantenemos el **rango** `[low, high]` de "open co
 
 ---
 
-## Cierre Greedy 🎉
+## Cierre Greedy
 
 | # | Problema | Idea distintiva |
 |---|---|---|
@@ -73,4 +73,4 @@ Como `*` puede ser cualquiera, mantenemos el **rango** `[low, high]` de "open co
 - [ ] Leído
 - [ ] Implementado desde cero
 - [ ] Resuelto en LeetCode
-- [ ] **Patrón Greedy cerrado** ✅
+- [ ] **Patrón Greedy cerrado** [OK]

@@ -8,7 +8,7 @@ source: claude-code
 aliases: [Product Management, Priorización de Backlog, MVP]
 ---
 
-# 🎯 Producto y Priorización
+# Producto y Priorización
 
 ## ¿Por qué existe el product management?
 
@@ -18,7 +18,7 @@ En hardware/técnico tienes una disciplina análoga: la ingeniería de requisito
 
 ---
 
-## 🗺️ Panorama: dónde encaja esto
+## Panorama: dónde encaja esto
 
 ```
 ESTRATEGIA DE NEGOCIO
@@ -36,7 +36,7 @@ El product management vive entre el negocio (o el usuario) y el equipo técnico.
 
 ---
 
-## 🧪 MVP — Producto Mínimo Viable
+## MVP — Producto Mínimo Viable
 
 ### El problema que resuelve
 
@@ -69,7 +69,7 @@ El objetivo es mover el punto de aprendizaje lo más a la izquierda posible.
 
 ---
 
-## 🔍 Discovery vs Delivery
+## Discovery vs Delivery
 
 Dos modos de trabajo radicalmente distintos que deben coexistir:
 
@@ -87,7 +87,7 @@ En proyectos personales/pequeños, tú haces ambos roles: dedica tiempo explíci
 
 ---
 
-## ⚖️ Técnicas de Priorización
+## Técnicas de Priorización
 
 El backlog siempre tiene más ítems de los que puedes construir. Priorizar es decidir explícitamente qué *no* harás ahora. Aquí las técnicas más usadas:
 
@@ -138,7 +138,7 @@ La más rápida de aplicar. Dibuja un cuadrante 2×2:
 ```
 Valor
   ▲
-  │  Quick Wins ★  │  Proyectos grandes
+  │  Quick Wins   │  Proyectos grandes
   │  (hacer ya)    │  (planificar)
   ├────────────────┼────────────────────
   │  Fill-ins      │  Tareas ingrato
@@ -175,7 +175,7 @@ Categoriza features según cómo afectan la **satisfacción del usuario** en fun
 
 ---
 
-## 🗓️ Roadmaps de Producto
+## Roadmaps de Producto
 
 Un roadmap es la **comunicación visual de la estrategia de producto en el tiempo**. No es un Gantt de tareas técnicas — es una narrativa de por qué se construye qué y cuándo.
 
@@ -196,7 +196,7 @@ Un roadmap es la **comunicación visual de la estrategia de producto en el tiemp
 
 ---
 
-## 👤 El Rol del Product Owner
+## El Rol del Product Owner
 
 En Scrum (ver [[03-scrum]]), el **Product Owner (PO)** es la persona responsable de maximizar el valor del producto. Sus responsabilidades concretas:
 
@@ -212,7 +212,7 @@ En Scrum (ver [[03-scrum]]), el **Product Owner (PO)** es la persona responsable
 
 ---
 
-## 📊 OKRs de Producto
+## OKRs de Producto
 
 **OKR** = Objectives and Key Results. Marco para definir metas ambiciosas y medir su consecución.
 
@@ -239,7 +239,7 @@ Objective: "Hacer que los usuarios recurrentes confíen en la app para su dieta 
 
 ---
 
-## 🚀 Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 ### app web (`app web`)
 

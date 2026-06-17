@@ -1,8 +1,8 @@
 # 03 — Isolation levels
 
-> 📚 **Doc 3 del cluster Database Internals**. La I de ACID en profundidad. Probablemente el tema más mal entendido en bases de datos. Si lo dominas, ya estás por encima del 80% de developers.
-> 🔥 **Frecuencia interview**: aparece en backend interviews senior. "Diferencia READ COMMITTED vs REPEATABLE READ", "qué es phantom read".
-> ⏱️ **Tiempo de lectura estimado**: 45-60 min.
+> **Doc 3 del cluster Database Internals**. La I de ACID en profundidad. Probablemente el tema más mal entendido en bases de datos. Si lo dominas, ya estás por encima del 80% de developers.
+> **Frecuencia interview**: aparece en backend interviews senior. "Diferencia READ COMMITTED vs REPEATABLE READ", "qué es phantom read".
+> **Tiempo de lectura estimado**: 45-60 min.
 
 ---
 
@@ -69,10 +69,10 @@ El standard SQL define 4 niveles, ordenados de menos a más estricto. Cada nivel
 
 | Nivel | Dirty read | Non-repeatable read | Phantom read | Write skew |
 |---|---|---|---|---|
-| **READ UNCOMMITTED** | ❌ posible | ❌ posible | ❌ posible | ❌ posible |
-| **READ COMMITTED** | ✅ previene | ❌ posible | ❌ posible | ❌ posible |
-| **REPEATABLE READ** | ✅ previene | ✅ previene | ❌ posible (en SQL standard) | ❌ posible |
-| **SERIALIZABLE** | ✅ previene | ✅ previene | ✅ previene | ✅ previene |
+| **READ UNCOMMITTED** | [NO] posible | [NO] posible | [NO] posible | [NO] posible |
+| **READ COMMITTED** | [OK] previene | [NO] posible | [NO] posible | [NO] posible |
+| **REPEATABLE READ** | [OK] previene | [OK] previene | [NO] posible (en SQL standard) | [NO] posible |
+| **SERIALIZABLE** | [OK] previene | [OK] previene | [OK] previene | [OK] previene |
 
 ### READ UNCOMMITTED — casi nadie lo usa
 

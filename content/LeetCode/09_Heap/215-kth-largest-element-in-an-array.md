@@ -14,13 +14,13 @@ neetcode_order: 4
 
 # LeetCode 215 — Kth Largest Element in an Array
 
-> 🎯 **Cuarto problema del patrón Heap**. Encontrar **solo el k-ésimo** (no top-K). Tres opciones: sort O(n log n), heap O(n log k), quickselect O(n) promedio.
+> **Cuarto problema del patrón Heap**. Encontrar **solo el k-ésimo** (no top-K). Tres opciones: sort O(n log n), heap O(n log k), quickselect O(n) promedio.
 
 ## Enunciado
 
 Devuelve el **k-ésimo elemento más grande** del array.
 
-> ⚠️ "K-ésimo más grande" 1-indexed: en `[3,2,1,5,6,4]`, k=2 → `5` (5 es el 2º más grande).
+> "K-ésimo más grande" 1-indexed: en `[3,2,1,5,6,4]`, k=2 → `5` (5 es el 2º más grande).
 
 ---
 

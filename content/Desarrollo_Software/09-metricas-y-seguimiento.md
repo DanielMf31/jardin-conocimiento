@@ -8,7 +8,7 @@ source: claude-code
 aliases: [metricas agile, DORA, velocity]
 ---
 
-# 📊 Métricas y seguimiento
+# Métricas y seguimiento
 
 ## ¿Por qué existen las métricas en software?
 
@@ -212,7 +212,7 @@ Objetivo: Hacer que nuestros usuarios confíen en la plataforma de producto.
 
 ---
 
-## ⚠️ Anti-patrones clásicos
+## Anti-patrones clásicos
 
 ### Comparar velocity entre equipos
 

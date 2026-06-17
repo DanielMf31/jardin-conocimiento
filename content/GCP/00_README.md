@@ -8,13 +8,13 @@ source: claude-code
 aliases: [README GCP]
 ---
 
-# ☁️ Clúster: GCP (Google Cloud)
+# Clúster: GCP (Google Cloud)
 
 Fundamentos + IAM + cómputo + redes + almacenamiento + BBDD + **datos (BigQuery)** +
 contenedores/serverless + DevOps/IaC + **IA (Vertex)** + costes + certificaciones.
 
 ## Punto de entrada
-👉 [[MOC_GCP]] — índice + roadmap.
+ [[MOC_GCP]] — índice + roadmap.
 
 ## Cómo recorrerlo
 1. **Base**: [[01-fundamentos-cloud-y-gcp]] → [[02-iam-y-seguridad]] → [[03-computo]] → [[04-redes]]/[[05-almacenamiento]].

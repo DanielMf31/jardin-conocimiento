@@ -14,7 +14,7 @@ neetcode_order: 5
 
 # LeetCode 130 — Surrounded Regions
 
-> 🎯 **Quinto problema del patrón Graphs**. Mismo truco de "DFS desde los bordes" que [[417-pacific-atlantic-water-flow]]. Aquí se aplica para identificar las `'O'` **NO rodeadas** y dejarlas en paz, capturando el resto.
+> **Quinto problema del patrón Graphs**. Mismo truco de "DFS desde los bordes" que [[417-pacific-atlantic-water-flow]]. Aquí se aplica para identificar las `'O'` **NO rodeadas** y dejarlas en paz, capturando el resto.
 
 ## Enunciado
 

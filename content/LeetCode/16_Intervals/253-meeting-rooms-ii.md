@@ -14,7 +14,7 @@ neetcode_order: 5
 
 # LeetCode 253 — Meeting Rooms II
 
-> 🎯 **Quinto problema de Intervals**. ¿Cuántas salas mínimas necesarias? **Min-heap por end times**.
+> **Quinto problema de Intervals**. ¿Cuántas salas mínimas necesarias? **Min-heap por end times**.
 
 ## Enunciado
 

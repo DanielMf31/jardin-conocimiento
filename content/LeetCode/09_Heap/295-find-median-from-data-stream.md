@@ -14,7 +14,7 @@ neetcode_order: 7
 
 # LeetCode 295 — Find Median from Data Stream
 
-> 🎯 **Séptimo y último problema del patrón Heap — el Hard del patrón**. Es **el problema más bonito de heaps**: dos heaps (un max-heap para mitad inferior + un min-heap para mitad superior) mantienen la mediana en O(1) y la inserción en O(log n).
+> **Séptimo y último problema del patrón Heap — el Hard del patrón**. Es **el problema más bonito de heaps**: dos heaps (un max-heap para mitad inferior + un min-heap para mitad superior) mantienen la mediana en O(1) y la inserción en O(log n).
 
 ## Enunciado
 
@@ -22,7 +22,7 @@ Diseña una estructura para un stream de números que mantiene la **mediana** en
 - `addNum(num)` — añade número al stream.
 - `findMedian()` — devuelve la mediana actual.
 
-> 💡 Si total impar: la mediana es el del medio. Si par: promedio de los dos del medio.
+> Si total impar: la mediana es el del medio. Si par: promedio de los dos del medio.
 
 ---
 
@@ -78,7 +78,7 @@ Con esos 3 pasos siempre tienes la estructura correcta.
 
 ---
 
-## Cierre del patrón Heap 🎉
+## Cierre del patrón Heap
 
 | # | Problema | Idea distintiva |
 |---|---|---|
@@ -104,4 +104,4 @@ Con esos 3 pasos siempre tienes la estructura correcta.
 - [ ] Leído
 - [ ] Implementado desde cero
 - [ ] Resuelto en LeetCode
-- [ ] **Patrón Heap cerrado** ✅
+- [ ] **Patrón Heap cerrado** [OK]

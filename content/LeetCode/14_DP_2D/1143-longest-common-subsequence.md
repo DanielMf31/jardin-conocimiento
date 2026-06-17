@@ -14,7 +14,7 @@ neetcode_order: 2
 
 # LeetCode 1143 — Longest Common Subsequence
 
-> 🎯 **Segundo problema de DP 2-D — el LCS clásico**. La base de Edit Distance, Diff algorithms, bioinformática.
+> **Segundo problema de DP 2-D — el LCS clásico**. La base de Edit Distance, Diff algorithms, bioinformática.
 
 ## Enunciado
 

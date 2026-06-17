@@ -14,7 +14,7 @@ neetcode_order: 4
 
 # LeetCode 110 — Balanced Binary Tree
 
-> 🎯 **Cuarto problema del patrón Trees**. Truco clave: **devolver dos cosas a la vez** desde la recursión (altura + es_balanceado), o usar un valor "centinela" como -1.
+> **Cuarto problema del patrón Trees**. Truco clave: **devolver dos cosas a la vez** desde la recursión (altura + es_balanceado), o usar un valor "centinela" como -1.
 
 ## Enunciado
 
@@ -57,7 +57,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)** — single pass, las "early returns" lo mantienen lineal.
 - **Espacio: O(h)**.
-- **Veredicto:** ✅ la canónica.
+- **Veredicto:** [OK] la canónica.
 
 ### Truco "valor centinela"
 

@@ -14,7 +14,7 @@ neetcode_order: 4
 
 # LeetCode 143 — Reorder List
 
-> 🎯 **Cuarto problema del patrón Linked List**. **Combina 3 sub-rutinas** ya conocidas en una sola solución: encontrar la mitad (slow/fast de [[141-linked-list-cycle]]), invertir lista ([[206-reverse-linked-list]]) y mergear alternando. Aprenderlo ilustra cómo problemas Medium se resuelven **componiendo** patrones simples.
+> **Cuarto problema del patrón Linked List**. **Combina 3 sub-rutinas** ya conocidas en una sola solución: encontrar la mitad (slow/fast de [[141-linked-list-cycle]]), invertir lista ([[206-reverse-linked-list]]) y mergear alternando. Aprenderlo ilustra cómo problemas Medium se resuelven **componiendo** patrones simples.
 
 ## Enunciado
 
@@ -95,13 +95,13 @@ Paso 2: invertir 3→4 → 4→3
         second half (invertida): 4 → 3
 
 Paso 3: merge alternando
-        1 → 4 → 2 → 3 ✅
+        1 → 4 → 2 → 3 [OK]
 ```
 
 **Análisis:**
 - **Tiempo: O(n)** — tres pasadas lineales.
 - **Espacio: O(1)** — todo in-place.
-- **Veredicto:** ✅ la canónica.
+- **Veredicto:** [OK] la canónica.
 
 ---
 

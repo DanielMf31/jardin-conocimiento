@@ -14,7 +14,7 @@ neetcode_order: 4
 
 # LeetCode 134 — Gas Station
 
-> 🎯 **Cuarto problema de Greedy**. Estaciones en círculo. Encontrar punto de inicio para completar el circuito. Truco greedy: si te quedas sin gasolina en `i`, **el inicio no puede estar en ningún punto entre el inicio actual e i**.
+> **Cuarto problema de Greedy**. Estaciones en círculo. Encontrar punto de inicio para completar el circuito. Truco greedy: si te quedas sin gasolina en `i`, **el inicio no puede estar en ningún punto entre el inicio actual e i**.
 
 ## Enunciado
 

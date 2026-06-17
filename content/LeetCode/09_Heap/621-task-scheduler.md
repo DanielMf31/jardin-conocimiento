@@ -14,7 +14,7 @@ neetcode_order: 5
 
 # LeetCode 621 — Task Scheduler
 
-> 🎯 **Quinto problema del patrón Heap**. Combina **max-heap + queue de cooldown**. Es un problema de **scheduling clásico** con cooldown entre tareas iguales.
+> **Quinto problema del patrón Heap**. Combina **max-heap + queue de cooldown**. Es un problema de **scheduling clásico** con cooldown entre tareas iguales.
 
 ## Enunciado
 

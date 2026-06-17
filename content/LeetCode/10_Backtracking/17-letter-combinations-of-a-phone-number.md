@@ -14,7 +14,7 @@ neetcode_order: 8
 
 # LeetCode 17 — Letter Combinations of a Phone Number
 
-> 🎯 **Octavo problema del patrón Backtracking**. **Producto cartesiano** de letras de cada dígito. Backtracking simple (o `itertools.product`).
+> **Octavo problema del patrón Backtracking**. **Producto cartesiano** de letras de cada dígito. Backtracking simple (o `itertools.product`).
 
 ## Enunciado
 

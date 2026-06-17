@@ -14,8 +14,8 @@ neetcode_order: 1
 
 # LeetCode 121 — Best Time to Buy and Sell Stock
 
-> 🎯 **Primer problema del patrón Sliding Window**, aunque la solución óptima es realmente **one-pass tracking** (track del mínimo histórico). Es la introducción más suave al pensamiento de "ventana": una ventana que solo crece, donde mantienes el "mejor punto de partida" visto.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Primer problema del patrón Sliding Window**, aunque la solución óptima es realmente **one-pass tracking** (track del mínimo histórico). Es la introducción más suave al pensamiento de "ventana": una ventana que solo crece, donde mantienes el "mejor punto de partida" visto.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -64,7 +64,7 @@ class Solution:
 | Edge case 1 | `prices = [5]` → 0 (no se puede vender) |
 | Edge case 2 | Precios decrecientes → 0 |
 
-> 💡 **Reformulación clave**: para cada día `i`, el mejor beneficio terminando en `i` es `prices[i] - min(prices[0..i-1])`. El resultado es el max de eso sobre todos los días.
+> **Reformulación clave**: para cada día `i`, el mejor beneficio terminando en `i` es `prices[i] - min(prices[0..i-1])`. El resultado es el max de eso sobre todos los días.
 
 ---
 
@@ -86,7 +86,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n²)** — TLE con n = 10^5.
 - **Espacio: O(1)**.
-- **Veredicto:** ❌ rechazada por TLE.
+- **Veredicto:** [NO] rechazada por TLE.
 
 ---
 
@@ -116,12 +116,12 @@ class Solution:
 | 4 | 6 | 1 | **5** | **5** |
 | 5 | 4 | 1 | 3 | 5 |
 
-Resultado: `5` ✅
+Resultado: `5` [OK]
 
 **Análisis:**
 - **Tiempo: O(n)** — un solo recorrido.
 - **Espacio: O(1)** — dos variables.
-- **Veredicto:** ✅ **la óptima**. La respuesta esperada en entrevista.
+- **Veredicto:** [OK] **la óptima**. La respuesta esperada en entrevista.
 
 ### Aclaración a una duda común — "¿qué pasa si el min llega al final sin precios mayores después?"
 
@@ -134,8 +134,8 @@ Trace con `prices = [3, 100_000_000, 1, 1, 1]`:
 | Iter | price | min_price (después) | profit hoy | best (después) |
 |---|---|---|---|---|
 | 1 | 3 | 3 | 0 | 0 |
-| 2 | **100M** | 3 | **99_999_997** | **99_999_997** ⭐ capturado |
-| 3 | 1 | 1 | 0 | 99_999_997 ✅ no se pierde |
+| 2 | **100M** | 3 | **99_999_997** | **99_999_997** capturado |
+| 3 | 1 | 1 | 0 | 99_999_997 [OK] no se pierde |
 | 4 | 1 | 1 | 0 | 99_999_997 |
 | 5 | 1 | 1 | 0 | 99_999_997 |
 
@@ -194,16 +194,16 @@ class Solution:
 | Iter | price | min_price | min_idx | profit | best | buy_day | sell_day |
 |---|---|---|---|---|---|---|---|
 | 0 | 3 | 3 | 0 | 0 | 0 | 0 | 0 |
-| 1 | 100M | 3 | 0 | 99_999_997 | **99_999_997** | **0** | **1** ⭐ |
+| 1 | 100M | 3 | 0 | 99_999_997 | **99_999_997** | **0** | **1** |
 | 2 | 1 | 1 | 2 | 0 | 99_999_997 | 0 | 1 |
 | 3 | 1 | 1 | 2 | 0 | 99_999_997 | 0 | 1 |
 | 4 | 1 | 1 | 2 | 0 | 99_999_997 | 0 | 1 |
 
 Devuelve `(99_999_997, 0, 1)` — comprar día 0, vender día 1.
 
-> 💡 **El truco clave**: `min_idx` se actualiza **siempre** (sigue al `min_price`), pero `buy_day` y `sell_day` SOLO se actualizan **cuando hay un nuevo `best`**. Esto separa "día del mínimo actual" (que cambia con cada nuevo mínimo) de "día del mejor par hasta ahora" (que solo cambia cuando aparece un par realmente mejor).
+> **El truco clave**: `min_idx` se actualiza **siempre** (sigue al `min_price`), pero `buy_day` y `sell_day` SOLO se actualizan **cuando hay un nuevo `best`**. Esto separa "día del mínimo actual" (que cambia con cada nuevo mínimo) de "día del mejor par hasta ahora" (que solo cambia cuando aparece un par realmente mejor).
 
-> ⚠️ **Cuidado con el orden de los chequeos**: actualizar `min_price` ANTES de calcular `profit`. Si lo haces al revés, perderías la oportunidad de "comprar y vender el mismo día" (que da 0, lo cual no es un problema aquí, pero conceptualmente importa).
+> **Cuidado con el orden de los chequeos**: actualizar `min_price` ANTES de calcular `profit`. Si lo haces al revés, perderías la oportunidad de "comprar y vender el mismo día" (que da 0, lo cual no es un problema aquí, pero conceptualmente importa).
 
 ---
 
@@ -287,7 +287,7 @@ math.inf
 -math.inf
 ```
 
-> 💡 **Cuándo usarlo**: en cualquier loop donde mantengas un min/max y quieras que la **primera comparación** funcione sin caso especial.
+> **Cuándo usarlo**: en cualquier loop donde mantengas un min/max y quieras que la **primera comparación** funcione sin caso especial.
 
 ### Tracking en una sola pasada vs múltiples
 
@@ -307,8 +307,8 @@ Mismo patrón, distinta cantidad rastreada.
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Fuerza bruta | O(n²) | O(1) | ❌ TLE |
-| 2. **One-pass tracking del min** | **O(n)** | O(1) | ✅ La canónica |
+| 1. Fuerza bruta | O(n²) | O(1) | [NO] TLE |
+| 2. **One-pass tracking del min** | **O(n)** | O(1) | [OK] La canónica |
 | 3. Two pointers explícito | O(n) | O(1) | Funciona, menos limpia que la 2 |
 
 ---
@@ -338,7 +338,7 @@ Mismo patrón, distinta cantidad rastreada.
 
 ## Solución en C++ — contraste con Python
 
-> 📘 Añadido para ver las diferencias de lenguaje. Código compilable en [`121-best-time-to-buy-and-sell-stock.cpp`](121-best-time-to-buy-and-sell-stock.cpp).
+> Añadido para ver las diferencias de lenguaje. Código compilable en [`121-best-time-to-buy-and-sell-stock.cpp`](121-best-time-to-buy-and-sell-stock.cpp).
 
 ```cpp
 class Solution {

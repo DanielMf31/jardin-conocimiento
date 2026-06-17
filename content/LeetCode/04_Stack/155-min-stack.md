@@ -14,8 +14,8 @@ neetcode_order: 2
 
 # LeetCode 155 — Min Stack
 
-> 🎯 **Segundo problema del patrón Stack** — y el primer **problema de diseño** del NeetCode 150 (te piden implementar una clase, no una función). Introduce el truco de "stack auxiliar para mantener un agregado en O(1)" que reaparece en problemas más complejos.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Segundo problema del patrón Stack** — y el primer **problema de diseño** del NeetCode 150 (te piden implementar una clase, no una función). Introduce el truco de "stack auxiliar para mantener un agregado en O(1)" que reaparece en problemas más complejos.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -69,7 +69,7 @@ class MinStack:
 | ¿Hay duplicados? | Sí pueden existir (cuidado al gestionar el min stack) |
 | ¿Valores negativos? | Sí (rango int32) |
 
-> 💡 **El reto**: cuando haces `pop()`, **si el valor que sales era el mínimo**, ¿cuál es el nuevo mínimo? Recorrer el stack para encontrarlo sería O(n). Necesitas mantener historia del mínimo.
+> **El reto**: cuando haces `pop()`, **si el valor que sales era el mínimo**, ¿cuál es el nuevo mínimo? Recorrer el stack para encontrarlo sería O(n). Necesitas mantener historia del mínimo.
 
 ---
 
@@ -122,21 +122,21 @@ push(-3):
   stack = [-2, 0, -3]
   min_stack = [-2, -2, -3]   (min(-3, -2) = -3)
 
-getMin() → min_stack[-1] = -3 ✅
+getMin() → min_stack[-1] = -3 [OK]
 
 pop():
   stack = [-2, 0]
   min_stack = [-2, -2]
 
-top() → stack[-1] = 0 ✅
+top() → stack[-1] = 0 [OK]
 
-getMin() → min_stack[-1] = -2 ✅
+getMin() → min_stack[-1] = -2 [OK]
 ```
 
 **Análisis:**
 - **Tiempo: O(1)** todas las operaciones.
 - **Espacio: O(n)** — dos stacks de tamaño n.
-- **Veredicto:** ✅ **la canónica de entrevista**. Limpia y fácil de explicar.
+- **Veredicto:** [OK] **la canónica de entrevista**. Limpia y fácil de explicar.
 
 ---
 
@@ -163,7 +163,7 @@ class MinStack:
         return self.stack[-1][1]
 ```
 
-**Veredicto:** ✅ funcionalmente equivalente, ligeramente más memoria (overhead de tupla) pero más compacta de código. Es cuestión de gusto.
+**Veredicto:** [OK] funcionalmente equivalente, ligeramente más memoria (overhead de tupla) pero más compacta de código. Es cuestión de gusto.
 
 ---
 
@@ -197,9 +197,9 @@ class MinStack:
 **Análisis:**
 - **Tiempo: O(1)**.
 - **Espacio: O(n)** peor caso, **O(k)** donde k = número de "nuevos mínimos" vistos. En la práctica suele ser mucho menos que n.
-- **Veredicto:** ✅ optimización elegante. **Cuidado con el `<=`**: si solo usas `<`, los duplicados del mínimo desaparecen del min_stack y luego al hacer pop te quedas sin min correcto.
+- **Veredicto:** [OK] optimización elegante. **Cuidado con el `<=`**: si solo usas `<`, los duplicados del mínimo desaparecen del min_stack y luego al hacer pop te quedas sin min correcto.
 
-> ⚠️ **Trampa con `<` vs `<=`**: imagina push(1), push(1). Con `<`: min_stack = [1]. Pop → min_stack = []. ¡Pero el stack principal aún tiene un 1! Con `<=`: min_stack = [1, 1]. Pop → min_stack = [1] correcto.
+> **Trampa con `<` vs `<=`**: imagina push(1), push(1). Con `<`: min_stack = [1]. Pop → min_stack = []. ¡Pero el stack principal aún tiene un 1! Con `<=`: min_stack = [1, 1]. Pop → min_stack = [1] correcto.
 
 ---
 
@@ -252,9 +252,9 @@ class StructConAgregado:
 
 | Solución | Memoria | Claridad | Cuándo usar |
 |---|---|---|---|
-| 1. Dos stacks paralelos | O(n) + O(n) | ⭐⭐⭐⭐ | Por defecto; la más fácil de explicar |
-| 2. Stack de tuplas | O(n) con overhead | ⭐⭐⭐⭐ | Si te gustan datos compactados |
-| 3. Min stack comprimido | O(k) ≤ O(n) | ⭐⭐⭐ | Si te preguntan optimización de espacio |
+| 1. Dos stacks paralelos | O(n) + O(n) | | Por defecto; la más fácil de explicar |
+| 2. Stack de tuplas | O(n) con overhead | | Si te gustan datos compactados |
+| 3. Min stack comprimido | O(k) ≤ O(n) | | Si te preguntan optimización de espacio |
 
 ### Diseño de clase en Python
 
@@ -278,9 +278,9 @@ Igual que en [[20-valid-parentheses]], el chequeo idiomático.
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. **Dos stacks paralelos** | O(1) | O(n) | ✅ La canónica |
-| 2. Stack de tuplas | O(1) | O(n) + overhead | ✅ Compacta |
-| 3. Min stack comprimido | O(1) | O(k) ≤ O(n) | ✅ La óptima en espacio |
+| 1. **Dos stacks paralelos** | O(1) | O(n) | [OK] La canónica |
+| 2. Stack de tuplas | O(1) | O(n) + overhead | [OK] Compacta |
+| 3. Min stack comprimido | O(1) | O(k) ≤ O(n) | [OK] La óptima en espacio |
 
 ---
 

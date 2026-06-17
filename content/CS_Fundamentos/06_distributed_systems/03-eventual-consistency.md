@@ -1,8 +1,8 @@
 # 03 — Eventual consistency
 
-> 📚 **Doc 3 del cluster Distributed Systems**. La alternativa pragmática a strong consistency. Lo que usan Twitter, Facebook, DynamoDB, Cassandra y la mayoría de sistemas a escala web.
-> 🔥 **Frecuencia interview**: aparece cada vez que se discute escalar a millones de usuarios. Saber explicar bien los trade-offs es marca de seniority.
-> ⏱️ **Tiempo de lectura estimado**: 35-50 min.
+> **Doc 3 del cluster Distributed Systems**. La alternativa pragmática a strong consistency. Lo que usan Twitter, Facebook, DynamoDB, Cassandra y la mayoría de sistemas a escala web.
+> **Frecuencia interview**: aparece cada vez que se discute escalar a millones de usuarios. Saber explicar bien los trade-offs es marca de seniority.
+> **Tiempo de lectura estimado**: 35-50 min.
 
 ---
 
@@ -17,12 +17,12 @@ Lo importante son las palabras precisas:
 - **"Convergerán"**: todas las réplicas llegarán al mismo estado. No se especifica qué estado (puede ser uno u otro de los conflictivos).
 
 Comparado con **strong consistency** (linealizable), eventual:
-- ✅ Mucho más rápida (lecturas y escrituras locales).
-- ✅ Más disponible (no necesita coordinar entre réplicas).
-- ✅ Tolera particiones (réplicas siguen sirviendo aunque no se vean).
-- ❌ Lecturas pueden ser stale.
-- ❌ Read-your-writes no garantizado por defecto.
-- ❌ Conflicting writes requieren resolución.
+- [OK] Mucho más rápida (lecturas y escrituras locales).
+- [OK] Más disponible (no necesita coordinar entre réplicas).
+- [OK] Tolera particiones (réplicas siguen sirviendo aunque no se vean).
+- [NO] Lecturas pueden ser stale.
+- [NO] Read-your-writes no garantizado por defecto.
+- [NO] Conflicting writes requieren resolución.
 
 ---
 

@@ -8,7 +8,7 @@ source: claude-code
 aliases: [cripto, cryptography, cifrado]
 ---
 
-# 🔐 Criptografia
+# Criptografia
 
 ## ¿Por que existe? — El problema que resuelve
 
@@ -27,7 +27,7 @@ La criptografia no resuelve TODOS los problemas de seguridad — si el sistema e
 
 ---
 
-## 🔑 Cifrado simetrico — Una sola llave para todo
+## Cifrado simetrico — Una sola llave para todo
 
 **Concepto:** emisor y receptor comparten la misma clave secreta. La misma llave cifra y descifra.
 
@@ -47,7 +47,7 @@ Mensaje claro → [cifrar con clave K] → Ciphertext → [descifrar con clave K
 
 ---
 
-## 🗝️ Cifrado asimetrico — Par de claves publica/privada
+## Cifrado asimetrico — Par de claves publica/privada
 
 **Concepto:** cada parte tiene DOS claves matematicamente vinculadas:
 - **Clave publica:** puedes compartirla con el mundo.
@@ -73,7 +73,7 @@ Alice quiere enviar algo secreto a Bob:
 
 ---
 
-## 🤝 Diffie-Hellman — Como acordar una clave sin compartirla directamente
+## Diffie-Hellman — Como acordar una clave sin compartirla directamente
 
 **El problema clasico:** Alice y Bob quieren usar cifrado simetrico (rapido), pero necesitan acordar una clave. ¿Como lo hacen en un canal inseguro sin que un espía (Eve) se entere?
 
@@ -97,7 +97,7 @@ El "color final" es la **clave de sesion simetrica** que usan para cifrar la com
 
 ---
 
-## #️⃣ Hashing — Huella digital de datos
+## #⃣ Hashing — Huella digital de datos
 
 **Concepto:** una funcion hash toma datos de cualquier tamaño y produce una cadena de longitud fija (digest). Es una **funcion de una sola via**: no se puede revertir.
 
@@ -133,7 +133,7 @@ El "color final" es la **clave de sesion simetrica** que usan para cifrar la com
 
 ---
 
-## ✍️ Firmas digitales — Autenticidad e integridad juntas
+## Firmas digitales — Autenticidad e integridad juntas
 
 **Problema que resuelve:** como sabes que un mensaje fue realmente escrito por Alice y no fue alterado en transito?
 
@@ -146,7 +146,7 @@ Alice firma:
 Bob verifica:
   1. Descifra firma con [clave PUBLICA de Alice] → digest_alice
   2. Calcula hash(mensaje recibido)              → digest_local
-  3. digest_alice == digest_local → ✅ integro y autentico
+  3. digest_alice == digest_local → [OK] integro y autentico
 ```
 
 Si el mensaje fue alterado, los hashes no coinciden. Si alguien mas firmo, la clave publica de Alice no descifra correctamente.
@@ -155,7 +155,7 @@ Si el mensaje fue alterado, los hashes no coinciden. Si alguien mas firmo, la cl
 
 ---
 
-## 🌐 TLS, PKI y Certificados — La cadena de confianza
+## TLS, PKI y Certificados — La cadena de confianza
 
 ### TLS (Transport Layer Security)
 
@@ -202,7 +202,7 @@ Root CA (Autoridad de Certificacion Raiz)
 
 ---
 
-## 🔒 Hashing de contraseñas — El caso especial
+## Hashing de contraseñas — El caso especial
 
 Almacenar contraseñas en texto plano es un error clasico y critico. Si la base de datos es robada, todas las contraseñas quedan expuestas.
 
@@ -240,7 +240,7 @@ En tu proyecto de app web (FastAPI + MongoDB), si tienes usuarios con contraseñ
 
 ---
 
-## 🔐 SSH — Criptografia asimetrica en la practica del dia a dia
+## SSH — Criptografia asimetrica en la practica del dia a dia
 
 SSH usa exactamente los conceptos anteriores:
 - **Autenticacion por clave publica:** tu clave privada (`~/.ssh/id_ed25519`) nunca sale de tu maquina. El servidor tiene tu clave publica en `~/.ssh/authorized_keys`.
@@ -250,7 +250,7 @@ SSH usa exactamente los conceptos anteriores:
 
 ---
 
-## ⚠️ Errores comunes — Lo que NO debes hacer
+## Errores comunes — Lo que NO debes hacer
 
 | Error | Por que es peligroso | Correccion |
 |---|---|---|
@@ -265,7 +265,7 @@ SSH usa exactamente los conceptos anteriores:
 
 ---
 
-## 🛠️ Aplicalo / Practica
+## Aplicalo / Practica
 
 ### Laboratorio conceptual (sin instalar nada extra)
 ```bash
@@ -296,7 +296,7 @@ Los conceptos de criptografia son neutrales y educativos. Las herramientas de an
 
 ---
 
-## 📚 Referencias
+## Referencias
 
 - NIST SP 800-175B — Cryptographic Standards and Guidelines.
 - RFC 8446 — The Transport Layer Security (TLS) Protocol Version 1.3.

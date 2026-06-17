@@ -104,7 +104,7 @@ Salida esperada:
 <cadena_de_~32_caracteres>
 ```
 
-> ⚠️ `<cadena_de_~32_caracteres>` es un **placeholder**. Lo que verás en tu terminal será la contraseña real del nivel siguiente (bandit1): una cadena de caracteres alfanuméricos de aproximadamente 32 caracteres. **Cópiala** — la necesitarás para el paso siguiente.
+> `<cadena_de_~32_caracteres>` es un **placeholder**. Lo que verás en tu terminal será la contraseña real del nivel siguiente (bandit1): una cadena de caracteres alfanuméricos de aproximadamente 32 caracteres. **Cópiala** — la necesitarás para el paso siguiente.
 
 `cat` (*concatenate*) lee el contenido de uno o más archivos y lo vuelca en pantalla. Es la forma más directa de leer un archivo de texto en Linux.
 

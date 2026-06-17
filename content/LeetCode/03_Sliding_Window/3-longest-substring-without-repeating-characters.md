@@ -14,8 +14,8 @@ neetcode_order: 2
 
 # LeetCode 3 — Longest Substring Without Repeating Characters
 
-> 🎯 **Segundo problema del patrón Sliding Window** — y el **prototipo del patrón "ventana de tamaño variable"** que vas a ver muchísimo. Una ventana que crece por la derecha y se contrae por la izquierda cuando se rompe una invariante. Aprenderlo bien desbloquea casi todo el patrón.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Segundo problema del patrón Sliding Window** — y el **prototipo del patrón "ventana de tamaño variable"** que vas a ver muchísimo. Una ventana que crece por la derecha y se contrae por la izquierda cuando se rompe una invariante. Aprenderlo bien desbloquea casi todo el patrón.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -46,7 +46,7 @@ Output: 3
 - `0 <= s.length <= 5 * 10^4`
 - `s` consiste en letras inglesas, dígitos, símbolos y espacios.
 
-> ⚠️ **Importante**: el substring debe ser **contiguo**, no una subsecuencia.
+> **Importante**: el substring debe ser **contiguo**, no una subsecuencia.
 
 **Plantilla:**
 ```python
@@ -91,7 +91,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n³)** — n² substrings × O(n) chequeo de duplicados.
 - **Espacio: O(n)** por el set.
-- **Veredicto:** ❌ TLE.
+- **Veredicto:** [NO] TLE.
 
 ---
 
@@ -131,12 +131,12 @@ class Solution:
 | 6 | 'b' | duplicado → shrink: remove 'a' (left=4), remove 'b' (left=5); add | {'c','b'} | 5 | "cb" | 3 |
 | 7 | 'b' | duplicado → shrink: remove 'c' (left=6), remove 'b' (left=7); add | {'b'} | 7 | "b" | 3 |
 
-Resultado: `3` ✅.
+Resultado: `3` [OK].
 
 **Análisis:**
 - **Tiempo: O(n)** — análisis amortizado: `left` y `right` cada uno avanzan ≤ n veces.
 - **Espacio: O(min(n, alfabeto))** — el set tiene como mucho |alfabeto| caracteres.
-- **Veredicto:** ✅ la respuesta canónica.
+- **Veredicto:** [OK] la respuesta canónica.
 
 ### Desglose detallado de la Solución 2 — qué es la ventana y por qué los dos punteros
 
@@ -175,7 +175,7 @@ Esa invariante se mantiene siempre. Lo único que hace el algoritmo es **respeta
 
 `seen` es el set de caracteres **que están actualmente en la ventana**. Sirve para responder rápido a la pregunta: "¿el nuevo carácter ya está en la ventana?". Sin set tendrías que mirar cada carácter de la ventana → O(n) por consulta. Con set → O(1).
 
-> 💡 **Comparación de complejidades según qué uses**:
+> **Comparación de complejidades según qué uses**:
 > - **Sin ventana, fuerza bruta** (probando todos los substrings): O(n³) — n² substrings × O(n) verificar duplicados.
 > - **Ventana pero con `list` en vez de `set`** para `seen`: O(n²) — el loop sigue siendo lineal pero `char in list` es O(n).
 > - **Ventana + `set`**: O(n) — la solución de aquí.
@@ -237,7 +237,7 @@ Estado inicial: `seen = {}`, `left = 0`, `best = 0`.
             [b  c  a]
 ```
 
-> 🎯 **Aquí ves al `left` haciendo su trabajo**: el `'a'` nuevo entra en conflicto con el `'a'` en posición 0. El `while` "limpia" la ventana avanzando `left` y eliminando del set hasta que el conflicto desaparezca.
+> **Aquí ves al `left` haciendo su trabajo**: el `'a'` nuevo entra en conflicto con el `'a'` en posición 0. El `while` "limpia" la ventana avanzando `left` y eliminando del set hasta que el conflicto desaparezca.
 
 **Iter 5**: `right = 4`, `char = 'b'`
 
@@ -277,7 +277,7 @@ Estado inicial: `seen = {}`, `left = 0`, `best = 0`.
                         [c  b]
 ```
 
-> 💡 Aquí el while hizo **dos avances** del `left`. Tuvo que limpiar dos caracteres porque hubo que "saltarse" el `'a'` para llegar al `'b'` que duplicaba.
+> Aquí el while hizo **dos avances** del `left`. Tuvo que limpiar dos caracteres porque hubo que "saltarse" el `'a'` para llegar al `'b'` que duplicaba.
 
 **Iter 8**: `right = 7`, `char = 'b'`
 
@@ -286,7 +286,7 @@ Estado inicial: `seen = {}`, `left = 0`, `best = 0`.
   - `remove(s[6]='b')` → `{}`. `left=7`. ¿`'b'`? NO.
 - Add. `seen = {b}`. Ventana `"b"`. Longitud 1.
 
-**Resultado final**: `best = 3` ✅ (substrings óptimos: `"abc"`, `"bca"`, `"cab"`, `"abc"`).
+**Resultado final**: `best = 3` [OK] (substrings óptimos: `"abc"`, `"bca"`, `"cab"`, `"abc"`).
 
 #### La animación: cómo rueda la ventana
 
@@ -335,9 +335,9 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)** — un solo recorrido sin while interno.
 - **Espacio: O(min(n, alfabeto))**.
-- **Veredicto:** ✅ ligeramente más eficiente (constantes mejores). Es la respuesta "óptima" en entrevista.
+- **Veredicto:** [OK] ligeramente más eficiente (constantes mejores). Es la respuesta "óptima" en entrevista.
 
-> 💡 **`last[char] >= left`**: la guarda evita saltos hacia atrás. Si `last[char] < left`, ese duplicado **ya no está en la ventana actual**, así que no hay conflicto.
+> **`last[char] >= left`**: la guarda evita saltos hacia atrás. Si `last[char] < left`, ese duplicado **ya no está en la ventana actual**, así que no hay conflicto.
 
 **Trace con `s = "abba"`** (caso donde la guarda importa):
 
@@ -396,7 +396,7 @@ def sliding_window_variable(arr):
 | **76. Minimum Window Substring** | Mínima en lugar de máxima |
 | **438. Find All Anagrams in a String** | Todos los inicios donde cabe un anagrama |
 
-> 🎯 **Patrón maestro**: cuando dominas Sliding Window variable, los Hard del patrón se vuelven viables. Son todos variantes con distintas invariantes.
+> **Patrón maestro**: cuando dominas Sliding Window variable, los Hard del patrón se vuelven viables. Son todos variantes con distintas invariantes.
 
 ---
 
@@ -426,9 +426,9 @@ Un `char` puede estar en `last` pero **fuera de la ventana actual** (si ya lo "a
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Fuerza bruta | O(n³) | O(n) | ❌ TLE |
-| 2. **Sliding window con set** | **O(n)** amort. | O(k) | ✅ La canónica |
-| 3. **Sliding window con dict** | **O(n)** | O(k) | ✅ La óptima |
+| 1. Fuerza bruta | O(n³) | O(n) | [NO] TLE |
+| 2. **Sliding window con set** | **O(n)** amort. | O(k) | [OK] La canónica |
+| 3. **Sliding window con dict** | **O(n)** | O(k) | [OK] La óptima |
 
 ---
 

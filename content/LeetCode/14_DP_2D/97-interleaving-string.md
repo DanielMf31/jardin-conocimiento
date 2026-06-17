@@ -14,7 +14,7 @@ neetcode_order: 6
 
 # LeetCode 97 — Interleaving String
 
-> 🎯 **Sexto problema de DP 2-D**. ¿Es `s3` un interleave de `s1` y `s2`? DP donde `dp[i][j] = True` si `s3[0:i+j]` es interleave de `s1[0:i]` y `s2[0:j]`.
+> **Sexto problema de DP 2-D**. ¿Es `s3` un interleave de `s1` y `s2`? DP donde `dp[i][j] = True` si `s3[0:i+j]` es interleave de `s1[0:i]` y `s2[0:j]`.
 
 ## Enunciado
 

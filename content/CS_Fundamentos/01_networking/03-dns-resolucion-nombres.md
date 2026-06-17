@@ -1,8 +1,8 @@
 # 03 — DNS y resolución de nombres
 
-> 📚 **Doc 3 del cluster Networking**. DNS es invisible pero está en TODO. La pregunta *"¿qué pasa cuando escribes google.com en el navegador?"* empieza con DNS.
-> 🔥 **Frecuencia interview**: aparece en system design siempre que hay dominios, CDNs, geo-routing.
-> ⏱️ **Tiempo de lectura estimado**: 30-50 min.
+> **Doc 3 del cluster Networking**. DNS es invisible pero está en TODO. La pregunta *"¿qué pasa cuando escribes google.com en el navegador?"* empieza con DNS.
+> **Frecuencia interview**: aparece en system design siempre que hay dominios, CDNs, geo-routing.
+> **Tiempo de lectura estimado**: 30-50 min.
 
 ---
 

@@ -1,8 +1,8 @@
 # 01 — B-trees e indexing
 
-> 📚 **Doc 1 del cluster Database Internals**. Por qué tu DB es rápida buscando entre millones de filas. La estructura de datos que sostiene todo SQL del mundo.
-> 🔥 **Frecuencia interview**: aparece SIEMPRE en backend interviews. "¿Qué es un índice?", "¿Cuándo añadir un índice?", "¿Por qué B-tree y no hash?".
-> ⏱️ **Tiempo de lectura estimado**: 40-55 min.
+> **Doc 1 del cluster Database Internals**. Por qué tu DB es rápida buscando entre millones de filas. La estructura de datos que sostiene todo SQL del mundo.
+> **Frecuencia interview**: aparece SIEMPRE en backend interviews. "¿Qué es un índice?", "¿Cuándo añadir un índice?", "¿Por qué B-tree y no hash?".
+> **Tiempo de lectura estimado**: 40-55 min.
 
 ---
 
@@ -109,9 +109,9 @@ Estructura B+tree separada que mapea valores → puntero a la fila real. Puedes 
 Índice sobre **varias columnas** en orden específico: `INDEX (lastname, firstname)`.
 
 **Importante**: el orden de columnas importa. Este índice sirve para:
-- `WHERE lastname = 'Smith' AND firstname = 'John'` ✓
-- `WHERE lastname = 'Smith'` (usa solo prefix) ✓
-- `WHERE firstname = 'John'` ✗ (NO sirve, lastname no especificado)
+- `WHERE lastname = 'Smith' AND firstname = 'John'`
+- `WHERE lastname = 'Smith'` (usa solo prefix)
+- `WHERE firstname = 'John'` (NO sirve, lastname no especificado)
 
 Regla mnemotécnica: **leftmost prefix rule**. El índice se usa solo si tu WHERE usa un prefijo de las columnas.
 

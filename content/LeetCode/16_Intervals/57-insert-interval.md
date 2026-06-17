@@ -14,7 +14,7 @@ neetcode_order: 1
 
 # LeetCode 57 — Insert Interval
 
-> 🎯 **Primer problema de Intervals**. Insertar un nuevo intervalo en una lista ordenada y fusionar solapamientos. Patrón: **3 fases** (antes, fusión, después).
+> **Primer problema de Intervals**. Insertar un nuevo intervalo en una lista ordenada y fusionar solapamientos. Patrón: **3 fases** (antes, fusión, después).
 
 ## Enunciado
 

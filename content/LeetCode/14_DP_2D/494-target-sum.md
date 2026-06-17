@@ -14,7 +14,7 @@ neetcode_order: 5
 
 # LeetCode 494 — Target Sum
 
-> 🎯 **Quinto problema de DP 2-D**. ¿De cuántas formas asignar `+` o `-` a cada número para sumar `target`? **0-1 knapsack** con dict como DP.
+> **Quinto problema de DP 2-D**. ¿De cuántas formas asignar `+` o `-` a cada número para sumar `target`? **0-1 knapsack** con dict como DP.
 
 ## Enunciado
 

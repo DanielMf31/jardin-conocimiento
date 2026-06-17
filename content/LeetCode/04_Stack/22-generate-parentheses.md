@@ -14,8 +14,8 @@ neetcode_order: 4
 
 # LeetCode 22 — Generate Parentheses
 
-> 🎯 **Cuarto problema del patrón Stack**, aunque la solución óptima es realmente **backtracking**. NeetCode lo ubica aquí porque la lógica de "abrir/cerrar" tiene estructura de stack mental. Es la **introducción suave al backtracking** que verás en profundidad en el patrón 10.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Cuarto problema del patrón Stack**, aunque la solución óptima es realmente **backtracking**. NeetCode lo ubica aquí porque la lógica de "abrir/cerrar" tiene estructura de stack mental. Es la **introducción suave al backtracking** que verás en profundidad en el patrón 10.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -54,7 +54,7 @@ class Solution:
 | ¿Cuántas combinaciones para n? | El **n-ésimo número de Catalan**: `C(n) = (2n choose n) / (n+1)`. Para n=8 son 1430 |
 | ¿Qué hace válida una combinación? | (1) En cualquier prefix, los `(` ≥ los `)`. (2) Al final, `(` = `)` = n |
 
-> 💡 **La invariante clave**: en cualquier momento durante la construcción, **no podemos cerrar más paréntesis de los que hemos abierto**.
+> **La invariante clave**: en cualquier momento durante la construcción, **no podemos cerrar más paréntesis de los que hemos abierto**.
 
 ---
 
@@ -84,7 +84,7 @@ class Solution:
 
 **Análisis:**
 - **Tiempo: O(2^(2n) · n)** — 2^(2n) cadenas posibles × O(n) validar.
-- **Veredicto:** ❌ ineficiente. La idea correcta es no generar las inválidas.
+- **Veredicto:** [NO] ineficiente. La idea correcta es no generar las inválidas.
 
 ---
 
@@ -135,8 +135,8 @@ class Solution:
                           ▼          "()("  (2,1)
                        "(()"  (2,1)     │ +)
                           │ +)          ▼
-                          ▼          "()()"  ✅
-                       "(())"  ✅
+                          ▼          "()()"  [OK]
+                       "(())"  [OK]
 
 Result: ["(())", "()()"]
 ```
@@ -144,7 +144,7 @@ Result: ["(())", "()()"]
 **Análisis:**
 - **Tiempo: O(4^n / √n)** — el n-ésimo número de Catalan, asintóticamente.
 - **Espacio: O(n)** stack de recursión + O(catalan_n · n) para el output.
-- **Veredicto:** ✅ **la canónica**. Backtracking puro y limpio.
+- **Veredicto:** [OK] **la canónica**. Backtracking puro y limpio.
 
 ---
 
@@ -177,7 +177,7 @@ class Solution:
 
 **Análisis:** mismo O(catalan), pero **constantes mejores** (evita rebuild de string en cada llamada).
 
-> 🎯 **El patrón "append + recurse + pop"** es la estructura típica de backtracking. El `current.pop()` es el "deshacer" que permite explorar la siguiente rama desde el mismo estado.
+> **El patrón "append + recurse + pop"** es la estructura típica de backtracking. El `current.pop()` es el "deshacer" que permite explorar la siguiente rama desde el mismo estado.
 
 ---
 
@@ -207,7 +207,7 @@ def backtrack(state, ...):
 2. Hay reglas de validez que permiten descartar ramas tempranamente.
 3. La fuerza bruta es exponencial pero la cardinalidad real es mucho menor.
 
-> 📌 **Patrón maestro**: backtracking es el caballo de batalla de muchos problemas Medium/Hard. NeetCode tiene un patrón entero (10 - Backtracking) dedicado.
+> **Patrón maestro**: backtracking es el caballo de batalla de muchos problemas Medium/Hard. NeetCode tiene un patrón entero (10 - Backtracking) dedicado.
 
 ---
 
@@ -267,9 +267,9 @@ Aparecen en muchos problemas de combinatoria (BSTs distintos, triangulaciones de
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Brute force + filtro | O(2^(2n) · n) | O(n) | ❌ Muy ineficiente |
-| 2. **Backtracking con string** | O(catalan_n · n) | O(n) | ✅ La canónica |
-| 3. **Backtracking con list** | O(catalan_n · n) | O(n) | ✅ Constantes mejores |
+| 1. Brute force + filtro | O(2^(2n) · n) | O(n) | [NO] Muy ineficiente |
+| 2. **Backtracking con string** | O(catalan_n · n) | O(n) | [OK] La canónica |
+| 3. **Backtracking con list** | O(catalan_n · n) | O(n) | [OK] Constantes mejores |
 
 ---
 

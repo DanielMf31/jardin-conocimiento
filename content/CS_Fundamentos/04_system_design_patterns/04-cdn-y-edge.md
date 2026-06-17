@@ -1,8 +1,8 @@
 # 04 — CDN y edge computing
 
-> 📚 **Doc 4 del cluster System Design Patterns**. Cómo servir contenido en milisegundos a usuarios en cualquier punto del planeta.
-> 🔥 **Frecuencia interview**: aparece en system design global (YouTube, Netflix, Twitter, e-commerce internacional).
-> ⏱️ **Tiempo de lectura estimado**: 30-45 min.
+> **Doc 4 del cluster System Design Patterns**. Cómo servir contenido en milisegundos a usuarios en cualquier punto del planeta.
+> **Frecuencia interview**: aparece en system design global (YouTube, Netflix, Twitter, e-commerce internacional).
+> **Tiempo de lectura estimado**: 30-45 min.
 
 ---
 
@@ -101,7 +101,7 @@ Headers HTTP que controlan el caching:
 | `Cache-Control: s-maxage=3600` | CDN cachea 1h (browser puede usar otro tiempo) |
 | `ETag: "abc123"` | Identificador de versión. Cliente envía `If-None-Match`. Si match → 304 Not Modified, no body. Ahorra bandwidth |
 | `Vary: Accept-Encoding` | Cachear copias separadas por header Vary (gzip vs brotli) |
-| `Vary: Cookie` | ⚠️ Casi inutiliza el cache (cada cookie distinta = entrada distinta) |
+| `Vary: Cookie` | Casi inutiliza el cache (cada cookie distinta = entrada distinta) |
 
 ---
 

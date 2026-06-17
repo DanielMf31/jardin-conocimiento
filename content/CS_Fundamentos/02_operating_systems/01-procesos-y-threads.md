@@ -1,8 +1,8 @@
 # 01 — Procesos y threads
 
-> 📚 **Doc 1 del cluster Operating Systems**. Aquí entiendes cómo el SO ejecuta múltiples programas a la vez y cómo un programa puede hacer varias cosas en paralelo.
-> 🔥 **Frecuencia interview**: aparece en concurrency questions, en "¿qué pasa cuando ejecutas X?", y en debugging de performance.
-> ⏱️ **Tiempo de lectura estimado**: 50-75 min.
+> **Doc 1 del cluster Operating Systems**. Aquí entiendes cómo el SO ejecuta múltiples programas a la vez y cómo un programa puede hacer varias cosas en paralelo.
+> **Frecuencia interview**: aparece en concurrency questions, en "¿qué pasa cuando ejecutas X?", y en debugging de performance.
+> **Tiempo de lectura estimado**: 50-75 min.
 
 ---
 
@@ -356,7 +356,7 @@ Si embebido tiene un proceso watchdog + un proceso que lee sensores + un proceso
 
 **"Daemon threads se cierran limpio"**: NO. Mueren ABRUPTAMENTE cuando el main termina. Sin cleanup. No los uses para tareas que necesiten flush a disco/red.
 
-**"`kill -9` es la forma normal de parar un proceso"**: ❌. SIGKILL (-9) NO permite cleanup. La app no puede liberar locks, flush buffers, cerrar conexiones DB. Usa siempre SIGTERM (-15) primero. -9 solo cuando -15 no responde tras unos segundos.
+**"`kill -9` es la forma normal de parar un proceso"**: [NO]. SIGKILL (-9) NO permite cleanup. La app no puede liberar locks, flush buffers, cerrar conexiones DB. Usa siempre SIGTERM (-15) primero. -9 solo cuando -15 no responde tras unos segundos.
 
 **"asyncio es más rápido que threads siempre"**: solo para I/O-bound. Para CPU-bound, asyncio NO ayuda (sigue siendo 1 thread). Async ≠ paralelismo.
 

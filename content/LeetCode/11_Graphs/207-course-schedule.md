@@ -14,7 +14,7 @@ neetcode_order: 8
 
 # LeetCode 207 — Course Schedule
 
-> 🎯 **Octavo problema del patrón Graphs**. **Detección de ciclos en un grafo dirigido**. La pregunta de "puedes terminar todos los cursos" se reduce a "¿hay ciclo en el grafo de prerequisites?".
+> **Octavo problema del patrón Graphs**. **Detección de ciclos en un grafo dirigido**. La pregunta de "puedes terminar todos los cursos" se reduce a "¿hay ciclo en el grafo de prerequisites?".
 
 ## Enunciado
 
@@ -90,7 +90,7 @@ class Solution:
         return completed == numCourses
 ```
 
-**Veredicto:** ✅ alternativa elegante. Si `completed != numCourses`, hay ciclo.
+**Veredicto:** [OK] alternativa elegante. Si `completed != numCourses`, hay ciclo.
 
 ---
 

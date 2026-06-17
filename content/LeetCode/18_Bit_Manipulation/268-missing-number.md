@@ -14,7 +14,7 @@ neetcode_order: 5
 
 # LeetCode 268 — Missing Number
 
-> 🎯 **Quinto problema de Bit Manipulation**. En `[0, n]` falta uno. Tres soluciones: suma de Gauss, XOR, set.
+> **Quinto problema de Bit Manipulation**. En `[0, n]` falta uno. Tres soluciones: suma de Gauss, XOR, set.
 
 ## Enunciado
 

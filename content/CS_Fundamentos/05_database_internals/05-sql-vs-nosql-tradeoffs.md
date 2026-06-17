@@ -1,8 +1,8 @@
 # 05 — SQL vs NoSQL — tradeoffs
 
-> 📚 **Doc 5 (último) del cluster Database Internals**. La decisión que marca arquitectura: relacional o no, y dentro de no-relacional, qué tipo. Sin religión, con criterios.
-> 🔥 **Frecuencia interview**: aparece en system design siempre. "Qué BD usas y por qué" es respuesta crítica.
-> ⏱️ **Tiempo de lectura estimado**: 35-50 min.
+> **Doc 5 (último) del cluster Database Internals**. La decisión que marca arquitectura: relacional o no, y dentro de no-relacional, qué tipo. Sin religión, con criterios.
+> **Frecuencia interview**: aparece en system design siempre. "Qué BD usas y por qué" es respuesta crítica.
+> **Tiempo de lectura estimado**: 35-50 min.
 
 ---
 
@@ -352,7 +352,7 @@ Si no puedes → relee.
 
 ---
 
-## ¡Cluster Database Internals completado! 🎉
+## ¡Cluster Database Internals completado!
 
 Has completado el quinto Tier 1 (último de los críticos). Resumen:
 

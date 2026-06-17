@@ -8,7 +8,7 @@ source: claude-code
 aliases: [gitlab-registry, gitlab-pages, container-registry]
 ---
 
-# 📦 Container Registry, Package Registry y GitLab Pages
+# Container Registry, Package Registry y GitLab Pages
 
 ## ¿Por qué existen? El problema que resuelven
 
@@ -22,7 +22,7 @@ GitLab resuelve los tres desde el mismo lugar donde vive tu código. Esto no es 
 
 ---
 
-## 🐳 Container Registry — Registro Docker propio
+## Container Registry — Registro Docker propio
 
 ### Qué es y dónde encaja
 
@@ -128,7 +128,7 @@ En Kubernetes, esto se convierte en un `imagePullSecret`. GitLab tiene documenta
 
 ---
 
-## 📚 Package Registry — Librerías internas
+## Package Registry — Librerías internas
 
 ### Qué problema resuelve
 
@@ -195,7 +195,7 @@ La variable `CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX` la inyecta GitLab automáti
 
 ---
 
-## 🌐 GitLab Pages — Hosting de sitios estáticos
+## GitLab Pages — Hosting de sitios estáticos
 
 ### Qué es y cuándo usarlo
 
@@ -280,7 +280,7 @@ Por defecto, Pages es público. Puedes hacerlo privado (acceso solo a miembros d
 
 ---
 
-## 🔗 Cómo encajan los tres en una pipeline real
+## Cómo encajan los tres en una pipeline real
 
 ```yaml
 # Pipeline completa: test → build imagen → publicar docs → publicar paquete
@@ -338,7 +338,7 @@ pages:
 
 ---
 
-## 🛠 Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 **app web (FastAPI + React):**
 - Container Registry: construye y pushea la imagen del backend FastAPI en cada merge a main. Tu `docker-compose.yml` en producción la consume con `image: registry.gitlab.com/...` en vez de hacer build local.
@@ -353,7 +353,7 @@ pages:
 
 ---
 
-## ⚠️ Errores comunes y sus causas
+## Errores comunes y sus causas
 
 | Error | Causa más probable | Solución |
 |---|---|---|

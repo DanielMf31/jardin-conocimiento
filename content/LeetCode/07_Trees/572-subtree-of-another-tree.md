@@ -14,7 +14,7 @@ neetcode_order: 6
 
 # LeetCode 572 — Subtree of Another Tree
 
-> 🎯 **Sexto problema del patrón Trees**. Combina [[100-same-tree]] como sub-rutina con búsqueda recursiva. **Doble recursión**: una para buscar el nodo candidato, otra (`isSameTree`) para verificar.
+> **Sexto problema del patrón Trees**. Combina [[100-same-tree]] como sub-rutina con búsqueda recursiva. **Doble recursión**: una para buscar el nodo candidato, otra (`isSameTree`) para verificar.
 
 ## Enunciado
 
@@ -42,7 +42,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(m * n)** — peor caso, m = nodos en root, n = nodos en subRoot.
 - **Espacio: O(h)**.
-- **Veredicto:** ✅ canónica.
+- **Veredicto:** [OK] canónica.
 
 ### El patrón "buscar Y verificar"
 

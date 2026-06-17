@@ -14,7 +14,7 @@ neetcode_order: 6
 
 # LeetCode 138 — Copy List with Random Pointer
 
-> 🎯 **Sexto problema del patrón Linked List**. Es el **caso clásico de deep copy** con punteros que apuntan a sitios "arbitrarios". El truco mental: **separar creación de nodos de creación de relaciones** mediante un mapa old→new.
+> **Sexto problema del patrón Linked List**. Es el **caso clásico de deep copy** con punteros que apuntan a sitios "arbitrarios". El truco mental: **separar creación de nodos de creación de relaciones** mediante un mapa old→new.
 
 ## Enunciado
 
@@ -63,9 +63,9 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)** — dos pasadas.
 - **Espacio: O(n)** — el dict.
-- **Veredicto:** ✅ **la canónica**. Limpia y fácil.
+- **Veredicto:** [OK] **la canónica**. Limpia y fácil.
 
-> 💡 **`dict.get(curr.next)`** devuelve `None` si `curr.next` es `None`, evitando KeyError.
+> **`dict.get(curr.next)`** devuelve `None` si `curr.next` es `None`, evitando KeyError.
 
 ---
 

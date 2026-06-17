@@ -1,8 +1,8 @@
 # 01 — CPU pipeline y registros
 
-> 📚 **Doc 1 del cluster Computer Architecture**. Por qué tu código va más rápido o lento de lo que esperas. Lo que pasa "debajo" del lenguaje de programación.
-> 🔥 **Frecuencia interview**: aparece en preguntas de performance avanzadas. Para roles low-level / systems / hardware (donde perfiles de hardware/IoT encaja) es crítico.
-> ⏱️ **Tiempo de lectura estimado**: 35-50 min.
+> **Doc 1 del cluster Computer Architecture**. Por qué tu código va más rápido o lento de lo que esperas. Lo que pasa "debajo" del lenguaje de programación.
+> **Frecuencia interview**: aparece en preguntas de performance avanzadas. Para roles low-level / systems / hardware (donde perfiles de hardware/IoT encaja) es crítico.
+> **Tiempo de lectura estimado**: 35-50 min.
 
 ---
 

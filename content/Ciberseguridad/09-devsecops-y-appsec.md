@@ -8,7 +8,7 @@ source: claude-code
 aliases: [DevSecOps, AppSec, seguridad-en-el-ciclo-de-desarrollo]
 ---
 
-# 🔒 DevSecOps y seguridad de aplicaciones
+# DevSecOps y seguridad de aplicaciones
 
 ## ¿Por qué existe este campo?
 
@@ -20,7 +20,7 @@ El software se construye rápido — sprints de 2 semanas, decenas de dependenci
 
 ---
 
-## 🗺️ Panorama: dónde encaja cada herramienta
+## Panorama: dónde encaja cada herramienta
 
 ```
 Código fuente        →  SAST (análisis estático)
@@ -39,7 +39,7 @@ La idea central: **detectar lo antes posible** (shift-left), **no solo al final*
 
 ---
 
-## 1. 🔄 Secure SDLC y "Shift-Left"
+## 1. Secure SDLC y "Shift-Left"
 
 **SDLC** (Software Development Life Cycle) es el ciclo de vida del software: requisitos → diseño → desarrollo → pruebas → despliegue → mantenimiento.
 
@@ -60,7 +60,7 @@ El "shift-left" no elimina la seguridad en producción — la complementa. Un er
 
 ---
 
-## 2. 🔍 SAST — Análisis Estático (Static Application Security Testing)
+## 2. SAST — Análisis Estático (Static Application Security Testing)
 
 **Qué es**: Analizar el código fuente (o bytecode compilado) **sin ejecutarlo** para encontrar patrones que representen vulnerabilidades conocidas.
 
@@ -94,7 +94,7 @@ sast:
 
 ---
 
-## 3. 🌐 DAST — Análisis Dinámico (Dynamic Application Security Testing)
+## 3. DAST — Análisis Dinámico (Dynamic Application Security Testing)
 
 **Qué es**: Atacar la **aplicación en ejecución** como lo haría un atacante externo, sin acceso al código fuente. El escáner envía peticiones HTTP malformadas y observa las respuestas.
 
@@ -126,7 +126,7 @@ Deploy a staging → ejecutar DAST → revisar report → merge a main
 
 ---
 
-## 4. 📦 SCA — Análisis de Composición de Software (Software Composition Analysis)
+## 4. SCA — Análisis de Composición de Software (Software Composition Analysis)
 
 **Qué es**: Auditar las **dependencias de terceros** (librerías, paquetes npm/pip/maven) para detectar vulnerabilidades conocidas (CVEs) y problemas de licencias.
 
@@ -160,7 +160,7 @@ npm audit --audit-level=high
 
 ---
 
-## 5. 🕵️ Secrets Scanning
+## 5. Secrets Scanning
 
 **Qué es**: Detectar credenciales, tokens, API keys, contraseñas o cualquier secreto hardcodeado en el código o en el historial de git.
 
@@ -196,7 +196,7 @@ repos:
 
 ---
 
-## 6. 🔗 Supply Chain Security
+## 6. Supply Chain Security
 
 **Qué es**: La seguridad de la **cadena de suministro** de software — todo lo que viene de fuera: dependencias, imágenes base de contenedores, herramientas de build, plugins del CI.
 
@@ -252,7 +252,7 @@ cosign verify --key cosign.pub ghcr.io/user/myapp:latest
 
 ---
 
-## 7. ⚙️ Seguridad en pipelines CI/CD
+## 7. Seguridad en pipelines CI/CD
 
 El pipeline de CI/CD es infraestructura crítica. Quien controla el pipeline puede modificar lo que se despliega. Es un vector de ataque de alto valor.
 
@@ -290,7 +290,7 @@ tag/release    → sign + SBOM + deploy a producción (con aprobación manual)
 
 ---
 
-## 8. 🧩 Threat Modeling de aplicaciones
+## 8. Threat Modeling de aplicaciones
 
 **Qué es**: Un proceso estructurado para identificar, antes de escribir código (o al diseñar una feature), qué puede salir mal desde el punto de vista de seguridad.
 
@@ -333,7 +333,7 @@ Para cada flecha y caja: ¿qué pasa si este canal es interceptado? ¿si este co
 
 ---
 
-## 9. 🛡️ Cómo prevenirlo — resumen práctico
+## 9. Cómo prevenirlo — resumen práctico
 
 | Problema | Control principal | Herramienta sugerida |
 |---|---|---|
@@ -358,7 +358,7 @@ Para cada flecha y caja: ¿qué pasa si este canal es interceptado? ¿si este co
 
 ---
 
-## 🧪 Aplícalo / practica
+## Aplícalo / practica
 
 ### En tus propios proyectos
 - Añade `pip-audit` o `npm audit` al CI de la y revisa los findings actuales

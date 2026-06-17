@@ -8,7 +8,7 @@ source: claude-code
 aliases: [retrospectivas, antipatrones agile, dark scrum]
 ---
 
-# 🔄 Equipo, Retros y Anti-patrones
+# Equipo, Retros y Anti-patrones
 
 ## ¿Por qué existe esto?
 
@@ -23,7 +23,7 @@ Si ya tienes claro qué es Scrum y los marcos ágiles, este doc es el "¿y cómo
 
 ---
 
-## 🗺️ Panorama: el bucle de mejora continua
+## Panorama: el bucle de mejora continua
 
 Todos los marcos ágiles comparten una idea central: **inspeccioná → adaptá**. La retrospectiva es el evento donde eso ocurre a nivel de equipo (no de producto).
 
@@ -35,7 +35,7 @@ Sin retro, el equipo repite los mismos errores indefinidamente. Con retro mal fa
 
 ---
 
-## 🔁 La Retrospectiva
+## La Retrospectiva
 
 ### Qué es y qué NO es
 
@@ -89,7 +89,7 @@ Más estructurado cognitivamente. Bueno para equipos maduros que quieren profund
 
 **Cuándo usarlo**: retros de fin de proyecto, equipos con 3+ meses juntos, cuando quieres capturar aprendizajes transferibles.
 
-#### 4. Sailboat (Barco de Vela) 🚢
+#### 4. Sailboat (Barco de Vela)
 Formato visual/metafórico. El equipo es un barco navegando hacia un objetivo (isla = meta del sprint o release).
 
 | Elemento | Representa |
@@ -117,7 +117,7 @@ Formato visual/metafórico. El equipo es un barco navegando hacia un objetivo (i
 
 ---
 
-## 🔒 Seguridad Psicológica
+## Seguridad Psicológica
 
 *Seguridad psicológica* (término de Amy Edmondson, investigadora de Harvard): la creencia de que puedes hablar, preguntar, cometer errores o disentir sin ser castigado social o profesionalmente.
 
@@ -147,7 +147,7 @@ Es el **predictor más fuerte** de si una retro funciona. Sin ella, la gente dic
 
 ---
 
-## ⚠️ Anti-patrones famosos
+## Anti-patrones famosos
 
 Un *anti-patrón* es una "solución" reconocible que parece resolver un problema pero en realidad lo empeora o crea nuevos. En software, el término viene de la programación (análogo inverso a los patrones de diseño), pero aplica igual a procesos.
 
@@ -246,7 +246,7 @@ El Scrum Master *no es* un jefe de proyecto (*project manager*) ni un manager de
 
 ---
 
-## 🎭 Críticas honestas a Agile/Scrum
+## Críticas honestas a Agile/Scrum
 
 Agile no es una religión. Hay críticas legítimas que vale la pena conocer para no ser fundamentalista.
 
@@ -288,7 +288,7 @@ Cuando velocity (puntos por sprint) se convierte en métrica de éxito, el incen
 
 ---
 
-## 🔧 Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 ### app web (React + FastAPI + Docker)
 

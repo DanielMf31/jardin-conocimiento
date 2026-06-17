@@ -14,7 +14,7 @@ neetcode_order: 3
 
 # LeetCode 435 — Non-overlapping Intervals
 
-> 🎯 **Tercer problema de Intervals**. **Greedy con sort por end**. El que termina antes deja más espacio para los siguientes.
+> **Tercer problema de Intervals**. **Greedy con sort por end**. El que termina antes deja más espacio para los siguientes.
 
 ## Enunciado
 

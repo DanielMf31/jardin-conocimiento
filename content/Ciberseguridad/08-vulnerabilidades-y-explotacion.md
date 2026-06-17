@@ -8,7 +8,7 @@ source: claude-code
 aliases: [vulnerabilidades, CVE, buffer overflow]
 ---
 
-# 🔓 Vulnerabilidades y explotacion (conceptual)
+# Vulnerabilidades y explotacion (conceptual)
 
 ## Por que importa este tema
 

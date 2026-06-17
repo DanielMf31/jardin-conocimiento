@@ -8,7 +8,7 @@ source: claude-code
 aliases: [GCP Storage, Cloud Storage GCP, almacenamiento google cloud]
 ---
 
-# 💾 Almacenamiento en GCP
+# Almacenamiento en GCP
 
 ## ¿Por qué importa la capa de almacenamiento?
 
@@ -24,7 +24,7 @@ Elegir mal entre estos tres es uno de los errores de coste más comunes en cloud
 
 ---
 
-## 🪣 Cloud Storage
+## Cloud Storage
 
 ### ¿Qué es?
 
@@ -161,7 +161,7 @@ gcloud storage objects update gs://mi-bucket/archivo.csv \
 
 ---
 
-## 💿 Persistent Disk (PD)
+## Persistent Disk (PD)
 
 ### ¿Qué es?
 
@@ -216,7 +216,7 @@ gcloud compute resource-policies create snapshot-schedule mi-politica \
 
 ---
 
-## 📁 Filestore
+## Filestore
 
 ### ¿Qué es?
 
@@ -252,7 +252,7 @@ gcloud filestore instances describe mi-nfs \
 
 ---
 
-## 🗺️ ¿Cuándo usar cada uno? — Tabla de decisión
+## ¿Cuándo usar cada uno? — Tabla de decisión
 
 | Necesito... | Usa |
 |---|---|
@@ -268,7 +268,7 @@ gcloud filestore instances describe mi-nfs \
 
 ---
 
-## ⚠️ Errores y costes comunes
+## Errores y costes comunes
 
 1. **Usar Standard para datos fríos**: si tienes 10 TB de logs que no lees, pagas ~$200/mes vs $12/mes en Archive. El cambio de clase es un comando.
 
@@ -284,7 +284,7 @@ gcloud filestore instances describe mi-nfs \
 
 ---
 
-## 🛠️ Aplícalo / Practica
+## Aplícalo / Practica
 
 1. **Lab básico Cloud Storage**:
    - Crea un bucket en `europe-west1`.

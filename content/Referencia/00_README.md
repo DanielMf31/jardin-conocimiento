@@ -1,6 +1,6 @@
 # Referencia — docs generales transversales de programación
 
-> 📚 **Catálogos y referencias de patrones, archetypes y conceptos** que NO pertenecen a un proyecto específico sino que aplican transversalmente a cualquier proyecto backend/sistemas que construyas.
+> **Catálogos y referencias de patrones, archetypes y conceptos** que NO pertenecen a un proyecto específico sino que aplican transversalmente a cualquier proyecto backend/sistemas que construyas.
 
 ## Propósito
 

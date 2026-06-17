@@ -14,7 +14,7 @@ neetcode_order: 2
 
 # LeetCode 211 — Design Add and Search Words Data Structure
 
-> 🎯 **Segundo problema del patrón Tries**. Extiende [[208-implement-trie-prefix-tree]] con **wildcards**: el carácter `'.'` matchea cualquier letra. La búsqueda se vuelve **DFS** sobre el Trie.
+> **Segundo problema del patrón Tries**. Extiende [[208-implement-trie-prefix-tree]] con **wildcards**: el carácter `'.'` matchea cualquier letra. La búsqueda se vuelve **DFS** sobre el Trie.
 
 ## Enunciado
 

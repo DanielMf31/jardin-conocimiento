@@ -1,10 +1,10 @@
 # CS Fundamentos — auto-estudio
 
-> 🎯 **Cluster de teoría CS** que cubre el 20% teórico del plan de estudio. Paralelo a `LeetCode/` (algoritmos) y `Build_Things/` (proyectos hands-on).
+> **Cluster de teoría CS** que cubre el 20% teórico del plan de estudio. Paralelo a `LeetCode/` (algoritmos) y `Build_Things/` (proyectos hands-on).
 >
-> 📍 **Punto de entrada**: [[../../../30_MOCs/MOC_CS_Fundamentos|MOC_CS_Fundamentos]]
+> **Punto de entrada**: [[../../../30_MOCs/MOC_CS_Fundamentos|MOC_CS_Fundamentos]]
 >
-> 📚 **Filosofía**: referencia teórica permanente. Si la pregunta es *"¿cómo lo construyo?"* → `Build_Things/`. Si la pregunta es *"¿por qué funciona así?"* → este cluster.
+> **Filosofía**: referencia teórica permanente. Si la pregunta es *"¿cómo lo construyo?"* → `Build_Things/`. Si la pregunta es *"¿por qué funciona así?"* → este cluster.
 
 ## Estructura
 

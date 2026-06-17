@@ -14,7 +14,7 @@ neetcode_order: 2
 
 # LeetCode 191 — Number of 1 Bits
 
-> 🎯 **Segundo problema de Bit Manipulation**. Cuenta bits 1 en un entero. **Truco Brian Kernighan**: `n & (n-1)` apaga el bit 1 más bajo.
+> **Segundo problema de Bit Manipulation**. Cuenta bits 1 en un entero. **Truco Brian Kernighan**: `n & (n-1)` apaga el bit 1 más bajo.
 
 ## Enunciado
 

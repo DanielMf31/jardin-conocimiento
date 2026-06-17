@@ -14,7 +14,7 @@ neetcode_order: 1
 
 # LeetCode 78 — Subsets
 
-> 🎯 **Primer problema del patrón Backtracking**. **El "Hello World" del backtracking**. La idea: en cada nivel, **decides incluir o no incluir** el elemento actual. 2^n subconjuntos.
+> **Primer problema del patrón Backtracking**. **El "Hello World" del backtracking**. La idea: en cada nivel, **decides incluir o no incluir** el elemento actual. 2^n subconjuntos.
 
 ## Enunciado
 

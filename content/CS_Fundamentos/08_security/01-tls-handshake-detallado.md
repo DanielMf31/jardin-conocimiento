@@ -1,10 +1,10 @@
 # 01 — TLS handshake detallado
 
-> 📚 **Doc 1 del cluster Security**. La versión profunda del TLS handshake. Qué pasa exactamente paso a paso, las matemáticas detrás, por qué TLS 1.3 es más seguro y rápido.
-> 🔥 **Frecuencia interview**: aparece en preguntas de seguridad senior, infraestructura, compliance.
-> ⏱️ **Tiempo de lectura estimado**: 40-55 min.
+> **Doc 1 del cluster Security**. La versión profunda del TLS handshake. Qué pasa exactamente paso a paso, las matemáticas detrás, por qué TLS 1.3 es más seguro y rápido.
+> **Frecuencia interview**: aparece en preguntas de seguridad senior, infraestructura, compliance.
+> **Tiempo de lectura estimado**: 40-55 min.
 
-> 💡 Este doc complementa [[../01_networking/05-tls-https]] que da el overview. Aquí entramos en el "cómo" matemático.
+> Este doc complementa [[../01_networking/05-tls-https]] que da el overview. Aquí entramos en el "cómo" matemático.
 
 ---
 

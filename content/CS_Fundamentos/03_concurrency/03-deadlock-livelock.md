@@ -1,8 +1,8 @@
 # 03 — Deadlock y livelock
 
-> 📚 **Doc 3 del cluster Concurrency**. El otro lado de los locks: cuando se vuelven contra ti. Deadlocks son el bug clásico de threading.
-> 🔥 **Frecuencia interview**: aparece en preguntas "diseña sistema sin deadlock", problema dining philosophers.
-> ⏱️ **Tiempo de lectura estimado**: 30-45 min.
+> **Doc 3 del cluster Concurrency**. El otro lado de los locks: cuando se vuelven contra ti. Deadlocks son el bug clásico de threading.
+> **Frecuencia interview**: aparece en preguntas "diseña sistema sin deadlock", problema dining philosophers.
+> **Tiempo de lectura estimado**: 30-45 min.
 
 ---
 

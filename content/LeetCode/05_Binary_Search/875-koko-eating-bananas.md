@@ -14,8 +14,8 @@ neetcode_order: 3
 
 # LeetCode 875 — Koko Eating Bananas
 
-> 🎯 **Tercer problema del patrón Binary Search** y la introducción a un sub-patrón muy poderoso: **Binary Search on Answer**. En vez de buscar un elemento en un array ordenado, **buscas el valor mínimo (o máximo) que cumple una condición**, asumiendo que la condición es **monotónica** (si k funciona, k+1 también; si k no funciona, k-1 tampoco).
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Tercer problema del patrón Binary Search** y la introducción a un sub-patrón muy poderoso: **Binary Search on Answer**. En vez de buscar un elemento en un array ordenado, **buscas el valor mínimo (o máximo) que cumple una condición**, asumiendo que la condición es **monotónica** (si k funciona, k+1 también; si k no funciona, k-1 tampoco).
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -30,8 +30,8 @@ Encuentra el **valor mínimo de `k`** tal que Koko se las come todas en `h` hora
 Input:  piles = [3, 6, 7, 11], h = 8
 Output: 4
         Con k=4: piles consumen ceil(3/4) + ceil(6/4) + ceil(7/4) + ceil(11/4)
-                                = 1 + 2 + 2 + 3 = 8 horas ✓
-        Con k=3: 1 + 2 + 3 + 4 = 10 horas (más de 8) ✗
+                                = 1 + 2 + 2 + 3 = 8 horas 
+        Con k=3: 1 + 2 + 3 + 4 = 10 horas (más de 8) 
 ```
 
 **Ejemplo 2:**
@@ -71,7 +71,7 @@ class Solution:
 | Edge case 1 | h == len(piles): k debe ser max(piles) |
 | Edge case 2 | h muy grande: k = 1 podría bastar |
 
-> 💡 **El insight**: la función "k → ¿se come todo en h horas?" es **monotónica** (False...False True...True a medida que k crece). Binary search encuentra el primer True.
+> **El insight**: la función "k → ¿se come todo en h horas?" es **monotónica** (False...False True...True a medida que k crece). Binary search encuentra el primer True.
 
 ---
 
@@ -91,7 +91,7 @@ class Solution:
 
 **Análisis:**
 - **Tiempo: O(max(piles) · n)** — TLE con max(piles) = 10^9.
-- **Veredicto:** ❌ TLE.
+- **Veredicto:** [NO] TLE.
 
 ---
 
@@ -123,30 +123,30 @@ class Solution:
 Inicial: left=1, right=11
 
 Iter 1: mid = 6
-  horas(6) = ceil(3/6)+ceil(6/6)+ceil(7/6)+ceil(11/6) = 1+1+2+2 = 6 ≤ 8 ✓
+  horas(6) = ceil(3/6)+ceil(6/6)+ceil(7/6)+ceil(11/6) = 1+1+2+2 = 6 ≤ 8 
   right = 6 (podría ser respuesta)
 
 Iter 2: left=1, right=6, mid=3
-  horas(3) = 1+2+3+4 = 10 > 8 ✗
+  horas(3) = 1+2+3+4 = 10 > 8 
   left = 4
 
 Iter 3: left=4, right=6, mid=5
-  horas(5) = 1+2+2+3 = 8 ≤ 8 ✓
+  horas(5) = 1+2+2+3 = 8 ≤ 8 
   right = 5
 
 Iter 4: left=4, right=5, mid=4
-  horas(4) = 1+2+2+3 = 8 ≤ 8 ✓
+  horas(4) = 1+2+2+3 = 8 ≤ 8 
   right = 4
 
 left == right == 4 → exit loop
 
-Return 4 ✅
+Return 4 [OK]
 ```
 
 **Análisis:**
 - **Tiempo: O(n · log(max(piles)))** — log(10^9) ≈ 30 iteraciones, cada una O(n).
 - **Espacio: O(1)**.
-- **Veredicto:** ✅ **la canónica**. La óptima.
+- **Veredicto:** [OK] **la canónica**. La óptima.
 
 ### Por qué `right = mid` y no `right = mid - 1`
 
@@ -197,7 +197,7 @@ Donde `ok(x)` es la función que devuelve True si x cumple la condición.
 2. La función "valor → cumple condición" es **monotónica**.
 3. La fuerza bruta probaría todos los valores → demasiado lento.
 
-> 🎯 **Patrón muy potente**: cuando lo interiorizas, problemas que parecen requerir DP o greedy se resuelven en 10 líneas con binary search.
+> **Patrón muy potente**: cuando lo interiorizas, problemas que parecen requerir DP o greedy se resuelven en 10 líneas con binary search.
 
 ---
 
@@ -210,7 +210,7 @@ Donde `ok(x)` es la función que devuelve True si x cumple la condición.
 | **1482. Minimum Number of Days to Make m Bouquets** | Días mínimos para hacer m ramos |
 | **2226. Maximum Candies Allocated to K Children** | Versión max (en lugar de min) |
 
-> 📌 Todos siguen la misma estructura: definir `ok(x)`, binary search sobre el dominio.
+> Todos siguen la misma estructura: definir `ok(x)`, binary search sobre el dominio.
 
 ---
 
@@ -254,8 +254,8 @@ Recuerda esta tabla. Es la fuente de bugs más común en binary search.
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Linear search | O(max · n) | O(1) | ❌ TLE |
-| 2. **Binary search on answer** | **O(n · log(max))** | O(1) | ✅ La canónica |
+| 1. Linear search | O(max · n) | O(1) | [NO] TLE |
+| 2. **Binary search on answer** | **O(n · log(max))** | O(1) | [OK] La canónica |
 
 ---
 

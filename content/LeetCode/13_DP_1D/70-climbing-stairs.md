@@ -14,7 +14,7 @@ neetcode_order: 1
 
 # LeetCode 70 — Climbing Stairs
 
-> 🎯 **Primer problema de DP 1-D — el Hello World del DP**. Es **Fibonacci disfrazado**: para llegar al peldaño `n`, solo puedes llegar desde `n-1` (subiendo 1) o `n-2` (subiendo 2). Por tanto `f(n) = f(n-1) + f(n-2)`.
+> **Primer problema de DP 1-D — el Hello World del DP**. Es **Fibonacci disfrazado**: para llegar al peldaño `n`, solo puedes llegar desde `n-1` (subiendo 1) o `n-2` (subiendo 2). Por tanto `f(n) = f(n-1) + f(n-2)`.
 
 ## Enunciado
 

@@ -8,7 +8,7 @@ source: claude-code
 aliases: [kanban, lean-software, scrumban]
 ---
 
-# 📋 Kanban y Lean
+# Kanban y Lean
 
 ## Por qué existe esto (el problema que resuelven)
 
@@ -22,7 +22,7 @@ Kanban y Lean atacan exactamente ese problema: **hacer fluir el trabajo en lugar
 
 ---
 
-## 🏗️ Kanban — el tablero como sistema de señales
+## Kanban — el tablero como sistema de señales
 
 ### Origen
 
@@ -72,7 +72,7 @@ A diferencia de Scrum, Kanban **no tiene iteraciones fijas** (sprints). El traba
 
 ---
 
-## 📐 Métricas de flujo
+## Métricas de flujo
 
 Kanban tiene sus propias métricas, distintas a las de Scrum (que mide velocidad en puntos).
 
@@ -87,7 +87,7 @@ Kanban tiene sus propias métricas, distintas a las de Scrum (que mide velocidad
 
 ---
 
-## 🧰 Principios Lean aplicados a software
+## Principios Lean aplicados a software
 
 Lean es la filosofía subyacente a Kanban. Mary y Tom Poppendieck la formalizaron para software en 2003.
 
@@ -128,7 +128,7 @@ Kanban implementa pull mediante los límites WIP: si una columna está llena, no
 
 ---
 
-## 🔀 Scrumban — el híbrido
+## Scrumban — el híbrido
 
 Scrumban (acuñado por Corey Ladas, 2008) combina estructura de Scrum con el flujo de Kanban. Es útil como **estado de transición** (equipos que vienen de Scrum y quieren más fluidez) o para equipos con mezcla de trabajo planificado y emergente.
 
@@ -143,7 +143,7 @@ Scrumban (acuñado por Corey Ladas, 2008) combina estructura de Scrum con el flu
 
 ---
 
-## ⚔️ Scrum vs. Kanban — cuándo usar cada uno
+## Scrum vs. Kanban — cuándo usar cada uno
 
 | Criterio | Scrum | Kanban |
 |---|---|---|
@@ -162,7 +162,7 @@ Scrumban (acuñado por Corey Ladas, 2008) combina estructura de Scrum con el flu
 
 ---
 
-## 🛠️ Cómo montar un Kanban básico desde cero
+## Cómo montar un Kanban básico desde cero
 
 ### Paso 1 — Mapea tu proceso real (no el ideal)
 
@@ -205,7 +205,7 @@ Cada 2 semanas (o cuando el sistema se sienta incómodo): revisa el CFD o simple
 
 ---
 
-## 🚀 Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 ### app web (FastAPI + React + MongoDB)
 

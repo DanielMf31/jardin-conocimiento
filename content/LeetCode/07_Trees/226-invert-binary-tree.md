@@ -14,7 +14,7 @@ neetcode_order: 1
 
 # LeetCode 226 — Invert Binary Tree
 
-> 🎯 **Primer problema del patrón Trees**. La introducción más limpia a la **recursión sobre árboles**. Famoso por la anécdota del creador de Homebrew rechazado por Google por no saberlo escribir en una pizarra. Hoy: lo escribes con los ojos cerrados.
+> **Primer problema del patrón Trees**. La introducción más limpia a la **recursión sobre árboles**. Famoso por la anécdota del creador de Homebrew rechazado por Google por no saberlo escribir en una pizarra. Hoy: lo escribes con los ojos cerrados.
 
 ## Recordatorio: la estructura `TreeNode`
 
@@ -67,9 +67,9 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)** — visita cada nodo una vez.
 - **Espacio: O(h)** donde h es altura — call stack. Peor caso O(n) (árbol degenerado), promedio O(log n) (balanceado).
-- **Veredicto:** ✅ la canónica. **Tres líneas.**
+- **Veredicto:** [OK] la canónica. **Tres líneas.**
 
-> 💡 El truco es el **swap pythonic** `root.left, root.right = root.right, root.left` haciéndolo recursivamente.
+> El truco es el **swap pythonic** `root.left, root.right = root.right, root.left` haciéndolo recursivamente.
 
 ---
 
@@ -121,7 +121,7 @@ def funcion_arbol(node):
 
 ## Solución en C++ — contraste con Python
 
-> 📘 Añadido para ver las diferencias de lenguaje. Recursión sobre árbol con punteros. Código compilable en [`226-invert-binary-tree.cpp`](226-invert-binary-tree.cpp).
+> Añadido para ver las diferencias de lenguaje. Recursión sobre árbol con punteros. Código compilable en [`226-invert-binary-tree.cpp`](226-invert-binary-tree.cpp).
 
 ```cpp
 struct TreeNode { int val; TreeNode* left; TreeNode* right; };

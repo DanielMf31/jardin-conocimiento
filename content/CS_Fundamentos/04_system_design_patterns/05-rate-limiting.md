@@ -1,8 +1,8 @@
 # 05 — Rate limiting
 
-> 📚 **Doc 5 (último) del cluster System Design Patterns**. Cómo proteger tu sistema de abuso, picos y errores en cascada.
-> 🔥 **Frecuencia interview**: aparece SIEMPRE en system design. "Cómo proteges tu API de DDoS / scrapers / bug en cliente que hace 1000 req/s".
-> ⏱️ **Tiempo de lectura estimado**: 30-45 min.
+> **Doc 5 (último) del cluster System Design Patterns**. Cómo proteger tu sistema de abuso, picos y errores en cascada.
+> **Frecuencia interview**: aparece SIEMPRE en system design. "Cómo proteges tu API de DDoS / scrapers / bug en cliente que hace 1000 req/s".
+> **Tiempo de lectura estimado**: 30-45 min.
 
 ---
 
@@ -339,7 +339,7 @@ Si no puedes → relee.
 
 ---
 
-## ¡Cluster System Design Patterns completado! 🎉
+## ¡Cluster System Design Patterns completado!
 
 Has completado el cuarto Tier 1. Resumen de lo dominado:
 

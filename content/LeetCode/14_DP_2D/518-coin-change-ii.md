@@ -14,7 +14,7 @@ neetcode_order: 4
 
 # LeetCode 518 — Coin Change II
 
-> 🎯 **Cuarto problema de DP 2-D**. Variante de [[322-coin-change]]: en lugar de **mínimo número de monedas**, **cuántas combinaciones** distintas hay para sumar amount.
+> **Cuarto problema de DP 2-D**. Variante de [[322-coin-change]]: en lugar de **mínimo número de monedas**, **cuántas combinaciones** distintas hay para sumar amount.
 
 ## Enunciado
 

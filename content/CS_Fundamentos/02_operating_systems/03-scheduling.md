@@ -1,8 +1,8 @@
 # 03 — Scheduling
 
-> 📚 **Doc 3 del cluster Operating Systems**. Cómo el SO decide QUÉ proceso/thread ejecutar en cada CPU en cada momento. La parte más "viva" del SO.
-> 🔥 **Frecuencia interview**: aparece en preguntas de performance, latencia, "¿por qué mi proceso está lento aunque hay CPU?".
-> ⏱️ **Tiempo de lectura estimado**: 35-50 min.
+> **Doc 3 del cluster Operating Systems**. Cómo el SO decide QUÉ proceso/thread ejecutar en cada CPU en cada momento. La parte más "viva" del SO.
+> **Frecuencia interview**: aparece en preguntas de performance, latencia, "¿por qué mi proceso está lento aunque hay CPU?".
+> **Tiempo de lectura estimado**: 35-50 min.
 
 ---
 

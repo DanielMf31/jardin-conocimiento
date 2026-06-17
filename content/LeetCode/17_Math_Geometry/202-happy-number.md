@@ -14,7 +14,7 @@ neetcode_order: 1
 
 # LeetCode 202 — Happy Number
 
-> 🎯 **Primer problema de Math & Geometry**. ¿Llega n a 1 sumando cuadrados de sus dígitos? **Detección de ciclos** con set o Floyd.
+> **Primer problema de Math & Geometry**. ¿Llega n a 1 sumando cuadrados de sus dígitos? **Detección de ciclos** con set o Floyd.
 
 ## Enunciado
 

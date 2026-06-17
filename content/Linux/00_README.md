@@ -10,9 +10,9 @@ aliases: [Linux fundamentos, Linux básico, fundamentos linux]
 
 # Linux — fundamentos para ser proficiente
 
-> 🎯 Lo básico de Linux que hay que dominar **sí o sí** para moverte con soltura. Estilo denso tipo [[MOC_CS_Fundamentos|CS_Fundamentos]]. Ejemplos sobre **Ubuntu 24.04** (mi sistema).
+> Lo básico de Linux que hay que dominar **sí o sí** para moverte con soltura. Estilo denso tipo [[MOC_CS_Fundamentos|CS_Fundamentos]]. Ejemplos sobre **Ubuntu 24.04** (mi sistema).
 >
-> 📍 Mapa del área: [[MOC_Linux]]
+> Mapa del área: [[MOC_Linux]]
 
 ## Estructura
 

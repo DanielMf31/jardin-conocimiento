@@ -8,7 +8,7 @@ source: claude-code
 aliases: [gitlab self-host, gitlab autoalojado, gitlab on-premise]
 ---
 
-# 🏠 Autoalojamiento (self-hosting) de GitLab
+# Autoalojamiento (self-hosting) de GitLab
 
 ## ¿Por qué autoalojar?
 
@@ -26,7 +26,7 @@ GitLab.com es la instancia pública gratuita de GitLab. Autoalojar significa cor
 
 ---
 
-## 🏗️ Arquitectura: qué hay dentro de un GitLab
+## Arquitectura: qué hay dentro de un GitLab
 
 GitLab "pesa" porque no es una aplicación monolítica simple: es una plataforma completa. Entender los componentes te ayuda a dimensionar el hardware y diagnosticar problemas.
 
@@ -73,7 +73,7 @@ Mínimo viable (homelab, pocos usuarios): **4 GB RAM**. Cómodo para un equipo p
 
 ---
 
-## 📦 Formas de instalar
+## Formas de instalar
 
 ### 1. Omnibus (paquete .deb / .rpm) — el método "oficial"
 
@@ -98,7 +98,7 @@ sudo gitlab-ctl tail           # logs en vivo
 
 ---
 
-### 2. Docker / Docker Compose — recomendado para homelab ⭐
+### 2. Docker / Docker Compose — recomendado para homelab
 
 Permite correr GitLab aislado, junto a otras apps, y es fácil de respaldar y mover.
 
@@ -189,7 +189,7 @@ proyecto/
 └── gitlab/
     ├── config/          # ← respaldar siempre
     │   ├── gitlab.rb
-    │   └── gitlab-secrets.json   # ⚠️ NUNCA pierdes esto (claves de cifrado de BD)
+    │   └── gitlab-secrets.json   #  NUNCA pierdes esto (claves de cifrado de BD)
     ├── logs/
     └── data/            # ← el más grande (repos + artifacts)
 ```
@@ -211,7 +211,7 @@ helm install gitlab gitlab/gitlab \
 
 ---
 
-## 🔒 HTTPS y exposición segura
+## HTTPS y exposición segura
 
 ### El problema de exponer GitLab a internet
 
@@ -262,15 +262,15 @@ sudo tailscale up
 
 | | Cloudflare Tunnel | Tailscale |
 |---|---|---|
-| Acceso público (sin VPN) | ✅ Sí | ❌ No (solo tailnet) |
-| IP privada | ✅ | ✅ |
-| SSH git nativo | ⚠️ Limitado | ✅ Completo |
+| Acceso público (sin VPN) | [OK] Sí | [NO] No (solo tailnet) |
+| IP privada | [OK] | [OK] |
+| SSH git nativo | Limitado | [OK] Completo |
 | Coste | Gratis (Free plan) | Gratis hasta 3 usuarios |
 | Confianza | Cloudflare ve tráfico | Solo tus devices |
 
 ---
 
-## ⚙️ Requisitos reales de hardware
+## Requisitos reales de hardware
 
 | Uso | RAM | CPU | Disco |
 |---|---|---|---|
@@ -283,7 +283,7 @@ sudo tailscale up
 
 ---
 
-## 🛡️ Errores comunes y cómo evitarlos
+## Errores comunes y cómo evitarlos
 
 | Error | Consecuencia | Solución |
 |---|---|---|
@@ -305,7 +305,7 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 
 ---
 
-## 💾 Backups
+## Backups
 
 ```bash
 # Con Omnibus (en el host)
@@ -323,7 +323,7 @@ Estrategia mínima viable: backup diario con cron → rsync a disco externo o rc
 
 ---
 
-## 🚀 Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 **app web y proyecto embebido:** ambos son proyectos que podrías alojar en una instancia GitLab self-hosted si quieres CI/CD propio con runners en tu máquina local (sin límite de minutos CI, sin exponer código a GitLab.com).
 

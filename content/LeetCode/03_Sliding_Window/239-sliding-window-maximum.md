@@ -14,8 +14,8 @@ neetcode_order: 6
 
 # LeetCode 239 — Sliding Window Maximum
 
-> 🎯 **Sexto y último problema del patrón Sliding Window — segundo Hard**. Introduce la estructura más bonita y útil del patrón: la **deque monotónica decreciente**. Es un truco que reaparece en muchísimos problemas (Largest Rectangle in Histogram, Daily Temperatures, etc.) y aprenderlo aquí te abre toda esa familia.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Sexto y último problema del patrón Sliding Window — segundo Hard**. Introduce la estructura más bonita y útil del patrón: la **deque monotónica decreciente**. Es un truco que reaparece en muchísimos problemas (Largest Rectangle in Histogram, Daily Temperatures, etc.) y aprenderlo aquí te abre toda esa familia.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -68,7 +68,7 @@ class Solution:
 | Edge case 1 | `k = 1` → output = `nums` |
 | Edge case 2 | `k = n` → una sola ventana, una sola salida |
 
-> 💡 **El reto**: ¿puedes hacerlo en O(n)? La fuerza bruta da O(n·k); el heap da O(n log n); el deque monotónico da O(n).
+> **El reto**: ¿puedes hacerlo en O(n)? La fuerza bruta da O(n·k); el heap da O(n log n); el deque monotónico da O(n).
 
 ---
 
@@ -88,7 +88,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n·k)** — TLE con n = 10^5 y k grande.
 - **Espacio: O(1)** extra.
-- **Veredicto:** ❌ TLE para valores grandes de k.
+- **Veredicto:** [NO] TLE para valores grandes de k.
 
 ---
 
@@ -116,7 +116,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n log n)** — cada elemento puede entrar y salir del heap O(n) veces.
 - **Espacio: O(n)** — el heap puede tener todos los elementos.
-- **Veredicto:** ✅ pasa LeetCode pero **no cumple O(n)**. Aceptable como solución intermedia, no la óptima.
+- **Veredicto:** [OK] pasa LeetCode pero **no cumple O(n)**. Aceptable como solución intermedia, no la óptima.
 
 ---
 
@@ -163,7 +163,7 @@ class Solution:
 | 6 | 6 | [4, 5] | pop 5 (3≤6), pop 4 (5≤6); append 6 | [6] | nums[6]=**6** |
 | 7 | 7 | [6] | pop 6 (6≤7); append 7 | [7] | nums[7]=**7** |
 
-Resultado: `[3, 3, 5, 5, 6, 7]` ✅.
+Resultado: `[3, 3, 5, 5, 6, 7]` [OK].
 
 ### Por qué la deque mantiene orden decreciente
 
@@ -174,15 +174,15 @@ Esto garantiza que la deque siempre está en orden decreciente. El **frente** es
 **Análisis:**
 - **Tiempo: O(n)** — análisis amortizado: cada índice entra y sale de la deque **a lo sumo una vez**. Total: 2n operaciones.
 - **Espacio: O(k)** — la deque tiene como mucho k elementos.
-- **Veredicto:** ✅ **la óptima**. La que demuestra dominio del patrón "deque monotónica" en una entrevista.
+- **Veredicto:** [OK] **la óptima**. La que demuestra dominio del patrón "deque monotónica" en una entrevista.
 
-> 🎯 **El truco "guardar índices, no valores"** es lo que permite chequear la ventana (`dq[0] <= right - k`) sin perder información. Si guardases solo valores, no sabrías cuándo expirarlos.
+> **El truco "guardar índices, no valores"** es lo que permite chequear la ventana (`dq[0] <= right - k`) sin perder información. Si guardases solo valores, no sabrías cuándo expirarlos.
 
 ---
 
 ## Trace exhaustivo de las soluciones 2 y 3 (referencia detallada)
 
-> 📚 **Sección de repaso**: explica en profundidad cómo funcionan internamente el **heap** y la **deque monotónica** — qué hace cada operación, por qué se hace así, y un trace paso a paso con números concretos. Útil para revisar cuando hayas olvidado los detalles.
+> **Sección de repaso**: explica en profundidad cómo funcionan internamente el **heap** y la **deque monotónica** — qué hace cada operación, por qué se hace así, y un trace paso a paso con números concretos. Útil para revisar cuando hayas olvidado los detalles.
 
 ### Parte 1 — Solución 2 (HEAP) en detalle
 
@@ -265,7 +265,7 @@ heappush((-5, 4)) → tras burbujeo:
 top = (-5, 4)  →  nums[4]=5
 Limpieza: 4 ≤ 1? NO.
 
-⚠️ El elemento (-3, 1) ya está fuera de la ventana actual [2,3,4]
+ El elemento (-3, 1) ya está fuera de la ventana actual [2,3,4]
    PERO no estorba (no es el top), así que no lo limpiamos.
    Ahí está la "pereza" — viejo dentro, pero invisible.
 
@@ -294,7 +294,7 @@ EMITE: 6.   result = [3, 3, 5, 5, 6]
 ```
 heappush((-7, 7)) → top = (-7, 7).
 Limpieza: 7 ≤ 4? NO.
-EMITE: 7.   result = [3, 3, 5, 5, 6, 7] ✅
+EMITE: 7.   result = [3, 3, 5, 5, 6, 7] [OK]
 ```
 
 #### 1.5 Caso donde la limpieza perezosa SÍ se activa — `nums = [5, 4, 3, 2, 1], k = 2`
@@ -379,7 +379,7 @@ REGLA 3 — Emitir resultado cuando ventana esté formada:
        result.append(nums[dq[0]])      # el frente es el máximo
 ```
 
-> ℹ️ **Sobre `<=` en Regla 1**: usamos `<=` (no `<`) para manejar duplicados — si ya hay un valor igual y entra otro nuevo, sacamos el viejo porque expirará antes y el nuevo durará más.
+> ℹ **Sobre `<=` en Regla 1**: usamos `<=` (no `<`) para manejar duplicados — si ya hay un valor igual y entra otro nuevo, sacamos el viejo porque expirará antes y el nuevo durará más.
 
 #### 2.5 Trace paso a paso — `nums = [1, 3, -1, -3, 5, 3, 6, 7], k = 3`
 
@@ -391,7 +391,7 @@ Regla 1: dq vacía → append. dq=[0].
 Regla 2: 0 ≤ -3? NO.
 Regla 3: right=0 < 2 → no emite.
 
-dq = [0]   nums[dq] = [1]   ✓
+dq = [0]   nums[dq] = [1]   
 ```
 
 **right=1, num=3**
@@ -404,7 +404,7 @@ Regla 1: nums[0]=1 ≤ 3? SÍ → pop. dq vacía. append(1). dq=[1].
 Regla 2: 1 ≤ -2? NO.
 Regla 3: 1 < 2 → no emite.
 
-dq = [1]   nums[dq] = [3]   ✓
+dq = [1]   nums[dq] = [3]   
 ```
 
 **right=2, num=-1**
@@ -417,7 +417,7 @@ Regla 1: nums[1]=3 ≤ -1? NO. append(2). dq=[1, 2].
 Regla 2: 1 ≤ -1? NO.
 Regla 3: EMITE nums[1] = 3.
 
-dq = [1, 2]   nums[dq] = [3, -1]   ✓
+dq = [1, 2]   nums[dq] = [3, -1]   
 result = [3]
 ```
 
@@ -429,7 +429,7 @@ Regla 1: nums[2]=-1 ≤ -3? NO. append(3). dq=[1, 2, 3].
 Regla 2: 1 ≤ 0? NO. (Índice 1 sigue en ventana [1,3]).
 Regla 3: EMITE nums[1] = 3.
 
-dq = [1, 2, 3]   nums[dq] = [3, -1, -3]   ✓
+dq = [1, 2, 3]   nums[dq] = [3, -1, -3]   
 result = [3, 3]
 ```
 
@@ -447,7 +447,7 @@ Regla 1 (iterativa):
 Regla 2: 4 ≤ 1? NO.
 Regla 3: EMITE nums[4] = 5.
 
-dq = [4]   nums[dq] = [5]   ✓
+dq = [4]   nums[dq] = [5]   
 result = [3, 3, 5]
 ```
 
@@ -459,7 +459,7 @@ Regla 1: nums[4]=5 ≤ 3? NO. append(5). dq=[4, 5].
 Regla 2: 4 ≤ 2? NO.
 Regla 3: EMITE nums[4] = 5.
 
-dq = [4, 5]   nums[dq] = [5, 3]   ✓
+dq = [4, 5]   nums[dq] = [5, 3]   
 result = [3, 3, 5, 5]
 ```
 
@@ -474,7 +474,7 @@ Regla 1:
 Regla 2: 6 ≤ 3? NO.
 Regla 3: EMITE nums[6] = 6.
 
-dq = [6]   nums[dq] = [6]   ✓
+dq = [6]   nums[dq] = [6]   
 result = [3, 3, 5, 5, 6]
 ```
 
@@ -487,7 +487,7 @@ Regla 2: 7 ≤ 4? NO.
 Regla 3: EMITE nums[7] = 7.
 
 dq = [7]   nums[dq] = [7]
-result = [3, 3, 5, 5, 6, 7] ✅
+result = [3, 3, 5, 5, 6, 7] [OK]
 ```
 
 #### 2.6 Caso donde se activa la Regla 2 (expirar por frente) — `nums = [5, 4, 3, 2, 1], k = 3`
@@ -583,7 +583,7 @@ def deque_monotonica_max(arr, k):
 | **862. Shortest Subarray with Sum at Least K** | Deque monotónica con sumas acumulativas (Hard) |
 | **1696. Jump Game VI** | Deque monotónica + DP |
 
-> 🎯 **Patrón maestro**: stack monotónico y deque monotónica son la **misma idea estructural**. Stack si el problema es "el siguiente/anterior X", deque si hay también una restricción de ventana.
+> **Patrón maestro**: stack monotónico y deque monotónica son la **misma idea estructural**. Stack si el problema es "el siguiente/anterior X", deque si hay también una restricción de ventana.
 
 ---
 
@@ -615,9 +615,9 @@ Stack es un caso especial de deque (sin la restricción de ventana).
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Fuerza bruta | O(n·k) | O(1) | ❌ TLE |
-| 2. Heap con limpieza | O(n log n) | O(n) | ✅ Pasa, no óptima |
-| 3. **Deque monotónica** | **O(n)** | O(k) | ✅ La óptima |
+| 1. Fuerza bruta | O(n·k) | O(1) | [NO] TLE |
+| 2. Heap con limpieza | O(n log n) | O(n) | [OK] Pasa, no óptima |
+| 3. **Deque monotónica** | **O(n)** | O(k) | [OK] La óptima |
 
 ---
 
@@ -646,7 +646,7 @@ Stack es un caso especial de deque (sin la restricción de ventana).
 
 ---
 
-## Cierre del patrón Sliding Window 🎉
+## Cierre del patrón Sliding Window
 
 Has llegado al **último problema del tercer patrón del NeetCode 150**. Resumen de los **6 problemas**:
 
@@ -677,4 +677,4 @@ Has llegado al **último problema del tercer patrón del NeetCode 150**. Resumen
 - [ ] Justificado por qué guardar índices y no valores
 - [ ] Trace mental hecho con duplicados
 - [ ] Resuelto en LeetCode con éxito
-- [ ] **Patrón Sliding Window cerrado** ✅
+- [ ] **Patrón Sliding Window cerrado** [OK]

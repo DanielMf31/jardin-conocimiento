@@ -8,7 +8,7 @@ source: claude-code
 aliases: [Leviathan README, Leviathan guia, OverTheWire Leviathan]
 ---
 
-# 🐙 OverTheWire Leviathan — guía y progreso
+# OverTheWire Leviathan — guía y progreso
 
 Wargame **legal y educativo**, el paso natural **después de Bandit**. Más corto (8 niveles, 0→7) y
 con un foco claro: **binarios setuid mal programados** y cómo abusarlos para escalar de un usuario al
@@ -26,12 +26,12 @@ ssh leviathanN@leviathan.labs.overthewire.org -p 2223
 
 > Úsalos así: intenta el nivel tú primero; si te atascas, mira el paso concreto. **No leas la solución entera de golpe.**
 
-> 💡 Concepto transversal: casi todos los niveles giran en torno a un **binario SUID** (corre con los
+> Concepto transversal: casi todos los niveles giran en torno a un **binario SUID** (corre con los
 > privilegios de su dueño). Tus dos herramientas estrella: `ltrace` (ver qué llamadas hace el binario,
 > p.ej. con qué cadena compara tu contraseña) y los **symlinks** (engañar a un binario para que lea un
 > fichero protegido). Conecta con [[06-seguridad-de-sistemas-y-hardening]].
 
-## 📚 Walkthroughs (todos los niveles)
+## Walkthroughs (todos los niveles)
 - [[Leviathan/01-nivel-0-a-1]] — archivos ocultos (`.backup/`) + `grep`
 - [[Leviathan/02-nivel-1-a-2]] — binario setuid + `ltrace` (1)
 - [[Leviathan/03-nivel-2-a-3]] — `system()` sin comillas: truco del espacio + symlink
@@ -40,10 +40,10 @@ ssh leviathanN@leviathan.labs.overthewire.org -p 2223
 - [[Leviathan/06-nivel-5-a-6]] — symlink a fichero protegido (`/tmp/file.log`)
 - [[Leviathan/07-nivel-6-a-7]] — fuerza bruta de PIN de 4 dígitos (nivel 7 = final)
 
-## 📋 Mi progreso (rellena a mano)
-> ⚠️ Bajo riesgo (es un juego), pero por hábito: **no subas este archivo con contraseñas a un repo público**.
+## Mi progreso (rellena a mano)
+> Bajo riesgo (es un juego), pero por hábito: **no subas este archivo con contraseñas a un repo público**.
 
-| Nivel | Qué aprendí                     | ✓   | Contraseña obtenida |
+| Nivel | Qué aprendí | | Contraseña obtenida |
 | ----- | ------------------------------- | --- | ------------------- |
 | 0→1   | archivos ocultos + `grep`       |     |                     |
 | 1→2   | setuid + `ltrace`               |     |                     |

@@ -14,7 +14,7 @@ neetcode_order: 2
 
 # LeetCode 55 — Jump Game
 
-> 🎯 **Segundo problema de Greedy**. ¿Puedo llegar desde 0 al final con saltos de longitud variable? **Trackear el "máximo alcance" mientras avanzas**.
+> **Segundo problema de Greedy**. ¿Puedo llegar desde 0 al final con saltos de longitud variable? **Trackear el "máximo alcance" mientras avanzas**.
 
 ## Enunciado
 

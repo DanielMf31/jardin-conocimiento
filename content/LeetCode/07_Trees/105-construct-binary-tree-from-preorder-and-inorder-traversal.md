@@ -14,7 +14,7 @@ neetcode_order: 13
 
 # LeetCode 105 — Construct Binary Tree from Preorder and Inorder Traversal
 
-> 🎯 **Decimotercero problema del patrón Trees**. Reconstrucción a partir de dos recorridos. Combina **propiedad del preorder** (primer elemento es root) y **propiedad del inorder** (root divide en izquierda y derecha).
+> **Decimotercero problema del patrón Trees**. Reconstrucción a partir de dos recorridos. Combina **propiedad del preorder** (primer elemento es root) y **propiedad del inorder** (root divide en izquierda y derecha).
 
 ## Enunciado
 
@@ -94,7 +94,7 @@ class Solution:
 
 **Análisis:** O(n) tiempo (lookup O(1)), O(n) espacio.
 
-**Veredicto:** ✅ la óptima. La que esperan en entrevista.
+**Veredicto:** [OK] la óptima. La que esperan en entrevista.
 
 ---
 

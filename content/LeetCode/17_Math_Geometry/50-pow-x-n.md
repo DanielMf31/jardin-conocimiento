@@ -14,7 +14,7 @@ neetcode_order: 6
 
 # LeetCode 50 — Pow(x, n)
 
-> 🎯 **Sexto problema de Math & Geometry**. **Exponentiation by squaring** (fast power). Reduce O(n) → O(log n).
+> **Sexto problema de Math & Geometry**. **Exponentiation by squaring** (fast power). Reduce O(n) → O(log n).
 
 ## Enunciado
 

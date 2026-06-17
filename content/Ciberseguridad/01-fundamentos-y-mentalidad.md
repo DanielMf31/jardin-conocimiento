@@ -8,7 +8,7 @@ source: claude-code
 aliases: [fundamentos seguridad, mentalidad hacker, CIA triada]
 ---
 
-# 🛡️ Fundamentos y mentalidad de la ciberseguridad
+# Fundamentos y mentalidad de la ciberseguridad
 
 ## ¿Por qué este documento existe?
 
@@ -16,7 +16,7 @@ La ciberseguridad no es una capa que se añade al final de un proyecto. Es una f
 
 ---
 
-## 🌐 ¿Qué es la ciberseguridad?
+## ¿Qué es la ciberseguridad?
 
 **Ciberseguridad** es la práctica de proteger sistemas, redes, datos y personas frente a accesos no autorizados, daños o ataques. No se limita a software: incluye hardware, personas (ingeniería social), procesos y políticas.
 
@@ -32,7 +32,7 @@ Tres disciplinas principales que se solapan:
 
 ---
 
-## 🔺 La Tríada CIA
+## La Tríada CIA
 
 El modelo más fundamental de la seguridad. Toda amenaza ataca una o más de estas tres propiedades:
 
@@ -65,7 +65,7 @@ El sistema está accesible para quienes lo necesitan cuando lo necesitan.
 
 ---
 
-## 🗺️ Threat Modeling — Modelar amenazas
+## Threat Modeling — Modelar amenazas
 
 **Threat modeling** (modelado de amenazas) es el proceso estructurado de identificar qué puede salir mal en un sistema antes de que ocurra. No es opcional en proyectos serios.
 
@@ -91,7 +91,7 @@ Mnemónico para categorizar amenazas (creado por Microsoft):
 
 ---
 
-## 🎯 Superficie de ataque y vectores de ataque
+## Superficie de ataque y vectores de ataque
 
 **Superficie de ataque** (attack surface): todo punto de un sistema donde un atacante podría intentar entrar o extraer datos. Cuanto más grande, más riesgo.
 
@@ -115,7 +115,7 @@ Superficie de ataque (todo lo expuesto)
 
 ---
 
-## 🏗️ Principios fundamentales de diseño seguro
+## Principios fundamentales de diseño seguro
 
 Estos principios son transferibles a cualquier sistema. Son la base de todas las decisiones de seguridad.
 
@@ -177,7 +177,7 @@ Ejemplo bueno: si el sistema de autenticación falla, deniega el acceso y regist
 
 ---
 
-## 👤 Actores de amenaza (Threat Actors)
+## Actores de amenaza (Threat Actors)
 
 Saber quién te puede atacar cambia radicalmente qué controles priorizar.
 
@@ -194,7 +194,7 @@ Saber quién te puede atacar cambia radicalmente qué controles priorizar.
 
 ---
 
-## ⚖️ Ética y legalidad — Reglas de oro
+## Ética y legalidad — Reglas de oro
 
 Este es el límite que separa al profesional de seguridad del criminal. No es negociable.
 
@@ -234,7 +234,7 @@ Muchas empresas tienen programas de **Bug Bounty** (recompensa por bugs) — es 
 
 ---
 
-## 🧠 Mentalidad del defensor vs. del atacante
+## Mentalidad del defensor vs. del atacante
 
 La seguridad efectiva requiere pensar como ambos:
 
@@ -263,7 +263,7 @@ La seguridad efectiva requiere pensar como ambos:
 
 ---
 
-## 🛠️ Aplícalo / Practica
+## Aplícalo / Practica
 
 ### Laboratorio mínimo (nivel 0)
 1. Instala una VM con **Kali Linux** (distribución orientada a pentesting, con herramientas preinstaladas).

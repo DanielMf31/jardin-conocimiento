@@ -1,8 +1,8 @@
 # 02 — ACID y transactions
 
-> 📚 **Doc 2 del cluster Database Internals**. La razón por la que confías en tu DB con datos críticos. Las garantías que distinguen una DB seria de un archivo glorificado.
-> 🔥 **Frecuencia interview**: aparece en backend interviews siempre. "Explica ACID", "qué es una transacción", "cómo garantiza consistencia tu DB".
-> ⏱️ **Tiempo de lectura estimado**: 35-50 min.
+> **Doc 2 del cluster Database Internals**. La razón por la que confías en tu DB con datos críticos. Las garantías que distinguen una DB seria de un archivo glorificado.
+> **Frecuencia interview**: aparece en backend interviews siempre. "Explica ACID", "qué es una transacción", "cómo garantiza consistencia tu DB".
+> **Tiempo de lectura estimado**: 35-50 min.
 
 ---
 

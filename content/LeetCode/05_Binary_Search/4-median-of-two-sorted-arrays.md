@@ -14,8 +14,8 @@ neetcode_order: 7
 
 # LeetCode 4 — Median of Two Sorted Arrays
 
-> 🎯 **Séptimo y último problema del patrón Binary Search — el Hard del patrón** y uno de los problemas **más difíciles conceptualmente** de NeetCode 150. La solución óptima requiere un truco no obvio: **binary search sobre la partición** de los dos arrays. No te frustres si tarda en cuajar — incluso ingenieros experimentados lo encuentran difícil.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Séptimo y último problema del patrón Binary Search — el Hard del patrón** y uno de los problemas **más difíciles conceptualmente** de NeetCode 150. La solución óptima requiere un truco no obvio: **binary search sobre la partición** de los dos arrays. No te frustres si tarda en cuajar — incluso ingenieros experimentados lo encuentran difícil.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -65,7 +65,7 @@ class Solution:
 | Edge case 1 | Uno de los arrays vacío → mediana es del otro solo |
 | Edge case 2 | Total impar vs par — manejo distinto |
 
-> ⚠️ **Avisa**: este problema tiene **muchos casos borde** (arrays vacíos, particiones extremas, total par/impar). La solución óptima es elegante pero **fácil de implementar mal**.
+> **Avisa**: este problema tiene **muchos casos borde** (arrays vacíos, particiones extremas, total par/impar). La solución óptima es elegante pero **fácil de implementar mal**.
 
 ---
 
@@ -175,13 +175,13 @@ Iter 1: left=0, right=2
   nums2_right = nums2[1] = ... fuera de rango → +inf
 
   ¿1 <= +inf y 2 <= 3? SÍ y SÍ → partición correcta
-  total impar (3) → return max(1, 2) = 2.0 ✅
+  total impar (3) → return max(1, 2) = 2.0 [OK]
 ```
 
 **Análisis:**
 - **Tiempo: O(log(min(m, n)))** — binary search sobre el array más pequeño.
 - **Espacio: O(1)**.
-- **Veredicto:** ✅ **la óptima**. La que demuestra dominio del problema.
+- **Veredicto:** [OK] **la óptima**. La que demuestra dominio del problema.
 
 ### Por qué binary search sobre el array más pequeño
 
@@ -270,9 +270,9 @@ Esto garantiza que la izquierda contiene el "medio" en arrays de tamaño impar, 
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Merge + sort | O((m+n) log(m+n)) | O(m+n) | ❌ No óptimo |
+| 1. Merge + sort | O((m+n) log(m+n)) | O(m+n) | [NO] No óptimo |
 | 2. Merge two pointers | O(m+n) | O(m+n) | Acepta, no cumple O(log) |
-| 3. **Binary search sobre partición** | **O(log(min(m,n)))** | **O(1)** | ✅ La óptima |
+| 3. **Binary search sobre partición** | **O(log(min(m,n)))** | **O(1)** | [OK] La óptima |
 
 ---
 
@@ -299,7 +299,7 @@ Esto garantiza que la izquierda contiene el "medio" en arrays de tamaño impar, 
 
 ---
 
-## Cierre del patrón Binary Search 🎉
+## Cierre del patrón Binary Search
 
 Has llegado al **último problema del quinto patrón del NeetCode 150**. Resumen de los **7 problemas**:
 
@@ -334,4 +334,4 @@ Has llegado al **último problema del quinto patrón del NeetCode 150**. Resumen
 - [ ] Justificada cada parte de la condición de partición
 - [ ] Trace mental con varios ejemplos (par, impar, uno vacío)
 - [ ] Resuelto en LeetCode con éxito
-- [ ] **Patrón Binary Search cerrado** ✅
+- [ ] **Patrón Binary Search cerrado** [OK]

@@ -1,8 +1,8 @@
 # 03 — Message queues
 
-> 📚 **Doc 3 del cluster System Design Patterns**. Cómo desacoplas servicios y absorbes picos de carga sin que nada explote. Patrón omnipresente en arquitecturas distribuidas.
-> 🔥 **Frecuencia interview**: aparece en cualquier system design "asíncrono" o "evento-driven". Diferenciar Kafka vs RabbitMQ es clásico.
-> ⏱️ **Tiempo de lectura estimado**: 40-55 min.
+> **Doc 3 del cluster System Design Patterns**. Cómo desacoplas servicios y absorbes picos de carga sin que nada explote. Patrón omnipresente en arquitecturas distribuidas.
+> **Frecuencia interview**: aparece en cualquier system design "asíncrono" o "evento-driven". Diferenciar Kafka vs RabbitMQ es clásico.
+> **Tiempo de lectura estimado**: 40-55 min.
 
 ---
 
@@ -84,9 +84,9 @@ Las 3 garantías posibles:
 **Idempotente** = ejecutar 1 vez o N veces produce el MISMO resultado final.
 
 **Ejemplos**:
-- ✅ "set user.email = X" → repetible sin daño.
-- ❌ "increment counter" → no idempotente.
-- ✅ "increment counter IF version=N" → idempotente con version check.
+- [OK] "set user.email = X" → repetible sin daño.
+- [NO] "increment counter" → no idempotente.
+- [OK] "increment counter IF version=N" → idempotente con version check.
 
 **Cómo hacer idempotente**:
 - Idempotency key (UUID) por mensaje. El consumer guarda processed IDs.

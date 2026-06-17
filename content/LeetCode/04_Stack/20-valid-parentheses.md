@@ -14,8 +14,8 @@ neetcode_order: 1
 
 # LeetCode 20 — Valid Parentheses
 
-> 🎯 **Primer problema del patrón Stack** y la introducción más limpia al patrón. La idea: un stack es **memoria LIFO** (Last In First Out) que recuerda **lo más reciente sin terminar**. Cuando ves un cierre, lo que esperas casarlo es lo más reciente que esté abierto.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Primer problema del patrón Stack** y la introducción más limpia al patrón. La idea: un stack es **memoria LIFO** (Last In First Out) que recuerda **lo más reciente sin terminar**. Cuando ves un cierre, lo que esperas casarlo es lo más reciente que esté abierto.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -82,7 +82,7 @@ class Solution:
 | Edge case 2 | `"["` → `False` (apertura solitaria) |
 | Edge case 3 | `"(){}[]"` → `True` (todos pares secuenciales) |
 
-> 💡 **La estructura natural** del problema es LIFO: cuando ves un cierre, lo que tienes que casarlo es **la última apertura que vino**. Stack lo modela exactamente.
+> **La estructura natural** del problema es LIFO: cuando ves un cierre, lo que tienes que casarlo es **la última apertura que vino**. Stack lo modela exactamente.
 
 ---
 
@@ -116,13 +116,13 @@ Estado inicial: stack = []
 char='{' (apertura) → push          stack = ['{']
 char='[' (apertura) → push          stack = ['{', '[']
 char=']' (cierre)
-       → top='[' == pairs[']']='[' ✅
+       → top='[' == pairs[']']='[' [OK]
        → pop                        stack = ['{']
 char='}' (cierre)
-       → top='{' == pairs['}']='{' ✅
+       → top='{' == pairs['}']='{' [OK]
        → pop                        stack = []
 
-Final: stack vacío → return True ✅
+Final: stack vacío → return True [OK]
 ```
 
 **Trace mental con `s = "([)]"`**:
@@ -133,14 +133,14 @@ Estado inicial: stack = []
 char='(' (apertura) → push          stack = ['(']
 char='[' (apertura) → push          stack = ['(', '[']
 char=')' (cierre)
-       → top='[' != pairs[')']='(' ❌
+       → top='[' != pairs[')']='(' [NO]
        → return False
 ```
 
 **Análisis:**
 - **Tiempo: O(n)** — un recorrido lineal.
 - **Espacio: O(n)** — el stack puede llegar a tener n/2 caracteres en el peor caso.
-- **Veredicto:** ✅ **la canónica de entrevista**. Limpia y eficiente.
+- **Veredicto:** [OK] **la canónica de entrevista**. Limpia y eficiente.
 
 ---
 
@@ -185,7 +185,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n²)** — cada `replace` es O(n), y se ejecuta hasta n/2 veces.
 - **Espacio: O(n)**.
-- **Veredicto:** ⚠️ es un "truco" que pasa LeetCode pero **NUNCA escribas esto en entrevista**. No demuestra que entiendes el patrón stack.
+- **Veredicto:** es un "truco" que pasa LeetCode pero **NUNCA escribas esto en entrevista**. No demuestra que entiendes el patrón stack.
 
 ---
 
@@ -244,7 +244,7 @@ not stack                    # vacío? (idiomático)
 len(stack) == 0              # vacío? (equivalente)
 ```
 
-> ⚠️ **NO uses `stack.pop(0)`** — eso es `popleft` y es O(n) en list. Para FIFO (queue), usa `collections.deque`.
+> **NO uses `stack.pop(0)`** — eso es `popleft` y es O(n) en list. Para FIFO (queue), usa `collections.deque`.
 
 ### `not stack` — el chequeo idiomático de vacío
 
@@ -278,9 +278,9 @@ if char en cierres:
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. **Stack con dict de mapeo** | **O(n)** | O(n) | ✅ La canónica |
+| 1. **Stack con dict de mapeo** | **O(n)** | O(n) | [OK] La canónica |
 | 2. Stack con if encadenados | O(n) | O(n) | Funciona, menos limpia |
-| 3. Replace iterativo | O(n²) | O(n) | ⚠️ Truco; no usar en entrevista |
+| 3. Replace iterativo | O(n²) | O(n) | Truco; no usar en entrevista |
 
 ---
 
@@ -308,7 +308,7 @@ if char en cierres:
 
 ## Solución en C++ — contraste con Python
 
-> 📘 Añadido para ver las diferencias de lenguaje. Código compilable en [`20-valid-parentheses.cpp`](20-valid-parentheses.cpp).
+> Añadido para ver las diferencias de lenguaje. Código compilable en [`20-valid-parentheses.cpp`](20-valid-parentheses.cpp).
 
 ```cpp
 class Solution {

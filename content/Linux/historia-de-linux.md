@@ -30,7 +30,7 @@ Como reacción irónica a la complejidad de Multics, lo llamaron primero **UNICS
 
 La gran revolución llegó pocos años después. Para no tener que reescribir Unix en ensamblador cada vez que cambiaba de máquina, Ritchie desarrolló entre 1972 y 1973 un nuevo lenguaje de programación: el **lenguaje C**. En 1973 reescribieron casi todo el núcleo de Unix en C. Esto fue **enorme**: por primera vez, un sistema operativo era *portable*. Podías llevarlo a otra arquitectura simplemente recompilando, en lugar de reescribirlo entero. Una idea que tardó años en explotar del todo, pero la mecha ya estaba encendida.
 
-> 💡 **Curiosidad**: La filosofía Unix —"haz una sola cosa y hazla bien", "todo es un archivo", "programas pequeños conectados con tuberías"— sigue viva cada vez que escribes `cat archivo | grep error | wc -l` en tu terminal. Esa tubería `|` es un invento de Bell Labs de hace más de cincuenta años. Kernighan y Ritchie documentaron todo esto en *The C Programming Language* (1978), conocido simplemente como "K&R", considerado aún hoy uno de los mejores libros técnicos jamás escritos.
+> **Curiosidad**: La filosofía Unix —"haz una sola cosa y hazla bien", "todo es un archivo", "programas pequeños conectados con tuberías"— sigue viva cada vez que escribes `cat archivo | grep error | wc -l` en tu terminal. Esa tubería `|` es un invento de Bell Labs de hace más de cincuenta años. Kernighan y Ritchie documentaron todo esto en *The C Programming Language* (1978), conocido simplemente como "K&R", considerado aún hoy uno de los mejores libros técnicos jamás escritos.
 
 ### Las "guerras Unix" y BSD
 
@@ -99,7 +99,7 @@ will support anything other than AT-harddisks, as that's all I have :-(
 
 La modestia es, en retrospectiva, casi cómica. *"Just a hobby, won't be big and professional like gnu"* — solo un hobby, nunca será grande ni profesional. Y añade en la posdata que el sistema NO es portable y *"probablemente nunca soportará nada más que discos AT, que es todo lo que tengo"*. Hoy Linux corre en teléfonos, supercomputadores, coches autónomos, sondas espaciales, routers... y en prácticamente cualquier dispositivo con un procesador.
 
-> 💡 **Curiosidad**: Fíjate en que Linus menciona en el mismo mensaje que ya ha portado **bash** y **gcc** — herramientas del proyecto GNU. Desde el primer minuto, el corazón que Linus estaba construyendo latía dentro del cuerpo que Stallman había pasado casi una década ensamblando. El encuentro fue casi inconsciente.
+> **Curiosidad**: Fíjate en que Linus menciona en el mismo mensaje que ya ha portado **bash** y **gcc** — herramientas del proyecto GNU. Desde el primer minuto, el corazón que Linus estaba construyendo latía dentro del cuerpo que Stallman había pasado casi una década ensamblando. El encuentro fue casi inconsciente.
 
 ### El nombre que Linus no eligió: de "Freax" a "Linux"
 
@@ -117,7 +117,7 @@ Esta decisión desató una colaboración sin precedentes. La GPL garantizaba a c
 
 Y con eso se completó el puzzle: **el kernel Linux + las herramientas GNU = un sistema operativo libre y completo**. El corazón de Helsinki, latiendo dentro del cuerpo que Stallman había construido en el MIT durante casi una década.
 
-> 💡 **Curiosidad — el debate del nombre "GNU/Linux"**: Stallman y la FSF defienden que el sistema completo debería llamarse **"GNU/Linux"**, porque "Linux" en sentido estricto es *solo el kernel*, y la mayor parte de las herramientas que usas a diario (bash, gcc, las coreutils...) son GNU. La mayoría de la gente dice simplemente "Linux". Torvalds, con su pragmatismo habitual, considera que el debate es pedante. Es uno de los temas más polémicos y recurrentes de la comunidad del software libre, con más de treinta años de historia y sin visos de resolución.
+> **Curiosidad — el debate del nombre "GNU/Linux"**: Stallman y la FSF defienden que el sistema completo debería llamarse **"GNU/Linux"**, porque "Linux" en sentido estricto es *solo el kernel*, y la mayor parte de las herramientas que usas a diario (bash, gcc, las coreutils...) son GNU. La mayoría de la gente dice simplemente "Linux". Torvalds, con su pragmatismo habitual, considera que el debate es pedante. Es uno de los temas más polémicos y recurrentes de la comunidad del software libre, con más de treinta años de historia y sin visos de resolución.
 
 ---
 
@@ -139,7 +139,7 @@ El argumento técnico tenía dos patas principales:
 
 Linus respondió con la combatividad que lo haría famoso, defendiendo el pragmatismo: los microkernels son elegantes en teoría, pero más lentos y más complicados de implementar bien en la práctica. Un kernel monolítico bien escrito es más rápido y más fácil de desarrollar. El hilo acumuló unas 73 respuestas a lo largo de varias semanas.
 
-> 💡 **Curiosidad — ¿quién ganó?**: Académicamente, Tanenbaum tenía razón en lo conceptual: los microkernels son arquitectónicamente más elegantes. En la práctica, ganó Linus por goleada — Linux conquistó el mundo mientras GNU Hurd sigue siendo un proyecto de investigación décadas después. Pero hay un giro final delicioso: **MINIX**, el SO educativo de Tanenbaum, acabó embebido en el **Intel Management Engine** — un subsistema de gestión oculto dentro de prácticamente todos los procesadores Intel modernos. Así que durante años, MINIX fue posiblemente el sistema operativo más *instalado* del planeta... corriendo en secreto dentro de tu propio ordenador, sin que nadie lo supiera, incluyendo al propio Tanenbaum, que se enteró por la prensa en 2017. Sobre la portabilidad: hoy Linux corre en x86, ARM, RISC-V, PowerPC, MIPS, SPARC, y prácticamente cualquier arquitectura de procesador relevante.
+> **Curiosidad — ¿quién ganó?**: Académicamente, Tanenbaum tenía razón en lo conceptual: los microkernels son arquitectónicamente más elegantes. En la práctica, ganó Linus por goleada — Linux conquistó el mundo mientras GNU Hurd sigue siendo un proyecto de investigación décadas después. Pero hay un giro final delicioso: **MINIX**, el SO educativo de Tanenbaum, acabó embebido en el **Intel Management Engine** — un subsistema de gestión oculto dentro de prácticamente todos los procesadores Intel modernos. Así que durante años, MINIX fue posiblemente el sistema operativo más *instalado* del planeta... corriendo en secreto dentro de tu propio ordenador, sin que nadie lo supiera, incluyendo al propio Tanenbaum, que se enteró por la prensa en 2017. Sobre la portabilidad: hoy Linux corre en x86, ARM, RISC-V, PowerPC, MIPS, SPARC, y prácticamente cualquier arquitectura de procesador relevante.
 
 ---
 
@@ -167,7 +167,7 @@ En 1996, Linux necesitaba una imagen. La elección del pingüino como mascota ti
 
 Desde entonces Torvalds declara haber desarrollado cierta "penguinitis" — es decir, a encontrar simpáticos a los pingüinos. En **1996**, el programador **Larry Ewing** dibujó la mascota oficial usando **GIMP 0.54**. La primera aparición pública de Tux fue el **9 de mayo de 1996**. El nombre **"Tux"** lo propuso James Hughes el **10 de junio de 1996** — suele leerse como **T**orvalds **U**ni**X**, aunque también evoca el esmoquin (*tuxedo*) blanco y negro del pingüino.
 
-> 💡 **Curiosidad**: Larry Ewing nunca cobró un céntimo por dibujar una de las imágenes de software más reconocidas del mundo. El archivo original está disponible libremente bajo una licencia sin restricciones.
+> **Curiosidad**: Larry Ewing nunca cobró un céntimo por dibujar una de las imágenes de software más reconocidas del mundo. El archivo original está disponible libremente bajo una licencia sin restricciones.
 
 ### Entran los trajes: IBM y los mil millones (2000)
 
@@ -195,7 +195,7 @@ Git no era solo rápido de escribir: su modelo de datos — un grafo acíclico d
 
 El impacto de Git es comparable al del propio Linux. GitHub, construido sobre Git en 2008, se convirtió en el repositorio de código más grande del mundo. En 2018, Microsoft lo adquirió por **7.500 millones de dólares**. La herramienta que Linus escribió en diez días, como reacción irritada a un problema de licencias, se convirtió en la infraestructura sobre la que descansa prácticamente todo el desarrollo de software del mundo.
 
-> 💡 **Curiosidad**: El nombre "git" es argot británico para "persona estúpida o desagradable". Linus lo explicó con su habitual ironía: *"I'm an egotistical bastard, and I name all my projects after myself. First 'Linux', now 'git'."* Creó el kernel más importante del mundo y, casi de pasada, el sistema de control de versiones más usado de la historia. Los dos llevan su nombre. Los dos nacieron de la impaciencia.
+> **Curiosidad**: El nombre "git" es argot británico para "persona estúpida o desagradable". Linus lo explicó con su habitual ironía: *"I'm an egotistical bastard, and I name all my projects after myself. First 'Linux', now 'git'."* Creó el kernel más importante del mundo y, casi de pasada, el sistema de control de versiones más usado de la historia. Los dos llevan su nombre. Los dos nacieron de la impaciencia.
 
 ---
 
@@ -271,17 +271,17 @@ El resultado es difícil de exagerar. El kernel Linux tiene hoy más de **27 mil
 
 ## Parte IX — Curiosidades extra
 
-> 💡 **Linus el buceador.** Torvalds se aficionó al submarinismo en los 2000 y, como no encontraba buen software para registrar inmersiones, hizo lo de siempre: escribió el suyo. Se llama **Subsurface**, es libre y de código abierto, y lo sigue manteniendo activamente. El creador del mayor sistema operativo del mundo y del sistema de control de versiones más usado también te ayuda a apuntar a cuántos metros viste un pez.
+> **Linus el buceador.** Torvalds se aficionó al submarinismo en los 2000 y, como no encontraba buen software para registrar inmersiones, hizo lo de siempre: escribió el suyo. Se llama **Subsurface**, es libre y de código abierto, y lo sigue manteniendo activamente. El creador del mayor sistema operativo del mundo y del sistema de control de versiones más usado también te ayuda a apuntar a cuántos metros viste un pez.
 
-> 💡 **"Just for Fun".** Su autobiografía (2001), co-escrita con el periodista David Diamond, se titula *Just for Fun: The Story of an Accidental Revolutionary*. El título resume su filosofía: nunca buscó cambiar el mundo, solo se lo estaba pasando bien programando. "Accidental" es la palabra clave. (ISBN 0-06-662072-4, HarperBusiness.)
+> **"Just for Fun".** Su autobiografía (2001), co-escrita con el periodista David Diamond, se titula *Just for Fun: The Story of an Accidental Revolutionary*. El título resume su filosofía: nunca buscó cambiar el mundo, solo se lo estaba pasando bien programando. "Accidental" es la palabra clave. (ISBN 0-06-662072-4, HarperBusiness.)
 
-> 💡 **Las rarezas del versionado del kernel.** El número de versión de Linux tiene una historia peculiar:
+> **Las rarezas del versionado del kernel.** El número de versión de Linux tiene una historia peculiar:
 > - Durante la era 2.x, ramas menores *impares* (2.3, 2.5) eran de desarrollo experimental y las *pares* (2.4, 2.6) eran las estables. Esa convención se abandonó después.
 > - Linux se quedó "atascado" en la serie **2.6 durante ocho años** (2003–2011), llegando a versiones como 2.6.39.
 > - El salto a **3.0 en 2011** fue básicamente estético: los números se estaban haciendo ridículamente largos y coincidía con el 20º aniversario de Linux. No hubo ningún cambio técnico revolucionario que lo justificara.
 > - Desde entonces, Linus salta de número mayor más o menos cuando el segundo número se vuelve "demasiado grande" para su gusto. El versionado del kernel más importante del mundo se rige, en parte, por el criterio estético de una sola persona.
 
-> 💡 **El símbolo definitivo.** Cuando arrancas una máquina Linux, en el fondo se está orquestando una historia de más de cincuenta años: la filosofía de Thompson y Ritchie, el lenguaje C, las herramientas de Stallman, la GPL, el kernel de un finlandés de 21 años, y el trabajo de decenas de miles de personas que nunca se conocieron. Todo empezó con alguien que pensaba que "solo era un hobby" y que el sistema "nunca sería portable".
+> **El símbolo definitivo.** Cuando arrancas una máquina Linux, en el fondo se está orquestando una historia de más de cincuenta años: la filosofía de Thompson y Ritchie, el lenguaje C, las herramientas de Stallman, la GPL, el kernel de un finlandés de 21 años, y el trabajo de decenas de miles de personas que nunca se conocieron. Todo empezó con alguien que pensaba que "solo era un hobby" y que el sistema "nunca sería portable".
 
 ---
 

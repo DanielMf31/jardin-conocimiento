@@ -14,7 +14,7 @@ neetcode_order: 7
 
 # LeetCode 286 — Walls and Gates
 
-> 🎯 **Séptimo problema del patrón Graphs**. **Multi-source BFS** otra vez. Esta vez, computar la **distancia al gate más cercano** para cada celda vacía.
+> **Séptimo problema del patrón Graphs**. **Multi-source BFS** otra vez. Esta vez, computar la **distancia al gate más cercano** para cada celda vacía.
 
 ## Enunciado
 

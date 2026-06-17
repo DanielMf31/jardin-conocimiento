@@ -8,7 +8,7 @@ source: claude-code
 aliases: [carrera-ciberseg, aprender-hacking-etico, ruta-ciberseguridad]
 ---
 
-# 🎓 Aprender ciberseguridad y carrera
+# Aprender ciberseguridad y carrera
 
 ## Por qué este documento existe
 
@@ -20,7 +20,7 @@ Este documento resuelve esa paradoja: cómo construir un entorno de práctica **
 
 ---
 
-## 🧭 Panorama: dónde encaja el aprendizaje en el ciclo de la disciplina
+## Panorama: dónde encaja el aprendizaje en el ciclo de la disciplina
 
 ```
 [Teoría] → [Lab propio] → [Plataformas guiadas] → [CTFs] → [Cert / portafolio] → [Rol profesional]
@@ -32,7 +32,7 @@ La ciberseguridad es un campo **adversarial y evolutivo**: los atacantes cambian
 
 ---
 
-## 🖥️ Montar un laboratorio en VMs
+## Montar un laboratorio en VMs
 
 ### Por qué un lab propio antes que todo lo demás
 
@@ -84,7 +84,7 @@ Kali es el estándar de facto. Si vienes de hardware/técnico, la CLI de Kali es
 
 ---
 
-## 🌐 Plataformas de práctica online
+## Plataformas de práctica online
 
 ### OverTheWire — Bandit (CLI/Linux)
 
@@ -135,7 +135,7 @@ Kali es el estándar de facto. Si vienes de hardware/técnico, la CLI de Kali es
 
 ---
 
-## 🏁 CTFs (Capture The Flag)
+## CTFs (Capture The Flag)
 
 ### Qué son
 
@@ -175,7 +175,7 @@ Un CTF es una competición de seguridad donde los participantes resuelven retos 
 
 ---
 
-## 📜 Certificaciones por nivel
+## Certificaciones por nivel
 
 ### Por qué importan (y cuándo no importan)
 
@@ -226,7 +226,7 @@ GESTIÓN / GRC
 
 ---
 
-## 👥 Roles en ciberseguridad
+## Roles en ciberseguridad
 
 ### El espectro ofensivo–defensivo
 
@@ -262,7 +262,7 @@ Tu perfil de ingeniería tiene ventajas específicas:
 
 ---
 
-## 🗺️ Ruta recomendada de autoaprendizaje
+## Ruta recomendada de autoaprendizaje
 
 Esta ruta asume punto de partida técnico (Linux básico, algo de programación) pero poca base de seguridad.
 
@@ -311,7 +311,7 @@ Esta ruta asume punto de partida técnico (Linux básico, algo de programación)
 
 ---
 
-## ⚠️ Errores comunes al aprender ciberseguridad
+## Errores comunes al aprender ciberseguridad
 
 - **Tutorial hell**: ver 50 videos sin practicar. La práctica activa en lab/plataformas es lo que construye habilidad.
 - **Saltar a OSCP sin base**: OSCP sin haber resuelto 20–30 máquinas HTB es tirar dinero.
@@ -322,7 +322,7 @@ Esta ruta asume punto de partida técnico (Linux básico, algo de programación)
 
 ---
 
-## 🛠️ Aplícalo / Practica
+## Aplícalo / Practica
 
 ### Lab inmediato (esta semana)
 

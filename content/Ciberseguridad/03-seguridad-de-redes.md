@@ -8,7 +8,7 @@ source: claude-code
 aliases: [network security, seguridad red, redes seguras]
 ---
 
-# 🌐 Seguridad de redes
+# Seguridad de redes
 
 ## ¿Por qué existe este documento?
 
@@ -23,7 +23,7 @@ Todo lo relativo a escaneo de red, sniffing y análisis de tráfico se enmarca e
 
 ---
 
-## 🗺️ 1. Repaso TCP/IP y puertos — el mapa del territorio
+## 1. Repaso TCP/IP y puertos — el mapa del territorio
 
 ### El modelo en capas (TCP/IP de 4 capas)
 
@@ -74,7 +74,7 @@ Un puerto (0–65535) identifica el **servicio** dentro de un host. Los más rel
 
 ---
 
-## 🧱 2. Firewalls, NAT y segmentación
+## 2. Firewalls, NAT y segmentación
 
 ### Firewall — el portero
 
@@ -131,7 +131,7 @@ Internet ──→ [FW externo] ──→ DMZ (web, mail) ──→ [FW interno]
 
 ---
 
-## 🔒 3. VPN — túneles seguros sobre redes no confiables
+## 3. VPN — túneles seguros sobre redes no confiables
 
 **VPN** (Virtual Private Network): crea un canal cifrado sobre una red pública (internet) para que el tráfico viaje protegido.
 
@@ -158,7 +158,7 @@ Internet ──→ [FW externo] ──→ DMZ (web, mail) ──→ [FW interno]
 
 ---
 
-## 🕵️ 4. DNS y sus amenazas
+## 4. DNS y sus amenazas
 
 ### ¿Qué es DNS y por qué es crítico?
 
@@ -186,7 +186,7 @@ Usuario → [Resolver comprometido] → IP falsa (servidor atacante)
 
 ---
 
-## 📡 5. Sniffing de red y ataques MITM
+## 5. Sniffing de red y ataques MITM
 
 ### Sniffing — capturar tráfico en la red
 
@@ -233,7 +233,7 @@ ARP (Address Resolution Protocol) traduce IPs a MACs en la LAN. No tiene autenti
 
 ---
 
-## 🔍 6. Escaneo de red con nmap (contexto autorizado)
+## 6. Escaneo de red con nmap (contexto autorizado)
 
 ### ¿Qué es nmap y qué hace?
 
@@ -287,7 +287,7 @@ PORT     STATE    SERVICE    VERSION
 
 ---
 
-## 🚨 7. IDS e IPS — detectar y bloquear intrusiones
+## 7. IDS e IPS — detectar y bloquear intrusiones
 
 ### Definiciones
 
@@ -326,7 +326,7 @@ Saber cómo los atacantes evaden IDS ayuda a configurarlos mejor:
 
 ---
 
-## 🛡️ 8. Cómo se defiende una red — visión global
+## 8. Cómo se defiende una red — visión global
 
 ### Defensa en profundidad (Defense in Depth)
 
@@ -377,7 +377,7 @@ Hosts endurecidos (ver [[06-seguridad-de-sistemas-y-hardening]])
 
 ---
 
-## 🧪 Aplícalo / practica
+## Aplícalo / practica
 
 ### En tu laboratorio (VMs)
 

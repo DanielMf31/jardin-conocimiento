@@ -8,7 +8,7 @@ source: claude-code
 aliases: [runners, gitlab-runner, agente CI]
 ---
 
-# 🏃 GitLab Runners
+# GitLab Runners
 
 ## Por qué existen los runners
 
@@ -22,7 +22,7 @@ Analogía de hardware: si el servidor GitLab es el controlador (PLC/MCU), el run
 
 ---
 
-## 🗺️ Panorama: tipos de runner por alcance
+## Panorama: tipos de runner por alcance
 
 | Tipo | Alcance | Quién lo administra | Cuándo usarlo |
 |---|---|---|---|
@@ -34,7 +34,7 @@ Los runners **se heredan hacia abajo**: un group runner está disponible para to
 
 ---
 
-## ⚙️ Executors: el motor del runner
+## Executors: el motor del runner
 
 El **executor** define *cómo* el runner ejecuta el job: en qué entorno, con qué aislamiento. Es la decisión de diseño más importante al registrar un runner.
 
@@ -73,7 +73,7 @@ El job corre directamente en la shell del host donde está instalado el runner (
 
 ---
 
-## 📋 Registrar un runner
+## Registrar un runner
 
 Registrar = conectar el proceso `gitlab-runner` instalado en tu máquina con tu instancia GitLab. Se hace una sola vez (o cuando cambias de servidor).
 
@@ -128,7 +128,7 @@ La configuración se guarda en `/etc/gitlab-runner/config.toml`.
 
 ---
 
-## 🏷️ Tags de runner: enrutamiento de jobs
+## Tags de runner: enrutamiento de jobs
 
 Los **tags** son etiquetas que funcionan como un sistema de enrutamiento: conectan jobs específicos del YAML con runners específicos.
 
@@ -171,7 +171,7 @@ Un runner configurado con `run-untagged = true` acepta jobs que no tienen `tags:
 
 ---
 
-## 🆚 Runners autoalojados vs minutos SaaS
+## Runners autoalojados vs minutos SaaS
 
 Esta es la decisión económica y operacional clave.
 
@@ -198,7 +198,7 @@ Esta es la decisión económica y operacional clave.
 
 ---
 
-## 🐳 Montar tu propio runner con executor Docker
+## Montar tu propio runner con executor Docker
 
 Guía paso a paso para un servidor Linux (Ubuntu 22.04 / Debian 12).
 
@@ -281,7 +281,7 @@ pull_policy = ["if-not-present"]   # usa imagen local si ya existe; no descarga 
 
 ---
 
-## ⚠️ Errores comunes
+## Errores comunes
 
 | Error | Causa probable | Solución |
 |---|---|---|
@@ -294,7 +294,7 @@ pull_policy = ["if-not-present"]   # usa imagen local si ya existe; no descarga 
 
 ---
 
-## 🔧 Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 **app web (Docker Compose, FastAPI + React):**
 - Runner con executor Docker + tags `docker,linux`.

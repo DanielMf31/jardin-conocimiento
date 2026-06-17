@@ -14,8 +14,8 @@ neetcode_order: 1
 
 # LeetCode 125 — Valid Palindrome
 
-> 🎯 **Primer problema del patrón Two Pointers**. Es la introducción más limpia al patrón: dos punteros desde **extremos opuestos** que convergen hacia el centro, verificando una **propiedad simétrica**. Es la presentación canónica de "two pointers convergentes".
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Primer problema del patrón Two Pointers**. Es la introducción más limpia al patrón: dos punteros desde **extremos opuestos** que convergen hacia el centro, verificando una **propiedad simétrica**. Es la presentación canónica de "two pointers convergentes".
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -86,9 +86,9 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)** — un recorrido para limpiar + un recorrido para reversar + comparación lineal.
 - **Espacio: O(n)** — el string limpio + el reverse.
-- **Veredicto:** ✅ funciona, idiomática y corta. Pero NO usa two pointers (que es lo que el ejercicio quiere enseñar).
+- **Veredicto:** [OK] funciona, idiomática y corta. Pero NO usa two pointers (que es lo que el ejercicio quiere enseñar).
 
-> 💡 **`s[::-1]`** es un slice de Python que invierte el string. Crea una nueva string en O(n).
+> **`s[::-1]`** es un slice de Python que invierte el string. Crea una nueva string en O(n).
 
 ---
 
@@ -112,7 +112,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)** — limpieza + recorrido con dos punteros.
 - **Espacio: O(n)** — el string limpio.
-- **Veredicto:** ✅ buena. Hace explícito el patrón two pointers, pero todavía necesita el espacio auxiliar.
+- **Veredicto:** [OK] buena. Hace explícito el patrón two pointers, pero todavía necesita el espacio auxiliar.
 
 ---
 
@@ -143,17 +143,17 @@ class Solution:
 
 | Iteración | left | right | s[left] | s[right] | ¿Match? |
 |---|---|---|---|---|---|
-| 1 | 0 | 29 | 'A' | 'a' | ✅ (lowercase) |
-| 2 | 1 (avanza saltando ' ') → 2 | 28 (retrocede) → 27 | 'm' | 'm' | ✅ |
-| 3 | 3 | 26 | 'a' | 'a' | ✅ |
+| 1 | 0 | 29 | 'A' | 'a' | [OK] (lowercase) |
+| 2 | 1 (avanza saltando ' ') → 2 | 28 (retrocede) → 27 | 'm' | 'm' | [OK] |
+| 3 | 3 | 26 | 'a' | 'a' | [OK] |
 | ... | ... | ... | ... | ... | ... |
 
 **Análisis:**
 - **Tiempo: O(n)** — cada carácter se visita como mucho una vez (los inner whiles avanzan punteros que ya no vuelven atrás).
 - **Espacio: O(1)** — solo dos índices y una variable temporal.
-- **Veredicto:** ✅ **la respuesta esperada en entrevista**. Cumple O(1) espacio extra.
+- **Veredicto:** [OK] **la respuesta esperada en entrevista**. Cumple O(1) espacio extra.
 
-> 💡 **Análisis amortizado** (igual que en [[128-longest-consecutive-sequence]]): aunque hay bucles dentro de bucles, cada índice solo se mueve en una dirección y nunca vuelve atrás → O(n) total.
+> **Análisis amortizado** (igual que en [[128-longest-consecutive-sequence]]): aunque hay bucles dentro de bucles, cada índice solo se mueve en una dirección y nunca vuelve atrás → O(n) total.
 
 ---
 
@@ -247,7 +247,7 @@ s[3:]                # "lo"
 |---|---|---|---|---|
 | 1. Limpiar + reverse | O(n) | O(n) | NO | Idiomática, no demuestra el patrón |
 | 2. Limpiar + two pointers | O(n) | O(n) | Sí | Aceptable |
-| 3. **Two pointers in-place** | **O(n)** | **O(1)** | Sí | ✅ La óptima |
+| 3. **Two pointers in-place** | **O(n)** | **O(1)** | Sí | [OK] La óptima |
 
 ---
 
@@ -275,7 +275,7 @@ s[3:]                # "lo"
 
 ## Solución en C++ — contraste con Python
 
-> 📘 Añadido para ver las diferencias de lenguaje. Código compilable en [`125-valid-palindrome.cpp`](125-valid-palindrome.cpp).
+> Añadido para ver las diferencias de lenguaje. Código compilable en [`125-valid-palindrome.cpp`](125-valid-palindrome.cpp).
 
 ```cpp
 class Solution {

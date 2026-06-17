@@ -14,7 +14,7 @@ neetcode_order: 2
 
 # LeetCode 133 — Clone Graph
 
-> 🎯 **Segundo problema del patrón Graphs**. **Deep copy de un grafo** con DFS + hash map. Mismo patrón que [[138-copy-list-with-random-pointer]] pero sobre grafo en lugar de linked list.
+> **Segundo problema del patrón Graphs**. **Deep copy de un grafo** con DFS + hash map. Mismo patrón que [[138-copy-list-with-random-pointer]] pero sobre grafo en lugar de linked list.
 
 ## Enunciado
 

@@ -14,7 +14,7 @@ neetcode_order: 6
 
 # LeetCode 79 — Word Search
 
-> 🎯 **Sexto problema del patrón Backtracking**. **Backtracking en un grid 2D**. Es la versión sin Trie de [[212-word-search-ii]] — busca **una sola palabra** moviéndote 4-direccionalmente.
+> **Sexto problema del patrón Backtracking**. **Backtracking en un grid 2D**. Es la versión sin Trie de [[212-word-search-ii]] — busca **una sola palabra** moviéndote 4-direccionalmente.
 
 ## Enunciado
 

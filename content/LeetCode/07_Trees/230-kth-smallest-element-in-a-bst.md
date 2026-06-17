@@ -14,7 +14,7 @@ neetcode_order: 12
 
 # LeetCode 230 — Kth Smallest Element in a BST
 
-> 🎯 **Duodécimo problema del patrón Trees**. **Propiedad clave del BST**: inorder traversal produce los valores en orden creciente. Por tanto, el k-ésimo nodo visitado en inorder es el k-ésimo más pequeño.
+> **Duodécimo problema del patrón Trees**. **Propiedad clave del BST**: inorder traversal produce los valores en orden creciente. Por tanto, el k-ésimo nodo visitado en inorder es el k-ésimo más pequeño.
 
 ## Enunciado
 

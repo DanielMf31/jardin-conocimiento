@@ -14,7 +14,7 @@ neetcode_order: 7
 
 # LeetCode 2 — Add Two Numbers
 
-> 🎯 **Séptimo problema del patrón Linked List**. Suma aritmética con **carry** simulando suma a mano. Combina dummy node + iteración con condición compuesta. Excelente práctica de manejo de "casos especiales" elegantes con bucles uniformes.
+> **Séptimo problema del patrón Linked List**. Suma aritmética con **carry** simulando suma a mano. Combina dummy node + iteración con condición compuesta. Excelente práctica de manejo de "casos especiales" elegantes con bucles uniformes.
 
 ## Enunciado
 
@@ -74,13 +74,13 @@ Iter 2: v1=4, v2=6, total=10, carry=1, digit=0
 Iter 3: v1=3, v2=4, total=8 (3+4+1 carry), carry=0, digit=8
         result: 7 → 0 → 8
 
-Final: 7 → 0 → 8 ✅ (= 807, que es 342+465)
+Final: 7 → 0 → 8 [OK] (= 807, que es 342+465)
 ```
 
 **Análisis:**
 - **Tiempo: O(max(m, n))**.
 - **Espacio: O(max(m, n))** para la lista resultado.
-- **Veredicto:** ✅ la canónica.
+- **Veredicto:** [OK] la canónica.
 
 ### El truco de la condición compuesta `while l1 or l2 or carry`
 

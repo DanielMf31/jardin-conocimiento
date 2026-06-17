@@ -70,7 +70,7 @@ aliases: [Glosario Programación]
 
 ---
 
-## 🗺️ Mapa temático
+## Mapa temático
 
 > Navegación **por relaciones**, no por orden alfabético. Aquí los términos se agrupan por el problema que resuelven, para saltar entre conceptos que viven juntos en la práctica aunque estén lejos en el abecedario. El **orden alfabético / lookup sigue intacto más abajo** (desde `## A`); esto es solo un índice transversal de entrada.
 

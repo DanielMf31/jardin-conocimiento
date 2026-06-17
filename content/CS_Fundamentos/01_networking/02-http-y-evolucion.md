@@ -1,8 +1,8 @@
 # 02 — HTTP y su evolución (1.0 → 3.0)
 
-> 📚 **Doc 2 del cluster Networking**. Lee primero [[01-tcp-ip-osi]] (TCP es el transporte sobre el que corre HTTP).
-> 🔥 **Frecuencia interview**: aparece en TODA system design web. Conocer las diferencias entre 1.1, 2 y 3 te diferencia de candidatos superficiales.
-> ⏱️ **Tiempo de lectura estimado**: 45-75 min.
+> **Doc 2 del cluster Networking**. Lee primero [[01-tcp-ip-osi]] (TCP es el transporte sobre el que corre HTTP).
+> **Frecuencia interview**: aparece en TODA system design web. Conocer las diferencias entre 1.1, 2 y 3 te diferencia de candidatos superficiales.
+> **Tiempo de lectura estimado**: 45-75 min.
 
 ---
 

@@ -14,7 +14,7 @@ neetcode_order: 2
 
 # LeetCode 21 — Merge Two Sorted Lists
 
-> 🎯 **Segundo problema del patrón Linked List**. Introduce el **dummy node** (nodo centinela), un truco fundamental para evitar casos especiales al construir una lista. **Es la sub-rutina** de LC 23 (Merge K Sorted Lists) y LC 148 (Sort List).
+> **Segundo problema del patrón Linked List**. Introduce el **dummy node** (nodo centinela), un truco fundamental para evitar casos especiales al construir una lista. **Es la sub-rutina** de LC 23 (Merge K Sorted Lists) y LC 148 (Sort List).
 
 ## Enunciado
 
@@ -43,7 +43,7 @@ class Solution:
 
 ## Entender linked lists antes de codear (sección de fondo)
 
-> 📚 **Si las linked lists todavía te confunden, lee esto antes de las soluciones**. Una vez tienes el modelo mental de "variables como flechas" y dominas el dummy node, todos los problemas del patrón Linked List (11 en total) se vuelven mecánicos. Esta sección sirve para los 3 primeros (206, 21, 141) — los que interiorizan el modelo.
+> **Si las linked lists todavía te confunden, lee esto antes de las soluciones**. Una vez tienes el modelo mental de "variables como flechas" y dominas el dummy node, todos los problemas del patrón Linked List (11 en total) se vuelven mecánicos. Esta sección sirve para los 3 primeros (206, 21, 141) — los que interiorizan el modelo.
 
 ### 1. Qué es una linked list realmente (modelo mental)
 
@@ -230,7 +230,7 @@ TRAS PRIMERA ITERACIÓN (1 ≤ 1, cogemos de list1):
     list1 ──→ 2 → 4
     list2 ──→ 1 → 3 → 4
 
-✨ El dummy nunca cambia, sigue apuntando al fantasma.
+ El dummy nunca cambia, sigue apuntando al fantasma.
    tail va avanzando por la lista nueva.
 ```
 
@@ -296,7 +296,7 @@ Paso A: tail.next = list2
                                      ↑
                                     list1
 
-   ⚠️ ¡OJO! El nodo 2 quedó "desconectado" temporalmente,
+    ¡OJO! El nodo 2 quedó "desconectado" temporalmente,
    pero list1 todavía lo apunta. Lo recogeremos en la próxima iter.
 
 Paso B: list2 = list2.next
@@ -324,7 +324,7 @@ Paso A: tail.next = list1
                                               ↑
                                             (tail antes)
 
-   ✨ ¡Importante! Al hacer tail.next = list1, REEMPLAZAMOS la flecha
+    ¡Importante! Al hacer tail.next = list1, REEMPLAZAMOS la flecha
    anterior que iba al [3|●]. El nodo 3 sigue existiendo y list2 lo apunta.
 
 Paso B y C: list1 y tail avanzan
@@ -379,7 +379,7 @@ RETURN dummy.next
 
 dummy.next es el primer [1|●], así que la lista resultado es:
 
-    [1|●] ──→ [1|●] ──→ [2|●] ──→ [3|●] ──→ [4|●] ──→ [4|●] ──→ None  ✅
+    [1|●] ──→ [1|●] ──→ [2|●] ──→ [3|●] ──→ [4|●] ──→ [4|●] ──→ None  [OK]
 ```
 
 **Lo importante a notar**:
@@ -418,7 +418,7 @@ TRAMPA 1 — Olvidar avanzar tail:
        if ...
            tail.next = list1
            list1 = list1.next
-           # ⚠️ FALTA: tail = tail.next
+           #  FALTA: tail = tail.next
        else:
            ...
 
@@ -428,7 +428,7 @@ TRAMPA 1 — Olvidar avanzar tail:
 TRAMPA 2 — Olvidar conectar el resto al final:
    while list1 and list2:
        ...
-   # ⚠️ FALTA: tail.next = list1 if list1 else list2
+   #  FALTA: tail.next = list1 if list1 else list2
    return dummy.next
 
    → Bug: la lista se corta en cuanto una de las dos se acaba.
@@ -442,7 +442,7 @@ TRAMPA 3 — Hacer < en vez de <=:
      pero en problemas relacionados (sort estable) sí. Costumbre <=.
 
 TRAMPA 4 — Crear nodos nuevos en vez de reusar:
-   tail.next = ListNode(list1.val)    # ⚠️ MAL
+   tail.next = ListNode(list1.val)    #  MAL
 
    → Funciona pero usa O(m+n) extra de memoria innecesariamente.
      La elegancia de este algoritmo es REUSAR nodos.
@@ -530,13 +530,13 @@ Iter 3: 2 ≤ 3 → tail.next = list1(2), list1=4, tail=2
         ...
 
 Final: dummy → 1 → 1 → 2 → 3 → 4 → 4
-return dummy.next ✅
+return dummy.next [OK]
 ```
 
 **Análisis:**
 - **Tiempo: O(m + n)**.
 - **Espacio: O(1)** — solo dummy y tail.
-- **Veredicto:** ✅ **la canónica**.
+- **Veredicto:** [OK] **la canónica**.
 
 ### Por qué `dummy = ListNode()` y `return dummy.next`
 

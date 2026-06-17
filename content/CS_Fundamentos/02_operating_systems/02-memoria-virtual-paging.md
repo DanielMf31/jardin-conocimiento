@@ -1,8 +1,8 @@
 # 02 — Memoria virtual y paging
 
-> 📚 **Doc 2 del cluster Operating Systems**. La abstracción más elegante del SO: cada proceso cree que tiene toda la memoria de la máquina para él solo. Pero el hardware MMU + el SO orquestan la mentira.
-> 🔥 **Frecuencia interview**: aparece en preguntas de "¿qué pasa cuando tu proceso pide memoria?", debugging OOM, performance tuning.
-> ⏱️ **Tiempo de lectura estimado**: 50-70 min.
+> **Doc 2 del cluster Operating Systems**. La abstracción más elegante del SO: cada proceso cree que tiene toda la memoria de la máquina para él solo. Pero el hardware MMU + el SO orquestan la mentira.
+> **Frecuencia interview**: aparece en preguntas de "¿qué pasa cuando tu proceso pide memoria?", debugging OOM, performance tuning.
+> **Tiempo de lectura estimado**: 50-70 min.
 
 ---
 

@@ -58,7 +58,7 @@ exec-once = [workspace 4 silent] spotify
 ```ini
 windowrule = match:class ^(Spotify)$, workspace 4 silent
 ```
-- ⚠️ **Sintaxis 0.55**: `windowrule = match:<campo> <valor>, <acción>` (el `match:` PRIMERO). La sintaxis vieja `windowrule = <acción>, class:^(X)$` ya **no** vale.
+- **Sintaxis 0.55**: `windowrule = match:<campo> <valor>, <acción>` (el `match:` PRIMERO). La sintaxis vieja `windowrule = <acción>, class:^(X)$` ya **no** vale.
 - Para saber el `class` de una app: `hyprctl clients`.
 
 → más reglas en.
@@ -102,7 +102,7 @@ bind = $mainMod SHIFT, V, exec, kitty --class cava -o font_size=20 cava
 ```
 - cava = visualizador de espectro (FFT del audio que suena). Corre en una kitty; `font_size` grande = barras más gordas.
 
-### ⚠️ Lección: colocar apps por workspace al iniciar
+### Lección: colocar apps por workspace al iniciar
 El prefijo `exec-once = [workspace N silent] app` **falla con apps que se re-lanzan en otro proceso** (Chrome, Electron/VS Code): Hyprland pierde la pista del PID y la ventana cae en el workspace activo. **Solución fiable**: regla de ventana por clase.
 ```ini
 windowrule = match:class ^(google-chrome)$, workspace 2 silent
@@ -129,10 +129,10 @@ windowrule = match:class ^(com\.github\.johnfactotum\.Foliate)$, workspace 7 sil
 - App: `~/.config/hypr/UserScripts/pomodoro_widget.py` (GTK3). Comparte estado con la barra vía `Pomodoro.sh` (set/toggle/reset/skip).
 - Reglas (clase `pomodoro-widget`): `float on`, `size 420 360`, `center on`, `workspace 7 silent`.
 - Toggle: `pomodoro_widget_toggle.sh` → **SUPER+SHIFT+D**.
-- ⚠️ Sintaxis 0.55: las reglas booleanas son `float on` / `center on` (con "on"), no `float`/`center` a secas.
+- Sintaxis 0.55: las reglas booleanas son `float on` / `center on` (con "on"), no `float`/`center` a secas.
 
 ### Widget flotante Vinilo (now playing, Python+GTK+cairo)
-- App: `~/.config/hypr/UserScripts/vinyl_widget.py`. Coge la carátula vía `playerctl` (mpris:artUrl), la descarga y la pinta como disco que **gira con cairo mientras suena** (se para al pausar). Título/artista + controles ⏮⏯⏭.
+- App: `~/.config/hypr/UserScripts/vinyl_widget.py`. Coge la carátula vía `playerctl` (mpris:artUrl), la descarga y la pinta como disco que **gira con cairo mientras suena** (se para al pausar). Título/artista + controles .
 - Reglas (clase `vinyl-widget`): `float on`, `size 300 440`, `center on` (sin workspace fijo → aparece donde estés).
 - Toggle: `vinyl_widget_toggle.sh` → **SUPER+SHIFT+Y**.
 
@@ -140,7 +140,7 @@ windowrule = match:class ^(com\.github\.johnfactotum\.Foliate)$, workspace 7 sil
 - Ahora **flotante** (no fullscreen): `float on`, `size 720 480`, `center on`.
 - Incorpora **cava integrado** (lee `~/.config/cava/config-raw` en modo raw/ascii y dibuja las barras al lado del disco).
 - **Fluidez**: los metadatos (`playerctl metadata`) se leen en un **hilo aparte** + carátula en hilo → el hilo gráfico (rotación 60 fps) nunca se bloquea.
-- ⚠️ Bug que tuve: `playerctl -F` sin el subcomando `metadata` da error de uso → usar `playerctl metadata [--format ...]`.
+- Bug que tuve: `playerctl -F` sin el subcomando `metadata` da error de uso → usar `playerctl metadata [--format ...]`.
 
 ### Alias de Claude · `.bashrc`
 ```bash
@@ -152,12 +152,12 @@ alias clc='claude --continue'
 - `vinyl_widget_toggle.sh` cuenta ventanas del workspace activo (`hyprctl activeworkspace -j` → `windows`) ANTES de abrir.
 - Solo (0 otras) → grande `resizewindowpixel exact 1720 960` + centrado. Con compañía → pequeño `460 340` en esquina.
 - Regla estática solo `float on`; el tamaño/posición lo pone el script con `hyprctl dispatch resizewindowpixel/movewindowpixel ... ,address:$addr`.
-- ⚠️ GTK no encoge una ventana por debajo del mínimo de su contenido → bajar los `set_size_request` del disco/cava para poder hacerlo pequeño.
+- GTK no encoge una ventana por debajo del mínimo de su contenido → bajar los `set_size_request` del disco/cava para poder hacerlo pequeño.
 
 ### Alias bóveda + vinilo 50/50
 - `.bashrc`: `alias obs='cd <ruta-vault>'` (saltar a la bóveda). Evitar `obsidian` (lanza la app).
 - Vinilo: `top = Gtk.Box(..., homogeneous=True)` y `set_size_request` iguales en disco y cava → celdas 50/50 exactas en grande y pequeño.
-- ⚠️ Al probar widgets desde un shell efímero, lánzalos con `setsid` (o vía keybind de Hyprland) o mueren por SIGHUP al salir el shell.
+- Al probar widgets desde un shell efímero, lánzalos con `setsid` (o vía keybind de Hyprland) o mueren por SIGHUP al salir el shell.
 
 ### Kitty makeover + grabador de pantalla
 - Kitty: `~/.config/kitty/current-theme.conf` (Catppuccin Mocha) + bloque en `kitty.conf` (`include current-theme.conf`, `background_opacity 0.85`, `window_padding_width 12`, pestañas powerline, `cursor_shape beam`). Recargar: `pkill -SIGUSR1 -x kitty`. `cursor_trail` requiere kitty ≥0.36.
@@ -168,4 +168,4 @@ alias clc='claude --continue'
 - Se abre como **app** con `google-chrome-stable --app=file://.../index.html` (ventana sin pestañas) + `.desktop` "Sistema Solar" en el lanzador.
 - Chrome ignora `--class` en modo app → la clase real es `chrome-<ruta>-Default`; capturada con `hyprctl clients` y usada en la regla (`float on`, `size 660 730`, `center on`).
 - Toggle: `solar_toggle.sh` (closewindow si abierto, lanzar si no) → **SUPER+ALT+S**.
-- 💡 Lección: para widgets GRÁFICOS/animados, JS+Canvas en ventana app de Chrome > Python+GTK (animación, gradientes y iteración visual mucho más fáciles; previsualizas en el navegador). AGS no aporta para canvas.
+- Lección: para widgets GRÁFICOS/animados, JS+Canvas en ventana app de Chrome > Python+GTK (animación, gradientes y iteración visual mucho más fáciles; previsualizas en el navegador). AGS no aporta para canvas.

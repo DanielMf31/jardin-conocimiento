@@ -8,7 +8,7 @@ source: claude-code
 aliases: [gitlab-repos, flujo-git-gitlab, git-workflow-gitlab]
 ---
 
-# 🗄️ Repositorios y flujo Git en GitLab
+# Repositorios y flujo Git en GitLab
 
 ## ¿Por qué importa esto?
 
@@ -16,7 +16,7 @@ Un repositorio Git es solo un árbol de versiones. GitLab añade la capa social 
 
 ---
 
-## 🏗️ Anatomía de un repositorio GitLab
+## Anatomía de un repositorio GitLab
 
 ### Qué contiene un repo (más allá del código)
 
@@ -42,7 +42,7 @@ La rama que Git y GitLab consideran "la verdad". Efectos concretos:
 
 ---
 
-## 🔒 Protected Branches — el guardián del código estable
+## Protected Branches — el guardián del código estable
 
 ### El problema que resuelven
 
@@ -75,7 +75,7 @@ develop (si usas Git Flow):
 
 ---
 
-## 🌿 Modelos de flujo de ramas — el núcleo de la decisión
+## Modelos de flujo de ramas — el núcleo de la decisión
 
 Antes de escribir una línea de código en equipo, hay que decidir **cómo se ramifica**. No hay una respuesta universal; hay trade-offs.
 
@@ -145,7 +145,7 @@ hotfix/critical                    ●────●
 
 ---
 
-## 🏷️ Tags y Releases
+## Tags y Releases
 
 ### Tags — punteros inmutables al historial
 
@@ -196,7 +196,7 @@ release_job:
 
 ---
 
-## 🔄 El flujo de trabajo diario: rama → push → Merge Request
+## El flujo de trabajo diario: rama → push → Merge Request
 
 Este es el ciclo que repites decenas de veces en un proyecto real.
 
@@ -255,7 +255,7 @@ Ver [[04-merge-requests-y-code-review]] para el detalle completo. En síntesis:
 
 ---
 
-## ⚠️ Errores comunes
+## Errores comunes
 
 | Error | Causa | Solución |
 |---|---|---|
@@ -267,7 +267,7 @@ Ver [[04-merge-requests-y-code-review]] para el detalle completo. En síntesis:
 
 ---
 
-## 🛠️ Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 ### app web (React + FastAPI + Docker)
 

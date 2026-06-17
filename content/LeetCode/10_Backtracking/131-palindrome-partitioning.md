@@ -14,7 +14,7 @@ neetcode_order: 7
 
 # LeetCode 131 — Palindrome Partitioning
 
-> 🎯 **Séptimo problema del patrón Backtracking**. Particionar string en palíndromos. Combina backtracking + check de palíndromo.
+> **Séptimo problema del patrón Backtracking**. Particionar string en palíndromos. Combina backtracking + check de palíndromo.
 
 ## Enunciado
 

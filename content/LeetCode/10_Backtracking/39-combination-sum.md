@@ -14,7 +14,7 @@ neetcode_order: 2
 
 # LeetCode 39 — Combination Sum
 
-> 🎯 **Segundo problema del patrón Backtracking**. **Repetición permitida** del mismo elemento. La trampa: evitar duplicados sin perder combinaciones.
+> **Segundo problema del patrón Backtracking**. **Repetición permitida** del mismo elemento. La trampa: evitar duplicados sin perder combinaciones.
 
 ## Enunciado
 

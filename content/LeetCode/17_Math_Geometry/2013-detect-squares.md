@@ -14,7 +14,7 @@ neetcode_order: 8
 
 # LeetCode 2013 — Detect Squares
 
-> 🎯 **Octavo y último problema de Math & Geometry**. **Diseño** + cálculo geométrico. Diagonal del cuadrado define los otros 2 vértices.
+> **Octavo y último problema de Math & Geometry**. **Diseño** + cálculo geométrico. Diagonal del cuadrado define los otros 2 vértices.
 
 ## Enunciado
 
@@ -50,7 +50,7 @@ class DetectSquares:
 
 ---
 
-## Cierre Math & Geometry 🎉
+## Cierre Math & Geometry
 
 | # | Problema | Idea |
 |---|---|---|
@@ -70,4 +70,4 @@ class DetectSquares:
 - [ ] Leído
 - [ ] Implementado desde cero
 - [ ] Resuelto en LeetCode
-- [ ] **Patrón Math & Geometry cerrado** ✅
+- [ ] **Patrón Math & Geometry cerrado** [OK]

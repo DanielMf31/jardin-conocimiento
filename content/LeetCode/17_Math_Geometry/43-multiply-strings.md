@@ -14,7 +14,7 @@ neetcode_order: 7
 
 # LeetCode 43 — Multiply Strings
 
-> 🎯 **Séptimo problema de Math & Geometry**. Multiplicación a mano de números enormes. Sin convertir a int directamente.
+> **Séptimo problema de Math & Geometry**. Multiplicación a mano de números enormes. Sin convertir a int directamente.
 
 ## Enunciado
 

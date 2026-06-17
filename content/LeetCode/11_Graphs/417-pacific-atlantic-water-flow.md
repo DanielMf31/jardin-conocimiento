@@ -14,7 +14,7 @@ neetcode_order: 4
 
 # LeetCode 417 — Pacific Atlantic Water Flow
 
-> 🎯 **Cuarto problema del patrón Graphs**. Truco brillante: **DFS DESDE los océanos hacia adentro**, no al revés. Reduce el problema a "qué celdas alcanzan ambos océanos".
+> **Cuarto problema del patrón Graphs**. Truco brillante: **DFS DESDE los océanos hacia adentro**, no al revés. Reduce el problema a "qué celdas alcanzan ambos océanos".
 
 ## Enunciado
 

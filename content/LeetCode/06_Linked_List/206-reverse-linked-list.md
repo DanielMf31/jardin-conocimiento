@@ -14,8 +14,8 @@ neetcode_order: 1
 
 # LeetCode 206 — Reverse Linked List
 
-> 🎯 **Primer problema del patrón Linked List** — y **el más importante del bloque**. Reverse Linked List aparece como sub-rutina en muchos problemas posteriores (LC 143 Reorder List, LC 25 Reverse Nodes in K-Group, LC 234 Palindrome Linked List). Si lo dominas, te ahorra trabajo en 3-4 problemas más adelante.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Primer problema del patrón Linked List** — y **el más importante del bloque**. Reverse Linked List aparece como sub-rutina en muchos problemas posteriores (LC 143 Reorder List, LC 25 Reverse Nodes in K-Group, LC 234 Palindrome Linked List). Si lo dominas, te ahorra trabajo en 3-4 problemas más adelante.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Recordatorio: la estructura `ListNode`
 
@@ -103,13 +103,13 @@ Iter 3: next_temp=None, 3.next=2, prev=3, curr=None
 
 Loop termina. Return prev = 3.
 
-Lista resultante: 3 → 2 → 1 → None ✅
+Lista resultante: 3 → 2 → 1 → None [OK]
 ```
 
 **Análisis:**
 - **Tiempo: O(n)** — un recorrido.
 - **Espacio: O(1)** — tres punteros.
-- **Veredicto:** ✅ **la canónica**.
+- **Veredicto:** [OK] **la canónica**.
 
 ### Las 4 líneas del bucle — memorízalas
 
@@ -141,7 +141,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)**.
 - **Espacio: O(n)** — call stack de recursión (¡no es O(1)!).
-- **Veredicto:** ✅ elegante. **Pero**: en entrevista, prefiere la iterativa por el O(1) espacio.
+- **Veredicto:** [OK] elegante. **Pero**: en entrevista, prefiere la iterativa por el O(1) espacio.
 
 ---
 
@@ -191,7 +191,7 @@ def reverse(head):
 
 ## Solución en C++ — contraste con Python
 
-> 📘 Añadido para ver las diferencias de lenguaje. **Aquí es donde C++ más diverge de Python**: punteros crudos y gestión de memoria. Código compilable en [`206-reverse-linked-list.cpp`](206-reverse-linked-list.cpp).
+> Añadido para ver las diferencias de lenguaje. **Aquí es donde C++ más diverge de Python**: punteros crudos y gestión de memoria. Código compilable en [`206-reverse-linked-list.cpp`](206-reverse-linked-list.cpp).
 
 ```cpp
 struct ListNode { int val; ListNode* next; };

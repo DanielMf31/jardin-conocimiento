@@ -8,7 +8,7 @@ source: claude-code
 aliases: [gitlab-cicd, ci-cd-gitlab, pipeline-gitlab]
 ---
 
-# ⚙️ GitLab CI/CD — Fundamentos
+# GitLab CI/CD — Fundamentos
 
 ## ¿Por qué existe CI/CD?
 
@@ -30,7 +30,7 @@ GitLab CI/CD integra todo esto **dentro del mismo repositorio**, sin herramienta
 
 ---
 
-## 🗺️ Panorama: dónde encaja en GitLab
+## Panorama: dónde encaja en GitLab
 
 ```
 git push
@@ -50,7 +50,7 @@ El Runner es el proceso que **ejecuta el trabajo real** (ver [[06-runners]]). El
 
 ---
 
-## 📄 El archivo `.gitlab-ci.yml`
+## El archivo `.gitlab-ci.yml`
 
 ### Por qué en la raíz del repo
 
@@ -75,7 +75,7 @@ mi-primer-job:   # Nombre del job (arbitrario, debe ser único)
 
 ---
 
-## 🧱 Conceptos clave: PIPELINE, STAGES, JOBS
+## Conceptos clave: PIPELINE, STAGES, JOBS
 
 ### Pipeline
 
@@ -104,7 +104,7 @@ La unidad mínima de trabajo. Cada job:
 
 ---
 
-## 🔧 La clave `script`
+## La clave `script`
 
 El corazón de cada job. Lista de comandos shell ejecutados en orden. Si **cualquier comando devuelve código distinto de 0**, el job falla y el pipeline se detiene (por defecto).
 
@@ -130,7 +130,7 @@ Variantes útiles:
 
 ---
 
-## 🐳 Imagen Docker por job (`image:`)
+## Imagen Docker por job (`image:`)
 
 Cada job corre en un contenedor Docker. Puedes definir la imagen **globalmente** o **por job**. Esto es poder real: cada job tiene exactamente las herramientas que necesita, sin conflictos.
 
@@ -164,7 +164,7 @@ test-rust:
 
 ---
 
-## 🔑 Variables
+## Variables
 
 ### Variables predefinidas de GitLab
 
@@ -233,7 +233,7 @@ deploy-produccion:
 
 ---
 
-## 📦 Artifacts vs Cache
+## Artifacts vs Cache
 
 Esta distinción confunde a todo el mundo al principio.
 
@@ -290,7 +290,7 @@ test-python:
 
 ---
 
-## 🎛️ Reglas de ejecución — `rules` y `only/except`
+## Reglas de ejecución — `rules` y `only/except`
 
 Por defecto, todos los jobs corren en cada pipeline. Las reglas permiten ejecutar jobs **condicionalmente**.
 
@@ -341,7 +341,7 @@ test-mr:
 
 ---
 
-## 📋 Ejemplo completo comentado
+## Ejemplo completo comentado
 
 Un pipeline real para una aplicación Python con Docker:
 
@@ -469,7 +469,7 @@ deploy-produccion:
 
 ---
 
-## 🚩 Errores comunes
+## Errores comunes
 
 | Error | Causa habitual | Solución |
 |---|---|---|
@@ -483,7 +483,7 @@ deploy-produccion:
 
 ---
 
-## 🔗 `before_script` y `after_script`
+## `before_script` y `after_script`
 
 Comandos que corren antes o después del `script` principal de cada job.
 
@@ -505,7 +505,7 @@ build:
 
 ---
 
-## 🛠️ Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 ### app web (FastAPI + React + Docker)
 

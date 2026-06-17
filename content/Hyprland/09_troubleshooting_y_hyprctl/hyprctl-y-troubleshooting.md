@@ -389,7 +389,7 @@ grep -rn "special\|scratchpad" ~/.config/hypr/configs/WindowRules*.conf
 Hyprland arranca, falla al parsear el config, y o bien muestra overlay rojo o bien cae de vuelta a GDM.
 
 **Solución desde GDM:**
-1. En la pantalla de login de GDM, haz clic en el engranaje (⚙) junto al usuario
+1. En la pantalla de login de GDM, haz clic en el engranaje () junto al usuario
 2. Selecciona **GNOME (Xorg)** o **GNOME** en lugar de Hyprland
 3. Inicia sesión en GNOME
 4. Abre terminal y corrige el config:

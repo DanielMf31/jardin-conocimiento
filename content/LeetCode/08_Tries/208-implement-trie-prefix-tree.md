@@ -14,7 +14,7 @@ neetcode_order: 1
 
 # LeetCode 208 — Implement Trie (Prefix Tree)
 
-> 🎯 **Primer problema del patrón Tries**. Un **Trie** (árbol de prefijos) es una estructura especializada para strings. Cada nodo tiene un dict de hijos por carácter y un flag `is_end`. Aprende este patrón aquí; los 2 problemas siguientes son extensiones directas.
+> **Primer problema del patrón Tries**. Un **Trie** (árbol de prefijos) es una estructura especializada para strings. Cada nodo tiene un dict de hijos por carácter y un flag `is_end`. Aprende este patrón aquí; los 2 problemas siguientes son extensiones directas.
 
 ## Concepto del Trie
 
@@ -82,7 +82,7 @@ class Trie:
 **Análisis:**
 - **Tiempo: O(L)** por operación (L = longitud de la palabra).
 - **Espacio: O(N · L)** donde N = número de palabras.
-- **Veredicto:** ✅ canónica.
+- **Veredicto:** [OK] canónica.
 
 ### `is_end` — la diferencia entre `search` y `startsWith`
 

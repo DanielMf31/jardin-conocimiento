@@ -14,7 +14,7 @@ neetcode_order: 4
 
 # LeetCode 213 — House Robber II
 
-> 🎯 **Cuarto problema de DP 1-D**. Como [[198-house-robber]] **pero circular** (la primera y última casa son adyacentes). Truco: dos llamadas separadas excluyendo cada extremo.
+> **Cuarto problema de DP 1-D**. Como [[198-house-robber]] **pero circular** (la primera y última casa son adyacentes). Truco: dos llamadas separadas excluyendo cada extremo.
 
 ## Enunciado
 

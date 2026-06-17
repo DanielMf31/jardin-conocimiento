@@ -14,7 +14,7 @@ neetcode_order: 2
 
 # LeetCode 104 — Maximum Depth of Binary Tree
 
-> 🎯 **Segundo problema del patrón Trees**. Otro clásico de recursión donde el truco es **devolver información de los hijos al padre** (postorder). Aprenderlo bien es base para LC 110, 543, 124.
+> **Segundo problema del patrón Trees**. Otro clásico de recursión donde el truco es **devolver información de los hijos al padre** (postorder). Aprenderlo bien es base para LC 110, 543, 124.
 
 ## Enunciado
 
@@ -46,7 +46,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)**.
 - **Espacio: O(h)** — call stack.
-- **Veredicto:** ✅ la canónica. Ese `1 + max(left, right)` es el patrón mental que vas a repetir.
+- **Veredicto:** [OK] la canónica. Ese `1 + max(left, right)` es el patrón mental que vas a repetir.
 
 ### Por qué postorder
 

@@ -14,7 +14,7 @@ neetcode_order: 9
 
 # LeetCode 152 — Maximum Product Subarray
 
-> 🎯 **Noveno problema de DP 1-D**. Variante de Kadane (Max Subarray Sum) pero con producto: trampa de **negativos** que pueden voltear min en max. Solución: **trackear min y max** en cada paso.
+> **Noveno problema de DP 1-D**. Variante de Kadane (Max Subarray Sum) pero con producto: trampa de **negativos** que pueden voltear min en max. Solución: **trackear min y max** en cada paso.
 
 ## Enunciado
 

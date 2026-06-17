@@ -14,7 +14,7 @@ neetcode_order: 2
 
 # LeetCode 743 — Network Delay Time
 
-> 🎯 **Segundo problema de Advanced Graphs**. **Dijkstra** clásico — shortest path desde un nodo a todos los demás en un grafo dirigido con pesos no negativos.
+> **Segundo problema de Advanced Graphs**. **Dijkstra** clásico — shortest path desde un nodo a todos los demás en un grafo dirigido con pesos no negativos.
 
 ## Enunciado
 

@@ -305,9 +305,9 @@ CREATE INDEX idx_hotels_city_price ON hotels(city, price_cents);
 
 | Query | Usa el índice? |
 |---|---|
-| `WHERE city = 'Madrid'` | ✅ |
-| `WHERE city = 'Madrid' AND price_cents = 8000` | ✅ |
-| `WHERE price_cents = 8000` | ❌ (no city → no usa) |
+| `WHERE city = 'Madrid'` | [OK] |
+| `WHERE city = 'Madrid' AND price_cents = 8000` | [OK] |
+| `WHERE price_cents = 8000` | [NO] (no city → no usa) |
 
 ### Reglas operativas
 
@@ -344,8 +344,8 @@ Normalización = organizar tablas para evitar redundancia y anomalías de update
 Cada celda contiene **un solo valor atómico** — no listas, no estructuras anidadas.
 
 ```
-❌ amenities: "wifi,pool,gym"           ← string con valores múltiples
-✅ tabla amenity_hotel separada con 1 amenity por fila
+[NO] amenities: "wifi,pool,gym"           ← string con valores múltiples
+[OK] tabla amenity_hotel separada con 1 amenity por fila
 ```
 
 (Postgres permite arrays nativos, técnicamente "rompe" 1NF pero práctico para casos simples).
@@ -357,8 +357,8 @@ Aplicable solo si tu PK es composite. Tu Booking usa PKs simples (id integer) �
 ### 3NF — atributos dependen SOLO de la PK, no de otros atributos
 
 ```
-❌ rooms(id, hotel_id, hotel_city)  ← hotel_city depende de hotel_id, no de rooms.id (anomalía)
-✅ rooms(id, hotel_id) + JOIN con hotels para obtener city  ← city solo en hotels
+[NO] rooms(id, hotel_id, hotel_city)  ← hotel_city depende de hotel_id, no de rooms.id (anomalía)
+[OK] rooms(id, hotel_id) + JOIN con hotels para obtener city  ← city solo en hotels
 ```
 
 **Regla práctica**: si actualizas un dato y tienes que actualizarlo en 2+ lugares → no estás en 3NF.
@@ -592,11 +592,11 @@ Seq Scan on hotels  (cost=0.00..1234.00 rows=120 width=80)
 Comparas `rows=120` (estimado) con `rows=118` (real). Si difieren mucho → estadísticas desactualizadas (`ANALYZE hotels;` para refrescar).
 
 Buscar en el plan:
-- `Index Scan` ✅ (usa índice)
-- `Bitmap Index Scan` + `Bitmap Heap Scan` ✅ (índice multi-resultado)
-- `Seq Scan` en tabla grande ❌ (falta índice)
-- `Sort` con muchos rows ❌ (debería usar índice ordenado)
-- `Nested Loop` con muchos rows ❌ (preferir Hash Join o Merge Join para grandes datasets)
+- `Index Scan` [OK] (usa índice)
+- `Bitmap Index Scan` + `Bitmap Heap Scan` [OK] (índice multi-resultado)
+- `Seq Scan` en tabla grande [NO] (falta índice)
+- `Sort` con muchos rows [NO] (debería usar índice ordenado)
+- `Nested Loop` con muchos rows [NO] (preferir Hash Join o Merge Join para grandes datasets)
 
 ## Cómo aplicar TODO esto a tu Booking — checklist mental
 

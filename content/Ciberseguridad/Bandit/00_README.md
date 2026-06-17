@@ -8,7 +8,7 @@ source: claude-code
 aliases: [Bandit README, Bandit guia, OverTheWire Bandit]
 ---
 
-# 🎯 OverTheWire Bandit — guía y progreso
+# OverTheWire Bandit — guía y progreso
 
 Wargame **legal y educativo** para aprender terminal/Linux jugando. En cada nivel encuentras una
 **contraseña escondida** que te deja entrar por SSH al siguiente. Aquí tienes el walkthrough paso a
@@ -26,11 +26,11 @@ ssh bandit<N>@bandit.labs.overthewire.org -p 2220
 
 > Úsalos así: intenta el nivel tú primero; si te atascas, mira el paso concreto. **No leas la solución entera de golpe.**
 
-> 💡 **Terminal Kitty (`Error opening terminal: xterm-kitty`).** Si usas **Kitty** como terminal, al abrir un programa interactivo **dentro del servidor** (`nano`, `vi`, `more`, `less`, y el paginador de `git log`/`git show`) verás ese error: el servidor no tiene el "terminfo" de Kitty. Solución: `export TERM=xterm` (una vez por sesión SSH) o prefijando el comando (`TERM=xterm nano archivo`). Afecta sobre todo a **16→17, 23→24, 25→26, 26→27** y a los **niveles git (28→32)**. (Si entras desde tu portátil no pasa: kitty sí tiene su terminfo ahí.)
+> **Terminal Kitty (`Error opening terminal: xterm-kitty`).** Si usas **Kitty** como terminal, al abrir un programa interactivo **dentro del servidor** (`nano`, `vi`, `more`, `less`, y el paginador de `git log`/`git show`) verás ese error: el servidor no tiene el "terminfo" de Kitty. Solución: `export TERM=xterm` (una vez por sesión SSH) o prefijando el comando (`TERM=xterm nano archivo`). Afecta sobre todo a **16→17, 23→24, 25→26, 26→27** y a los **niveles git (28→32)**. (Si entras desde tu portátil no pasa: kitty sí tiene su terminfo ahí.)
 
-> ⚠️ **Cambio de OverTheWire (2025-2026) — `localhost` bloqueado para SSH.** Ahora **bloquean conectarte al puerto SSH 2220 desde `localhost`** (`Connecting from localhost is blocked to conserve resources`). Afecta a los niveles que hacen `ssh -i ...@localhost`: **13→14, 16→17, 25→26**. Solución: usa el **hostname real** `bandit.labs.overthewire.org` (mismo puerto 2220), o copia la clave a tu portátil y conéctate desde ahí. **NO afecta** a `nc`/`openssl` contra puertos del juego (30000/30001/31xxx/30002 en 14→15, 15→16, 16→17, 24→25) ni, de momento, a los clones git por `localhost` (27→32, ver nota en [[28-nivel-27-a-28]]).
+> **Cambio de OverTheWire (2025-2026) — `localhost` bloqueado para SSH.** Ahora **bloquean conectarte al puerto SSH 2220 desde `localhost`** (`Connecting from localhost is blocked to conserve resources`). Afecta a los niveles que hacen `ssh -i ...@localhost`: **13→14, 16→17, 25→26**. Solución: usa el **hostname real** `bandit.labs.overthewire.org` (mismo puerto 2220), o copia la clave a tu portátil y conéctate desde ahí. **NO afecta** a `nc`/`openssl` contra puertos del juego (30000/30001/31xxx/30002 en 14→15, 15→16, 16→17, 24→25) ni, de momento, a los clones git por `localhost` (27→32, ver nota en [[28-nivel-27-a-28]]).
 
-## 📚 Walkthroughs (todos los niveles)
+## Walkthroughs (todos los niveles)
 **Básicos — manejo de archivos (0→5)**
 - [[01-nivel-0-a-1]] — SSH + `ls`, `cat`
 - [[02-nivel-1-a-2]] — archivo `-` (stdin vs `./-`)
@@ -80,10 +80,10 @@ ssh bandit<N>@bandit.labs.overthewire.org -p 2220
 **Truco de shell / final**
 - [[33-nivel-32-a-33]] — escapar del "uppercase shell" con `$0` (nivel 33 = final)
 
-## 📋 Mi progreso (rellena a mano)
-> ⚠️ Bajo riesgo (es un juego), pero por hábito: **no subas este archivo con contraseñas a un repo público**.
+## Mi progreso (rellena a mano)
+> Bajo riesgo (es un juego), pero por hábito: **no subas este archivo con contraseñas a un repo público**.
 
-| Nivel | Qué aprendí             | ✓   | Contraseña obtenida              |
+| Nivel | Qué aprendí | | Contraseña obtenida |
 | ----- | ----------------------- | --- | -------------------------------- |
 | 0→1   | ssh, ls, cat            |     |                                  |
 | 1→2   | archivo `-`             |     |                                  |

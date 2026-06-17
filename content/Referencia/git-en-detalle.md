@@ -8,7 +8,7 @@ source: claude-code
 aliases: [git en detalle, git practico, git guia, git comandos]
 ---
 
-# 🌿 Git en detalle — guía práctica
+# Git en detalle — guía práctica
 
 ## Idea central
 Git es un **control de versiones distribuido**: cada copia tiene la historia completa, y trabajas
@@ -20,7 +20,7 @@ guarda los datos por dentro) está en [[git-por-dentro]] — léelo antes si qui
 
 ---
 
-## ⚙️ Configuración inicial (una vez)
+## Configuración inicial (una vez)
 ```bash
 git config --global user.name "Tu Nombre"
 git config --global user.email "tu@email.com"
@@ -31,7 +31,7 @@ git config --global alias.st status
 git config --global alias.lg "log --oneline --graph --decorate --all"
 ```
 
-## 🔄 El ciclo básico (las 3 zonas)
+## El ciclo básico (las 3 zonas)
 ```bash
 git status                 # qué hay modificado / staged
 git add archivo.py         # mover cambios a 'staging'
@@ -42,7 +42,7 @@ git diff                   # cambios sin stagear (working vs index)
 git diff --staged          # cambios staged (index vs último commit)
 ```
 
-## 🌳 Ramas
+## Ramas
 ```bash
 git branch                 # listar
 git switch -c nueva-rama   # crear y cambiar (moderno; antes: git checkout -b)
@@ -53,7 +53,7 @@ git merge otra-rama        # fusionar 'otra-rama' EN la actual
 - **Fast-forward**: si no hay divergencia, la rama solo "avanza" el puntero (sin commit de merge).
 - **Merge commit**: si ambas divergieron, crea un commit con 2 padres.
 
-## 🔀 Merge vs Rebase (el tema que más se lía)
+## Merge vs Rebase (el tema que más se lía)
 | | `merge` | `rebase` |
 |---|---|---|
 | Qué hace | Une historias con un **commit de merge** | **Reaplica** tus commits encima de otra base |
@@ -64,7 +64,7 @@ git merge otra-rama        # fusionar 'otra-rama' EN la actual
 git rebase main            # reaplica tu rama encima de main (historia lineal)
 git rebase -i HEAD~3        # rebase INTERACTIVO: squash/reword/reorder los últimos 3
 ```
-> ⚠️ **Regla de oro**: **NO rebases commits que ya has publicado/compartido** (reescribes la historia
+> **Regla de oro**: **NO rebases commits que ya has publicado/compartido** (reescribes la historia
 > y rompes a los demás). Rebase = solo para tu trabajo local aún no empujado.
 
 ### Resolver conflictos
@@ -73,7 +73,7 @@ git rebase -i HEAD~3        # rebase INTERACTIVO: squash/reword/reorder los últ
 3. `git add archivo` y luego `git merge --continue` (o `git rebase --continue`).
 4. ¿Te liaste? `git merge --abort` / `git rebase --abort` para volver al estado previo.
 
-## 🌐 Remotos (trabajar con GitHub/GitLab)
+## Remotos (trabajar con GitHub/GitLab)
 ```bash
 git clone <url>                      # copiar un repo remoto
 git remote -v                        # ver remotos (origin…)
@@ -84,7 +84,7 @@ git push -u origin mi-rama           # primera vez: crea la rama remota y la enl
 ```
 - **fetch ≠ pull**: `fetch` solo descarga; `pull` además fusiona. Si quieres ver antes de mezclar, `fetch` + `git log origin/main`.
 
-## ↩️ Deshacer cosas (la parte más valiosa)
+## ↩ Deshacer cosas (la parte más valiosa)
 | Situación | Comando |
 |---|---|
 | Descartar cambios sin stagear de un archivo | `git restore archivo` |
@@ -96,18 +96,18 @@ git push -u origin mi-rama           # primera vez: crea la rama remota y la enl
 | Deshacer un commit **ya publicado** (crea uno inverso) | `git revert <hash>` |
 | Borrar archivos no rastreados (limpieza) | `git clean -fd` |
 
-> 🛟 **Red de seguridad: `git reflog`**. Registra TODOS los movimientos de HEAD; si "perdiste" un
+> **Red de seguridad: `git reflog`**. Registra TODOS los movimientos de HEAD; si "perdiste" un
 > commit (incluso tras un `reset --hard`), aparece ahí y lo recuperas con `git reset --hard <hash>`
 > o `git switch -c rescate <hash>`. Casi nada en Git se pierde de verdad.
 
-## 📦 Stash (guardar cambios a medias)
+## Stash (guardar cambios a medias)
 ```bash
 git stash                  # guarda y limpia el working dir (para cambiar de rama rápido)
 git stash pop              # recupera el último stash (y lo borra)
 git stash list             # ver la pila de stashes
 ```
 
-## 🍒 Otros útiles
+## Otros útiles
 ```bash
 git cherry-pick <hash>     # traer UN commit concreto de otra rama
 git tag -a v1.0 -m "..."   # crear un tag (releases)
@@ -117,13 +117,13 @@ git blame archivo          # quién y cuándo cambió cada línea
 git bisect start           # búsqueda binaria del commit que ROMPIÓ algo (bug hunting)
 ```
 
-## 🚫 .gitignore
+## .gitignore
 Lista de patrones de lo que Git debe **ignorar** (no rastrear): `__pycache__/`, `.venv/`, `node_modules/`,
 `.env`, `*.log`, build/. Crea uno por proyecto (gitignore.io genera plantillas por lenguaje).
-> ⚠️ Nunca commitees **secretos** (`.env`, claves). Si ya lo hiciste, no basta con borrarlo: queda
+> Nunca commitees **secretos** (`.env`, claves). Si ya lo hiciste, no basta con borrarlo: queda
 > en la historia → hay que reescribirla (`git filter-repo`) y **rotar el secreto**.
 
-## ✍️ Buenas prácticas
+## Buenas prácticas
 - **Commits atómicos**: un cambio lógico por commit (más fácil de revisar y de revertir).
 - **Mensajes claros**: imperativo y conciso ("Añade validación de email"). Mira *Conventional Commits*
   (`feat:`, `fix:`, `docs:`…) si quieres versionado/automatización.

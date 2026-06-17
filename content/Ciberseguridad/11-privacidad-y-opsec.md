@@ -8,7 +8,7 @@ source: claude-code
 aliases: [OPSEC, privacidad digital, anonimato]
 ---
 
-# 🔏 Privacidad y OPSEC
+# Privacidad y OPSEC
 
 ## Por que importa este dominio
 
@@ -20,7 +20,7 @@ Este módulo cierra el ciclo del cluster de ciberseguridad desde el ángulo del 
 
 ---
 
-## 🗺️ Panorama: privacidad, anonimato y OPSEC no son lo mismo
+## Panorama: privacidad, anonimato y OPSEC no son lo mismo
 
 Antes de entrar en herramientas, calibra los conceptos. Son distintos y se mezclan permanentemente en artículos de internet:
 
@@ -35,7 +35,7 @@ Antes de entrar en herramientas, calibra los conceptos. Son distintos y se mezcl
 
 ---
 
-## 🎯 Threat model personal — por qué te defiendes IMPORTA
+## Threat model personal — por qué te defiendes IMPORTA
 
 ### Qué es un threat model
 
@@ -70,7 +70,7 @@ La mayoría de personas técnicas en contexto occidental caen más cerca de A. U
 
 ---
 
-## 👣 Huella digital y rastreo
+## Huella digital y rastreo
 
 ### Tipos de huella
 
@@ -109,7 +109,7 @@ Correlación de identidades
 
 ---
 
-## 🧅 Anonimato: Tor y sus límites
+## Anonimato: Tor y sus límites
 
 ### Cómo funciona Tor (The Onion Router)
 
@@ -158,7 +158,7 @@ Los sitios `.onion` no son "la dark web maliciosa" por definición: son servicio
 
 ---
 
-## 🔌 VPNs — qué son y cuáles son sus límites reales
+## VPNs — qué son y cuáles son sus límites reales
 
 ### Lo que una VPN hace
 
@@ -192,7 +192,7 @@ Con VPN:
 
 ---
 
-## 🛡️ Hardening personal — lo que ya deberías tener
+## Hardening personal — lo que ya deberías tener
 
 Este bloque reutiliza prácticas del [[05-identidad-auth-y-secretos]] y del trabajo que ya haces en [[09-devsecops-y-appsec]]. No se repiten los conceptos en profundidad; aquí el enfoque es la aplicación personal.
 
@@ -255,7 +255,7 @@ No usar Chrome para nada sensible: Google tiene intereses comerciales directos e
 
 ---
 
-## 📋 GDPR y datos personales — nociones mínimas
+## GDPR y datos personales — nociones mínimas
 
 El **GDPR** (*General Data Protection Regulation*, UE 2018) establece derechos sobre tus datos personales. Como ingeniero que construye apps (ej:), también tienes obligaciones.
 
@@ -281,7 +281,7 @@ El **GDPR** (*General Data Protection Regulation*, UE 2018) establece derechos s
 
 ---
 
-## ⚠️ Errores comunes en privacidad personal
+## Errores comunes en privacidad personal
 
 1. **"No tengo nada que esconder"** — La privacidad no trata de ocultar delitos; trata de mantener autonomía sobre tu propia narrativa.
 2. **Confundir VPN con anonimato** — Un VPN solo desplaza la confianza al proveedor VPN.

@@ -14,7 +14,7 @@ neetcode_order: 8
 
 # LeetCode 102 — Binary Tree Level Order Traversal
 
-> 🎯 **Octavo problema del patrón Trees**. **El BFS canónico** sobre árboles binarios. Es la base de LC 199 (Right Side View), LC 1448 (Count Good Nodes), LC 297 (Serialize). Si lo dominas, desbloqueas un montón de problemas.
+> **Octavo problema del patrón Trees**. **El BFS canónico** sobre árboles binarios. Es la base de LC 199 (Right Side View), LC 1448 (Count Good Nodes), LC 297 (Serialize). Si lo dominas, desbloqueas un montón de problemas.
 
 ## Enunciado
 
@@ -61,7 +61,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)**.
 - **Espacio: O(n)** — la queue.
-- **Veredicto:** ✅ la canónica.
+- **Veredicto:** [OK] la canónica.
 
 ### Por qué `for _ in range(len(q))` y no `for node in q`
 

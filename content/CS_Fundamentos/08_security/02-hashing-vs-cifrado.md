@@ -1,8 +1,8 @@
 # 02 — Hashing vs cifrado
 
-> 📚 **Doc 2 del cluster Security**. Las dos primitivas criptográficas más confundidas. Esenciales para passwords, tokens, integridad, transmisión segura.
-> 🔥 **Frecuencia interview**: aparece siempre. "Cómo guardas passwords", "diferencia hash vs encrypt", "qué es bcrypt".
-> ⏱️ **Tiempo de lectura estimado**: 35-50 min.
+> **Doc 2 del cluster Security**. Las dos primitivas criptográficas más confundidas. Esenciales para passwords, tokens, integridad, transmisión segura.
+> **Frecuencia interview**: aparece siempre. "Cómo guardas passwords", "diferencia hash vs encrypt", "qué es bcrypt".
+> **Tiempo de lectura estimado**: 35-50 min.
 
 ---
 

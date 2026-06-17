@@ -14,7 +14,7 @@ neetcode_order: 3
 
 # LeetCode 48 — Rotate Image
 
-> 🎯 **Tercer problema de Math & Geometry**. Rotar matriz `n×n` 90° **in-place**. Truco: **transponer + invertir filas**.
+> **Tercer problema de Math & Geometry**. Rotar matriz `n×n` 90° **in-place**. Truco: **transponer + invertir filas**.
 
 ## Enunciado
 

@@ -14,7 +14,7 @@ neetcode_order: 3
 
 # LeetCode 212 — Word Search II
 
-> 🎯 **Tercer y último problema del patrón Tries — el Hard**. Combina **Trie + backtracking en grid**. La idea brillante: en lugar de buscar cada palabra en el grid (LC 79), construyes un Trie con todas las palabras y haces **un solo DFS** sobre el grid usando el Trie como guía.
+> **Tercer y último problema del patrón Tries — el Hard**. Combina **Trie + backtracking en grid**. La idea brillante: en lugar de buscar cada palabra en el grid (LC 79), construyes un Trie con todas las palabras y haces **un solo DFS** sobre el grid usando el Trie como guía.
 
 ## Enunciado
 
@@ -89,7 +89,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(M·N · 4^L)** donde M·N son celdas del grid y L es palabra más larga.
 - **Espacio: O(total chars en words)** para el Trie.
-- **Veredicto:** ✅ la canónica.
+- **Veredicto:** [OK] la canónica.
 
 ### El truco "node.word = word" en lugar de "is_end"
 
@@ -106,7 +106,7 @@ Si un nodo del Trie ya no tiene hijos (todas sus palabras se encontraron), lo el
 
 ---
 
-## Cierre del patrón Tries 🎉
+## Cierre del patrón Tries
 
 | # | Problema | Idea distintiva |
 |---|---|---|
@@ -128,4 +128,4 @@ Si un nodo del Trie ya no tiene hijos (todas sus palabras se encontraron), lo el
 - [ ] Leído
 - [ ] Implementado desde cero
 - [ ] Resuelto en LeetCode
-- [ ] **Patrón Tries cerrado** ✅
+- [ ] **Patrón Tries cerrado** [OK]

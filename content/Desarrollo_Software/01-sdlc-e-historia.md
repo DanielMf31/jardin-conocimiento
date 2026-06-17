@@ -8,7 +8,7 @@ source: claude-code
 aliases: [SDLC, ciclo de vida software, historia agile]
 ---
 
-# 🏗️ Ciclo de vida del software e historia
+# Ciclo de vida del software e historia
 
 ## ¿Por qué existe esto?
 
@@ -16,7 +16,7 @@ En hardware/técnico tienes procesos bien definidos: especificación → diseño
 
 ---
 
-## 📐 ¿Qué es el SDLC?
+## ¿Qué es el SDLC?
 
 **SDLC** (*Software Development Life Cycle*, ciclo de vida del desarrollo de software) es el marco conceptual que describe las **fases por las que pasa un producto software**, desde la idea hasta su retirada.
 
@@ -38,7 +38,7 @@ Los distintos modelos difieren en: ¿se hacen en secuencia única, en bucles, en
 
 ---
 
-## 🌊 Modelos clásicos
+## Modelos clásicos
 
 ### Waterfall (Cascada) — 1970
 
@@ -85,7 +85,7 @@ La idea central: *entregar algo funcional pronto y corregir el rumbo con feedbac
 
 ---
 
-## 💥 La crisis del software
+## La crisis del software
 
 Entre los años 60 y 90, la industria acumuló evidencia de fracasos masivos:
 
@@ -105,7 +105,7 @@ Entre los años 60 y 90, la industria acumuló evidencia de fracasos masivos:
 
 ---
 
-## 🚀 Por qué nació Agile (2001)
+## Por qué nació Agile (2001)
 
 A finales de los 90, varios practicantes con metodologías alternativas (XP, Scrum, DSDM, Crystal…) convergieron en la misma intuición: el problema no era la falta de disciplina, sino la **ilusión de que el software es predecible como la manufactura**.
 
@@ -122,7 +122,7 @@ El detonante conceptual: el software opera en un dominio **complejo** (en el sen
 
 ---
 
-## ⚖️ Cascada vs. Iterativo — comparativa directa
+## Cascada vs. Iterativo — comparativa directa
 
 | Dimensión | Cascada | Iterativo/Ágil |
 |-----------|---------|---------------|
@@ -138,7 +138,7 @@ El detonante conceptual: el software opera en un dominio **complejo** (en el sen
 
 ---
 
-## ✅ Cuándo el cascada sigue teniendo sentido
+## [OK] Cuándo el cascada sigue teniendo sentido
 
 No todo es ágil. El cascada (o el modelo en V) es la elección correcta cuando:
 
@@ -158,7 +158,7 @@ No todo es ágil. El cascada (o el modelo en V) es la elección correcta cuando:
 
 ---
 
-## 🔧 Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 **app web (React + FastAPI + MongoDB)**
 Este proyecto tiene requisitos que evolucionan (no sabes exactamente qué pantallas necesitarás hasta probarlas). El cascada sería un error: trabaja iterativo. Define un MVP funcional (ej: registro de comida + cálculo de Na/K), despliégalo, úsalo tú mismo, luego itera. Cada semana debería haber algo funcionando.

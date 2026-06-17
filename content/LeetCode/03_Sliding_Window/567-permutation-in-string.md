@@ -14,8 +14,8 @@ neetcode_order: 4
 
 # LeetCode 567 — Permutation in String
 
-> 🎯 **Cuarto problema del patrón Sliding Window** — y el primer ejemplo de **ventana de tamaño FIJO**, distinto de los anteriores que eran variables. Aprenderlo bien te abre la subfamilia de problemas "sliding window de tamaño k".
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Cuarto problema del patrón Sliding Window** — y el primer ejemplo de **ventana de tamaño FIJO**, distinto de los anteriores que eran variables. Aprenderlo bien te abre la subfamilia de problemas "sliding window de tamaño k".
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -60,7 +60,7 @@ class Solution:
 | Edge case 1 | `s1 = "a", s2 = "a"` → `True` |
 | Edge case 2 | s1 con duplicados (`"aa"`): solo cuenta como anagrama "aa" |
 
-> 💡 **Reformulación**: ¿existe una ventana de tamaño `len(s1)` en `s2` tal que sus frecuencias de caracteres coinciden con las de `s1`?
+> **Reformulación**: ¿existe una ventana de tamaño `len(s1)` en `s2` tal que sus frecuencias de caracteres coinciden con las de `s1`?
 
 ---
 
@@ -80,7 +80,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n! · m)** — n! permutaciones × O(m) por búsqueda. Catastrófico con `n = 10^4`.
 - **Espacio: O(n!)**.
-- **Veredicto:** ❌ TLE absoluta. Solo educativa.
+- **Veredicto:** [NO] TLE absoluta. Solo educativa.
 
 ---
 
@@ -122,12 +122,12 @@ class Solution:
 | 2 | 3 | quitar 'i', añadir 'b' → {d:1, b:1} | | NO |
 | 3 | 4 | quitar 'd', añadir 'a' → {b:1, a:1} | | **SÍ** → return True |
 
-Resultado: `True` ✅.
+Resultado: `True` [OK].
 
 **Análisis:**
 - **Tiempo: O(m + (m-n)·26)** = O(m) — cada comparación `==` entre Counters de tamaño máximo 26 es O(26).
 - **Espacio: O(26)** = O(1).
-- **Veredicto:** ✅ correcta. La sutileza del `del window[char]` cuando llega a 0 es **necesaria** para que `==` no falle por claves residuales con valor 0.
+- **Veredicto:** [OK] correcta. La sutileza del `del window[char]` cuando llega a 0 es **necesaria** para que `==` no falle por claves residuales con valor 0.
 
 ---
 
@@ -162,7 +162,7 @@ class Solution:
 
 **Análisis:** mismo O(m) tiempo, O(1) espacio. **La diferencia clave**: `window == target` entre listas de tamaño fijo 26 es O(26), sin tener que limpiar 0s (porque las listas siempre tienen 26 entradas).
 
-**Veredicto:** ✅ **la idiomática para alfabeto pequeño**. Es la respuesta esperada.
+**Veredicto:** [OK] **la idiomática para alfabeto pequeño**. Es la respuesta esperada.
 
 ---
 
@@ -214,7 +214,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(m)** — cada paso hace solo O(1) de trabajo (no compara 26 entradas).
 - **Espacio: O(1)**.
-- **Veredicto:** ✅ **la óptima absoluta**. No hace falta en LeetCode (la 3 ya pasa) pero es el patrón "matches counter" que vale la pena conocer porque aparece en LC 76 y similares.
+- **Veredicto:** [OK] **la óptima absoluta**. No hace falta en LeetCode (la 3 ya pasa) pero es el patrón "matches counter" que vale la pena conocer porque aparece en LC 76 y similares.
 
 ---
 
@@ -288,10 +288,10 @@ Cuando el costo de comparar dos estados es alto (e.g. dos arrays de N entradas),
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Generar permutaciones | O(n! · m) | O(n!) | ❌ TLE |
-| 2. Sliding window con `Counter` + `del` | O(m) | O(26) | ✅ Funciona |
-| 3. **Sliding window con array de 26** | **O(m)** | O(1) | ✅ La idiomática |
-| 4. **Sliding window con matches counter** | **O(m)** | O(1) | ✅ La óptima absoluta |
+| 1. Generar permutaciones | O(n! · m) | O(n!) | [NO] TLE |
+| 2. Sliding window con `Counter` + `del` | O(m) | O(26) | [OK] Funciona |
+| 3. **Sliding window con array de 26** | **O(m)** | O(1) | [OK] La idiomática |
+| 4. **Sliding window con matches counter** | **O(m)** | O(1) | [OK] La óptima absoluta |
 
 ---
 

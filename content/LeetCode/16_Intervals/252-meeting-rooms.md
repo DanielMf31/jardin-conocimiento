@@ -14,7 +14,7 @@ neetcode_order: 4
 
 # LeetCode 252 — Meeting Rooms
 
-> 🎯 **Cuarto problema de Intervals — Easy**. ¿Puede una persona asistir a todas las reuniones? Sort + check de solapamiento.
+> **Cuarto problema de Intervals — Easy**. ¿Puede una persona asistir a todas las reuniones? Sort + check de solapamiento.
 
 ## Enunciado
 

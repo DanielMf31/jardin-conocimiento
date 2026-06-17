@@ -1,8 +1,8 @@
 # 02 — Jerarquía de memoria y cache
 
-> 📚 **Doc 2 del cluster Computer Architecture**. La razón #1 por la que dos pieces de código que parecen iguales tienen performance brutalmente distinta. Conocer esto te diferencia como engineer.
-> 🔥 **Frecuencia interview**: aparece en preguntas de performance avanzadas, cache-friendly algorithms, optimización low-level.
-> ⏱️ **Tiempo de lectura estimado**: 35-50 min.
+> **Doc 2 del cluster Computer Architecture**. La razón #1 por la que dos pieces de código que parecen iguales tienen performance brutalmente distinta. Conocer esto te diferencia como engineer.
+> **Frecuencia interview**: aparece en preguntas de performance avanzadas, cache-friendly algorithms, optimización low-level.
+> **Tiempo de lectura estimado**: 35-50 min.
 
 ---
 

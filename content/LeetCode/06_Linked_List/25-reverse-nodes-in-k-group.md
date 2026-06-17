@@ -14,7 +14,7 @@ neetcode_order: 11
 
 # LeetCode 25 — Reverse Nodes in K-Group
 
-> 🎯 **Undécimo y último problema del patrón Linked List — segundo Hard**. Combina [[206-reverse-linked-list]] (reverse) con división en bloques. Es el problema con **más manejo manual de punteros** del bloque. Si lo dominas, has cerrado linked lists.
+> **Undécimo y último problema del patrón Linked List — segundo Hard**. Combina [[206-reverse-linked-list]] (reverse) con división en bloques. Es el problema con **más manejo manual de punteros** del bloque. Si lo dominas, has cerrado linked lists.
 
 ## Enunciado
 
@@ -84,7 +84,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)** — cada nodo se visita una vez para localización y una vez en la inversión.
 - **Espacio: O(1)**.
-- **Veredicto:** ✅ la canónica.
+- **Veredicto:** [OK] la canónica.
 
 ### Por qué dummy node
 
@@ -106,7 +106,7 @@ Es más claro que un contador inline. Devuelve el k-ésimo desde un nodo, o `Non
 
 ---
 
-## Cierre del patrón Linked List 🎉
+## Cierre del patrón Linked List
 
 | # | Problema | Variante | Idea distintiva |
 |---|---|---|---|
@@ -139,4 +139,4 @@ Es más claro que un contador inline. Devuelve el k-ésimo desde un nodo, o `Non
 - [ ] Implementada solución desde cero
 - [ ] Trace mental hecho
 - [ ] Resuelto en LeetCode con éxito
-- [ ] **Patrón Linked List cerrado** ✅
+- [ ] **Patrón Linked List cerrado** [OK]

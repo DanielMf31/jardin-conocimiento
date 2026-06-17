@@ -14,8 +14,8 @@ neetcode_order: 6
 
 # LeetCode 981 — Time Based Key-Value Store
 
-> 🎯 **Sexto problema del patrón Binary Search**. Es **diseño de clase** (como [[155-min-stack]]) combinado con binary search. Buen ejemplo de cuándo el módulo `bisect` SÍ se usa en entrevistas (a diferencia de LC 704). Aplicación práctica: **versionado temporal** (Git internals, time-series databases, snapshot isolation en DBs).
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Sexto problema del patrón Binary Search**. Es **diseño de clase** (como [[155-min-stack]]) combinado con binary search. Buen ejemplo de cuándo el módulo `bisect` SÍ se usa en entrevistas (a diferencia de LC 704). Aplicación práctica: **versionado temporal** (Git internals, time-series databases, snapshot isolation en DBs).
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -67,7 +67,7 @@ class TimeMap:
 | Edge case 1 | `get` con timestamp menor que todos los `set` → `""` |
 | Edge case 2 | `get` con key que nunca tuvo `set` → `""` |
 
-> 💡 **El insight**: para cada key, los `set` ya producen una lista ordenada de timestamps. `get` es esencialmente "encontrar el último timestamp ≤ t" → binary search clásico (con cuidado en los endpoints).
+> **El insight**: para cada key, los `set` ya producen una lista ordenada de timestamps. `get` es esencialmente "encontrar el último timestamp ≤ t" → binary search clásico (con cuidado en los endpoints).
 
 ---
 
@@ -98,7 +98,7 @@ class TimeMap:
 
 **Análisis:**
 - **set: O(1)**.
-- **get: O(n)** donde n = número de set para esa key. ❌ Lento si hay muchas operaciones.
+- **get: O(n)** donde n = número de set para esa key. [NO] Lento si hay muchas operaciones.
 - **Veredicto:** funciona pero ineficiente con muchos set para una misma key.
 
 ---
@@ -145,7 +145,7 @@ get("foo", 4):
   arr = [(1,"a"), (3,"b"), (5,"c")]
   left=0, right=2
 
-  Iter 1: mid=1, arr[1]=(3,"b"), 3 <= 4 ✓
+  Iter 1: mid=1, arr[1]=(3,"b"), 3 <= 4 
     result = "b", left = 2
 
   Iter 2: left=2, right=2, mid=2, arr[2]=(5,"c"), 5 <= 4? NO
@@ -153,13 +153,13 @@ get("foo", 4):
 
   left=2 > right=1 → exit
 
-  Return "b" ✅
+  Return "b" [OK]
 ```
 
 **Análisis:**
 - **set: O(1)**.
 - **get: O(log n)**.
-- **Veredicto:** ✅ **la canónica**.
+- **Veredicto:** [OK] **la canónica**.
 
 ---
 
@@ -192,9 +192,9 @@ class TimeMap:
 
 **Análisis:** mismo O(log n).
 
-**Veredicto:** ✅ **la pythonic**. Usar `bisect` aquí es **aceptable** en entrevista (a diferencia de [[704-binary-search]]) porque el problema es de diseño y `bisect` es accesorio, no el algoritmo principal.
+**Veredicto:** [OK] **la pythonic**. Usar `bisect` aquí es **aceptable** en entrevista (a diferencia de [[704-binary-search]]) porque el problema es de diseño y `bisect` es accesorio, no el algoritmo principal.
 
-> 💡 **`bisect_right(arr, x)`** devuelve el índice donde insertar `x+epsilon` para mantener el orden, o equivalentemente: el primer índice cuyo valor sea `> x`. El último valor `<= x` está en `i-1`.
+> **`bisect_right(arr, x)`** devuelve el índice donde insertar `x+epsilon` para mantener el orden, o equivalentemente: el primer índice cuyo valor sea `> x`. El último valor `<= x` está en `i-1`.
 
 ---
 
@@ -273,8 +273,8 @@ Memoriza estas dos recetas. Las verás en muchos problemas.
 
 ### Cuándo usar `bisect` en entrevista
 
-- ✅ **Aceptable**: cuando el problema es de **diseño** o **complejo** y `bisect` es una herramienta auxiliar (LC 981).
-- ❌ **NO recomendado**: cuando el problema es **explícitamente sobre binary search** (LC 704). Ahí quieren ver que sabes implementarlo.
+- [OK] **Aceptable**: cuando el problema es de **diseño** o **complejo** y `bisect` es una herramienta auxiliar (LC 981).
+- [NO] **NO recomendado**: cuando el problema es **explícitamente sobre binary search** (LC 704). Ahí quieren ver que sabes implementarlo.
 
 ---
 
@@ -283,8 +283,8 @@ Memoriza estas dos recetas. Las verás en muchos problemas.
 | Solución | set | get | Veredicto |
 |---|---|---|---|
 | 1. Linear search | O(1) | O(n) | Funciona, lenta |
-| 2. **Binary search manual** | O(1) | **O(log n)** | ✅ La canónica |
-| 3. **`bisect` module** | O(1) | **O(log n)** | ✅ La pythonic (aceptable aquí) |
+| 2. **Binary search manual** | O(1) | **O(log n)** | [OK] La canónica |
+| 3. **`bisect` module** | O(1) | **O(log n)** | [OK] La pythonic (aceptable aquí) |
 
 ---
 

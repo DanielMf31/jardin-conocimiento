@@ -1,8 +1,8 @@
 # 02 — Runtime y VMs
 
-> 📚 **Doc 2 (último) del cluster Compilers (Tier 3 opcional)**. Qué pasa con el AST después del parsing. Bytecode, garbage collection, JIT compilation. Por qué Python es lento y Java/JS son sorprendentemente rápidos.
-> 🎓 **Para quién**: opcional, útil para entender por qué tu código va a la velocidad que va.
-> ⏱️ **Tiempo de lectura estimado**: 35-50 min.
+> **Doc 2 (último) del cluster Compilers (Tier 3 opcional)**. Qué pasa con el AST después del parsing. Bytecode, garbage collection, JIT compilation. Por qué Python es lento y Java/JS son sorprendentemente rápidos.
+> **Para quién**: opcional, útil para entender por qué tu código va a la velocidad que va.
+> **Tiempo de lectura estimado**: 35-50 min.
 
 ---
 
@@ -349,8 +349,8 @@ Si no puedes → relee.
 
 ---
 
-## ¡Cluster Compilers completado! 🎉
-## ¡Cluster CS_Fundamentos COMPLETO! 🎉🎉🎉
+## ¡Cluster Compilers completado!
+## ¡Cluster CS_Fundamentos COMPLETO!
 
 **Has completado los 9 clusters, 37 docs**:
 

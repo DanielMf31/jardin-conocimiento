@@ -1,8 +1,8 @@
 # 05 — TLS y HTTPS
 
-> 📚 **Doc 5 (último) del cluster Networking**. Cierra el ciclo: cómo se cifra todo el tráfico moderno.
-> 🔥 **Frecuencia interview**: aparece en system design (HTTPS, certificate pinning, MITM) y en preguntas de seguridad.
-> ⏱️ **Tiempo de lectura estimado**: 45-65 min.
+> **Doc 5 (último) del cluster Networking**. Cierra el ciclo: cómo se cifra todo el tráfico moderno.
+> **Frecuencia interview**: aparece en system design (HTTPS, certificate pinning, MITM) y en preguntas de seguridad.
+> **Tiempo de lectura estimado**: 45-65 min.
 
 ---
 
@@ -333,7 +333,7 @@ Si no puedes → relee la sección.
 
 ---
 
-## ¡Cluster Networking completado! 🎉
+## ¡Cluster Networking completado!
 
 Has terminado los 5 docs de Networking. Resumen de lo que ahora dominas:
 

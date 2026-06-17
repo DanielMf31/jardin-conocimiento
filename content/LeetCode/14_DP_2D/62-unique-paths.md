@@ -14,7 +14,7 @@ neetcode_order: 1
 
 # LeetCode 62 — Unique Paths
 
-> 🎯 **Primer problema de DP 2-D**. **Caminos en un grid** moviéndose solo derecha o abajo. `dp[i][j] = dp[i-1][j] + dp[i][j-1]`.
+> **Primer problema de DP 2-D**. **Caminos en un grid** moviéndose solo derecha o abajo. `dp[i][j] = dp[i-1][j] + dp[i][j-1]`.
 
 ## Enunciado
 

@@ -14,8 +14,8 @@ neetcode_order: 5
 
 # LeetCode 76 — Minimum Window Substring
 
-> 🎯 **Quinto problema del patrón Sliding Window — primer Hard**. Es **el problema más difícil** de la categoría y **el más útil para entrevistas tecnicas** (lo preguntan muy frecuentemente). Introduce el patrón **`have / need`** (matches counter) que es la generalización de todo lo anterior.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Quinto problema del patrón Sliding Window — primer Hard**. Es **el problema más difícil** de la categoría y **el más útil para entrevistas tecnicas** (lo preguntan muy frecuentemente). Introduce el patrón **`have / need`** (matches counter) que es la generalización de todo lo anterior.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -23,7 +23,7 @@ Dadas dos strings `s` y `t`, devuelve la **ventana mínima en `s`** que contiene
 
 Si no existe tal ventana, devuelve `""` (string vacío).
 
-> ⚠️ Importante: la ventana puede contener caracteres extra; lo que importa es que **cubra** los de `t` (con sus frecuencias).
+> Importante: la ventana puede contener caracteres extra; lo que importa es que **cubra** los de `t` (con sus frecuencias).
 
 **Ejemplo 1:**
 ```
@@ -50,7 +50,7 @@ Output: ""
 - `1 <= m, n <= 10^5`.
 - `s` y `t` son ASCII imprimibles.
 
-> 💡 **Follow-up del enunciado**: ¿puedes hacerlo en O(m + n)?
+> **Follow-up del enunciado**: ¿puedes hacerlo en O(m + n)?
 
 **Plantilla:**
 ```python
@@ -74,7 +74,7 @@ class Solution:
 | Edge case 1 | `t` más larga que `s` → no puede cubrir → `""` |
 | Edge case 2 | `s` y `t` iguales → la ventana es `s` entera |
 
-> 🎯 **El reto**: tienes que mantener una ventana que **siempre cubra** los caracteres de `t`, expandirla cuando no cubre, contraerla cuando sí, y trackear la mejor (más corta).
+> **El reto**: tienes que mantener una ventana que **siempre cubra** los caracteres de `t`, expandirla cuando no cubre, contraerla cuando sí, y trackear la mejor (más corta).
 
 ---
 
@@ -100,7 +100,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(m³)** — m² substrings × O(m) construir Counter.
 - **Espacio: O(m)**.
-- **Veredicto:** ❌ TLE.
+- **Veredicto:** [NO] TLE.
 
 ---
 
@@ -173,12 +173,12 @@ class Solution:
 | 11 | N | N:1 | 2 | NO | — | (4,9,12) |
 | 12 | C | C:2 | 3 | SÍ | shrink: "BANC" (len 4) — best ya es 4 → empate, no actualiza | (4,9,12) |
 
-Resultado: `s[9:13]` = `"BANC"` ✅.
+Resultado: `s[9:13]` = `"BANC"` [OK].
 
 **Análisis:**
 - **Tiempo: O(m + n)** — O(n) para construir target, O(m) amortizado para el sliding window.
 - **Espacio: O(n + alfabeto)**.
-- **Veredicto:** ✅ **la canónica de entrevista**.
+- **Veredicto:** [OK] **la canónica de entrevista**.
 
 ### Por qué `have / need` y no comparar Counters
 
@@ -276,8 +276,8 @@ Patrón típico para no construir el substring antes de tiempo. Solo al final ha
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Fuerza bruta | O(m³) | O(m) | ❌ TLE |
-| 2. **Sliding window con `have / need`** | **O(m + n)** | O(n) | ✅ La canónica |
+| 1. Fuerza bruta | O(m³) | O(m) | [NO] TLE |
+| 2. **Sliding window con `have / need`** | **O(m + n)** | O(n) | [OK] La canónica |
 
 ---
 

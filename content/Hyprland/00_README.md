@@ -10,11 +10,11 @@ aliases: [hypr, WM, ricing]
 
 # Hyprland — auto-estudio y configuración
 
-> 🎯 Cluster de **teoría + práctica** sobre Hyprland (compositor Wayland *tiling*) y su ecosistema. Documenta **cómo funciona por dentro** y **cómo configurarlo**, anclado a mi instalación real.
+> Cluster de **teoría + práctica** sobre Hyprland (compositor Wayland *tiling*) y su ecosistema. Documenta **cómo funciona por dentro** y **cómo configurarlo**, anclado a mi instalación real.
 >
-> 📍 **Punto de entrada del área**: [[MOC_Hyprland]]
+> **Punto de entrada del área**: [[MOC_Hyprland]]
 >
-> 📚 **Filosofía**: igual que [[00_README|CS_Fundamentos]] pero para el WM. Si la pregunta es *"¿cómo lo configuro?"* → **Recetas_Config**. Si es *"¿por qué funciona así?"* → las carpetas numeradas.
+> **Filosofía**: igual que [[00_README|CS_Fundamentos]] pero para el WM. Si la pregunta es *"¿cómo lo configuro?"* → **Recetas_Config**. Si es *"¿por qué funciona así?"* → las carpetas numeradas.
 
 ## Cómo uso esta carpeta
 
@@ -26,7 +26,7 @@ aliases: [hypr, WM, ricing]
 
 ```
 01_arquitectura_wayland/      ← cómo funciona Wayland y un compositor por dentro
-02_layouts_y_ventanas/        ← dwindle/master, tiling, splits, floating  ⭐ (mi interés)
+02_layouts_y_ventanas/        ← dwindle/master, tiling, splits, floating   (mi interés)
 03_configuracion_hyprlang/    ← el lenguaje de config, variables, sourcing, hot reload
 04_keybinds_y_dispatchers/    ← binds, dispatchers, submaps
 05_window_workspace_rules/    ← reglas por ventana y por workspace

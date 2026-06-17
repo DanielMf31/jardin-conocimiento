@@ -8,7 +8,7 @@ source: claude-code
 aliases: [user stories, product backlog, historias usuario]
 ---
 
-# 📋 Historias de usuario y backlog
+# Historias de usuario y backlog
 
 ## Por qué existe esto — el problema que resuelve
 
@@ -22,7 +22,7 @@ Las **historias de usuario** son la respuesta ágil: unidades mínimas de valor 
 
 ---
 
-## 🧱 Estructura de una historia de usuario
+## Estructura de una historia de usuario
 
 ### El formato canónico
 
@@ -53,7 +53,7 @@ En proyectos con varios tipos de usuario, definir **personas** (perfiles fictici
 
 ---
 
-## ✅ Criterios INVEST — cómo saber si tu historia es buena
+## [OK] Criterios INVEST — cómo saber si tu historia es buena
 
 INVEST es un acrónimo que funciona como checklist de calidad para cada historia:
 
@@ -70,7 +70,7 @@ INVEST es un acrónimo que funciona como checklist de calidad para cada historia
 
 ---
 
-## 🔬 Criterios de aceptación — Given / When / Then
+## Criterios de aceptación — Given / When / Then
 
 Los criterios de aceptación son las condiciones concretas que deben cumplirse para dar la historia por terminada. Sin ellos, "listo" es subjetivo.
 
@@ -108,7 +108,7 @@ Los criterios de aceptación los escribe el **Product Owner** con input del equi
 
 ---
 
-## 🗂️ Jerarquía: temas, épicas e historias
+## Jerarquía: temas, épicas e historias
 
 Las historias individuales se agrupan en estructuras más grandes para mantener visión de conjunto:
 
@@ -130,7 +130,7 @@ Las **épicas** no se desarrollan directamente — se descomponen en historias c
 
 ---
 
-## 📦 El Product Backlog
+## El Product Backlog
 
 El **Product Backlog** (backlog de producto) es la lista ordenada y priorizada de todo lo que podría hacerse en el producto. Es la única fuente de verdad sobre el trabajo pendiente.
 
@@ -175,7 +175,7 @@ Qué se hace en una sesión de refinamiento:
 
 ---
 
-## 🃏 Estimación — por qué no en horas
+## Estimación — por qué no en horas
 
 ### El problema de estimar en horas
 
@@ -225,7 +225,7 @@ No se usa para compromiso de entrega, solo para priorización y planificación d
 
 ---
 
-## 📈 Velocity — la consecuencia, no la meta
+## Velocity — la consecuencia, no la meta
 
 La **velocity** (velocidad del equipo) es la suma de story points completados en un sprint. No se fija de antemano — emerge de los sprints reales.
 
@@ -245,7 +245,7 @@ Usos incorrectos (antipatrones comunes):
 
 ---
 
-## ⚠️ Errores comunes
+## Errores comunes
 
 | Error | Por qué pasa | Cómo evitarlo |
 |-------|-------------|---------------|
@@ -258,7 +258,7 @@ Usos incorrectos (antipatrones comunes):
 
 ---
 
-## 🛠️ Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 ### app web (React + FastAPI + MongoDB)
 

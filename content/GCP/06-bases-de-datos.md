@@ -8,7 +8,7 @@ source: claude-code
 aliases: [GCP databases, bases de datos GCP, gcp-bd]
 ---
 
-# 🗄️ Bases de datos en GCP
+# Bases de datos en GCP
 
 ## ¿Por qué importa elegir bien la base de datos?
 
@@ -26,7 +26,7 @@ La base de datos es el componente con mayor "lock-in" de un sistema: cambiarla e
 
 ---
 
-## 🗺️ Panorama de servicios
+## Panorama de servicios
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -46,7 +46,7 @@ La base de datos es el componente con mayor "lock-in" de un sistema: cambiarla e
 
 ---
 
-## 🐘 Cloud SQL — El punto de entrada relacional
+## Cloud SQL — El punto de entrada relacional
 
 ### ¿Qué problema resuelve?
 
@@ -115,7 +115,7 @@ gcloud sql instances list
 
 ---
 
-## ⚡ AlloyDB — PostgreSQL con superpoderes
+## AlloyDB — PostgreSQL con superpoderes
 
 ### ¿Qué lo diferencia de Cloud SQL?
 
@@ -151,7 +151,7 @@ gcloud alloydb instances create mi-instancia \
 
 ---
 
-## 🌐 Cloud Spanner — Relacional distribuido a escala global
+## Cloud Spanner — Relacional distribuido a escala global
 
 ### El problema que resuelve
 
@@ -209,7 +209,7 @@ docker run -p 9010:9010 -p 9020:9020 gcr.io/cloud-spanner-emulator/emulator
 
 ---
 
-## 📄 Firestore — Documentos para apps web/mobile
+## Firestore — Documentos para apps web/mobile
 
 ### ¿Qué es?
 
@@ -267,7 +267,7 @@ for u in usuarios_activos:
 
 ---
 
-## 🔢 Bigtable — Wide-column para escala masiva
+## Bigtable — Wide-column para escala masiva
 
 ### ¿Qué problema resuelve?
 
@@ -331,7 +331,7 @@ gcloud beta emulators bigtable start
 
 ---
 
-## 🚀 Memorystore — Redis/Valkey gestionado (caché)
+## Memorystore — Redis/Valkey gestionado (caché)
 
 ### ¿Qué es?
 
@@ -395,7 +395,7 @@ def get_usuario(user_id: str):
 
 ---
 
-## 📊 Tabla comparativa — ¿Qué servicio elegir?
+## Tabla comparativa — ¿Qué servicio elegir?
 
 | Servicio | Modelo | Escala | Consistencia | Latencia | Precio relativo | Caso típico |
 |---|---|---|---|---|---|---|
@@ -422,7 +422,7 @@ def get_usuario(user_id: str):
 
 ---
 
-## 🔗 Integración con otros servicios GCP
+## Integración con otros servicios GCP
 
 - **Cloud SQL → Cloud Run**: conéctate con el socket Unix del proxy (sin abrir puertos).
 - **Firestore → Cloud Functions**: triggers nativos cuando un documento cambia.
@@ -439,7 +439,7 @@ gcloud run services update mi-servicio \
 
 ---
 
-## ⚠️ Errores y costes comunes
+## Errores y costes comunes
 
 | Error | Consecuencia | Prevención |
 |---|---|---|
@@ -452,7 +452,7 @@ gcloud run services update mi-servicio \
 
 ---
 
-## 🛠️ Aplícalo / practica
+## Aplícalo / practica
 
 ### Ejercicio 1 — Cloud SQL con proxy (30 min)
 1. Crea una instancia Cloud SQL PostgreSQL en `us-central1` con `db-f1-micro`.

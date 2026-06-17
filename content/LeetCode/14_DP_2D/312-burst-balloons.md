@@ -14,7 +14,7 @@ neetcode_order: 10
 
 # LeetCode 312 — Burst Balloons
 
-> 🎯 **Décimo problema de DP 2-D — Hard**. **Interval DP**. Truco contra-intuitivo: en lugar de pensar "qué globo reviento PRIMERO", pensar "qué globo reviento al FINAL del intervalo".
+> **Décimo problema de DP 2-D — Hard**. **Interval DP**. Truco contra-intuitivo: en lugar de pensar "qué globo reviento PRIMERO", pensar "qué globo reviento al FINAL del intervalo".
 
 ## Enunciado
 

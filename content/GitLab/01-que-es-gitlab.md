@@ -8,7 +8,7 @@ source: claude-code
 aliases: [gitlab-intro, que-es-gitlab]
 ---
 
-# 🏗️ Qué es GitLab y sus ediciones
+# Qué es GitLab y sus ediciones
 
 ## El problema que resuelve
 
@@ -22,7 +22,7 @@ El resultado práctico: abres una tarea en Issues, creas una rama desde ahí, ha
 
 ---
 
-## 🗺️ Panorama del ciclo DevOps que cubre GitLab
+## Panorama del ciclo DevOps que cubre GitLab
 
 GitLab divide su funcionalidad en etapas del ciclo DevOps. Esto no es marketing: cada etapa corresponde a una sección real de la interfaz y a una categoría de features:
 
@@ -41,7 +41,7 @@ No tienes que usar todas las etapas; puedes adoptarlas incrementalmente. Muchos 
 
 ---
 
-## 🌐 GitLab.com (SaaS) vs Self-Managed (Autoalojado)
+## GitLab.com (SaaS) vs Self-Managed (Autoalojado)
 
 Esta es la diferencia más importante entre GitLab y GitHub para el mercado profesional: **GitLab puedes instalarlo tú mismo en tus servidores**, y eso es algo que muchas empresas exigen por razones regulatorias o de seguridad.
 
@@ -77,7 +77,7 @@ Esta es la diferencia más importante entre GitLab y GitHub para el mercado prof
 
 ---
 
-## 📦 Ediciones: CE vs EE
+## Ediciones: CE vs EE
 
 GitLab tiene un modelo open-core: el núcleo es software libre, y las features avanzadas son de pago.
 
@@ -94,20 +94,20 @@ GitLab tiene un modelo open-core: el núcleo es software libre, y las features a
 
 | Feature | CE (Free) | EE Premium | EE Ultimate |
 |---|---|---|---|
-| Repositorios Git ilimitados | ✅ | ✅ | ✅ |
-| CI/CD pipelines | ✅ | ✅ | ✅ |
-| Container Registry | ✅ | ✅ | ✅ |
-| GitLab Pages | ✅ | ✅ | ✅ |
-| Issues y tableros básicos | ✅ | ✅ | ✅ |
-| Merge Requests con aprobaciones | Básico | **Avanzado** (reglas por rama) | ✅ |
-| Protected branches por rol | Básico | **Por grupo** | ✅ |
-| Subgrupos anidados | 1 nivel | Ilimitados | ✅ |
-| Auditoría de eventos | Limitada | Completa | ✅ |
-| Epics y roadmaps (planificación) | ❌ | ✅ | ✅ |
-| SAST / Dependency Scanning | Básico | ✅ | ✅ |
-| DAST, Fuzzing | ❌ | Limitado | ✅ |
-| Compliance management | ❌ | ❌ | ✅ |
-| Value stream analytics | ❌ | ✅ | ✅ |
+| Repositorios Git ilimitados | [OK] | [OK] | [OK] |
+| CI/CD pipelines | [OK] | [OK] | [OK] |
+| Container Registry | [OK] | [OK] | [OK] |
+| GitLab Pages | [OK] | [OK] | [OK] |
+| Issues y tableros básicos | [OK] | [OK] | [OK] |
+| Merge Requests con aprobaciones | Básico | **Avanzado** (reglas por rama) | [OK] |
+| Protected branches por rol | Básico | **Por grupo** | [OK] |
+| Subgrupos anidados | 1 nivel | Ilimitados | [OK] |
+| Auditoría de eventos | Limitada | Completa | [OK] |
+| Epics y roadmaps (planificación) | [NO] | [OK] | [OK] |
+| SAST / Dependency Scanning | Básico | [OK] | [OK] |
+| DAST, Fuzzing | [NO] | Limitado | [OK] |
+| Compliance management | [NO] | [NO] | [OK] |
+| Value stream analytics | [NO] | [OK] | [OK] |
 
 > Los precios (2024 aprox.) son ~$29/usuario/mes para Premium y ~$99/usuario/mes para Ultimate en SaaS. Self-managed tiene precios similares por usuario.
 
@@ -116,7 +116,7 @@ GitLab.com Free usa la EE (código Enterprise) pero con la mayoría de features 
 
 ---
 
-## 🔍 GitLab vs GitHub: diferencias estratégicas
+## GitLab vs GitHub: diferencias estratégicas
 
 | Dimensión | GitLab | GitHub |
 |---|---|---|
@@ -131,7 +131,7 @@ No hay un ganador universal. GitHub domina en open source y comunidad; GitLab do
 
 ---
 
-## ⚠️ Errores comunes al empezar
+## Errores comunes al empezar
 
 - **Confundir GitLab.com con "GitLab"**: GitLab es el software, GitLab.com es una instancia SaaS. Cuando una empresa dice "tenemos GitLab", suele referirse a una instancia self-managed propia.
 - **Pensar que CE es una versión recortada inutilizable**: CE tiene CI/CD completo, Runners, Registry, etc. Solo faltan features enterprise de aprobaciones complejas, seguridad avanzada y planificación estratégica.
@@ -140,7 +140,7 @@ No hay un ganador universal. GitHub domina en open source y comunidad; GitLab do
 
 ---
 
-## 🛠️ Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 **app web** (FastAPI + React + Docker):
 - Puedes usar GitLab.com Free y ya tienes CI/CD real: linting, tests, build de imágenes Docker, todo en `.gitlab-ci.yml`.

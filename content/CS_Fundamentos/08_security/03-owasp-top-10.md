@@ -1,8 +1,8 @@
 # 03 — OWASP Top 10
 
-> 📚 **Doc 3 del cluster Security**. Las 10 vulnerabilidades más comunes en aplicaciones web. Saberlas todas + cómo prevenirlas es el mínimo profesional para cualquier backend developer.
-> 🔥 **Frecuencia interview**: aparece en preguntas de seguridad básica. Conocerlas TODAS te diferencia del que solo sabe SQL injection y XSS.
-> ⏱️ **Tiempo de lectura estimado**: 40-55 min.
+> **Doc 3 del cluster Security**. Las 10 vulnerabilidades más comunes en aplicaciones web. Saberlas todas + cómo prevenirlas es el mínimo profesional para cualquier backend developer.
+> **Frecuencia interview**: aparece en preguntas de seguridad básica. Conocerlas TODAS te diferencia del que solo sabe SQL injection y XSS.
+> **Tiempo de lectura estimado**: 40-55 min.
 
 ---
 

@@ -14,7 +14,7 @@ neetcode_order: 9
 
 # LeetCode 199 — Binary Tree Right Side View
 
-> 🎯 **Noveno problema del patrón Trees**. Variante directa de [[102-binary-tree-level-order-traversal]]: devolver solo el **último nodo de cada nivel** (el visible desde la derecha).
+> **Noveno problema del patrón Trees**. Variante directa de [[102-binary-tree-level-order-traversal]]: devolver solo el **último nodo de cada nivel** (el visible desde la derecha).
 
 ## Enunciado
 

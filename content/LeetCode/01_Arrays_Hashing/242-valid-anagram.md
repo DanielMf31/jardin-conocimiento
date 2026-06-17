@@ -15,14 +15,14 @@ neetcode_order: 2
 
 # LeetCode 242 — Valid Anagram
 
-> 🎯 **Segundo problema del NeetCode 150**. Sigue al [[217-contains-duplicate]] y sube de complejidad: pasa de **set** ("¿he visto X antes?") a **dict** ("¿cuántas veces he visto X?"). Es la transición clave del patrón Arrays & Hashing.
-> 📚 Mismo formato de aprendizaje: solución primero, patrón abstraído, replicar sin mirar.
+> **Segundo problema del NeetCode 150**. Sigue al [[217-contains-duplicate]] y sube de complejidad: pasa de **set** ("¿he visto X antes?") a **dict** ("¿cuántas veces he visto X?"). Es la transición clave del patrón Arrays & Hashing.
+> Mismo formato de aprendizaje: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
 Dadas dos strings `s` y `t`, devuelve `True` si `t` es un **anagrama** de `s`, y `False` en caso contrario.
 
-> 💡 **Anagrama** = misma multiset de caracteres, distinto orden. Por ejemplo `"anagram"` y `"nagaram"` son anagramas; `"rat"` y `"car"` no.
+> **Anagrama** = misma multiset de caracteres, distinto orden. Por ejemplo `"anagram"` y `"nagaram"` son anagramas; `"rat"` y `"car"` no.
 
 **Ejemplo 1:**
 ```
@@ -83,7 +83,7 @@ class Solution:
 - **Espacio: O(n)** — `sorted()` crea una lista nueva (no modifica las strings, que son inmutables en Python).
 - **Veredicto:** funciona y pasa. Es la respuesta "rápida y honesta" si la presión te bloquea. Pero NO es la idiomática.
 
-> 💡 **Detalle Python**: `s.sort()` no existe para strings (son inmutables). Solo `sorted(s)` que devuelve **lista**, no string. Si quisieras un string ordenado, harías `''.join(sorted(s))`.
+> **Detalle Python**: `s.sort()` no existe para strings (son inmutables). Solo `sorted(s)` que devuelve **lista**, no string. Si quisieras un string ordenado, harías `''.join(sorted(s))`.
 
 ---
 
@@ -110,7 +110,7 @@ class Solution:
 - **Espacio: O(k)** — k ≤ 26 si solo letras minúsculas, o ≤ 256 si ASCII completo.
 - **Veredicto:** correcta y clara. Aceptable en entrevista si la explicas bien.
 
-> 📌 **`dict.get(clave, default)`** es la forma idiomática de evitar `KeyError`. La alternativa `count_s[char] += 1` falla si la clave no existe todavía (vienes de C/firmware donde inicializas a 0; en Python no se inicializa automático en dicts normales).
+> **`dict.get(clave, default)`** es la forma idiomática de evitar `KeyError`. La alternativa `count_s[char] += 1` falla si la clave no existe todavía (vienes de C/firmware donde inicializas a 0; en Python no se inicializa automático en dicts normales).
 
 ---
 
@@ -139,7 +139,7 @@ class Solution:
 - **Espacio: O(k)** — el dict tiene como mucho k claves.
 - **Veredicto:** ligeramente más eficiente que la Solución 2 (la mitad de operaciones de escritura), y no necesita comparación final. Es la que muchos entrevistadores esperan.
 
-> 💡 **Por qué la guarda `count[char] == 0`**: si `s = "aab"` y `t = "abb"`, sin esa guarda al ver el segundo `'b'` de `t` el contador de `'b'` se quedaría en `-1`. Con la guarda detectas el desequilibrio antes.
+> **Por qué la guarda `count[char] == 0`**: si `s = "aab"` y `t = "abb"`, sin esa guarda al ver el segundo `'b'` de `t` el contador de `'b'` se quedaría en `-1`. Con la guarda detectas el desequilibrio antes.
 
 ---
 
@@ -160,7 +160,7 @@ class Solution:
 - **Espacio: O(k)**.
 - **Veredicto:** la más concisa y elegante. En entrevista, **escríbela después de explicar la lógica de la Solución 2 o 3**, para mostrar que sabes lo que pasa por debajo. Si la sueltas tal cual sin contexto, parece "memorizado".
 
-> 📚 **`Counter` también soporta**:
+> **`Counter` también soporta**:
 > - `Counter("aabbc").most_common(2)` → `[('a', 2), ('b', 2)]` — top-K frecuencias.
 > - `Counter(s) - Counter(t)` → diferencia de multisets.
 > - Es subclase de `dict`, así que todo lo que hace un dict también funciona aquí.
@@ -192,9 +192,9 @@ class Solution:
 - **Espacio: O(1)** — el array tiene **siempre 26 enteros**, sea n=10 o n=10^5. Por eso es **espacio constante**.
 - **Veredicto:** la **óptima teórica** para este problema con la restricción dada. Demuestra que sabes pensar en términos del enunciado, no del caso general.
 
-> 🎯 **Esta técnica reaparece** en muchos problemas de strings con alfabeto limitado: substring problems, sliding window de caracteres, etc. Familiarízate con `ord()` y `chr()`.
+> **Esta técnica reaparece** en muchos problemas de strings con alfabeto limitado: substring problems, sliding window de caracteres, etc. Familiarízate con `ord()` y `chr()`.
 
-> ⚠️ **Trampa importante**: si en un follow-up el entrevistador dice "y si fuera Unicode", esta solución se cae (Unicode tiene >1M de codepoints; un array de ese tamaño es absurdo). Tendrías que volver a `dict` / `Counter`. Esto es **una pregunta de entrevista real**.
+> **Trampa importante**: si en un follow-up el entrevistador dice "y si fuera Unicode", esta solución se cae (Unicode tiene >1M de codepoints; un array de ese tamaño es absurdo). Tendrías que volver a `dict` / `Counter`. Esto es **una pregunta de entrevista real**.
 
 ---
 
@@ -238,7 +238,7 @@ def patron_conteo_frecuencias(coleccion_a, coleccion_b):
 | **567. Permutation in String** | "¿s2 contiene una permutación de s1?" → sliding window de tamaño fijo + array de 26 |
 | **383. Ransom Note** | "¿Puedes formar la nota con las letras de la revista?" → mismo conteo, pero direccional |
 
-> 📌 **Patrón maestro**: cuando lleves la noción de "Counter / array fijo de frecuencias" interiorizada, problemas Medium de strings se vuelven sustancialmente más fáciles. Esta técnica es la base de buena parte del patrón Sliding Window.
+> **Patrón maestro**: cuando lleves la noción de "Counter / array fijo de frecuencias" interiorizada, problemas Medium de strings se vuelven sustancialmente más fáciles. Esta técnica es la base de buena parte del patrón Sliding Window.
 
 ---
 
@@ -306,11 +306,11 @@ d2['key'].append(1)             # OK, inicializa lista vacía
 
 | Solución | Tiempo | Espacio | Pythonic | Veredicto |
 |---|---|---|---|---|
-| 1. `sorted()` y comparar | O(n log n) | O(n) | ⭐⭐ | Aceptable, fácil |
-| 2. Dos dicts de conteo | O(n) | O(k) | ⭐⭐⭐ | Clara, didáctica |
-| 3. Un dict (incrementar/decrementar) | O(n) | O(k) | ⭐⭐⭐⭐ | La esperada en entrevista |
-| 4. `Counter == Counter` | O(n) | O(k) | ⭐⭐⭐⭐⭐ | La elegante (explica antes) |
-| 5. Array fijo de 26 | O(n) | **O(1)** | ⭐⭐⭐⭐ | Óptima dada la restricción |
+| 1. `sorted()` y comparar | O(n log n) | O(n) | | Aceptable, fácil |
+| 2. Dos dicts de conteo | O(n) | O(k) | | Clara, didáctica |
+| 3. Un dict (incrementar/decrementar) | O(n) | O(k) | | La esperada en entrevista |
+| 4. `Counter == Counter` | O(n) | O(k) | | La elegante (explica antes) |
+| 5. Array fijo de 26 | O(n) | **O(1)** | | Óptima dada la restricción |
 
 ---
 

@@ -14,7 +14,7 @@ neetcode_order: 3
 
 # LeetCode 45 — Jump Game II
 
-> 🎯 **Tercer problema de Greedy**. Como [[55-jump-game]] pero **mínimo número de saltos**. **BFS implícito**: cada salto = un nivel.
+> **Tercer problema de Greedy**. Como [[55-jump-game]] pero **mínimo número de saltos**. **BFS implícito**: cada salto = un nivel.
 
 ## Enunciado
 

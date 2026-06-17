@@ -1,8 +1,8 @@
 # 01 — TCP/IP y modelo OSI
 
-> 📚 **Doc fundacional del cluster Networking**. Lee esto antes que cualquier otro doc de redes. Sin entender capas, encapsulación y three-way handshake, el resto no encaja.
-> 🔥 **Frecuencia interview**: aparece directa o indirectamente en CASI TODA system design entrevistas tecnicas.
-> ⏱️ **Tiempo de lectura estimado**: 60-90 min con atención.
+> **Doc fundacional del cluster Networking**. Lee esto antes que cualquier otro doc de redes. Sin entender capas, encapsulación y three-way handshake, el resto no encaja.
+> **Frecuencia interview**: aparece directa o indirectamente en CASI TODA system design entrevistas tecnicas.
+> **Tiempo de lectura estimado**: 60-90 min con atención.
 
 ---
 
@@ -36,7 +36,7 @@ Hay dos modelos teóricos. Ambos describen lo mismo, pero con distinto número d
 | 2 | Enlace de datos | Ethernet, Wi-Fi, MAC address |
 | 1 | Física | cable de cobre, fibra, ondas radio |
 
-> 💡 **Mnemotecnia inglesa**: "Please Do Not Throw Sausage Pizza Away" (Physical, Data link, Network, Transport, Session, Presentation, Application).
+> **Mnemotecnia inglesa**: "Please Do Not Throw Sausage Pizza Away" (Physical, Data link, Network, Transport, Session, Presentation, Application).
 
 ### Modelo TCP/IP — 4 capas (real, lo que se usa)
 

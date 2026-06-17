@@ -14,7 +14,7 @@ neetcode_order: 5
 
 # LeetCode 100 — Same Tree
 
-> 🎯 **Quinto problema del patrón Trees**. Introduce la **recursión paralela** sobre dos árboles a la vez. Sub-rutina del LC 572 (Subtree of Another Tree).
+> **Quinto problema del patrón Trees**. Introduce la **recursión paralela** sobre dos árboles a la vez. Sub-rutina del LC 572 (Subtree of Another Tree).
 
 ## Enunciado
 
@@ -40,7 +40,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)** — visita cada par de nodos una vez.
 - **Espacio: O(h)**.
-- **Veredicto:** ✅ canónica.
+- **Veredicto:** [OK] canónica.
 
 ### Los 4 casos
 

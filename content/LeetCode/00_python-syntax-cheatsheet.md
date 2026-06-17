@@ -10,9 +10,9 @@ aliases: [Python LeetCode Cheatsheet, Sintaxis Python LeetCode, Referencia Pytho
 
 # Python Syntax Cheatsheet — Referencia para LeetCode / NeetCode 150
 
-> 🎯 **Objetivo**: archivo de consulta rápida con la sintaxis Python que **realmente** aparece en LeetCode. Por cada estructura: qué es, cuándo usarla, métodos clave con complejidad, ejemplos cortos, **y enlaces a los problemas NeetCode donde aparece**.
+> **Objetivo**: archivo de consulta rápida con la sintaxis Python que **realmente** aparece en LeetCode. Por cada estructura: qué es, cuándo usarla, métodos clave con complejidad, ejemplos cortos, **y enlaces a los problemas NeetCode donde aparece**.
 >
-> 📚 **Cómo usar este archivo**: NO se lee de corrida. Se consulta cuando estás resolviendo un problema y dudas de algo concreto. Tenlo abierto en una pestaña mientras trabajas.
+> **Cómo usar este archivo**: NO se lee de corrida. Se consulta cuando estás resolviendo un problema y dudas de algo concreto. Tenlo abierto en una pestaña mientras trabajas.
 
 ## Mapa rápido (clica para saltar)
 
@@ -58,10 +58,10 @@ matriz = [[0] * 3 for _ in range(2)]   # 2x3 de ceros — ⚠️ NO uses [[0]*3]
 | `nums[i] = x` | O(1) | `nums[0] = 5` | Mutar |
 | `nums.append(x)` | O(1) amort. | `nums.append(7)` | Añadir al final |
 | `nums.pop()` | O(1) | `nums.pop()` | Quitar y devolver el último |
-| `nums.pop(0)` | **O(n)** ❌ | `nums.pop(0)` | Quitar primero — usa `deque` en su lugar |
+| `nums.pop(0)` | **O(n)** [NO] | `nums.pop(0)` | Quitar primero — usa `deque` en su lugar |
 | `nums.insert(i, x)` | O(n) | `nums.insert(0, 5)` | Insertar — caro |
 | `len(nums)` | O(1) | `len(nums)` | Tamaño |
-| `x in nums` | O(n) ❌ | `5 in nums` | Pertenencia — usa `set` si es frecuente |
+| `x in nums` | O(n) [NO] | `5 in nums` | Pertenencia — usa `set` si es frecuente |
 | `nums.sort()` | O(n log n) | `nums.sort()` | Ordenar in-place |
 | `sorted(nums)` | O(n log n) | `sorted(nums)` | Devuelve copia ordenada |
 | `nums.reverse()` | O(n) | `nums.reverse()` | Invertir in-place |
@@ -81,7 +81,7 @@ nums[::-1]       # [5, 4, 3, 2, 1, 0]   — invertido
 nums[::2]        # [0, 2, 4]      — uno sí, uno no
 ```
 
-> ⚠️ **Slice crea una nueva lista** (O(k) donde k = tamaño del slice). No es una "vista".
+> **Slice crea una nueva lista** (O(k) donde k = tamaño del slice). No es una "vista".
 
 ### En problemas NeetCode
 
@@ -116,7 +116,7 @@ len(t)                       # 3
 a, b, c = t                  # unpacking
 ```
 
-> 🎯 **El uso más típico en LeetCode**: claves compuestas en sets/dicts.
+> **El uso más típico en LeetCode**: claves compuestas en sets/dicts.
 
 ```python
 seen = set()
@@ -236,7 +236,7 @@ for c in s:
 
 Léelo así: **"dame `count[c]`, y si no hay nada todavía dame 0, y a eso le sumo 1"**.
 
-> ⚠️ **`.get()` NO modifica el dict**. Si lees `d.get("z", 0)` cuando "z" no está, el dict **sigue sin tener "z"**. Si lo que querías era "léelo o insértalo si no estaba", eso es `setdefault()`:
+> **`.get()` NO modifica el dict**. Si lees `d.get("z", 0)` cuando "z" no está, el dict **sigue sin tener "z"**. Si lo que querías era "léelo o insértalo si no estaba", eso es `setdefault()`:
 >
 > ```python
 > d = {}
@@ -338,7 +338,7 @@ s.find(sub, start, end)  # busca solo en s[start:end]
 
 **Versión que lanza error en lugar de devolver -1**: `s.index(sub, start)` lanza `ValueError` si no encuentra. Para LeetCode prefiere `find()` porque es más fácil chequear `if pos == -1` que envolver en try/except.
 
-> 🎯 **Patrón típico LeetCode**: parsing de strings con separadores. Cuando estás en un índice `i` y quieres encontrar el siguiente separador, `s.find(sep, i)` es la herramienta. Aparece en [[271-encode-and-decode-strings]] (length-prefix decoding).
+> **Patrón típico LeetCode**: parsing de strings con separadores. Cuando estás en un índice `i` y quieres encontrar el siguiente separador, `s.find(sep, i)` es la herramienta. Aparece en [[271-encode-and-decode-strings]] (length-prefix decoding).
 
 **Ejemplo del patrón "decodificar bloques con length-prefix"**:
 
@@ -452,7 +452,7 @@ d = defaultdict(set)             # default = set()
 d['key'].add('value')            # OK
 ```
 
-> ⚠️ **Acceder con `d[k]` crea la entrada** aunque no quisieras. Usa `d.get(k)` si solo quieres leer sin crear.
+> **Acceder con `d[k]` crea la entrada** aunque no quisieras. Usa `d.get(k)` si solo quieres leer sin crear.
 
 ### En problemas NeetCode
 
@@ -485,7 +485,7 @@ q = deque([1, 2, 3], maxlen=5)    # con tamaño máximo (descarta automático)
 | `q.appendleft(x)` | **O(1)** | `list.insert(0, x)` es O(n) |
 | `q.pop()` | O(1) | igual |
 | `q.popleft()` | **O(1)** | `list.pop(0)` es O(n) |
-| `q[i]` | O(n) ❌ | acceso aleatorio caro |
+| `q[i]` | O(n) [NO] | acceso aleatorio caro |
 | `len(q)` | O(1) | igual |
 
 ### Patrón BFS típico (lo verás en patrón Trees y Graphs)
@@ -631,7 +631,7 @@ list(range(10, 0, -2))       # [10, 8, 6, 4, 2]               saltos de 2 hacia 
 list(range(0, 5, -1))        # []                              vacío (start < stop con step negativo)
 ```
 
-> ⚠️ **Trampa más común**: para descender hasta `0` inclusive, usa `stop=-1`, no `stop=0`. Porque `stop` no se incluye:
+> **Trampa más común**: para descender hasta `0` inclusive, usa `stop=-1`, no `stop=0`. Porque `stop` no se incluye:
 >
 > - `range(5, 0, -1)` produce `[5, 4, 3, 2, 1]` (te quedas en 1).
 > - `range(5, -1, -1)` produce `[5, 4, 3, 2, 1, 0]` (llegas a 0).
@@ -651,7 +651,7 @@ for i in range(n - 2, -1, -1):       # i = n-2, n-3, ..., 1, 0
     suffix[i] = suffix[i+1] * nums[i+1]
 ```
 
-> 🎯 **Cuándo lo necesitas**: cualquier recurrencia donde `dp[i]` depende de `dp[i+1]` (vecino derecho). Aparece en [[238-product-of-array-except-self]], [[42-trapping-rain-water]], y muchos problemas DP, Trees y Linked Lists.
+> **Cuándo lo necesitas**: cualquier recurrencia donde `dp[i]` depende de `dp[i+1]` (vecino derecho). Aparece en [[238-product-of-array-except-self]], [[42-trapping-rain-water]], y muchos problemas DP, Trees y Linked Lists.
 
 **Equivalentes pythonic más legibles**:
 
@@ -727,14 +727,14 @@ for i, x in enumerate(range(5)):     # range
     ...
 ```
 
-> 💡 **Detalle técnico**: `enumerate` devuelve un **iterador perezoso**, no una lista. No gasta memoria extra. Si necesitas la lista completa, conviértela explícitamente:
+> **Detalle técnico**: `enumerate` devuelve un **iterador perezoso**, no una lista. No gasta memoria extra. Si necesitas la lista completa, conviértela explícitamente:
 >
 > ```python
 > list(enumerate(nums))           # [(0, 10), (1, 20), (2, 30)]
 > dict(enumerate(nums))           # {0: 10, 1: 20, 2: 30}  ← truco útil
 > ```
 
-> 🎯 **Patrón típico LeetCode**: `for i, num in enumerate(nums):` en cualquier problema que necesite guardar el índice (Two Sum, Contains Duplicate, Sliding Window). Aparece literalmente en **la mayoría** de soluciones.
+> **Patrón típico LeetCode**: `for i, num in enumerate(nums):` en cualquier problema que necesite guardar el índice (Two Sum, Contains Duplicate, Sliding Window). Aparece literalmente en **la mayoría** de soluciones.
 
 ### Otros iteradores comunes
 
@@ -772,7 +772,7 @@ inverted = {v: k for k, v in d.items()}            # invertir un dict
 gen = (x**2 for x in range(1000000))               # eficiente en memoria
 ```
 
-> 💡 **Cuando NO hay un return concreto, usa `_` como variable**: `for _ in range(n):` deja claro que la variable no importa.
+> **Cuando NO hay un return concreto, usa `_` como variable**: `for _ in range(n):` deja claro que la variable no importa.
 
 ### En problemas NeetCode
 
@@ -920,9 +920,9 @@ def funcion(
     ...
 ```
 
-> 💡 **En LeetCode no necesitas escribir los type hints tú** — los pone la plantilla. Pero entenderlos te ayuda a saber qué espera la función.
+> **En LeetCode no necesitas escribir los type hints tú** — los pone la plantilla. Pero entenderlos te ayuda a saber qué espera la función.
 
-> ⚠️ **`List[int]` es `typing.List` (mayúscula)**, no `list`. En Python 3.9+ se puede usar `list[int]` directamente, pero LeetCode aún usa la versión con import.
+> **`List[int]` es `typing.List` (mayúscula)**, no `list`. En Python 3.9+ se puede usar `list[int]` directamente, pero LeetCode aún usa la versión con import.
 
 ---
 
@@ -1150,11 +1150,11 @@ def backtrack(state, choices):
 
 | Operación | `list` | `tuple` | `set` | `dict` | `deque` | `heap` |
 |---|---|---|---|---|---|---|
-| Acceso por índice | O(1) | O(1) | ❌ | ❌ | O(n) | ❌ |
-| Acceso por clave | ❌ | ❌ | ❌ | O(1) avg | ❌ | ❌ |
+| Acceso por índice | O(1) | O(1) | [NO] | [NO] | O(n) | [NO] |
+| Acceso por clave | [NO] | [NO] | [NO] | O(1) avg | [NO] | [NO] |
 | Buscar elemento (`in`) | O(n) | O(n) | O(1) avg | O(1) avg | O(n) | O(n) |
 | Insertar al final | O(1) amort | inmutable | O(1) avg | O(1) avg | O(1) | O(log n) |
-| Insertar al principio | O(n) | inmutable | O(1) avg | O(1) avg | **O(1)** | ❌ |
+| Insertar al principio | O(n) | inmutable | O(1) avg | O(1) avg | **O(1)** | [NO] |
 | Borrar del final | O(1) | inmutable | — | — | O(1) | — |
 | Borrar del principio | O(n) | inmutable | — | — | **O(1)** | — |
 | Mínimo | O(n) | O(n) | O(n) | O(n) | O(n) | **O(1)** |

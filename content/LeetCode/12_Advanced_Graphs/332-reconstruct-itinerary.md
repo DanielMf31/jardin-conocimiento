@@ -14,7 +14,7 @@ neetcode_order: 4
 
 # LeetCode 332 — Reconstruct Itinerary
 
-> 🎯 **Cuarto problema de Advanced Graphs — Hard**. **Eulerian path** (camino que usa cada arista exactamente una vez). Algoritmo de Hierholzer con DFS post-order.
+> **Cuarto problema de Advanced Graphs — Hard**. **Eulerian path** (camino que usa cada arista exactamente una vez). Algoritmo de Hierholzer con DFS post-order.
 
 ## Enunciado
 

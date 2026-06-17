@@ -14,13 +14,13 @@ neetcode_order: 7
 
 # LeetCode 235 — Lowest Common Ancestor of a Binary Search Tree
 
-> 🎯 **Séptimo problema del patrón Trees**. Aprovecha la **propiedad BST** (left.val < node.val < right.val) para resolver el LCA en O(log n) en lugar de O(n) (que sería en árbol genérico, LC 236).
+> **Séptimo problema del patrón Trees**. Aprovecha la **propiedad BST** (left.val < node.val < right.val) para resolver el LCA en O(log n) en lugar de O(n) (que sería en árbol genérico, LC 236).
 
 ## Enunciado
 
 Dado un BST y dos nodos `p` y `q`, devuelve su **ancestro común más bajo** (LCA).
 
-> 💡 **BST**: Binary Search Tree. Para cada nodo: todos los valores del subárbol izquierdo son **menores**, todos los del derecho son **mayores**.
+> **BST**: Binary Search Tree. Para cada nodo: todos los valores del subárbol izquierdo son **menores**, todos los del derecho son **mayores**.
 
 ---
 
@@ -41,7 +41,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(h)** = O(log n) en BST balanceado.
 - **Espacio: O(h)**.
-- **Veredicto:** ✅ canónica.
+- **Veredicto:** [OK] canónica.
 
 ### Versión iterativa (igual de elegante)
 

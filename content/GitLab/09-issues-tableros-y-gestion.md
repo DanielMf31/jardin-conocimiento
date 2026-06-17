@@ -8,7 +8,7 @@ source: claude-code
 aliases: [GitLab Issues, GitLab Kanban, GitLab Agile]
 ---
 
-# 📋 Issues, tableros y gestión ágil en GitLab
+# Issues, tableros y gestión ágil en GitLab
 
 ## ¿Por qué existe esto aquí?
 
@@ -20,7 +20,7 @@ Esto no es cosmético. Cuando un issue cierra automáticamente un MR y ese MR di
 
 ---
 
-## 🗂️ Issues — la unidad básica de trabajo
+## Issues — la unidad básica de trabajo
 
 ### ¿Qué es un issue?
 
@@ -62,7 +62,7 @@ Campos principales de un issue:
 
 ---
 
-## 🏷️ Labels — el sistema de clasificación
+## Labels — el sistema de clasificación
 
 ### Por qué importan
 
@@ -90,7 +90,7 @@ Usa colores con semántica consistente: rojo = urgente/bloqueado, amarillo = en 
 
 ---
 
-## 🎯 Milestones — sprints e hitos
+## Milestones — sprints e hitos
 
 Un **milestone** (hito) es un contenedor temporal: tiene nombre, descripción, fecha de inicio y fecha de fin, y agrupa issues y merge requests.
 
@@ -116,7 +116,7 @@ Grupo > Proyecto > Issues > Milestones > New milestone
 
 ---
 
-## 📊 Issue Boards — Kanban en GitLab
+## Issue Boards — Kanban en GitLab
 
 ### El problema que resuelven
 
@@ -164,7 +164,7 @@ Si tienes múltiples proyectos bajo un grupo (ej. `backend`, `frontend`, `infra`
 
 ---
 
-## ⏱️ Time Tracking — registro de tiempo
+## Time Tracking — registro de tiempo
 
 GitLab incluye time tracking básico sin plugins externos.
 
@@ -184,7 +184,7 @@ El issue muestra:
 
 ---
 
-## ⚡ Quick Actions — comandos de texto
+## Quick Actions — comandos de texto
 
 Los **quick actions** son comandos que escribes en un comentario (o en la description al crear/editar). GitLab los ejecuta y los borra del texto visible. No son slash commands de chat — son acciones reales sobre el issue.
 
@@ -230,7 +230,7 @@ Los **quick actions** son comandos que escribes en un comentario (o en la descri
 
 ---
 
-## 🗺️ Epics y Roadmaps (GitLab Ultimate)
+## Epics y Roadmaps (GitLab Ultimate)
 
 > Esta sección aplica a GitLab.com plan Ultimate o instancias self-hosted con licencia Ultimate. En Free/Premium, los epics no existen.
 
@@ -270,7 +270,7 @@ Grupo > Plan > Roadmap
 
 ---
 
-## 🔄 GitLab como herramienta ágil completa
+## GitLab como herramienta ágil completa
 
 ### ¿Cómo encajan las piezas?
 
@@ -327,7 +327,7 @@ Ver [[04-kanban-y-lean]] para el modelo completo.
 
 ---
 
-## 🔗 Vincular issues a código
+## Vincular issues a código
 
 ### Cierre automático desde commits y MRs
 
@@ -372,7 +372,7 @@ See also grupo/otro-proyecto#7
 
 ---
 
-## 🛠️ Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 ### app web (backend FastAPI + frontend React)
 

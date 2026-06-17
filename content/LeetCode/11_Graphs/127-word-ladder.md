@@ -14,7 +14,7 @@ neetcode_order: 13
 
 # LeetCode 127 — Word Ladder
 
-> 🎯 **Decimotercero y último problema del patrón Graphs — el Hard**. Un grafo **implícito**: las palabras son nodos, conectados si difieren en una letra. **BFS para shortest path** sobre ese grafo.
+> **Decimotercero y último problema del patrón Graphs — el Hard**. Un grafo **implícito**: las palabras son nodos, conectados si difieren en una letra. **BFS para shortest path** sobre ese grafo.
 
 ## Enunciado
 
@@ -75,7 +75,7 @@ Sin ellos, comparar cada par de palabras letra a letra es O(N² · L). Con patte
 
 ---
 
-## Cierre del patrón Graphs 🎉
+## Cierre del patrón Graphs
 
 | # | Problema | Idea distintiva |
 |---|---|---|
@@ -107,4 +107,4 @@ Sin ellos, comparar cada par de palabras letra a letra es O(N² · L). Con patte
 - [ ] Leído
 - [ ] Implementado desde cero
 - [ ] Resuelto en LeetCode
-- [ ] **Patrón Graphs cerrado** ✅
+- [ ] **Patrón Graphs cerrado** [OK]

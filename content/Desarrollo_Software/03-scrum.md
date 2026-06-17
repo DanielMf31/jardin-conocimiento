@@ -8,7 +8,7 @@ source: claude-code
 aliases: [Scrum Framework, Scrum Guide]
 ---
 
-# Scrum 🔄
+# Scrum
 
 ## Por qué existe Scrum
 

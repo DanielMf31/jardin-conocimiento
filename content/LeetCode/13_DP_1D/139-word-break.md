@@ -14,7 +14,7 @@ neetcode_order: 10
 
 # LeetCode 139 — Word Break
 
-> 🎯 **Décimo problema de DP 1-D**. ¿Se puede dividir un string en palabras del diccionario? DP donde `dp[i] = True` si `s[0:i]` se puede particionar.
+> **Décimo problema de DP 1-D**. ¿Se puede dividir un string en palabras del diccionario? DP donde `dp[i] = True` si `s[0:i]` se puede particionar.
 
 ## Enunciado
 

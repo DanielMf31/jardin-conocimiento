@@ -14,7 +14,7 @@ neetcode_order: 1
 
 # LeetCode 200 — Number of Islands
 
-> 🎯 **Primer problema del patrón Graphs** y el más típico. **Conteo de componentes conexos** en un grid 2D. Aprende este patrón aquí; los próximos 5 problemas son variantes directas.
+> **Primer problema del patrón Graphs** y el más típico. **Conteo de componentes conexos** en un grid 2D. Aprende este patrón aquí; los próximos 5 problemas son variantes directas.
 
 ## Enunciado
 

@@ -8,7 +8,7 @@ source: claude-code
 aliases: [OWASP Top 10, seguridad web, vulnerabilidades web]
 ---
 
-# 🌐 Seguridad web (OWASP Top 10)
+# Seguridad web (OWASP Top 10)
 
 ## ¿Por qué importa este mapa?
 
@@ -37,7 +37,7 @@ Panorama de riesgo web:
 
 ---
 
-## 📋 Índice OWASP Top 10 (2021)
+## Índice OWASP Top 10 (2021)
 
 | # | Categoría | Riesgo principal |
 |---|-----------|-----------------|
@@ -56,7 +56,7 @@ Panorama de riesgo web:
 
 ---
 
-## A01 🔓 Broken Access Control
+## A01 Broken Access Control
 
 ### ¿Qué es?
 **Control de acceso** (o autorización) es la pregunta: "¿Tiene este usuario permiso para hacer *esta acción* sobre *este recurso*?" Cuando falla, cualquier usuario puede acceder a datos o funciones que no le corresponden.
@@ -101,7 +101,7 @@ GET /admin/usuarios → devuelve todos los usuarios si conoces la ruta
 
 ---
 
-## A02 🔑 Cryptographic Failures
+## A02 Cryptographic Failures
 
 ### ¿Qué es?
 Datos sensibles (contraseñas, tarjetas, tokens, datos médicos) almacenados o transmitidos sin cifrado adecuado, o con algoritmos rotos. Antes se llamaba "Sensitive Data Exposure".
@@ -139,7 +139,7 @@ Nunca implementes tu propio cifrado. Usa librerías auditadas.
 
 ---
 
-## A03 💉 Injection (SQLi, Command Injection, etc.)
+## A03 Injection (SQLi, Command Injection, etc.)
 
 ### ¿Qué es?
 **Inyección** ocurre cuando datos no confiables (input del usuario) se interpretan como código en lugar de datos. El atacante controla la lógica del programa enviando caracteres especiales.
@@ -190,7 +190,7 @@ subprocess.run(f"cat logs/{filename}", shell=True)
 
 ---
 
-## A04 🏗️ Insecure Design
+## A04 Insecure Design
 
 ### ¿Qué es?
 No es un bug de implementación, sino un **fallo en la arquitectura o en el modelado de amenazas**. La aplicación se diseñó sin considerar qué puede hacer un atacante. Los controles técnicos no pueden parchear un diseño fundamentalmente inseguro.
@@ -219,7 +219,7 @@ No es un bug de implementación, sino un **fallo en la arquitectura o en el mode
 
 ---
 
-## A05 ⚙️ Security Misconfiguration
+## A05 Security Misconfiguration
 
 ### ¿Qué es?
 El framework, servidor, base de datos o nube están **mal configurados**. Incluye: configuraciones por defecto inseguras, directorios/archivos expuestos innecesariamente, mensajes de error que revelan stack traces, permisos excesivos en cloud.
@@ -265,7 +265,7 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
 
 ---
 
-## A06 📦 Vulnerable & Outdated Components
+## A06 Vulnerable & Outdated Components
 
 ### ¿Qué es?
 Usas librerías, frameworks o contenedores Docker con **CVEs conocidos** (Common Vulnerabilities and Exposures: identificadores de vulnerabilidades públicas). Si el atacante conoce qué versión usas, conoce tus brechas.
@@ -291,7 +291,7 @@ Usas librerías, frameworks o contenedores Docker con **CVEs conocidos** (Common
 
 ---
 
-## A07 🔐 Identification & Authentication Failures
+## A07 Identification & Authentication Failures
 
 ### ¿Qué es?
 Fallos en cómo la aplicación verifica la identidad del usuario. Permite suplantación, toma de cuentas (Account Takeover), o evasión del mecanismo de autenticación.
@@ -347,7 +347,7 @@ def verify_token(token: str):
 
 ---
 
-## A08 🔗 Software & Data Integrity Failures
+## A08 Software & Data Integrity Failures
 
 ### ¿Qué es?
 El código o datos que la aplicación carga **no se verifican en integridad**. Incluye: pipelines CI/CD que ejecutan código de terceros sin verificar, actualizaciones de software sin firma, deserialización insegura de datos no confiables.
@@ -378,7 +378,7 @@ El código o datos que la aplicación carga **no se verifican en integridad**. I
 
 ---
 
-## A09 📊 Security Logging & Monitoring Failures
+## A09 Security Logging & Monitoring Failures
 
 ### ¿Qué es?
 Si no registras lo que pasa en tu app, no puedes detectar ataques en curso, investigar incidentes post-mortem, ni cumplir requisitos legales. El tiempo medio de detección de una brecha es de **~200 días** — generalmente por terceros, no por el propio equipo.
@@ -425,7 +425,7 @@ async def login(request: LoginRequest, req: Request):
 
 ---
 
-## A10 🌐 Server-Side Request Forgery (SSRF)
+## A10 Server-Side Request Forgery (SSRF)
 
 ### ¿Qué es?
 El atacante hace que el **servidor** realice peticiones HTTP a destinos arbitrarios, incluyendo servicios internos que no deberían ser accesibles desde internet. El servidor actúa como proxy involuntario.
@@ -452,7 +452,7 @@ POST /api/preview
 
 ---
 
-## ➕ XSS — Cross-Site Scripting
+## XSS — Cross-Site Scripting
 
 ### ¿Qué es?
 El atacante inyecta **JavaScript malicioso** en páginas que verán otros usuarios. El JS se ejecuta en el navegador de la víctima con acceso a sus cookies, datos de sesión y DOM.
@@ -483,7 +483,7 @@ El atacante inyecta **JavaScript malicioso** en páginas que verán otros usuari
 
 ---
 
-## ➕ CSRF — Cross-Site Request Forgery
+## CSRF — Cross-Site Request Forgery
 
 ### ¿Qué es?
 El atacante engaña al navegador del usuario autenticado para que **envíe peticiones no autorizadas** a la app. El navegador incluye automáticamente las cookies de sesión, así que la app las acepta como legítimas.
@@ -515,7 +515,7 @@ Diferencia clave con XSS: CSRF no necesita ejecutar JS en la víctima — basta 
 
 ---
 
-## 🗺️ Mapa de defensas — resumen por capa
+## Mapa de defensas — resumen por capa
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -547,7 +547,7 @@ Diferencia clave con XSS: CSRF no necesita ejecutar JS en la víctima — basta 
 
 ---
 
-## ⚠️ Errores comunes de developers (sin mala intención)
+## Errores comunes de developers (sin mala intención)
 
 1. **"La validación la hace el frontend"** → el atacante no usa tu frontend; llama la API directamente con curl.
 2. **`DEBUG=True` en producción** → expone stack traces y, en Django, una consola interactiva.
@@ -559,7 +559,7 @@ Diferencia clave con XSS: CSRF no necesita ejecutar JS en la víctima — basta 
 
 ---
 
-## 🛠️ Aplícalo / practica
+## Aplícalo / practica
 
 ### En tus propios proyectos
 - ****: auditar con este checklist:

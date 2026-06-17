@@ -1,8 +1,8 @@
 # 02 — Consensus: Paxos y Raft
 
-> 📚 **Doc 2 del cluster Distributed Systems**. Cómo varios nodos se ponen de acuerdo en algo cuando la red es no fiable. El problema más fundamental de sistemas distribuidos.
-> 🔥 **Frecuencia interview**: aparece en system design senior. Saber qué es Raft y por qué existe te diferencia.
-> ⏱️ **Tiempo de lectura estimado**: 40-55 min.
+> **Doc 2 del cluster Distributed Systems**. Cómo varios nodos se ponen de acuerdo en algo cuando la red es no fiable. El problema más fundamental de sistemas distribuidos.
+> **Frecuencia interview**: aparece en system design senior. Saber qué es Raft y por qué existe te diferencia.
+> **Tiempo de lectura estimado**: 40-55 min.
 
 ---
 

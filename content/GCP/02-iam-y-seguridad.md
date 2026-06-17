@@ -8,7 +8,7 @@ source: claude-code
 aliases: [IAM GCP, Cloud IAM, seguridad GCP]
 ---
 
-# 🔐 IAM y seguridad en GCP
+# IAM y seguridad en GCP
 
 ## ¿Por qué existe IAM?
 
@@ -20,7 +20,7 @@ Es la primera línea de defensa en GCP y uno de los temas de mayor peso en las c
 
 ---
 
-## 🗺️ El modelo central: Principal → Rol → Recurso
+## El modelo central: Principal → Rol → Recurso
 
 Antes de cualquier detalle, el esquema que unifica todo:
 
@@ -34,7 +34,7 @@ La política IAM se puede poner en cualquier nivel de la jerarquía: Organizaci�
 
 ---
 
-## 👤 Identidades (Principals)
+## Identidades (Principals)
 
 Un *principal* es cualquier entidad que puede recibir permisos. No confundir con "usuario" — hay varios tipos:
 
@@ -53,7 +53,7 @@ Los **Google Groups** son el patrón recomendado para gestionar equipos: asignas
 
 ---
 
-## 🎭 Roles: tipos y jerarquía
+## Roles: tipos y jerarquía
 
 Un *rol* es una colección de *permisos*. Los permisos individuales tienen la forma `servicio.recurso.verbo` (ej: `storage.objects.get`). Nunca se asignan permisos sueltos — siempre a través de roles.
 
@@ -101,7 +101,7 @@ gcloud iam roles create mi_rol_lectura_sql \
 
 ---
 
-## 🤖 Service Accounts (SAs) — Identidades para máquinas
+## Service Accounts (SAs) — Identidades para máquinas
 
 Un Service Account es como un "usuario robot". No tiene contraseña humana — las apps lo usan para autenticarse en GCP sin necesitar credenciales de persona.
 
@@ -160,7 +160,7 @@ El permiso `iam.serviceAccounts.actAs` permite que un principal use una SA. Es m
 
 ---
 
-## 🛡️ Principio de mínimo privilegio
+## Principio de mínimo privilegio
 
 La regla más importante en IAM. Solo dar el permiso mínimo necesario para que algo funcione.
 
@@ -182,7 +182,7 @@ gcloud recommender recommendations list \
 
 ---
 
-## 🏢 Org Policies — Guardrails a nivel organización
+## Org Policies — Guardrails a nivel organización
 
 Mientras IAM controla "quién puede hacer qué", las **Org Policies** controlan "qué está permitido hacer en absoluto", independientemente de los permisos IAM.
 
@@ -207,7 +207,7 @@ Las Org Policies son el mecanismo de compliance corporativo: cumplimiento de GDP
 
 ---
 
-## 🔑 Secret Manager — Gestión de secretos
+## Secret Manager — Gestión de secretos
 
 **El problema**: credenciales de BD, API keys, tokens OAuth. No pueden ir en variables de entorno en el código ni en repositorios git (ver [[MOC_Ciberseguridad]]).
 
@@ -253,7 +253,7 @@ La app necesita `roles/secretmanager.secretAccessor` en su SA. Sin clave JSON en
 
 ---
 
-## 🔒 Cloud KMS — Gestión de claves criptográficas
+## Cloud KMS — Gestión de claves criptográficas
 
 **El problema que resuelve**: Secret Manager guarda secretos como texto. ¿Y si necesitas cifrar tus propios datos, o controlar quién tiene la clave de cifrado de un bucket/disco/BD?
 
@@ -314,7 +314,7 @@ Para la mayoría de casos: CMEK es el equilibrio correcto si necesitas control, 
 
 ---
 
-## ⚠️ Errores y costes comunes
+## Errores y costes comunes
 
 | Error | Consecuencia | Prevención |
 |---|---|---|
@@ -328,7 +328,7 @@ Secret Manager tiene un **free tier** de 6 versiones de secretos activas y 10.00
 
 ---
 
-## 🛠️ Aplícalo / Práctica
+## Aplícalo / Práctica
 
 1. **Mínimo privilegio desde cero**: crea un proyecto de prueba, una SA, y dale solo `roles/storage.objectViewer` sobre un bucket concreto. Verifica que no puede listar buckets del proyecto (`gcloud storage ls`) pero sí leer objetos del bucket específico.
 

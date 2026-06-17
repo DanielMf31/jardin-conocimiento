@@ -14,7 +14,7 @@ neetcode_order: 10
 
 # LeetCode 684 — Redundant Connection
 
-> 🎯 **Décimo problema del patrón Graphs**. Introducción al **Union-Find** (Disjoint Set Union — DSU). Estructura clave para conectividad en grafos.
+> **Décimo problema del patrón Graphs**. Introducción al **Union-Find** (Disjoint Set Union — DSU). Estructura clave para conectividad en grafos.
 
 ## Enunciado
 

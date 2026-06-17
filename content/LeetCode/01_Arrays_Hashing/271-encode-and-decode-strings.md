@@ -14,9 +14,9 @@ neetcode_order: 6
 
 # LeetCode 271 — Encode and Decode Strings
 
-> 🎯 **Sexto problema del NeetCode 150 en Arrays & Hashing**. Distinto del resto: es un problema de **diseño de protocolo de serialización**. La técnica clave (**length-prefix encoding**) es **exactamente la que tú usas en el protocolo binario embebido** — la conexión es directa.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
-> ⚠️ Originalmente "Premium" en LeetCode — disponible gratis en NeetCode y en LintCode #659.
+> **Sexto problema del NeetCode 150 en Arrays & Hashing**. Distinto del resto: es un problema de **diseño de protocolo de serialización**. La técnica clave (**length-prefix encoding**) es **exactamente la que tú usas en el protocolo binario embebido** — la conexión es directa.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> Originalmente "Premium" en LeetCode — disponible gratis en NeetCode y en LintCode #659.
 
 ## Enunciado
 
@@ -70,7 +70,7 @@ Output: ["", "abc", ""]
 | ¿La codificación debe ser óptima en bytes? | El problema no lo pide; piden corrección. Optimización es follow-up |
 | ¿Es el receptor de confianza? | Sí (no es problema de seguridad; encode no necesita firmar) |
 
-> 🎯 **El reto**: encontrar un esquema que sea **inyectivo** (cada lista da una string distinta) sobre cualquier alfabeto, sin asumir nada de las strings.
+> **El reto**: encontrar un esquema que sea **inyectivo** (cada lista da una string distinta) sobre cualquier alfabeto, sin asumir nada de las strings.
 
 ---
 
@@ -88,7 +88,7 @@ class Codec:
 
 **Por qué falla:** si `strs = ["a,b", "c"]`, encode da `"a,b,c"`, y decode lo parte en `["a", "b", "c"]` — **incorrecto**. Cualquier carácter elegido como separador puede aparecer en los datos.
 
-> 📌 **Lección general**: en cualquier protocolo de serialización, **nunca confíes en que un carácter no aparezca en los datos** salvo que lo controles explícitamente (e.g. base64 garantiza solo `A-Za-z0-9+/=`).
+> **Lección general**: en cualquier protocolo de serialización, **nunca confíes en que un carácter no aparezca en los datos** salvo que lo controles explícitamente (e.g. base64 garantiza solo `A-Za-z0-9+/=`).
 
 ---
 
@@ -128,7 +128,7 @@ class Codec:
 - **Tiempo encode: O(n)** total (n = suma de longitudes).
 - **Tiempo decode: O(n)** total — `s.find('#', i)` es lineal en cada iteración, pero las iteraciones cubren cada carácter una sola vez.
 - **Espacio: O(n)** en ambos.
-- **Veredicto:** ✅ **la respuesta canónica**. Funciona con cualquier alfabeto. Es **literalmente lo que hacen** protocolos binarios reales (HTTP/1.1 chunked encoding, Protocol Buffers de Google, etc.).
+- **Veredicto:** [OK] **la respuesta canónica**. Funciona con cualquier alfabeto. Es **literalmente lo que hacen** protocolos binarios reales (HTTP/1.1 chunked encoding, Protocol Buffers de Google, etc.).
 
 ### Desglose detallado del decode — sintaxis por sintaxis
 
@@ -148,7 +148,7 @@ texto.find('#', 11)      # -1  (no hay # desde 11 en adelante)
 
 El segundo argumento es opcional. Sin él, busca desde el principio. **En decode, lo usamos para no encontrar el `#` del bloque ya procesado.**
 
-> 💡 **Variante**: `s.index(sub, start)` hace lo mismo pero **lanza `ValueError` si no encuentra**. Para decoding, prefiere `find()`.
+> **Variante**: `s.index(sub, start)` hace lo mismo pero **lanza `ValueError` si no encuentra**. Para decoding, prefiere `find()`.
 
 #### `s[i:j]` — slicing recordatorio
 
@@ -253,7 +253,7 @@ Char:   '5''#''h''e''l''l''o''5''#''w''o''r''l''d'
 
 **Comprobación de salida del while**: `i = 14`, `len(s) = 14`. `14 < 14` es `False` → sale del while.
 
-Return `result = ["hello", "world"]` ✅.
+Return `result = ["hello", "world"]` [OK].
 
 ### Por qué cada `+1` y `+length` aparecen donde aparecen
 
@@ -324,7 +324,7 @@ class Codec:
 
 **Análisis:** mismo O(n) que Solución 2, pero **sin necesidad de `find()`**. Más rápido en la práctica si las strings son cortas (porque saltas exactamente 4 bytes en lugar de buscar el `#`).
 
-> 🎯 **Esta variante es exactamente la cabecera de tu protocolo binario embebido**: longitud + payload. Lo único distinto es que tú usas big-endian de 2 bytes en binario en vez de 4 dígitos decimales en string.
+> **Esta variante es exactamente la cabecera de tu protocolo binario embebido**: longitud + payload. Lo único distinto es que tú usas big-endian de 2 bytes en binario en vez de 4 dígitos decimales en string.
 
 ---
 
@@ -422,10 +422,10 @@ f"{'abc':<10}"       # "abc       " — alineado izquierda, ancho 10
 
 | Solución | Funciona con alfabeto libre | Complejidad | Veredicto |
 |---|---|---|---|
-| 1. Separador "seguro" | ❌ | O(n) | ❌ Falla casos |
-| 2. **Length + delimitador `#`** | ✅ | O(n) | ✅ La canónica |
-| 3. **Length de tamaño fijo** | ✅ | O(n) | ✅ Más rápida en práctica |
-| 4. JSON dump | ✅ | O(n) | "Trampa", no es ejercicio |
+| 1. Separador "seguro" | [NO] | O(n) | [NO] Falla casos |
+| 2. **Length + delimitador `#`** | [OK] | O(n) | [OK] La canónica |
+| 3. **Length de tamaño fijo** | [OK] | O(n) | [OK] Más rápida en práctica |
+| 4. JSON dump | [OK] | O(n) | "Trampa", no es ejercicio |
 
 ---
 
@@ -452,7 +452,7 @@ f"{'abc':<10}"       # "abc       " — alineado izquierda, ancho 10
 
 ## Conexiones
 
-- 🔗 **Tu protocolo binario embebido** — usas length-prefix con cabecera de 2 bytes y CRC. Este problema es la versión "string-based" del mismo concepto. Ver Capítulo 3 (Protocolo) de la documentación técnica de embebido.
+- **Tu protocolo binario embebido** — usas length-prefix con cabecera de 2 bytes y CRC. Este problema es la versión "string-based" del mismo concepto. Ver Capítulo 3 (Protocolo) de la documentación técnica de embebido.
 - — el protocolo binario de embebido ilustra el mismo patrón en producción.
 - [[1-two-sum]] — patrón anterior del NeetCode 150.
 - Próximo: [[238-product-of-array-except-self]] — prefix/suffix products.

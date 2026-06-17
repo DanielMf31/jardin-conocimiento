@@ -14,7 +14,7 @@ neetcode_order: 3
 
 # LeetCode 338 — Counting Bits
 
-> 🎯 **Tercer problema de Bit Manipulation**. Para todo i en [0, n], cuenta bits 1. **DP con bit shift**: `dp[i] = dp[i >> 1] + (i & 1)`.
+> **Tercer problema de Bit Manipulation**. Para todo i en [0, n], cuenta bits 1. **DP con bit shift**: `dp[i] = dp[i >> 1] + (i & 1)`.
 
 ## Enunciado
 

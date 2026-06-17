@@ -14,8 +14,8 @@ neetcode_order: 5
 
 # LeetCode 33 — Search in Rotated Sorted Array
 
-> 🎯 **Quinto problema del patrón Binary Search**. Es la **extensión natural de [[153-find-minimum-in-rotated-sorted-array]]**: ahora no buscas el mínimo, buscas un **target específico**. La técnica clave: en cada iteración, **detectar qué mitad está ordenada** y comprobar si el target cae en ella.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Quinto problema del patrón Binary Search**. Es la **extensión natural de [[153-find-minimum-in-rotated-sorted-array]]**: ahora no buscas el mínimo, buscas un **target específico**. La técnica clave: en cada iteración, **detectar qué mitad está ordenada** y comprobar si el target cae en ella.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -62,7 +62,7 @@ class Solution:
 | Edge case 1 | Array no rotado → binary search clásico |
 | Edge case 2 | n=1: comparar directamente |
 
-> 💡 **El truco mental**: cualquier mitad de un array rotado o (a) está completamente ordenada o (b) contiene el punto de rotación. Comparando `nums[left]` con `nums[mid]` puedes distinguir cuál es cuál.
+> **El truco mental**: cualquier mitad de un array rotado o (a) está completamente ordenada o (b) contiene el punto de rotación. Comparando `nums[left]` con `nums[mid]` puedes distinguir cuál es cuál.
 
 ---
 
@@ -77,7 +77,7 @@ class Solution:
         return -1
 ```
 
-❌ Viola la restricción O(log n).
+[NO] Viola la restricción O(log n).
 
 ---
 
@@ -128,13 +128,13 @@ Iter 2: left=4, right=6, mid=5, nums[5]=1
   right = 4
 
 Iter 3: left=4, right=4, mid=4, nums[4]=0
-  0 == 0 → return 4 ✅
+  0 == 0 → return 4 [OK]
 ```
 
 **Análisis:**
 - **Tiempo: O(log n)** — cada iteración descarta la mitad.
 - **Espacio: O(1)**.
-- **Veredicto:** ✅ **la canónica**.
+- **Veredicto:** [OK] **la canónica**.
 
 ### Por qué `nums[left] <= nums[mid]` (con `<=`)
 
@@ -273,8 +273,8 @@ Cuando los rangos son cerrados o abiertos importa para no incluir/excluir endpoi
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Linear search | O(n) | O(1) | ❌ No cumple |
-| 2. **Binary search modificado** | **O(log n)** | O(1) | ✅ La canónica |
+| 1. Linear search | O(n) | O(1) | [NO] No cumple |
+| 2. **Binary search modificado** | **O(log n)** | O(1) | [OK] La canónica |
 
 ---
 

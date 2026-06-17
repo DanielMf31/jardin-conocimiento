@@ -14,7 +14,7 @@ neetcode_order: 6
 
 # LeetCode 1851 — Minimum Interval to Include Each Query
 
-> 🎯 **Sexto y último problema de Intervals — Hard**. **Offline processing**: ordenar queries, procesarlos junto con intervalos en orden de start.
+> **Sexto y último problema de Intervals — Hard**. **Offline processing**: ordenar queries, procesarlos junto con intervalos en orden de start.
 
 ## Enunciado
 
@@ -50,7 +50,7 @@ class Solution:
 
 ---
 
-## Cierre Intervals 🎉
+## Cierre Intervals
 
 | # | Problema | Idea distintiva |
 |---|---|---|
@@ -68,4 +68,4 @@ class Solution:
 - [ ] Leído
 - [ ] Implementado desde cero
 - [ ] Resuelto en LeetCode
-- [ ] **Patrón Intervals cerrado** ✅
+- [ ] **Patrón Intervals cerrado** [OK]

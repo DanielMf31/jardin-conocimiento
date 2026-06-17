@@ -1,8 +1,8 @@
 # 04 — Sockets y puertos
 
-> 📚 **Doc 4 del cluster Networking**. Aquí bajamos al nivel de programación. Cómo el SO te da acceso a la red mediante la abstracción de "socket".
-> 🔥 **Frecuencia interview**: aparece en system design (puertos well-known, port exhaustion) y en preguntas low-level.
-> ⏱️ **Tiempo de lectura estimado**: 40-60 min.
+> **Doc 4 del cluster Networking**. Aquí bajamos al nivel de programación. Cómo el SO te da acceso a la red mediante la abstracción de "socket".
+> **Frecuencia interview**: aparece en system design (puertos well-known, port exhaustion) y en preguntas low-level.
+> **Tiempo de lectura estimado**: 40-60 min.
 
 ---
 

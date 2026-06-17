@@ -8,13 +8,13 @@ source: claude-code
 aliases: [HTB Easy, HTB maquinas faciles, HTB retiradas easy]
 ---
 
-# 🟢 HTB Máquinas Easy — guía, patrones y progreso
+# (facil) HTB Máquinas Easy — guía, patrones y progreso
 
 El **paso después de [[HTB_Starting_Point/00_README|Starting Point]]**: máquinas Easy retiradas de la
 plataforma principal de Hack The Box. Aquí ya no hay tutela — son **cadenas completas** de ataque
 (*foothold → shell → escalada de privilegios*). 15 writeups + la síntesis de patrones que se repiten.
 
-> ⚖️ HTB es un laboratorio **legal y autorizado**. Esto es para aprender a **defender y diseñar mejor**.
+> HTB es un laboratorio **legal y autorizado**. Esto es para aprender a **defender y diseñar mejor**.
 
 ## El salto respecto a Starting Point
 | | Starting Point | Easy (estas) |
@@ -33,7 +33,7 @@ plataforma principal de Hack The Box. Aquí ya no hay tutela — son **cadenas c
 
 ---
 
-## 🧠 La teoría: patrones que se repiten en TODAS
+## La teoría: patrones que se repiten en TODAS
 
 ### Foothold (cómo entras) — 4 vías recurrentes
 1. **Servicio desactualizado con CVE conocido** → RCE casi directo. (`lame` Samba, `legacy`/`blue` EternalBlue, `optimum` HFS, `shocker` Shellshock).
@@ -55,11 +55,11 @@ nmap (todos los puertos + versiones)  →  enumerar CADA servicio a fondo
   →  enumerar como ese usuario (sudo -l, cron, SUID, historial, configs)  →  privesc  →  root
 ```
 
-> 💡 Reflejo dev/purple team: por cada paso, *"¿cómo lo habría evitado en el código/config?"* → parchear, mínimo privilegio, no credenciales en ficheros, validar uploads, sudo específico.
+> Reflejo dev/purple team: por cada paso, *"¿cómo lo habría evitado en el código/config?"* → parchear, mínimo privilegio, no credenciales en ficheros, validar uploads, sudo específico.
 
 ---
 
-## 📚 Writeups (dificultad creciente)
+## Writeups (dificultad creciente)
 **Exploit conocido directo (las más fáciles)**
 - [[HTB_Easy/01-lame]] — Samba `usermap_script` (CVE-2007-2447), RCE como root
 - [[HTB_Easy/02-legacy]] — SMB MS08-067 / MS17-010 → SYSTEM
@@ -81,7 +81,7 @@ nmap (todos los puertos + versiones)  →  enumerar CADA servicio a fondo
 - [[HTB_Easy/14-beep]] — Elastix: LFI + reutilización de credenciales
 - [[HTB_Easy/15-friendzone]] — SMB+DNS → LFI → library hijack Python
 
-## 📋 Mi progreso (rellena a mano)
+## Mi progreso (rellena a mano)
 | # | Máquina | SO | Técnica clave | user | root |
 |---|---|---|---|---|---|
 | 01 | lame | Linux | Samba CVE-2007-2447 | | |

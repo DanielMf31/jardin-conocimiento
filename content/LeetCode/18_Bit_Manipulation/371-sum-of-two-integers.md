@@ -14,7 +14,7 @@ neetcode_order: 6
 
 # LeetCode 371 — Sum of Two Integers
 
-> 🎯 **Sexto problema de Bit Manipulation**. Sumar sin usar `+` ni `-`. **Half-adder de hardware**: XOR para suma sin carry, AND+shift para carry.
+> **Sexto problema de Bit Manipulation**. Sumar sin usar `+` ni `-`. **Half-adder de hardware**: XOR para suma sin carry, AND+shift para carry.
 
 ## Enunciado
 

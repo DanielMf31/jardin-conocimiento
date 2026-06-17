@@ -8,7 +8,7 @@ source: claude-code
 aliases: [Cloud Run, GKE, contenedores GCP]
 ---
 
-# 📦 Contenedores y Serverless en GCP
+# Contenedores y Serverless en GCP
 
 ## ¿Por qué esto importa?
 
@@ -27,7 +27,7 @@ Esto tiene dos sabores en GCP:
 
 ---
 
-## 🗂️ Artifact Registry — El almacén de imágenes
+## Artifact Registry — El almacén de imágenes
 
 ### Qué problema resuelve
 
@@ -75,7 +75,7 @@ gcloud artifacts docker images list europe-west1-docker.pkg.dev/PROJECT_ID/mi-re
 
 ---
 
-## 🚀 Cloud Run — Serverless para contenedores
+## Cloud Run — Serverless para contenedores
 
 ### Qué es y por qué es especial
 
@@ -184,7 +184,7 @@ gcloud run services update-traffic mi-api \
 
 ---
 
-## ☸️ GKE — Google Kubernetes Engine
+## GKE — Google Kubernetes Engine
 
 ### Qué es y cuándo lo necesitas
 
@@ -281,7 +281,7 @@ spec:
 
 ---
 
-## ⚡ Cloud Functions — Serverless para fragmentos de código
+## Cloud Functions — Serverless para fragmentos de código
 
 Cloud Functions ejecuta **una función** en respuesta a un evento, sin contenedor que gestionar. La unidad mínima de despliegue.
 
@@ -302,7 +302,7 @@ gcloud functions deploy mi-funcion \
 
 ---
 
-## 📊 Comparativa: Cloud Run vs GKE vs Cloud Functions
+## Comparativa: Cloud Run vs GKE vs Cloud Functions
 
 | Criterio | Cloud Functions | Cloud Run | GKE (Autopilot) |
 |---|---|---|---|
@@ -329,7 +329,7 @@ gcloud functions deploy mi-funcion \
 
 ---
 
-## 🛠️ Ejemplo completo: FastAPI en Cloud Run
+## Ejemplo completo: FastAPI en Cloud Run
 
 Supón que tienes la app web (FastAPI + Python) y quieres desplegarla sin gestionar infraestructura.
 
@@ -410,7 +410,7 @@ curl -H "Authorization: Bearer $(gcloud auth print-identity-token)" \
 
 ---
 
-## 🔗 CI/CD con Cloud Run
+## CI/CD con Cloud Run
 
 El flujo típico en un equipo:
 
@@ -432,7 +432,7 @@ Ver [[09-devops-iac-observabilidad]] para el pipeline completo.
 
 ---
 
-## ⚠️ Errores y costes comunes
+## Errores y costes comunes
 
 | Error | Causa | Solución |
 |---|---|---|
@@ -444,7 +444,7 @@ Ver [[09-devops-iac-observabilidad]] para el pipeline completo.
 
 ---
 
-## 🏋️ Aplícalo / Practica
+## Aplícalo / Practica
 
 1. **Nivel 0 (15 min)**: Despliega la imagen `gcr.io/google-samples/hello-app:1.0` en Cloud Run con `gcloud run deploy`. Prueba la URL.
 

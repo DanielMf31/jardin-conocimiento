@@ -14,7 +14,7 @@ neetcode_order: 12
 
 # LeetCode 261 — Graph Valid Tree
 
-> 🎯 **Duodécimo problema del patrón Graphs**. **¿Es un grafo un árbol?** Definición: un árbol es **conexo** y **sin ciclos**. Equivalente: tiene exactamente `n-1` aristas y es conexo.
+> **Duodécimo problema del patrón Graphs**. **¿Es un grafo un árbol?** Definición: un árbol es **conexo** y **sin ciclos**. Equivalente: tiene exactamente `n-1` aristas y es conexo.
 
 ## Enunciado
 

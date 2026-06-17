@@ -14,7 +14,7 @@ neetcode_order: 3
 
 # LeetCode 141 — Linked List Cycle
 
-> 🎯 **Tercer problema del patrón Linked List** y la introducción al **algoritmo de Floyd (tortoise and hare)** — uno de los algoritmos más bonitos de toda la informática. Lo verás también en [[287-find-the-duplicate-number]] y [[143-reorder-list]].
+> **Tercer problema del patrón Linked List** y la introducción al **algoritmo de Floyd (tortoise and hare)** — uno de los algoritmos más bonitos de toda la informática. Lo verás también en [[287-find-the-duplicate-number]] y [[143-reorder-list]].
 
 ## Enunciado
 
@@ -86,7 +86,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)** — el rápido llega al final o alcanza al lento en O(n).
 - **Espacio: O(1)** — solo dos punteros.
-- **Veredicto:** ✅ **la canónica**. La que demuestra dominio del problema.
+- **Veredicto:** [OK] **la canónica**. La que demuestra dominio del problema.
 
 ### Las dos guardias críticas
 

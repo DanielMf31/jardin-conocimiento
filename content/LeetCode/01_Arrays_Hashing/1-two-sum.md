@@ -14,8 +14,8 @@ neetcode_order: 3
 
 # LeetCode 1 — Two Sum
 
-> 🎯 **El problema más famoso de LeetCode**. Literalmente el `id=1`. Lo verás referenciado en charlas, memes y entrevistas. Es **el** problema que hay que saber.
-> 📚 Tercer problema del NeetCode 150 en Arrays & Hashing. Después de [[217-contains-duplicate]] (set) y [[242-valid-anagram]] (dict para contar), ahora **dict para mapear**: el patrón **"el complemento que falta"**.
+> **El problema más famoso de LeetCode**. Literalmente el `id=1`. Lo verás referenciado en charlas, memes y entrevistas. Es **el** problema que hay que saber.
+> Tercer problema del NeetCode 150 en Arrays & Hashing. Después de [[217-contains-duplicate]] (set) y [[242-valid-anagram]] (dict para contar), ahora **dict para mapear**: el patrón **"el complemento que falta"**.
 
 ## Enunciado
 
@@ -72,7 +72,7 @@ class Solution:
 | ¿En qué orden devuelvo los índices? | Cualquiera, el grader acepta `[0, 1]` y `[1, 0]` |
 | Edge case típico | Números negativos: `[-3, 4, 3, 90], target = 0` → debería devolver `[0, 2]` |
 
-> 💡 **Lo que diferencia este problema de Contains Duplicate**: aquí no buscas el mismo elemento, buscas un **elemento distinto** cuya suma con el actual dé el target. Es decir: buscas el **complemento**, no el duplicado.
+> **Lo que diferencia este problema de Contains Duplicate**: aquí no buscas el mismo elemento, buscas un **elemento distinto** cuya suma con el actual dé el target. Es decir: buscas el **complemento**, no el duplicado.
 
 ---
 
@@ -96,7 +96,7 @@ class Solution:
 - **Espacio: O(1)** — solo dos índices.
 - **Veredicto:** **pasa los tests** de LeetCode (n ≤ 10⁴ → 10⁸ ops, justo en el límite). Pero no es la respuesta esperada.
 
-> ⚠️ **Trampa común**: empezar `j` desde `0` en lugar de `i+1` haría que `nums[i] + nums[i] == target` cuente, violando la regla "no usar el mismo elemento dos veces". Empezar desde `i+1` lo evita.
+> **Trampa común**: empezar `j` desde `0` en lugar de `i+1` haría que `nums[i] + nums[i] == target` cuente, violando la regla "no usar el mismo elemento dos veces". Empezar desde `i+1` lo evita.
 
 ---
 
@@ -123,7 +123,7 @@ class Solution:
 - **Espacio: O(n)** — el dict almacena n entradas.
 - **Veredicto:** correcta, pero **tiene una sutileza**:
 
-> ⚠️ **Cuidado con duplicados**: si `nums = [3, 3], target = 6`, la dict comprehension hace `{3: 0}` y luego `{3: 1}` (sobrescribe). Cuando buscamos el complemento `3` en el primer `num=3` (i=0), `indices[3]` es `1`, diferente de `0` → devuelve `[0, 1]`. Por eso la guarda `indices[complemento] != i` es **crítica**: evita emparejar un elemento consigo mismo.
+> **Cuidado con duplicados**: si `nums = [3, 3], target = 6`, la dict comprehension hace `{3: 0}` y luego `{3: 1}` (sobrescribe). Cuando buscamos el complemento `3` en el primer `num=3` (i=0), `indices[3]` es `1`, diferente de `0` → devuelve `[0, 1]`. Por eso la guarda `indices[complemento] != i` es **crítica**: evita emparejar un elemento consigo mismo.
 
 ---
 
@@ -148,7 +148,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)** — un solo recorrido, lookups y inserts O(1).
 - **Espacio: O(n)** — el dict crece hasta n-1 elementos en el peor caso.
-- **Veredicto:** ✅ **la respuesta esperada en entrevista**. Demuestra que entiendes el patrón.
+- **Veredicto:** [OK] **la respuesta esperada en entrevista**. Demuestra que entiendes el patrón.
 
 ### Por qué la one-pass funciona y NO necesita la guarda `!= i`
 
@@ -167,7 +167,7 @@ Encuentra la solución en **2 iteraciones** sin haber recorrido todo. Es estrict
 
 ## Solución 4 — Two pointers (NO aplica aquí, pero es importante saberlo)
 
-> 🚫 **Esta solución NO funciona para Two Sum (LC 1)**. La incluyo porque es el patrón natural para la **variante ordenada** y es importante distinguir cuándo aplica.
+> **Esta solución NO funciona para Two Sum (LC 1)**. La incluyo porque es el patrón natural para la **variante ordenada** y es importante distinguir cuándo aplica.
 
 Si `nums` estuviera **ordenado**, podrías usar dos punteros (uno al principio, otro al final) y moverlos según la suma sea menor o mayor que el target. Pero ordenar **destruye los índices originales**, que es lo que pide devolver el problema.
 
@@ -188,7 +188,7 @@ def twoSum_ORDENADO(self, nums, target):
 
 **Cuándo SÍ aplica two-pointers**: en [LC 167 — Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/), donde el array ya está ordenado. En ese problema two-pointers da O(n) tiempo y **O(1) espacio** (mejor que el hash map en espacio). Pero requiere que el array esté ordenado de origen.
 
-> 📌 **Lección general**: dos patrones distintos para problemas hermanos. Hash map cuando el array es **arbitrario**; two pointers cuando es **ordenado**. Saber elegir el correcto en función del input es señal de seniority.
+> **Lección general**: dos patrones distintos para problemas hermanos. Hash map cuando el array es **arbitrario**; two pointers cuando es **ordenado**. Saber elegir el correcto en función del input es señal de seniority.
 
 ---
 
@@ -234,7 +234,7 @@ Two Sum es el problema **fundacional**. Sus variaciones aparecen por todas parte
 | **1. Two Sum (Closest)** | Variante en algunas empresas: pareja cuya suma sea **lo más cercana** a target |
 | **560. Subarray Sum Equals K** | Subarray contiguo que suma K → **prefix sum** + hash map (mismo patrón mental aplicado a sumas acumulativas) |
 
-> 📌 **Patrón maestro**: Two Sum es la base del patrón "complemento". 3Sum y 4Sum son combinaciones de Two Sum con bucles externos. Subarray Sum Equals K es Two Sum sobre **sumas acumulativas** en lugar de elementos directos. Cuando lo interiorizas, **muchos problemas Medium/Hard se resuelven en minutos**.
+> **Patrón maestro**: Two Sum es la base del patrón "complemento". 3Sum y 4Sum son combinaciones de Two Sum con bucles externos. Subarray Sum Equals K es Two Sum sobre **sumas acumulativas** en lugar de elementos directos. Cuando lo interiorizas, **muchos problemas Medium/Hard se resuelven en minutos**.
 
 ---
 
@@ -282,7 +282,7 @@ En general, una sola pasada es más eficiente, pero **no siempre es posible**. L
 |---|---|---|---|---|
 | 1. Fuerza bruta | O(n²) | O(1) | Sí (TLE en Hard) | Pasa los tests pero no la entrevista |
 | 2. Hash map two-pass | O(n) | O(n) | Sí | Funcional, sutil con duplicados |
-| 3. **Hash map one-pass** | **O(n)** | **O(n)** | **Sí** | ✅ **La idiomática** |
+| 3. **Hash map one-pass** | **O(n)** | **O(n)** | **Sí** | [OK] **La idiomática** |
 | 4. Two pointers | O(n log n) | O(1) | **NO** (destruye índices) | Aplica solo a LC 167 |
 
 ---
@@ -314,7 +314,7 @@ En general, una sola pasada es más eficiente, pero **no siempre es posible**. L
 
 ## Solución en C++ — contraste con Python
 
-> 📘 Añadido para ver las diferencias de lenguaje. Mismo algoritmo, distinta semántica. Código compilable en [`1-two-sum.cpp`](1-two-sum.cpp).
+> Añadido para ver las diferencias de lenguaje. Mismo algoritmo, distinta semántica. Código compilable en [`1-two-sum.cpp`](1-two-sum.cpp).
 
 ```cpp
 class Solution {

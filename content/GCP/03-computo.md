@@ -8,7 +8,7 @@ source: claude-code
 aliases: [GCP Computo, Compute GCP, VMs GCP]
 ---
 
-# 🖥️ Cómputo en GCP
+# Cómputo en GCP
 
 ## ¿Por qué existe este espectro?
 
@@ -20,7 +20,7 @@ Este espectro importa porque el error más común es usar VMs para todo cuando C
 
 ---
 
-## 🗺️ El espectro: de más a menos gestionado
+## El espectro: de más a menos gestionado
 
 ```
 Tú gestionas más ←————————————————————————→ GCP gestiona más
@@ -234,7 +234,7 @@ entrypoint: gunicorn -b :$PORT main:app
 
 ---
 
-## 4. Cloud Run — Contenedores serverless ⭐
+## 4. Cloud Run — Contenedores serverless
 
 ### Qué es y cuándo usarlo
 
@@ -393,7 +393,7 @@ gcloud functions logs read hola-mundo \
 
 ---
 
-## 🔍 Tabla: ¿Cuándo usar qué?
+## Tabla: ¿Cuándo usar qué?
 
 | Escenario | Servicio recomendado | Por qué |
 |---|---|---|
@@ -401,7 +401,7 @@ gcloud functions logs read hola-mundo \
 | ML training con GPU, workload largo | **Compute Engine** (Spot) | GPU disponible, ahorro con Spot |
 | Arquitectura de microservicios ya en K8s | **GKE** | Portabilidad, ecosistema K8s |
 | Escalar a 100+ pods con lógica de red compleja | **GKE** | Control de red, scheduling avanzado |
-| API REST moderna, tráfico variable | **Cloud Run** ⭐ | Serverless, paga por uso, fácil CI/CD |
+| API REST moderna, tráfico variable | **Cloud Run** | Serverless, paga por uso, fácil CI/CD |
 | App web sencilla, Python/Node, free tier | **App Engine Standard** | Más simple aún que Cloud Run, gratis |
 | Procesar fichero al subirse a Cloud Storage | **Cloud Functions** | Trigger de evento puntual |
 | Webhook de tercero (GitHub, Stripe) | **Cloud Functions** o **Cloud Run** | HTTP simple; Functions si es un handler, Run si es una API mayor |
@@ -410,7 +410,7 @@ gcloud functions logs read hola-mundo \
 
 ---
 
-## 💰 Free Tier resumido
+## Free Tier resumido
 
 | Servicio | Qué incluye gratis (por mes) |
 |---|---|
@@ -422,7 +422,7 @@ gcloud functions logs read hola-mundo \
 
 ---
 
-## 🛠️ Aplícalo / Practica
+## Aplícalo / Practica
 
 1. **VM básica**: crea una `e2-micro` en `us-central1-a`, conéctate por SSH, instala nginx, y accede desde el navegador. Borra la VM al terminar.
 2. **Cloud Run desde cero**: crea una API FastAPI mínima, escribe un `Dockerfile`, súbela a Artifact Registry y despliégala en Cloud Run. Verifica que escala a 0.

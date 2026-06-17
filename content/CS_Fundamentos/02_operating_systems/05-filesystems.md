@@ -1,8 +1,8 @@
 # 05 — Filesystems
 
-> 📚 **Doc 5 (último) del cluster Operating Systems**. Cómo el SO organiza datos persistentes en disco. Inodes, journaling, permissions, y por qué `cp archivo` es más complejo de lo que parece.
-> 🔥 **Frecuencia interview**: aparece menos directamente que networking/concurrency, pero crítico para system design (databases, storage).
-> ⏱️ **Tiempo de lectura estimado**: 35-50 min.
+> **Doc 5 (último) del cluster Operating Systems**. Cómo el SO organiza datos persistentes en disco. Inodes, journaling, permissions, y por qué `cp archivo` es más complejo de lo que parece.
+> **Frecuencia interview**: aparece menos directamente que networking/concurrency, pero crítico para system design (databases, storage).
+> **Tiempo de lectura estimado**: 35-50 min.
 
 ---
 
@@ -417,7 +417,7 @@ Si no puedes → relee.
 
 ---
 
-## ¡Cluster Operating Systems completado! 🎉
+## ¡Cluster Operating Systems completado!
 
 Has completado el segundo Tier 1. Resumen de lo dominado:
 

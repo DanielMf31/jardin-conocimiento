@@ -8,7 +8,7 @@ source: claude-code
 aliases: [GCP certs, certificaciones Google Cloud, aprendizaje GCP]
 ---
 
-# 🎓 Certificaciones y aprendizaje de GCP
+# Certificaciones y aprendizaje de GCP
 
 ## ¿Por qué importa certificarse en GCP?
 
@@ -22,7 +22,7 @@ Para alguien que aspira a trabajar en Google, la lógica es directa: Google reco
 
 ---
 
-## 🗺️ El ecosistema de certificaciones: panorama
+## El ecosistema de certificaciones: panorama
 
 Google organiza sus certificaciones en tres niveles:
 
@@ -45,7 +45,7 @@ Foundational  →  Associate  →  Professional (varias especialidades)
 
 ---
 
-## 🥇 Cloud Digital Leader — ¿cuándo tiene sentido?
+## Cloud Digital Leader — ¿cuándo tiene sentido?
 
 **Qué cubre**: visión de negocio de GCP, conceptos de transformación digital, panorama de productos sin profundidad técnica.
 
@@ -55,7 +55,7 @@ Foundational  →  Associate  →  Professional (varias especialidades)
 
 ---
 
-## ⭐ Associate Cloud Engineer — la de mejor relación esfuerzo/valor
+## Associate Cloud Engineer — la de mejor relación esfuerzo/valor
 
 ### Qué evalúa
 
@@ -104,7 +104,7 @@ gcloud projects add-iam-policy-binding mi-proyecto \
 
 ---
 
-## 🏛️ Professional Cloud Architect — el salto de operador a diseñador
+## Professional Cloud Architect — el salto de operador a diseñador
 
 ### Qué evalúa
 
@@ -124,7 +124,7 @@ Después del ACE, con al menos 6 meses de práctica real o intensiva en labs. Si
 
 ---
 
-## 📊 Professional Data Engineer — para el perfil DS/ML
+## Professional Data Engineer — para el perfil DS/ML
 
 ### Qué cubre
 
@@ -140,7 +140,7 @@ Optimizar queries de BigQuery (particionado por fecha vs columna, clustering, sl
 
 ---
 
-## 🔒 Professional Cloud Security Engineer
+## Professional Cloud Security Engineer
 
 ### Qué cubre
 
@@ -152,7 +152,7 @@ Si tu rol implica auditorías, seguridad de infraestructura, o trabajas en secto
 
 ---
 
-## 🤖 Professional ML Engineer
+## Professional ML Engineer
 
 ### Qué cubre
 
@@ -164,7 +164,7 @@ Alguien que ya sabe ML (modelos, evaluación, feature engineering) y quiere apre
 
 ---
 
-## 🧪 Plataformas de práctica
+## Plataformas de práctica
 
 ### Google Cloud Skills Boost (antes Qwiklabs)
 
@@ -193,7 +193,7 @@ Existen bancos de preguntas de exámenes anteriores (ExamTopics, Whizlabs). Son 
 
 ---
 
-## 💸 Free Tier para proyectos reales
+## Free Tier para proyectos reales
 
 GCP tiene dos capas de gratuidad que conviene distinguir:
 
@@ -244,7 +244,7 @@ gcloud projects delete mi-proyecto-labs
 
 ---
 
-## 🗺️ Ruta recomendada de autoaprendizaje
+## Ruta recomendada de autoaprendizaje
 
 La ruta asume que ya tienes base de programación y sistemas (lo cual cumples) pero poca exposición a cloud.
 
@@ -290,7 +290,7 @@ Elegir especialidad según tu trayectoria: PCA si vas a arquitectura, PDE si vas
 
 ---
 
-## 🏢 Relevancia para una carrera en Google
+## Relevancia para una carrera en Google
 
 Google es usuario de GCP (usa su propia nube internamente, aunque algunos sistemas son anteriores a GCP y más propietarios). Algunas realidades:
 
@@ -313,7 +313,7 @@ Google es usuario de GCP (usa su propia nube internamente, aunque algunos sistem
 
 ---
 
-## ✏️ Aplícalo / practica
+## Aplícalo / practica
 
 1. **Crea tu cuenta GCP** (si no la tienes) y activa el free trial. Pon una alerta de presupuesto de $10 inmediatamente.
 2. **Instala gcloud CLI** y completa `gcloud init`. Verifica con `gcloud projects list`.

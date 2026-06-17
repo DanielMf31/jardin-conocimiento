@@ -14,8 +14,8 @@ neetcode_order: 8
 
 # LeetCode 36 — Valid Sudoku
 
-> 🎯 **Octavo problema del NeetCode 150 en Arrays & Hashing**. Combina lo que sabes de hash sets con **claves compuestas / múltiples restricciones simultáneas**. Es un problema de validación, no de resolución (NO tienes que resolver el sudoku, solo verificar que lo dado es consistente).
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Octavo problema del NeetCode 150 en Arrays & Hashing**. Combina lo que sabes de hash sets con **claves compuestas / múltiples restricciones simultáneas**. Es un problema de validación, no de resolución (NO tienes que resolver el sudoku, solo verificar que lo dado es consistente).
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -162,9 +162,9 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(81)** = O(1).
 - **Espacio: O(81)** = O(1) — máximo 81 entradas distribuidas.
-- **Veredicto:** ✅ **la respuesta esperada en entrevista**. Clara, sin duplicación, modela las tres restricciones uniformemente.
+- **Veredicto:** [OK] **la respuesta esperada en entrevista**. Clara, sin duplicación, modela las tres restricciones uniformemente.
 
-> 💡 **`r // 3, c // 3` para box ID**: si `r = 5, c = 7`, entonces `r // 3 = 1, c // 3 = 2`, que identifica el box "fila 1, columna 2" (de los 3x3 = 9 boxes). Cualquier celda en ese box da el mismo `(1, 2)`.
+> **`r // 3, c // 3` para box ID**: si `r = 5, c = 7`, entonces `r // 3 = 1, c // 3 = 2`, que identifica el box "fila 1, columna 2" (de los 3x3 = 9 boxes). Cualquier celda en ese box da el mismo `(1, 2)`.
 
 ---
 
@@ -200,7 +200,7 @@ class Solution:
 
 **Análisis:** mismo O(1) tiempo y espacio. **Más conciso**. La elegancia está en colapsar tres conceptos en una sola estructura mediante **claves tipadas**.
 
-> 🎯 **Patrón importante**: cuando tienes múltiples restricciones del mismo tipo, una **sola estructura con claves compuestas** suele ser más limpia que múltiples estructuras separadas.
+> **Patrón importante**: cuando tienes múltiples restricciones del mismo tipo, una **sola estructura con claves compuestas** suele ser más limpia que múltiples estructuras separadas.
 
 ### Desglose detallado de la Solución 3 — tuplas heterogéneas y claves tipadas
 
@@ -234,13 +234,13 @@ La única regla para meterlas en un `set` (o usarlas como clave de `dict`) es qu
 
 | Tipo | ¿Hashable? | ¿Puede ir en una tupla que va a un set? |
 |---|---|---|
-| `int`, `float`, `bool` | ✅ | Sí |
-| `str` | ✅ | Sí |
-| `tuple` (de hashables) | ✅ | Sí |
-| `frozenset` | ✅ | Sí |
-| `list` | ❌ | NO — la tupla deja de ser hashable |
-| `dict` | ❌ | NO |
-| `set` | ❌ | NO (pero `frozenset` sí) |
+| `int`, `float`, `bool` | [OK] | Sí |
+| `str` | [OK] | Sí |
+| `tuple` (de hashables) | [OK] | Sí |
+| `frozenset` | [OK] | Sí |
+| `list` | [NO] | NO — la tupla deja de ser hashable |
+| `dict` | [NO] | NO |
+| `set` | [NO] | NO (pero `frozenset` sí) |
 
 Strings e ints son hashables → `("row", 5, "8")` es perfectamente hashable y puede ir en un set.
 
@@ -504,8 +504,8 @@ rows[r].add(v)
 | Solución | Líneas | Claridad | Veredicto |
 |---|---|---|---|
 | 1. Tres recorridos separados | ~30 | Baja (código duplicado) | Funciona, no idiomática |
-| 2. **Recorrido único con 3 dicts** | ~15 | Alta | ✅ La idiomática |
-| 3. **Un set con claves compuestas** | ~12 | Muy alta | ✅ La elegante |
+| 2. **Recorrido único con 3 dicts** | ~15 | Alta | [OK] La idiomática |
+| 3. **Un set con claves compuestas** | ~12 | Muy alta | [OK] La elegante |
 
 Todas son O(1) en tiempo y espacio.
 

@@ -14,7 +14,7 @@ neetcode_order: 11
 
 # LeetCode 300 — Longest Increasing Subsequence
 
-> 🎯 **Undécimo problema de DP 1-D**. **LIS clásico**. DP O(n²) o **patience sorting** con binary search O(n log n).
+> **Undécimo problema de DP 1-D**. **LIS clásico**. DP O(n²) o **patience sorting** con binary search O(n log n).
 
 ## Enunciado
 

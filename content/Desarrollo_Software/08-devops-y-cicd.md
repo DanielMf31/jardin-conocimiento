@@ -8,7 +8,7 @@ source: claude-code
 aliases: [DevOps, CI/CD, Integracion Continua]
 ---
 
-# ⚙️ DevOps y CI/CD
+# DevOps y CI/CD
 
 ## Por qué existe esto
 

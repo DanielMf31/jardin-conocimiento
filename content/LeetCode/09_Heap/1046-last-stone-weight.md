@@ -14,7 +14,7 @@ neetcode_order: 2
 
 # LeetCode 1046 — Last Stone Weight
 
-> 🎯 **Segundo problema del patrón Heap**. Simulación con **max-heap**. Como Python solo tiene min-heap, el truco es **negar valores**.
+> **Segundo problema del patrón Heap**. Simulación con **max-heap**. Como Python solo tiene min-heap, el truco es **negar valores**.
 
 ## Enunciado
 

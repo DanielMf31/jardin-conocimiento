@@ -14,8 +14,8 @@ neetcode_order: 4
 
 # LeetCode 153 — Find Minimum in Rotated Sorted Array
 
-> 🎯 **Cuarto problema del patrón Binary Search**. Introduce el truco de **binary search en arrays rotados**: el array no está completamente ordenado, pero **una mitad siempre lo está**. Aprenderlo aquí te prepara para LC 33 (búsqueda en array rotado) y muchos problemas relacionados.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Cuarto problema del patrón Binary Search**. Introduce el truco de **binary search en arrays rotados**: el array no está completamente ordenado, pero **una mitad siempre lo está**. Aprenderlo aquí te prepara para LC 33 (búsqueda en array rotado) y muchos problemas relacionados.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -69,7 +69,7 @@ class Solution:
 | Edge case 1 | Array no rotado (rotado n veces) → min es nums[0] |
 | Edge case 2 | Array de 1 elemento → ese elemento |
 
-> 💡 **Visualización**: imagina el array como dos secciones ordenadas, donde la primera es "alta" y la segunda es "baja". El mínimo es **el primer elemento de la sección baja**.
+> **Visualización**: imagina el array como dos secciones ordenadas, donde la primera es "alta" y la segunda es "baja". El mínimo es **el primer elemento de la sección baja**.
 
 ```
 Original:  [0, 1, 2, 4, 5, 6, 7]
@@ -91,7 +91,7 @@ class Solution:
         return min(nums)
 ```
 
-**Análisis:** O(n). Funciona pero ignora la estructura ordenada. ❌ No cumple el follow-up.
+**Análisis:** O(n). Funciona pero ignora la estructura ordenada. [NO] No cumple el follow-up.
 
 ---
 
@@ -132,13 +132,13 @@ Iter 3: left=4, right=5, mid=4, nums[4]=0, nums[5]=1
 
 left == right == 4 → exit
 
-Return nums[4] = 0 ✅
+Return nums[4] = 0 [OK]
 ```
 
 **Análisis:**
 - **Tiempo: O(log n)** — cada iteración descarta la mitad.
 - **Espacio: O(1)**.
-- **Veredicto:** ✅ **la canónica**.
+- **Veredicto:** [OK] **la canónica**.
 
 ### Por qué comparar con `nums[right]` y no con `nums[left]`
 
@@ -201,7 +201,7 @@ def find_min_rotated(nums):
 | **33. Search in Rotated Sorted Array** | Buscar un target específico, no solo el min |
 | **81. Search in Rotated Sorted Array II** | LC 33 con duplicados |
 
-> 🎯 LC 33 (siguiente problema) extiende este al caso "buscar target". La idea de "una mitad siempre está ordenada" es la misma.
+> LC 33 (siguiente problema) extiende este al caso "buscar target". La idea de "una mitad siempre está ordenada" es la misma.
 
 ---
 
@@ -232,8 +232,8 @@ Esto degrada a O(n) en el peor caso (todo iguales), pero pasa correctamente.
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. `min(nums)` | O(n) | O(1) | ❌ No cumple O(log n) |
-| 2. **Binary search modificado** | **O(log n)** | O(1) | ✅ La canónica |
+| 1. `min(nums)` | O(n) | O(1) | [NO] No cumple O(log n) |
+| 2. **Binary search modificado** | **O(log n)** | O(1) | [OK] La canónica |
 
 ---
 

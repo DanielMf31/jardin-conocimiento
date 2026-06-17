@@ -8,7 +8,7 @@ source: claude-code
 aliases: [gitlab admin, gitlab backup, gitlab upgrade]
 ---
 
-# 🛠️ Administración: backups y upgrades
+# Administración: backups y upgrades
 
 ## ¿Por qué importa esto?
 
@@ -28,7 +28,7 @@ Si no estás dispuesto a asumir estas tareas, **usa gitlab.com**. Si las asumes,
 
 ---
 
-## 🗂️ `gitlab.rb` — el archivo de configuración maestro
+## `gitlab.rb` — el archivo de configuración maestro
 
 ### ¿Qué problema resuelve?
 
@@ -100,7 +100,7 @@ sudo gitlab-rake gitlab:check
 
 ---
 
-## 👥 Usuarios y autenticación
+## Usuarios y autenticación
 
 ### Autenticación local (por defecto)
 
@@ -152,7 +152,7 @@ sudo gitlab-rails runner "User.active.each { |u| puts u.email }"
 
 ---
 
-## 💾 Backups
+## Backups
 
 ### ¿Qué incluye un backup de GitLab?
 
@@ -230,7 +230,7 @@ La variable `CRON=1` suprime el output a stdout (solo registra errores). El flag
 
 ---
 
-## ⬆️ Upgrades — el punto más delicado
+## Upgrades — el punto más delicado
 
 ### Por qué los upgrades son especiales en GitLab
 
@@ -298,7 +298,7 @@ sudo gitlab-rake db:migrate:status 2>/dev/null | grep "^\s*down"
 
 ---
 
-## 📊 Monitoreo — Prometheus integrado
+## Monitoreo — Prometheus integrado
 
 GitLab Omnibus incluye Prometheus y un conjunto de exporters preconfigurados. No necesitas instalar nada extra para tener métricas básicas.
 
@@ -337,7 +337,7 @@ Si conectas Alertmanager (también incluido en Omnibus), configura alertas para:
 
 ---
 
-## 💸 El "impuesto de mantenimiento" real
+## El "impuesto de mantenimiento" real
 
 Esto es lo que realmente cuesta operar GitLab autohospedado, más allá del hardware:
 

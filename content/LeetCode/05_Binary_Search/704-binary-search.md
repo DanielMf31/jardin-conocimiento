@@ -14,8 +14,8 @@ neetcode_order: 1
 
 # LeetCode 704 — Binary Search
 
-> 🎯 **Primer problema del patrón Binary Search** y **el algoritmo más fundamental** que vas a usar. Es la versión "vainilla" — un array ordenado, busca un valor. Lo importante NO es el algoritmo en sí (lo conoces) sino **escribirlo sin off-by-one errors**, que es la trampa más común.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Primer problema del patrón Binary Search** y **el algoritmo más fundamental** que vas a usar. Es la versión "vainilla" — un array ordenado, busca un valor. Lo importante NO es el algoritmo en sí (lo conoces) sino **escribirlo sin off-by-one errors**, que es la trampa más común.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -63,7 +63,7 @@ class Solution:
 | Edge case 1 | Array de 1 elemento: o coincide o devuelve -1 |
 | Edge case 2 | Target menor que min o mayor que max → -1 |
 
-> 💡 **La idea de binary search**: comparar con el medio. Si igual → encontrado. Si target menor → mitad izquierda. Si target mayor → mitad derecha. Cada paso descarta la mitad del espacio.
+> **La idea de binary search**: comparar con el medio. Si igual → encontrado. Si target menor → mitad izquierda. Si target mayor → mitad derecha. Cada paso descarta la mitad del espacio.
 
 ---
 
@@ -80,7 +80,7 @@ class Solution:
 
 **Análisis:**
 - **Tiempo: O(n)** — viola la restricción de O(log n).
-- **Veredicto:** ❌ no cumple la restricción.
+- **Veredicto:** [NO] no cumple la restricción.
 
 ---
 
@@ -115,13 +115,13 @@ Iter 2:
   left=3, right=5
   mid = 3 + (5-3)//2 = 4
   nums[4] = 9
-  9 == 9 → return 4 ✅
+  9 == 9 → return 4 [OK]
 ```
 
 **Análisis:**
 - **Tiempo: O(log n)** — cada iteración descarta la mitad.
 - **Espacio: O(1)** — dos índices.
-- **Veredicto:** ✅ **la canónica**.
+- **Veredicto:** [OK] **la canónica**.
 
 ### Las 4 trampas del binary search
 
@@ -183,9 +183,9 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(log n)**.
 - **Espacio: O(1)**.
-- **Veredicto:** ✅ funciona, pero **NO la uses en entrevista**. El entrevistador quiere ver que escribes binary search, no que conoces `bisect`. Úsalo solo en problemas donde es accesorio (LC 981).
+- **Veredicto:** [OK] funciona, pero **NO la uses en entrevista**. El entrevistador quiere ver que escribes binary search, no que conoces `bisect`. Úsalo solo en problemas donde es accesorio (LC 981).
 
-> 📚 **Funciones útiles de `bisect`**:
+> **Funciones útiles de `bisect`**:
 > - `bisect_left(arr, x)` → índice donde insertar `x` manteniendo orden, ANTES de duplicados.
 > - `bisect_right(arr, x)` (alias `bisect`) → índice DESPUÉS de duplicados.
 > - `insort_left(arr, x)` → inserta in-place (O(n) por el shift, pero binary search para localizar).
@@ -261,9 +261,9 @@ Lo verás en LC 34 y otros.
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Linear search | O(n) | O(1) | ❌ No cumple restricción |
-| 2. **Binary search clásico** | **O(log n)** | O(1) | ✅ La canónica |
-| 3. `bisect_left` | O(log n) | O(1) | ✅ Pythonic, no para entrevista |
+| 1. Linear search | O(n) | O(1) | [NO] No cumple restricción |
+| 2. **Binary search clásico** | **O(log n)** | O(1) | [OK] La canónica |
+| 3. `bisect_left` | O(log n) | O(1) | [OK] Pythonic, no para entrevista |
 
 ---
 
@@ -293,7 +293,7 @@ Lo verás en LC 34 y otros.
 
 ## Solución en C++ — contraste con Python
 
-> 📘 Añadido para ver las diferencias de lenguaje. Código compilable en [`704-binary-search.cpp`](704-binary-search.cpp).
+> Añadido para ver las diferencias de lenguaje. Código compilable en [`704-binary-search.cpp`](704-binary-search.cpp).
 
 ```cpp
 class Solution {

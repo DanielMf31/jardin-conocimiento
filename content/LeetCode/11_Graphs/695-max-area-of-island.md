@@ -14,7 +14,7 @@ neetcode_order: 3
 
 # LeetCode 695 — Max Area of Island
 
-> 🎯 **Tercer problema del patrón Graphs**. Variante directa de [[200-number-of-islands]] — en lugar de **contar** islas, devuelve el **tamaño** de la isla más grande.
+> **Tercer problema del patrón Graphs**. Variante directa de [[200-number-of-islands]] — en lugar de **contar** islas, devuelve el **tamaño** de la isla más grande.
 
 ## Enunciado
 
@@ -43,7 +43,7 @@ class Solution:
         return best
 ```
 
-**Veredicto:** ✅ canónica. La diferencia con LC 200: el DFS **devuelve el área** (no es void).
+**Veredicto:** [OK] canónica. La diferencia con LC 200: el DFS **devuelve el área** (no es void).
 
 ---
 

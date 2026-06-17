@@ -14,7 +14,7 @@ neetcode_order: 2
 
 # LeetCode 56 — Merge Intervals
 
-> 🎯 **Segundo problema de Intervals — el más fundamental**. **Sort + scan linear**. Patrón maestro de todo el bloque.
+> **Segundo problema de Intervals — el más fundamental**. **Sort + scan linear**. Patrón maestro de todo el bloque.
 
 ## Enunciado
 

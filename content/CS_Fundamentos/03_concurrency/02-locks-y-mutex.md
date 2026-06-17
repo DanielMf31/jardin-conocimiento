@@ -1,8 +1,8 @@
 # 02 — Locks y mutex
 
-> 📚 **Doc 2 del cluster Concurrency**. La herramienta principal para prevenir race conditions: las primitivas de sincronización que el SO y los runtimes te dan.
-> 🔥 **Frecuencia interview**: aparece en preguntas de "implementa thread-safe X", debugging de contención.
-> ⏱️ **Tiempo de lectura estimado**: 40-55 min.
+> **Doc 2 del cluster Concurrency**. La herramienta principal para prevenir race conditions: las primitivas de sincronización que el SO y los runtimes te dan.
+> **Frecuencia interview**: aparece en preguntas de "implementa thread-safe X", debugging de contención.
+> **Tiempo de lectura estimado**: 40-55 min.
 
 ---
 

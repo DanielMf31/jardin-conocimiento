@@ -14,7 +14,7 @@ neetcode_order: 4
 
 # LeetCode 54 — Spiral Matrix
 
-> 🎯 **Cuarto problema de Math & Geometry**. Recorrer matriz en espiral. Truco: **4 boundaries** que se contraen.
+> **Cuarto problema de Math & Geometry**. Recorrer matriz en espiral. Truco: **4 boundaries** que se contraen.
 
 ## Enunciado
 

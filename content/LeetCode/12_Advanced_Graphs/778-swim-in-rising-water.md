@@ -14,7 +14,7 @@ neetcode_order: 5
 
 # LeetCode 778 — Swim in Rising Water
 
-> 🎯 **Quinto problema de Advanced Graphs — Hard**. **Dijkstra modificado**: en lugar de minimizar suma de distancias, minimizar el **máximo** de elevaciones en el camino.
+> **Quinto problema de Advanced Graphs — Hard**. **Dijkstra modificado**: en lugar de minimizar suma de distancias, minimizar el **máximo** de elevaciones en el camino.
 
 ## Enunciado
 

@@ -14,8 +14,8 @@ neetcode_order: 4
 
 # LeetCode 11 — Container With Most Water
 
-> 🎯 **Cuarto problema del patrón Two Pointers**. Es el más **conceptual** del bloque: la solución óptima requiere un argumento de **greedy local** que no es obvio. Cuando entiendes por qué se mueve el puntero del menor (y no el del mayor), interiorizas una idea que reaparece en muchos problemas.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Cuarto problema del patrón Two Pointers**. Es el más **conceptual** del bloque: la solución óptima requiere un argumento de **greedy local** que no es obvio. Cuando entiendes por qué se mueve el puntero del menor (y no el del mayor), interiorizas una idea que reaparece en muchos problemas.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -25,7 +25,7 @@ Encuentra dos líneas que, junto con el eje x, formen el **contenedor con la may
 
 Devuelve la **cantidad máxima** de agua que el contenedor puede almacenar.
 
-> ⚠️ **No se puede inclinar el contenedor**: el agua se queda al nivel del menor de los dos lados.
+> **No se puede inclinar el contenedor**: el agua se queda al nivel del menor de los dos lados.
 
 **Ejemplo 1:**
 ```
@@ -88,7 +88,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n²)** — TLE con n = 10^5 (10^10 operaciones).
 - **Espacio: O(1)**.
-- **Veredicto:** ❌ rechazada.
+- **Veredicto:** [NO] rechazada.
 
 ---
 
@@ -127,12 +127,12 @@ class Solution:
 | 8 | 1 | 2 | 8 | 6 | 1 | 6 | 6 | h[l]>h[r] → right-- |
 | 9 | 1 | 1 | — | — | — | — | — | left==right → break |
 
-Mejor encontrado: **49** ✅.
+Mejor encontrado: **49** [OK].
 
 **Análisis:**
 - **Tiempo: O(n)** — los dos punteros recorren juntos n posiciones.
 - **Espacio: O(1)**.
-- **Veredicto:** ✅ **la óptima**. La pregunta clave es: **¿por qué mover el menor?**
+- **Veredicto:** [OK] **la óptima**. La pregunta clave es: **¿por qué mover el menor?**
 
 ### El argumento clave — por qué mover el puntero del menor
 
@@ -148,7 +148,7 @@ Por tanto: nuevo área = `min(height[left], height[j]) * (j - left) ≤ height[l
 
 **Conclusión**: no puede mejorar manteniendo `left`. Es **seguro descartar `left`** y avanzar.
 
-> 🎯 Este es **un argumento de greedy local**: en cada paso descartas un candidato sabiendo que no puede llevar a una solución mejor que la actual.
+> Este es **un argumento de greedy local**: en cada paso descartas un candidato sabiendo que no puede llevar a una solución mejor que la actual.
 
 ---
 
@@ -187,10 +187,10 @@ def two_pointers_greedy(arr):
 
 | Problema LeetCode | Variación |
 |---|---|
-| **42. Trapping Rain Water** ⭐ | Calcular el agua **total** atrapada (no solo entre dos líneas) |
+| **42. Trapping Rain Water** | Calcular el agua **total** atrapada (no solo entre dos líneas) |
 | **407. Trapping Rain Water II** | Versión 2D (sobre un grid) — más complejo, requiere heap |
 
-> 📌 **Container With Most Water** y **Trapping Rain Water** se confunden en entrevistas. La diferencia: aquí buscas un solo contenedor (max área entre dos líneas); allá calculas el total de agua atrapada considerando todas las "vasijas" formadas por el perfil completo.
+> **Container With Most Water** y **Trapping Rain Water** se confunden en entrevistas. La diferencia: aquí buscas un solo contenedor (max área entre dos líneas); allá calculas el total de agua atrapada considerando todas las "vasijas" formadas por el perfil completo.
 
 ---
 
@@ -229,8 +229,8 @@ Mismo patrón estructural (two pointers convergentes), distinto razonamiento de 
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Fuerza bruta | O(n²) | O(1) | ❌ TLE |
-| 2. **Two pointers + greedy** | **O(n)** | O(1) | ✅ La óptima |
+| 1. Fuerza bruta | O(n²) | O(1) | [NO] TLE |
+| 2. **Two pointers + greedy** | **O(n)** | O(1) | [OK] La óptima |
 
 ---
 

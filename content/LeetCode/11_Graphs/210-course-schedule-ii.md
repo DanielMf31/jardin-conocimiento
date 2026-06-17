@@ -14,7 +14,7 @@ neetcode_order: 9
 
 # LeetCode 210 — Course Schedule II
 
-> 🎯 **Noveno problema del patrón Graphs**. Extensión de [[207-course-schedule]]: en lugar de bool, devolver **el orden en que tomar los cursos**. Es **topological sort** clásico.
+> **Noveno problema del patrón Graphs**. Extensión de [[207-course-schedule]]: en lugar de bool, devolver **el orden en que tomar los cursos**. Es **topological sort** clásico.
 
 ## Enunciado
 

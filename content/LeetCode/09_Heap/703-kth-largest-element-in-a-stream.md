@@ -14,7 +14,7 @@ neetcode_order: 1
 
 # LeetCode 703 — Kth Largest Element in a Stream
 
-> 🎯 **Primer problema del patrón Heap**. Refuerza el patrón "min-heap de tamaño k para top-K" que ya viste en [[347-top-k-frequent-elements]]. Aquí en versión streaming.
+> **Primer problema del patrón Heap**. Refuerza el patrón "min-heap de tamaño k para top-K" que ya viste en [[347-top-k-frequent-elements]]. Aquí en versión streaming.
 
 ## Enunciado
 
@@ -47,7 +47,7 @@ class KthLargest:
 **Análisis:**
 - **add: O(log k)**.
 - **Espacio: O(k)**.
-- **Veredicto:** ✅ canónica.
+- **Veredicto:** [OK] canónica.
 
 ### Por qué min-heap (de nuevo)
 

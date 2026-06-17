@@ -14,7 +14,7 @@ neetcode_order: 2
 
 # LeetCode 746 — Min Cost Climbing Stairs
 
-> 🎯 **Segundo problema de DP 1-D**. Variante de [[70-climbing-stairs]] con **costes**: cada peldaño tiene un coste y queremos llegar al final con coste mínimo.
+> **Segundo problema de DP 1-D**. Variante de [[70-climbing-stairs]] con **costes**: cada peldaño tiene un coste y queremos llegar al final con coste mínimo.
 
 ## Enunciado
 

@@ -8,7 +8,7 @@ source: manual
 aliases: [Dudas GCP]
 ---
 
-# ❓ Dudas y Preguntas — GCP
+# Dudas y Preguntas — GCP
 
 > Log vivo de dudas al estudiar/usar GCP. Apunta la pregunta; al resolverla, enlaza al doc
 > y muévela a "Resueltas".

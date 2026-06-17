@@ -1,8 +1,8 @@
 # 04 — Distributed tracing
 
-> 📚 **Doc 4 (último) del cluster Distributed Systems**. Cómo entender qué pasa en un sistema con N microservicios cuando algo va lento o falla. La herramienta de observabilidad más importante en arquitecturas distribuidas modernas.
-> 🔥 **Frecuencia interview**: aparece en preguntas de "cómo debugeas X falla" en sistemas distribuidos. Conocer OpenTelemetry te diferencia.
-> ⏱️ **Tiempo de lectura estimado**: 30-45 min.
+> **Doc 4 (último) del cluster Distributed Systems**. Cómo entender qué pasa en un sistema con N microservicios cuando algo va lento o falla. La herramienta de observabilidad más importante en arquitecturas distribuidas modernas.
+> **Frecuencia interview**: aparece en preguntas de "cómo debugeas X falla" en sistemas distribuidos. Conocer OpenTelemetry te diferencia.
+> **Tiempo de lectura estimado**: 30-45 min.
 
 ---
 
@@ -336,7 +336,7 @@ Si no puedes → relee.
 
 ---
 
-## ¡Cluster Distributed Systems completado! 🎉
+## ¡Cluster Distributed Systems completado!
 
 Has completado el sexto Tier 2 (segundo de los avanzados). Resumen:
 

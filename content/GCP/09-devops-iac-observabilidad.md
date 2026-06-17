@@ -8,7 +8,7 @@ source: claude-code
 aliases: [GCP DevOps, IaC GCP, Cloud Build, Cloud Monitoring]
 ---
 
-# 🏗️ DevOps, IaC y observabilidad en GCP
+# DevOps, IaC y observabilidad en GCP
 
 ## ¿Por qué importa este clúster?
 
@@ -24,7 +24,7 @@ Estas tres piezas forman el **loop de confianza DevOps**: el código entra limpi
 
 ---
 
-## 🔁 CI/CD en GCP
+## CI/CD en GCP
 
 ### El problema que resuelve
 
@@ -153,7 +153,7 @@ GitHub/GitLab push
 
 ---
 
-## 🏛️ Infraestructura como Código (IaC)
+## Infraestructura como Código (IaC)
 
 ### El problema que resuelve
 
@@ -272,7 +272,7 @@ Para la mayoría de proyectos: **Terraform**. Config Connector tiene su nicho en
 
 ---
 
-## 👁️ Observabilidad en GCP (Cloud Operations Suite)
+## Observabilidad en GCP (Cloud Operations Suite)
 
 ### El modelo de los tres pilares
 
@@ -412,7 +412,7 @@ except Exception:
 
 ---
 
-## 🔗 Integrar GitLab con GCP CI/CD
+## Integrar GitLab con GCP CI/CD
 
 Si usas GitLab como repositorio (ver [[MOC_GitLab]]), tienes dos opciones para conectarlo con Cloud Build:
 
@@ -471,7 +471,7 @@ gcloud iam workload-identity-pools providers create-oidc gitlab-provider \
 
 ---
 
-## ⚠️ Errores y costes comunes
+## Errores y costes comunes
 
 | Error / trampa | Cómo evitarlo |
 |---|---|
@@ -490,7 +490,7 @@ gcloud iam workload-identity-pools providers create-oidc gitlab-provider \
 
 ---
 
-## 🧪 Aplícalo / practica
+## Aplícalo / practica
 
 1. **Pipeline mínimo**: crea un `cloudbuild.yaml` que haga `docker build` y `docker push` a AR. Conecta un trigger a tu rama `main`.
 2. **IaC desde cero**: escribe un `main.tf` que despliegue un Cloud Run service. Ejecuta `terraform plan` y verifica que el plan es coherente con lo que tienes en consola.

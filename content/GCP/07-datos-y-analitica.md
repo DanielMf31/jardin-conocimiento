@@ -8,7 +8,7 @@ source: claude-code
 aliases: [GCP datos, BigQuery GCP, data engineering GCP]
 ---
 
-# 📊 Datos y Analítica en GCP
+# Datos y Analítica en GCP
 
 ## ¿Por qué existe este stack?
 
@@ -25,7 +25,7 @@ APIs       -->  Datastream --> (batch ETL)        Bigtable       Vertex AI
 
 ---
 
-## 🏗️ El pipeline típico (panorama primero)
+## El pipeline típico (panorama primero)
 
 Antes de entrar en cada servicio, entiende los cuatro roles funcionales:
 
@@ -40,7 +40,7 @@ El matiz clave: **Storage (GCS) no es un almacén analítico**. Es un lago de ob
 
 ---
 
-## 🔵 BigQuery — Data Warehouse Serverless
+## BigQuery — Data Warehouse Serverless
 
 ### Por qué es distinto
 
@@ -137,7 +137,7 @@ Esto conecta directamente con [[10-ia-ml-vertex]] — Vertex AI puede consumir m
 
 ---
 
-## 📨 Pub/Sub — Mensajería Asíncrona y Streaming
+## Pub/Sub — Mensajería Asíncrona y Streaming
 
 ### El problema que resuelve
 
@@ -187,7 +187,7 @@ gcloud pubsub subscriptions pull sub-dataflow \
 
 ---
 
-## 🌊 Dataflow — Procesamiento Batch y Stream (Apache Beam)
+## Dataflow — Procesamiento Batch y Stream (Apache Beam)
 
 ### Qué es y por qué importa
 
@@ -240,7 +240,7 @@ Pagas por los workers (vCPU + RAM + disco) mientras el job está corriendo. Data
 
 ---
 
-## ⚡ Dataproc — Spark y Hadoop Gestionado
+## Dataproc — Spark y Hadoop Gestionado
 
 ### Cuándo lo necesitas
 
@@ -279,7 +279,7 @@ gcloud dataproc clusters delete mi-cluster --region=us-central1
 
 ---
 
-## 📈 Looker — Business Intelligence y Exploración
+## Looker — Business Intelligence y Exploración
 
 ### Qué es Looker (y qué no es)
 
@@ -305,7 +305,7 @@ No requiere CLI.
 
 ---
 
-## 🔄 Pipeline Completo — Ejemplo Integrado
+## Pipeline Completo — Ejemplo Integrado
 
 Caso: app de fitness que registra entrenamientos en tiempo real y genera métricas semanales.
 
@@ -338,7 +338,7 @@ Para datos históricos (batch) el flujo es:
 
 ---
 
-## 💡 Equivalencias AWS (referencia cruzada)
+## Equivalencias AWS (referencia cruzada)
 
 | GCP | AWS equivalente | Diferencia notable |
 |---|---|---|
@@ -350,7 +350,7 @@ Para datos históricos (batch) el flujo es:
 
 ---
 
-## ⚠️ Errores y Costes Comunes
+## Errores y Costes Comunes
 
 1. **`SELECT *` en BigQuery**: escanea todas las columnas aunque no las uses. Siempre especifica columnas.
 2. **Tablas sin particionar**: en tablas grandes, cualquier consulta escanea todo. Añade partición por fecha desde el inicio.
@@ -365,7 +365,7 @@ Para datos históricos (batch) el flujo es:
 
 ---
 
-## 🛠️ Aplícalo / Práctica
+## Aplícalo / Práctica
 
 **Nivel 0 — Free tier, sin coste:**
 - Crea un dataset en BigQuery Sandbox.

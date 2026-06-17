@@ -8,7 +8,7 @@ source: claude-code
 aliases: [XP, marcos de escalado, Shape Up]
 ---
 
-# 🗺️ Otros marcos ágiles
+# Otros marcos ágiles
 
 Scrum y Kanban son los más populares, pero el ecosistema ágil es más amplio. Este documento cubre tres territorios distintos:
 
@@ -30,7 +30,7 @@ XP no es un proceso de gestión (no te dice cómo planificar sprints); es un con
 
 ### Las prácticas clave
 
-#### 🤝 Pair Programming (programación en pareja)
+#### Pair Programming (programación en pareja)
 Dos personas, un teclado. Una conduce (*driver*), la otra revisa en tiempo real (*navigator*). Se rotan.
 
 - **Qué ganas**: menos bugs, transferencia de conocimiento instantánea, menos silos.
@@ -38,7 +38,7 @@ Dos personas, un teclado. Una conduce (*driver*), la otra revisa en tiempo real 
 - **Cuándo usarlo**: código crítico, onboarding de alguien nuevo, lógica compleja que un solo par de ojos no ve.
 - **Cuándo NO**: tareas mecánicas, exploración rápida de un spike (*spike* = investigación acotada sin presión de calidad).
 
-#### 🔴🟢🔵 TDD — Test-Driven Development
+#### (dificil)(facil) TDD — Test-Driven Development
 El ciclo es: **Rojo → Verde → Refactor**.
 
 1. Escribe un test que falla (rojo) — defines el comportamiento esperado antes de implementar.
@@ -49,21 +49,21 @@ Para alguien de hardware: es como escribir primero el pliego de especificaciones
 
 Lo que TDD realmente aporta no es la cobertura de tests — es que **fuerza a pensar en la interfaz antes que en la implementación**, lo que produce APIs más limpias.
 
-#### 🔁 Integración Continua (CI)
+#### Integración Continua (CI)
 Todos los desarrolladores integran su código al repositorio compartido **varias veces al día**. Cada integración lanza una batería de tests automáticamente.
 
 El problema que resuelve: el "infierno de la integración" — cuando cada equipo trabaja en su rama durante semanas y al mergear todo explota. CI lo convierte en micro-explosiones manejables.
 
 > No confundir CI con el pipeline de CD/despliegue — eso se expande en [[08-devops-y-cicd]].
 
-#### ♻️ Refactoring continuo
+#### Refactoring continuo
 Mejorar la estructura interna del código sin cambiar su comportamiento externo, de forma continua — no como una tarea puntual cada 6 meses.
 
 La metáfora clásica: la **deuda técnica** (*technical debt*). Código rápido-pero-sucio es como pedir un crédito: funciona ahora, pero pagas intereses (tiempo extra) cada vez que tocas esa parte. Refactorizar es amortizar la deuda.
 
 La regla **Boy Scout**: *deja el código más limpio de como lo encontraste*. Pequeñas mejoras constantes evitan la entropía.
 
-#### 🧑‍🤝‍🧑 Propiedad colectiva del código (*Collective Code Ownership*)
+#### ‍‍ Propiedad colectiva del código (*Collective Code Ownership*)
 Cualquier miembro del equipo puede modificar cualquier parte del código en cualquier momento. No hay "dueños" de módulos.
 
 Combinado con pair programming y TDD, esto elimina los cuellos de botella por conocimiento silado. El riesgo — que alguien rompa algo que no entiende — lo mitiga la batería de tests.
@@ -73,7 +73,7 @@ Combinado con pair programming y TDD, esto elimina los cuellos de botella por co
 
 ---
 
-## 2. 📈 Marcos de escalado
+## 2. Marcos de escalado
 
 ### ¿Por qué hacen falta?
 
@@ -123,7 +123,7 @@ Creado por Scrum.org (los mismos que definen Scrum). Es la opción más conserva
 
 **Cuándo usar Nexus**: escala moderada (30-70 devs), equipos que ya saben Scrum bien, quieres el mínimo overhead añadido.
 
-### Modelo Spotify 🎵
+### Modelo Spotify
 
 No es un framework formal — es una descripción de cómo Spotify organizó sus equipos alrededor de 2012. Se popularizó tanto que se trata como modelo.
 
@@ -151,7 +151,7 @@ La terminología clave:
 
 ---
 
-## 3. 🍃 Shape Up (Basecamp)
+## 3. Shape Up (Basecamp)
 
 ### ¿Por qué existe?
 
@@ -198,7 +198,7 @@ Esto elimina la "cola de prioridades" que en Scrum puede tener items olvidados d
 
 ---
 
-## 4. 🚀 Lean Startup
+## 4. Lean Startup
 
 ### ¿Por qué existe?
 
@@ -243,7 +243,7 @@ Un *pivot* es un **cambio estructurado de dirección** manteniendo lo aprendido.
 
 ---
 
-## 📊 Tabla resumen
+## Tabla resumen
 
 | Marco | Nivel | Para qué | Overhead | Cuándo NO |
 |---|---|---|---|---|
@@ -268,7 +268,7 @@ Un *pivot* es un **cambio estructurado de dirección** manteniendo lo aprendido.
 
 ---
 
-## 🛠️ Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 ### app web (React + FastAPI + MongoDB)
 

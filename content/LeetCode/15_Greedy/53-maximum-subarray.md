@@ -14,7 +14,7 @@ neetcode_order: 1
 
 # LeetCode 53 — Maximum Subarray
 
-> 🎯 **Primer problema de Greedy — Kadane's algorithm**. **El "fib" del greedy**. La idea: en cada posición, decidir si "extender el subarray actual" o "reiniciar desde aquí".
+> **Primer problema de Greedy — Kadane's algorithm**. **El "fib" del greedy**. La idea: en cada posición, decidir si "extender el subarray actual" o "reiniciar desde aquí".
 
 ## Enunciado
 

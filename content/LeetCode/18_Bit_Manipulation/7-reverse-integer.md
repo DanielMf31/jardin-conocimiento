@@ -14,7 +14,7 @@ neetcode_order: 7
 
 # LeetCode 7 — Reverse Integer
 
-> 🎯 **Séptimo y último problema de Bit Manipulation**. Invertir dígitos de un int 32 bits. La trampa: **detectar overflow** sin usar 64 bits.
+> **Séptimo y último problema de Bit Manipulation**. Invertir dígitos de un int 32 bits. La trampa: **detectar overflow** sin usar 64 bits.
 
 ## Enunciado
 
@@ -44,7 +44,7 @@ class Solution:
 
 ---
 
-## Cierre Bit Manipulation 🎉
+## Cierre Bit Manipulation
 
 | # | Problema | Idea |
 |---|---|---|
@@ -56,7 +56,7 @@ class Solution:
 | 6 | [[371-sum-of-two-integers]] | Half-adder |
 | 7 | **Este** | Reverse + check overflow |
 
-> 🎯 **Para tu perfil HW**: esta categoría te resultará la más familiar de todo el NeetCode 150. XOR, máscaras, shifts son lenguaje habitual de firmware.
+> **Para tu perfil HW**: esta categoría te resultará la más familiar de todo el NeetCode 150. XOR, máscaras, shifts son lenguaje habitual de firmware.
 
 ---
 
@@ -65,5 +65,5 @@ class Solution:
 - [ ] Leído
 - [ ] Implementado desde cero
 - [ ] Resuelto en LeetCode
-- [ ] **Patrón Bit Manipulation cerrado** ✅
-- [ ] **NEETCODE 150 COMPLETO** 🎉🎉🎉
+- [ ] **Patrón Bit Manipulation cerrado** [OK]
+- [ ] **NEETCODE 150 COMPLETO**

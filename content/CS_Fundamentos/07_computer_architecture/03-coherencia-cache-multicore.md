@@ -1,8 +1,8 @@
 # 03 — Coherencia de cache en multicore
 
-> 📚 **Doc 3 (último) del cluster Computer Architecture**. Cómo varios cores comparten memoria sin pisarse, y por qué esto es la base oculta de toda concurrencia. Avanzado pero potente.
-> 🔥 **Frecuencia interview**: aparece en preguntas de concurrency profundas, lock-free, atomic operations, memory ordering.
-> ⏱️ **Tiempo de lectura estimado**: 30-45 min.
+> **Doc 3 (último) del cluster Computer Architecture**. Cómo varios cores comparten memoria sin pisarse, y por qué esto es la base oculta de toda concurrencia. Avanzado pero potente.
+> **Frecuencia interview**: aparece en preguntas de concurrency profundas, lock-free, atomic operations, memory ordering.
+> **Tiempo de lectura estimado**: 30-45 min.
 
 ---
 
@@ -323,7 +323,7 @@ Si no puedes → relee.
 
 ---
 
-## ¡Cluster Computer Architecture completado! 🎉
+## ¡Cluster Computer Architecture completado!
 
 3 docs:
 - `01-cpu-pipeline-y-registros` — pipeline, branch prediction, SIMD, OoO.

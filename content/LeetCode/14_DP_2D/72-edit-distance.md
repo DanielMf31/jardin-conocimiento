@@ -14,7 +14,7 @@ neetcode_order: 7
 
 # LeetCode 72 — Edit Distance
 
-> 🎯 **Séptimo problema de DP 2-D — el más importante**. **Distancia de Levenshtein**. Aplicaciones: spell checking, diff algorithms, bioinformática (secuencias DNA).
+> **Séptimo problema de DP 2-D — el más importante**. **Distancia de Levenshtein**. Aplicaciones: spell checking, diff algorithms, bioinformática (secuencias DNA).
 
 ## Enunciado
 

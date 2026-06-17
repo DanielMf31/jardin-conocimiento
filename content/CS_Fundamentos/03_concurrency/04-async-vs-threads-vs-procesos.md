@@ -1,8 +1,8 @@
 # 04 — Async vs threads vs procesos: cuándo cada uno
 
-> 📚 **Doc 4 (último) del cluster Concurrency**. La pregunta más frecuente: tengo que paralelizar algo, ¿qué uso? Aquí decides.
-> 🔥 **Frecuencia interview**: aparece en system design (cómo escalas) y en preguntas Python específicas (GIL, asyncio).
-> ⏱️ **Tiempo de lectura estimado**: 40-60 min.
+> **Doc 4 (último) del cluster Concurrency**. La pregunta más frecuente: tengo que paralelizar algo, ¿qué uso? Aquí decides.
+> **Frecuencia interview**: aparece en system design (cómo escalas) y en preguntas Python específicas (GIL, asyncio).
+> **Tiempo de lectura estimado**: 40-60 min.
 
 ---
 
@@ -215,14 +215,14 @@ result = await loop.run_in_executor(None, cpu_heavy_function, arg)
 
 | Tarea | Async | Threads | Procesos |
 |---|---|---|---|
-| Web server (10K cnx) | ✅ ideal | ⚠️ no escala | ❌ overhead |
-| HTTP requests masivos | ✅ ideal | ⚠️ ok | ❌ pesado |
-| Image processing | ❌ bloquea | ⚠️ GIL | ✅ ideal |
-| ML training | ❌ bloquea | ❌ GIL | ✅ ideal |
-| DB queries (asyncio) | ✅ ideal | ⚠️ ok | ❌ overhead |
-| Background jobs CPU | ❌ bloquea | ❌ GIL | ✅ ideal |
-| Real-time UI | ✅ ideal | ⚠️ complejo | ❌ overhead |
-| Compute scientific | ❌ bloquea | ⚠️ con C | ✅ ideal |
+| Web server (10K cnx) | [OK] ideal | no escala | [NO] overhead |
+| HTTP requests masivos | [OK] ideal | ok | [NO] pesado |
+| Image processing | [NO] bloquea | GIL | [OK] ideal |
+| ML training | [NO] bloquea | [NO] GIL | [OK] ideal |
+| DB queries (asyncio) | [OK] ideal | ok | [NO] overhead |
+| Background jobs CPU | [NO] bloquea | [NO] GIL | [OK] ideal |
+| Real-time UI | [OK] ideal | complejo | [NO] overhead |
+| Compute scientific | [NO] bloquea | con C | [OK] ideal |
 
 ---
 
@@ -438,7 +438,7 @@ Si no puedes → relee.
 
 ---
 
-## ¡Cluster Concurrency completado! 🎉
+## ¡Cluster Concurrency completado!
 
 Has completado el tercer Tier 1. Resumen:
 

@@ -8,7 +8,7 @@ source: claude-code
 aliases: [herramientas agile, certificaciones scrum, jira trello linear]
 ---
 
-# 🛠️ Herramientas y Certificaciones Agile
+# Herramientas y Certificaciones Agile
 
 ## ¿Por qué importa esto?
 
@@ -22,7 +22,7 @@ Ambas son ortogonales: puedes usar Jira sin certificarte, y puedes tener PSM I s
 
 ---
 
-## 🖥️ Herramientas de gestión de proyectos
+## Herramientas de gestión de proyectos
 
 ### El problema que resuelven
 
@@ -77,7 +77,7 @@ Sin herramienta, el backlog vive en un Excel, los sprints se acuerdan de palabra
 
 ---
 
-## 🎓 Certificaciones Agile
+## Certificaciones Agile
 
 ### El ecosistema de certificaciones (panorama)
 
@@ -183,7 +183,7 @@ Hay cuatro organismos principales que emiten certificaciones Agile/Scrum. No son
 
 ---
 
-## ⚠️ Errores comunes
+## Errores comunes
 
 - **Estudiar solo el Scrum Guide para el PSM I sin hacer simulacros**: el examen tiene preguntas de aplicación en contexto, no solo definiciones. Los Open Assessments de scrum.org son los más parecidos al examen real.
 - **Elegir CSM por ser "más fácil"**: es más cara, caduca, y en entornos técnicos tiene menos peso que PSM I.
@@ -193,7 +193,7 @@ Hay cuatro organismos principales que emiten certificaciones Agile/Scrum. No son
 
 ---
 
-## 🚀 Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 ### app web (React + FastAPI + Docker)
 

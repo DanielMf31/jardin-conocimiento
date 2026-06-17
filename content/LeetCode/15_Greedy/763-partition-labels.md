@@ -14,7 +14,7 @@ neetcode_order: 7
 
 # LeetCode 763 — Partition Labels
 
-> 🎯 **Séptimo problema de Greedy**. Particionar string tal que cada letra esté en como mucho **una partición**. Greedy: precomputar última posición de cada letra.
+> **Séptimo problema de Greedy**. Particionar string tal que cada letra esté en como mucho **una partición**. Greedy: precomputar última posición de cada letra.
 
 ## Enunciado
 

@@ -8,7 +8,7 @@ source: claude-code
 aliases: [fundamentos gcp, intro cloud, cloud basics]
 ---
 
-# ☁️ Fundamentos de cloud y GCP
+# Fundamentos de cloud y GCP
 
 ## Por qué existe la nube (el problema que resuelve)
 
@@ -22,7 +22,7 @@ La nube resuelve esto convirtiendo infraestructura en **servicio por uso** (pay-
 
 ---
 
-## 🏗️ IaaS / PaaS / SaaS — los tres niveles del servicio
+## IaaS / PaaS / SaaS — los tres niveles del servicio
 
 Piénsalo como cuánto control tienes sobre la "pila" vs. cuánto gestiona el proveedor.
 
@@ -36,7 +36,7 @@ Piénsalo como cuánto control tienes sobre la "pila" vs. cuánto gestiona el pr
 
 ---
 
-## 🔐 Modelo de responsabilidad compartida
+## Modelo de responsabilidad compartida
 
 Este concepto es crítico para seguridad y aparece en cualquier certificación.
 
@@ -61,7 +61,7 @@ RESPONSABILIDAD DE GOOGLE ↓
 
 ---
 
-## 🌍 Regiones y zonas
+## Regiones y zonas
 
 Google opera su infraestructura en ubicaciones físicas distribuidas por el mundo.
 
@@ -80,7 +80,7 @@ Google opera su infraestructura en ubicaciones físicas distribuidas por el mund
 
 ---
 
-## 🏢 Jerarquía de recursos GCP
+## Jerarquía de recursos GCP
 
 Este es el concepto más importante del capítulo. GCP organiza todo en una jerarquía de 4 niveles:
 
@@ -131,7 +131,7 @@ gcloud config set project MI_PROJECT_ID
 
 ---
 
-## 💳 Facturación
+## Facturación
 
 - **Cuenta de facturación**: entidad separada del proyecto. Un proyecto debe estar vinculado a una cuenta de facturación para usar recursos de pago. Una cuenta de facturación puede pagar N proyectos.
 - **Free Tier**: GCP tiene un nivel gratuito **permanente** (no expira) para ciertos servicios:
@@ -150,7 +150,7 @@ gcloud billing projects link MI_PROJECT_ID \
 
 ---
 
-## 🖥️ Formas de interactuar con GCP
+## Formas de interactuar con GCP
 
 ### 1. Cloud Console (web)
 
@@ -219,7 +219,7 @@ Las credenciales las gestiona `application-default login` (para desarrollo local
 
 ---
 
-## 🚀 Primer contacto práctico
+## Primer contacto práctico
 
 Secuencia mínima para tener GCP operativo:
 
@@ -262,7 +262,7 @@ gcloud storage rm -r gs://mi-bucket-prueba-gcp
 
 ---
 
-## ⚠️ Errores y costes comunes
+## Errores y costes comunes
 
 | Error | Consecuencia | Cómo evitarlo |
 |---|---|---|

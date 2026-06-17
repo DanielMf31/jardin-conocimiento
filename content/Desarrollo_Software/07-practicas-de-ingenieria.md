@@ -8,7 +8,7 @@ source: claude-code
 aliases: [practicas ingenieria, engineering practices, xp practices]
 ---
 
-# 🔧 Prácticas de Ingeniería de Software
+# Prácticas de Ingeniería de Software
 
 > Las metodologías (Scrum, Kanban) dicen *qué* hacer y *cuándo*. Las prácticas de ingeniería dicen *cómo* hacerlo bien. Son el nivel técnico que convierte un proceso ágil en software que no colapsa.
 

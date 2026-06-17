@@ -14,7 +14,7 @@ neetcode_order: 3
 
 # LeetCode 309 — Best Time to Buy and Sell Stock with Cooldown
 
-> 🎯 **Tercer problema de DP 2-D**. **DP con state machine** (3 estados: hold / sold / rest). Después de vender, cooldown de 1 día.
+> **Tercer problema de DP 2-D**. **DP con state machine** (3 estados: hold / sold / rest). Después de vender, cooldown de 1 día.
 
 ## Enunciado
 

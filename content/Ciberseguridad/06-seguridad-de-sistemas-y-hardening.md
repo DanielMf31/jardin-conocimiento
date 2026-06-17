@@ -8,7 +8,7 @@ source: claude-code
 aliases: [hardening linux, seguridad sistemas, system hardening]
 ---
 
-# 🛡️ Seguridad de sistemas y hardening
+# Seguridad de sistemas y hardening
 
 ## ¿Por qué existe este documento?
 
@@ -18,7 +18,7 @@ Este documento cubre la capa del sistema operativo (Linux principalmente) desde 
 
 ---
 
-## 🗺️ Mapa mental del área
+## Mapa mental del área
 
 ```
 Sistema Operativo
@@ -44,7 +44,7 @@ Sistema Operativo
 
 ---
 
-## 1. 🔐 Modelo de permisos Unix (DAC)
+## 1. Modelo de permisos Unix (DAC)
 
 **DAC** (*Discretionary Access Control* — control de acceso discrecional): el *dueño* de un recurso decide quién puede acceder. Es el modelo nativo de Linux/Unix.
 
@@ -102,7 +102,7 @@ find / -perm -4000 -type f 2>/dev/null
 
 ---
 
-## 2. 🔺 Privilege Escalation (escalada de privilegios)
+## 2. Privilege Escalation (escalada de privilegios)
 
 **Concepto**: un atacante que ha entrado al sistema con un usuario de bajos privilegios intenta obtener privilegios de administrador (root/SYSTEM). Es uno de los pasos centrales del [[07-pentesting-y-ciclo-del-ataque]] (fase post-explotación).
 
@@ -129,7 +129,7 @@ find / -perm -4000 -type f 2>/dev/null
 
 ---
 
-## 3. 🔧 Hardening de Linux
+## 3. Hardening de Linux
 
 El hardening reduce la **superficie de ataque** (attack surface): la cantidad de puntos donde el sistema puede ser atacado. La idea es: lo que no existe no puede ser vulnerado.
 
@@ -225,7 +225,7 @@ sudo apt install lynis && sudo lynis audit system
 
 ---
 
-## 4. 🏷️ Control de acceso obligatorio (MAC): SELinux y AppArmor
+## 4. Control de acceso obligatorio (MAC): SELinux y AppArmor
 
 **MAC** (*Mandatory Access Control*): a diferencia del DAC, aquí el administrador del sistema define la política y **ni siquiera root puede saltársela** (en teoría). Añade una capa de defensa en profundidad: aunque un proceso sea comprometido, el kernel filtra qué puede hacer.
 
@@ -268,7 +268,7 @@ Si un servicio web (nginx, apache) tiene una vulnerabilidad de ejecución remota
 
 ---
 
-## 5. 📦 Sandboxing y aislamiento de procesos
+## 5. Sandboxing y aislamiento de procesos
 
 ### 5.1 Namespaces y cgroups (base de los contenedores)
 
@@ -310,7 +310,7 @@ trivy image mi-imagen:latest
 
 ---
 
-## 6. 🦠 Malware: tipos y detección
+## 6. Malware: tipos y detección
 
 ### 6.1 Tipos de malware
 
@@ -372,7 +372,7 @@ Señales de que el sistema puede estar comprometido:
 
 ---
 
-## 7. 🏋️ Errores comunes
+## 7. Errores comunes
 
 | Error | Consecuencia | Corrección |
 |-------|-------------|-----------|
@@ -387,7 +387,7 @@ Señales de que el sistema puede estar comprometido:
 
 ---
 
-## 8. 🧪 Aplícalo / practica
+## 8. Aplícalo / practica
 
 ### En laboratorio propio (VMs)
 

@@ -14,7 +14,7 @@ neetcode_order: 3
 
 # LeetCode 787 — Cheapest Flights Within K Stops
 
-> 🎯 **Tercer problema de Advanced Graphs**. **Bellman-Ford modificado** para shortest path con **límite de aristas**. Dijkstra no funciona bien aquí porque el límite de stops puede llevar a soluciones subóptimas globales pero óptimas con K stops.
+> **Tercer problema de Advanced Graphs**. **Bellman-Ford modificado** para shortest path con **límite de aristas**. Dijkstra no funciona bien aquí porque el límite de stops puede llevar a soluciones subóptimas globales pero óptimas con K stops.
 
 ## Enunciado
 

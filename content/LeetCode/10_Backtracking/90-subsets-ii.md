@@ -14,7 +14,7 @@ neetcode_order: 4
 
 # LeetCode 90 — Subsets II
 
-> 🎯 **Cuarto problema del patrón Backtracking**. Como [[78-subsets]] **pero el array tiene duplicados**. Truco: **sort primero + saltar duplicados consecutivos**.
+> **Cuarto problema del patrón Backtracking**. Como [[78-subsets]] **pero el array tiene duplicados**. Truco: **sort primero + saltar duplicados consecutivos**.
 
 ## Enunciado
 

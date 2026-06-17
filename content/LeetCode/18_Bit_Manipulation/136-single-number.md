@@ -14,7 +14,7 @@ neetcode_order: 1
 
 # LeetCode 136 — Single Number
 
-> 🎯 **Primer problema de Bit Manipulation — el clásico**. **XOR de todos**: `a ^ a = 0`, `a ^ 0 = a`. Los duplicados se cancelan, queda el único.
+> **Primer problema de Bit Manipulation — el clásico**. **XOR de todos**: `a ^ a = 0`, `a ^ 0 = a`. Los duplicados se cancelan, queda el único.
 
 ## Enunciado
 

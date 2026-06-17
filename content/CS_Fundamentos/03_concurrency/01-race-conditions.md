@@ -1,8 +1,8 @@
 # 01 — Race conditions
 
-> 📚 **Doc 1 del cluster Concurrency**. El problema fundamental de la programación concurrente: cuando varias cosas pasan a la vez sin coordinación. Casi todos los bugs de threads vienen de aquí.
-> 🔥 **Frecuencia interview**: aparece SIEMPRE en preguntas de threads/concurrency. La pregunta "incrementa contador de 2 threads" es clásica.
-> ⏱️ **Tiempo de lectura estimado**: 40-60 min.
+> **Doc 1 del cluster Concurrency**. El problema fundamental de la programación concurrente: cuando varias cosas pasan a la vez sin coordinación. Casi todos los bugs de threads vienen de aquí.
+> **Frecuencia interview**: aparece SIEMPRE en preguntas de threads/concurrency. La pregunta "incrementa contador de 2 threads" es clásica.
+> **Tiempo de lectura estimado**: 40-60 min.
 
 ---
 
@@ -219,7 +219,7 @@ print(counter)
 # AHORA: 1_000_000 SIEMPRE
 ```
 
-> ⚠️ **Sobre el GIL**: en CPython el GIL hace que `counter += 1` SOMETIMES sea atómico (operación simple sobre un int). Pero **NO confíes en el GIL para corrección** — puede no serlo en operaciones más complejas, y **otros runtimes Python (PyPy free-threaded, futuro Python sin GIL) NO lo serán**. Usa locks explícitos siempre.
+> **Sobre el GIL**: en CPython el GIL hace que `counter += 1` SOMETIMES sea atómico (operación simple sobre un int). Pero **NO confíes en el GIL para corrección** — puede no serlo en operaciones más complejas, y **otros runtimes Python (PyPy free-threaded, futuro Python sin GIL) NO lo serán**. Usa locks explícitos siempre.
 
 ---
 

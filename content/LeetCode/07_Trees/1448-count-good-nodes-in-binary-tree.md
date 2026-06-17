@@ -14,7 +14,7 @@ neetcode_order: 10
 
 # LeetCode 1448 — Count Good Nodes in Binary Tree
 
-> 🎯 **Décimo problema del patrón Trees**. Introduce el truco **"pasar contexto hacia abajo"** en la recursión (el max visto en el camino). Es la versión "acumulador top-down" del DFS.
+> **Décimo problema del patrón Trees**. Introduce el truco **"pasar contexto hacia abajo"** en la recursión (el max visto en el camino). Es la versión "acumulador top-down" del DFS.
 
 ## Enunciado
 

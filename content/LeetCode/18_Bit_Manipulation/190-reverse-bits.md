@@ -14,7 +14,7 @@ neetcode_order: 4
 
 # LeetCode 190 — Reverse Bits
 
-> 🎯 **Cuarto problema de Bit Manipulation**. Invertir los 32 bits de un entero.
+> **Cuarto problema de Bit Manipulation**. Invertir los 32 bits de un entero.
 
 ## Enunciado
 

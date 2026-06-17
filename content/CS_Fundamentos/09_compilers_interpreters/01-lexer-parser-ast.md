@@ -1,8 +1,8 @@
 # 01 — Lexer, parser, AST
 
-> 📚 **Doc 1 del cluster Compilers (Tier 3 opcional)**. Cómo cualquier lenguaje de programación entiende tu código. La frontera entre "texto que escribes" y "instrucciones que la CPU ejecuta".
-> 🎓 **Para quién**: opcional para grandes tecnologicas SWE típico, útil para roles compilers/lenguajes/DSLs/parsing tools.
-> ⏱️ **Tiempo de lectura estimado**: 35-50 min.
+> **Doc 1 del cluster Compilers (Tier 3 opcional)**. Cómo cualquier lenguaje de programación entiende tu código. La frontera entre "texto que escribes" y "instrucciones que la CPU ejecuta".
+> **Para quién**: opcional para grandes tecnologicas SWE típico, útil para roles compilers/lenguajes/DSLs/parsing tools.
+> **Tiempo de lectura estimado**: 35-50 min.
 
 ---
 

@@ -14,7 +14,7 @@ neetcode_order: 5
 
 # LeetCode 73 — Set Matrix Zeroes
 
-> 🎯 **Quinto problema de Math & Geometry**. Si una celda es 0, poner toda su fila y columna a 0. Truco: **usar la primera fila y columna como markers**.
+> **Quinto problema de Math & Geometry**. Si una celda es 0, poner toda su fila y columna a 0. Truco: **usar la primera fila y columna como markers**.
 
 ## Enunciado
 

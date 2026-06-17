@@ -14,7 +14,7 @@ neetcode_order: 2
 
 # LeetCode 66 — Plus One
 
-> 🎯 **Segundo problema de Math & Geometry — Easy**. Sumar 1 a un número representado como array de dígitos. Manejo de carry.
+> **Segundo problema de Math & Geometry — Easy**. Sumar 1 a un número representado como array de dígitos. Manejo de carry.
 
 ## Enunciado
 

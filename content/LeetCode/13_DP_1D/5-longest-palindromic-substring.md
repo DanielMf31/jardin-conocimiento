@@ -14,7 +14,7 @@ neetcode_order: 5
 
 # LeetCode 5 — Longest Palindromic Substring
 
-> 🎯 **Quinto problema de DP 1-D**. **Expand around center** es el approach más elegante: O(n²) tiempo, O(1) espacio. Más rápido que DP en práctica.
+> **Quinto problema de DP 1-D**. **Expand around center** es el approach más elegante: O(n²) tiempo, O(1) espacio. Más rápido que DP en práctica.
 
 ## Enunciado
 

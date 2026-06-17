@@ -14,8 +14,8 @@ neetcode_order: 5
 
 # LeetCode 42 — Trapping Rain Water
 
-> 🎯 **Quinto y último problema de Two Pointers — primer Hard del NeetCode 150**. Es el problema más famoso de "puzzle algorítmico": parece imposible al principio, hay **3 soluciones distintas** según el nivel de optimización, y la final con two pointers es **alucinante**. Dominar este problema es un gran paso.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Quinto y último problema de Two Pointers — primer Hard del NeetCode 150**. Es el problema más famoso de "puzzle algorítmico": parece imposible al principio, hay **3 soluciones distintas** según el nivel de optimización, y la final con two pointers es **alucinante**. Dominar este problema es un gran paso.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -66,7 +66,7 @@ class Solution:
 | Edge case 1                                         | Array de 1 o 2 elementos → 0 (no se atrapa agua sin dos paredes)       |
 | Edge case 2                                         | Array decreciente o creciente → 0 (no hay paredes a ambos lados)       |
 
-> 💡 **El insight más importante**: el agua sobre el índice `i` está limitada por el **mínimo de las dos paredes** que la rodean (la más alta a la izquierda y la más alta a la derecha). No te confundas: las paredes inmediatas no bastan, hay que mirar **el máximo total** a cada lado.
+> **El insight más importante**: el agua sobre el índice `i` está limitada por el **mínimo de las dos paredes** que la rodean (la más alta a la izquierda y la más alta a la derecha). No te confundas: las paredes inmediatas no bastan, hay que mirar **el máximo total** a cada lado.
 
 ---
 
@@ -90,7 +90,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n²)** — `max(height[:i+1])` cuesta O(n) por cada `i`.
 - **Espacio: O(1)**.
-- **Veredicto:** ❌ TLE con n = 2*10^4 (4*10^8 ops). Pero la idea es correcta.
+- **Veredicto:** [NO] TLE con n = 2*10^4 (4*10^8 ops). Pero la idea es correcta.
 
 ---
 
@@ -128,9 +128,9 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)** — tres pasadas lineales.
 - **Espacio: O(n)** — los dos arrays auxiliares.
-- **Veredicto:** ✅ correcta y aceptable. Es la solución que demuestra que **entiendes el problema**. Sin embargo, no es la óptima en espacio.
+- **Veredicto:** [OK] correcta y aceptable. Es la solución que demuestra que **entiendes el problema**. Sin embargo, no es la óptima en espacio.
 
-> 🎯 **Conexión directa con [[238-product-of-array-except-self]]**: el patrón prefix/suffix accumulator. Misma técnica, distinta operación (`max` en lugar de `*`).
+> **Conexión directa con [[238-product-of-array-except-self]]**: el patrón prefix/suffix accumulator. Misma técnica, distinta operación (`max` en lugar de `*`).
 
 ---
 
@@ -179,7 +179,7 @@ Estado inicial: `left=0, right=11, max_left=0, max_right=1, total=0`.
 | 6 | 4 | 9 | max(2,1)=2 | 2 | total += 2-1=1 | 3 |
 | ... | ... | ... | ... | ... | ... | ... |
 
-Resultado final: `total = 6` ✅
+Resultado final: `total = 6` [OK]
 
 ### Por qué funciona — el argumento clave
 
@@ -189,12 +189,12 @@ Aunque desconocemos el **futuro** `max_right` (puede crecer al avanzar right hac
 
 Por tanto, podemos calcular `agua_local = max_left - height[left+1]` sin tener `maxRight` exacto del lado derecho.
 
-> 🎯 Este argumento es **profundo** y se repite en muchos problemas: a veces no necesitas información completa, solo saber que hay un **lower bound** que basta para tomar la decisión.
+> Este argumento es **profundo** y se repite en muchos problemas: a veces no necesitas información completa, solo saber que hay un **lower bound** que basta para tomar la decisión.
 
 **Análisis:**
 - **Tiempo: O(n)** — los dos punteros recorren n posiciones juntos.
 - **Espacio: O(1)** — solo cuatro variables.
-- **Veredicto:** ✅✅ **la óptima absoluta**. La que demuestra dominio del problema en una entrevista.
+- **Veredicto:** [OK][OK] **la óptima absoluta**. La que demuestra dominio del problema en una entrevista.
 
 ---
 
@@ -235,7 +235,7 @@ def two_pointers_max_track(arr):
 
 | Problema LeetCode | Variación |
 |---|---|
-| **11. Container With Most Water** ⭐ | El problema "hermano" más simple |
+| **11. Container With Most Water** | El problema "hermano" más simple |
 | **407. Trapping Rain Water II** | Versión 2D (sobre grid) — necesita **heap**, mucho más complejo |
 | **84. Largest Rectangle in Histogram** | Mayor rectángulo que cabe → stack monotónico |
 | **85. Maximal Rectangle** | Versión 2D del 84 |
@@ -276,9 +276,9 @@ Mismo patrón estructural (two pointers convergentes), distinta cantidad de info
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Fuerza bruta | O(n²) | O(1) | ❌ TLE |
-| 2. Prefix + Suffix max arrays | O(n) | O(n) | ✅ Correcta y didáctica |
-| 3. **Two pointers** | **O(n)** | **O(1)** | ✅ La óptima absoluta |
+| 1. Fuerza bruta | O(n²) | O(1) | [NO] TLE |
+| 2. Prefix + Suffix max arrays | O(n) | O(n) | [OK] Correcta y didáctica |
+| 3. **Two pointers** | **O(n)** | **O(1)** | [OK] La óptima absoluta |
 
 ---
 
@@ -304,7 +304,7 @@ Mismo patrón estructural (two pointers convergentes), distinta cantidad de info
 
 ---
 
-## Cierre del patrón Two Pointers 🎉
+## Cierre del patrón Two Pointers
 
 Has llegado al **último problema del segundo patrón del NeetCode 150**. Resumen de los **5 problemas**:
 
@@ -335,4 +335,4 @@ Has llegado al **último problema del segundo patrón del NeetCode 150**. Resume
 - [ ] Justificado el invariante de la Solución 3
 - [ ] Trace mental hecho con ambos ejemplos
 - [ ] Resuelto en LeetCode con éxito
-- [ ] **Patrón Two Pointers cerrado** ✅
+- [ ] **Patrón Two Pointers cerrado** [OK]

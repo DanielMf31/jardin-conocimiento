@@ -1,8 +1,8 @@
 # 01 — CAP y PACELC
 
-> 📚 **Doc 1 del cluster Distributed Systems**. El teorema más famoso de sistemas distribuidos. Marca los límites fundamentales de cualquier sistema con datos replicados.
-> 🔥 **Frecuencia interview**: aparece en TODA system design seria. Si te preguntan "qué BD usas y por qué", CAP/PACELC es la justificación.
-> ⏱️ **Tiempo de lectura estimado**: 35-50 min.
+> **Doc 1 del cluster Distributed Systems**. El teorema más famoso de sistemas distribuidos. Marca los límites fundamentales de cualquier sistema con datos replicados.
+> **Frecuencia interview**: aparece en TODA system design seria. Si te preguntan "qué BD usas y por qué", CAP/PACELC es la justificación.
+> **Tiempo de lectura estimado**: 35-50 min.
 
 ---
 

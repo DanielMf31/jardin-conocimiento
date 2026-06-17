@@ -8,7 +8,7 @@ source: manual
 aliases: [Dudas GitLab]
 ---
 
-# ❓ Dudas y Preguntas — GitLab
+# Dudas y Preguntas — GitLab
 
 > Log vivo de dudas al estudiar/usar GitLab. Apunta la pregunta; al resolverla, enlaza al doc
 > que la responde y muévela a "Resueltas".

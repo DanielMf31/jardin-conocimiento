@@ -14,7 +14,7 @@ neetcode_order: 3
 
 # LeetCode 46 — Permutations
 
-> 🎯 **Tercer problema del patrón Backtracking**. **Permutaciones**: importa el orden. Truco: array `used[]` o set para marcar elementos ya elegidos.
+> **Tercer problema del patrón Backtracking**. **Permutaciones**: importa el orden. Truco: array `used[]` o set para marcar elementos ya elegidos.
 
 ## Enunciado
 

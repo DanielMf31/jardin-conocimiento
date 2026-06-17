@@ -14,7 +14,7 @@ neetcode_order: 7
 
 # LeetCode 91 — Decode Ways
 
-> 🎯 **Séptimo problema de DP 1-D**. Cómo decodificar strings tipo `"12"` que pueden ser `"AB"` (1, 2) o `"L"` (12). DP "Fibonacci con condicional".
+> **Séptimo problema de DP 1-D**. Cómo decodificar strings tipo `"12"` que pueden ser `"AB"` (1, 2) o `"L"` (12). DP "Fibonacci con condicional".
 
 ## Enunciado
 

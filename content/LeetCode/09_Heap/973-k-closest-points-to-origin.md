@@ -14,7 +14,7 @@ neetcode_order: 3
 
 # LeetCode 973 — K Closest Points to Origin
 
-> 🎯 **Tercer problema del patrón Heap**. **Top-K más cercanos**: usa **max-heap de tamaño k** (echar al peor candidato cuando se llena).
+> **Tercer problema del patrón Heap**. **Top-K más cercanos**: usa **max-heap de tamaño k** (echar al peor candidato cuando se llena).
 
 ## Enunciado
 

@@ -14,8 +14,8 @@ neetcode_order: 3
 
 # LeetCode 150 — Evaluate Reverse Polish Notation
 
-> 🎯 **Tercer problema del patrón Stack** — la aplicación clásica para **evaluar expresiones aritméticas**. RPN (Reverse Polish Notation) es el formato natural de los stacks: cada operador consume los **dos elementos más recientes**, perfectamente LIFO.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Tercer problema del patrón Stack** — la aplicación clásica para **evaluar expresiones aritméticas**. RPN (Reverse Polish Notation) es el formato natural de los stacks: cada operador consume los **dos elementos más recientes**, perfectamente LIFO.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -71,13 +71,13 @@ class Solution:
 | ¿Operandos negativos? | Sí, llegan como string `"-11"`. `int("-11")` funciona |
 | ¿Orden de operandos? | El primero pop es el **derecho**, el segundo es el **izquierdo** |
 
-> ⚠️ **La trampa más común**: la división. En Python, `//` redondea hacia menos infinito. Para "truncar hacia cero" hay que usar `int(a / b)` o `int(a/b)`.
+> **La trampa más común**: la división. En Python, `//` redondea hacia menos infinito. Para "truncar hacia cero" hay que usar `int(a / b)` o `int(a/b)`.
 
 ---
 
 ## Entender RPN antes de codear (sección de fondo)
 
-> 📚 **Si la notación misma te resulta liosa, lee esto antes de las soluciones**. Una vez entiendes RPN como notación, el algoritmo se cae solo.
+> **Si la notación misma te resulta liosa, lee esto antes de las soluciones**. Una vez entiendes RPN como notación, el algoritmo se cae solo.
 
 ### De dónde viene RPN y por qué existe
 
@@ -172,12 +172,12 @@ Para entender RPN, sirve poder traducir mentalmente. La regla:
 Ejemplo: `(2 + 1) * 3`
 - `(2 + 1)` primero: el `+` va al final → `2 1 +`
 - Eso es ahora "un valor". Luego `* 3`: el `*` va al final → `[2 1 +] 3 *`
-- RPN: `2 1 + 3 *` ✓
+- RPN: `2 1 + 3 *`
 
 Ejemplo: `4 + 13 / 5`
 - `13 / 5` primero (precedencia mayor): `13 5 /`
 - Eso es "un valor". Luego `4 +`: el `+` va al final → `4 [13 5 /] +`
-- RPN: `4 13 5 / +` ✓
+- RPN: `4 13 5 / +`
 
 ### Trace COMPLETO del ejemplo difícil (13 tokens, resultado 22)
 
@@ -202,7 +202,7 @@ token "+"   → pop b=3, pop a=9     stack = [10, 6]
               push (9 + 3) = 12    stack = [10, 6, 12]
 
 token "-11" → push -11             stack = [10, 6, 12, -11]
-              ⚠️ "-11" es número, NO operador.
+               "-11" es número, NO operador.
                  Por eso el código usa len(token)==1 para distinguir.
 
 token "*"   → pop b=-11, pop a=12  stack = [10, 6]
@@ -210,10 +210,10 @@ token "*"   → pop b=-11, pop a=12  stack = [10, 6]
 
 token "/"   → pop b=-132, pop a=6  stack = [10]
               push int(6 / -132) = 0   stack = [10, 0]
-              ⚠️ aquí entra la trampa de la división:
+               aquí entra la trampa de la división:
                  6 / -132 = -0.0454...
-                 int(-0.0454) = 0   (truncar hacia cero ✓)
-                 6 // -132        = -1 (truncar hacia menos inf ✗)
+                 int(-0.0454) = 0   (truncar hacia cero )
+                 6 // -132        = -1 (truncar hacia menos inf )
 
 token "*"   → pop b=0, pop a=10    stack = []
               push (10 * 0) = 0    stack = [0]
@@ -228,7 +228,7 @@ token "5"   → push 5               stack = [17, 5]
 token "+"   → pop b=5, pop a=17    stack = []
               push (17 + 5) = 22   stack = [22]
 
-final: stack[0] = 22 ✅
+final: stack[0] = 22 [OK]
 ```
 
 **Reconstruyendo el árbol** que esto representa:
@@ -249,7 +249,7 @@ final: stack[0] = 22 ✅
                 9   3
 ```
 
-Lectura: `((10 * (6 / ((9+3) * -11))) + 17) + 5` = `((10 * (6 / (12 * -11))) + 17) + 5` = `((10 * (6/-132)) + 17) + 5` = `((10 * 0) + 17) + 5` = `(0 + 17) + 5` = `22`. ✓
+Lectura: `((10 * (6 / ((9+3) * -11))) + 17) + 5` = `((10 * (6 / (12 * -11))) + 17) + 5` = `((10 * (6/-132)) + 17) + 5` = `((10 * 0) + 17) + 5` = `(0 + 17) + 5` = `22`.
 
 ### La trampa del orden de operandos — explicada
 
@@ -267,7 +267,7 @@ Pensemos en `5 - 3`:
 - Cuando llega `-`, el **top** del stack es `3` (último apilado) → operando **derecho**.
 - `pop()` saca `3` primero → `b` (derecho).
 - `pop()` saca `5` después → `a` (izquierdo).
-- Aplicas `a - b` = `5 - 3 = 2`. ✓
+- Aplicas `a - b` = `5 - 3 = 2`.
 
 **Si lo hicieras al revés** (`b - a`), `3 - 5 = -2`. Mal.
 
@@ -317,7 +317,7 @@ class Solution:
         return stack[0]
 ```
 
-> 💡 **`len(token) == 1`** evita confundir `"-11"` (entero negativo, longitud 3) con el operador `"-"` (longitud 1).
+> **`len(token) == 1`** evita confundir `"-11"` (entero negativo, longitud 3) con el operador `"-"` (longitud 1).
 
 **Trace mental con `["2", "1", "+", "3", "*"]`**:
 
@@ -334,13 +334,13 @@ token="*" (operador):
        b = 3, a = 3
        push (3 * 3) = 9              stack = [9]
 
-Final: stack[0] = 9 ✅
+Final: stack[0] = 9 [OK]
 ```
 
 **Análisis:**
 - **Tiempo: O(n)** — un recorrido lineal.
 - **Espacio: O(n)** — el stack puede tener hasta n/2 + 1 elementos.
-- **Veredicto:** ✅ **la canónica**.
+- **Veredicto:** [OK] **la canónica**.
 
 ---
 
@@ -430,7 +430,7 @@ def eval_rpn(tokens):
 | **772. Basic Calculator III** | Combinación con paréntesis (Hard) |
 | **394. Decode String** | Decodificación con stack (similar pero strings) |
 
-> 🎯 **Las variantes con expresiones infijas son mucho más complicadas** porque requieren manejar precedencia. La RPN ya tiene la precedencia "incorporada" en el orden de tokens.
+> **Las variantes con expresiones infijas son mucho más complicadas** porque requieren manejar precedencia. La RPN ya tiene la precedencia "incorporada" en el orden de tokens.
 
 ---
 
@@ -477,8 +477,8 @@ Para `+` y `*` es conmutativo y da igual. Para `-` y `/` el orden importa.
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. **Stack con if encadenados** | **O(n)** | O(n) | ✅ La directa |
-| 2. **Stack con dict de funciones** | **O(n)** | O(n) | ✅ Más pythonic |
+| 1. **Stack con if encadenados** | **O(n)** | O(n) | [OK] La directa |
+| 2. **Stack con dict de funciones** | **O(n)** | O(n) | [OK] Más pythonic |
 
 ---
 

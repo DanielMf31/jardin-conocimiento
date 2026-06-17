@@ -14,7 +14,7 @@ neetcode_order: 5
 
 # LeetCode 40 — Combination Sum II
 
-> 🎯 **Quinto problema del patrón Backtracking**. Como [[39-combination-sum]] **pero NO se permite repetir**, y `candidates` tiene duplicados. Combina el truco de [[90-subsets-ii]] (sort + skip dups) con `i+1` en la recursión.
+> **Quinto problema del patrón Backtracking**. Como [[39-combination-sum]] **pero NO se permite repetir**, y `candidates` tiene duplicados. Combina el truco de [[90-subsets-ii]] (sort + skip dups) con `i+1` en la recursión.
 
 ## Enunciado
 

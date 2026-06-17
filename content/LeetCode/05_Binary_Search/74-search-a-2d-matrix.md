@@ -14,8 +14,8 @@ neetcode_order: 2
 
 # LeetCode 74 — Search a 2D Matrix
 
-> 🎯 **Segundo problema del patrón Binary Search**. Aplica el binary search clásico a una matriz 2D, con el truco de **tratar la matriz como un array 1D virtual**. Es la introducción al pensamiento "convertir índices entre representaciones".
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Segundo problema del patrón Binary Search**. Aplica el binary search clásico a una matriz 2D, con el truco de **tratar la matriz como un array 1D virtual**. Es la introducción al pensamiento "convertir índices entre representaciones".
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -25,7 +25,7 @@ Te dan una matriz `m × n` con dos propiedades:
 
 Devuelve `True` si `target` está en la matriz, `False` si no.
 
-> ⚠️ **La segunda propiedad es clave**: significa que si "aplanas" la matriz fila por fila, queda como un array 1D ordenado.
+> **La segunda propiedad es clave**: significa que si "aplanas" la matriz fila por fila, queda como un array 1D ordenado.
 
 **Ejemplo 1:**
 ```
@@ -84,7 +84,7 @@ class Solution:
         return False
 ```
 
-**Análisis:** O(m·n). Ignora completamente que está ordenado. ❌ No es lo que el problema espera.
+**Análisis:** O(m·n). Ignora completamente que está ordenado. [NO] No es lo que el problema espera.
 
 ---
 
@@ -126,7 +126,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(log m + log n)** = O(log(m·n)) — dos binary searches independientes.
 - **Espacio: O(1)**.
-- **Veredicto:** ✅ correcta, demuestra dos binary searches en serie.
+- **Veredicto:** [OK] correcta, demuestra dos binary searches en serie.
 
 ---
 
@@ -169,7 +169,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(log(m·n))** — un solo binary search.
 - **Espacio: O(1)**.
-- **Veredicto:** ✅ **la canónica**. La que demuestra dominio del concepto "matriz como 1D virtual".
+- **Veredicto:** [OK] **la canónica**. La que demuestra dominio del concepto "matriz como 1D virtual".
 
 **Trace mental con `matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 11`**:
 
@@ -180,7 +180,7 @@ Inicial: left=0, right=11
 Iter 1:
   mid = 0 + (11-0)//2 = 5
   divmod(5, 4) = (1, 1) → matrix[1][1] = 11
-  11 == 11 → return True ✅
+  11 == 11 → return True [OK]
 ```
 
 ---
@@ -207,9 +207,9 @@ class Solution:
 
 **Análisis:**
 - **Tiempo: O(m + n)** — peor que log(m·n).
-- **Veredicto:** ✅ funciona pero **menos eficiente que la 3** para este problema. Sin embargo, **es la óptima en LC 240** (variante donde cada fila/columna está ordenada pero las filas no están "encadenadas"). En LC 240, log no aplica → staircase es lo mejor.
+- **Veredicto:** [OK] funciona pero **menos eficiente que la 3** para este problema. Sin embargo, **es la óptima en LC 240** (variante donde cada fila/columna está ordenada pero las filas no están "encadenadas"). En LC 240, log no aplica → staircase es lo mejor.
 
-> 🎯 **Saber cuándo cada uno**: si las filas están "encadenadas" (LC 74), binary search 1D. Si solo cada fila/columna está ordenada por separado (LC 240), staircase.
+> **Saber cuándo cada uno**: si las filas están "encadenadas" (LC 74), binary search 1D. Si solo cada fila/columna está ordenada por separado (LC 240), staircase.
 
 ---
 
@@ -295,12 +295,12 @@ Patrón que aparece en muchos problemas de matriz.
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Búsqueda lineal | O(m·n) | O(1) | ❌ No aprovecha el orden |
-| 2. Dos binary searches | O(log m + log n) | O(1) | ✅ Correcta |
-| 3. **Binary search 1D virtual** | **O(log(m·n))** | O(1) | ✅ La elegante |
+| 1. Búsqueda lineal | O(m·n) | O(1) | [NO] No aprovecha el orden |
+| 2. Dos binary searches | O(log m + log n) | O(1) | [OK] Correcta |
+| 3. **Binary search 1D virtual** | **O(log(m·n))** | O(1) | [OK] La elegante |
 | 4. Staircase top-right | O(m+n) | O(1) | Funciona, óptima en LC 240 |
 
-> 💡 **Nota**: O(log m + log n) y O(log(m·n)) son **prácticamente equivalentes** (recordemos que log(a·b) = log(a) + log(b)). Soluciones 2 y 3 son equivalentes en complejidad.
+> **Nota**: O(log m + log n) y O(log(m·n)) son **prácticamente equivalentes** (recordemos que log(a·b) = log(a) + log(b)). Soluciones 2 y 3 son equivalentes en complejidad.
 
 ---
 

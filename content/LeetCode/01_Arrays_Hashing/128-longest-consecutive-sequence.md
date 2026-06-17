@@ -14,8 +14,8 @@ neetcode_order: 9
 
 # LeetCode 128 — Longest Consecutive Sequence
 
-> 🎯 **Noveno y último problema del NeetCode 150 en Arrays & Hashing**. Es **el más conceptualmente exigente** del bloque. Demuestra el truco más bonito del patrón: un algoritmo que **parece O(n²) pero es O(n)** por análisis amortizado. Cuando lo entiendes, te queda un patrón que reaparece muchas veces.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Noveno y último problema del NeetCode 150 en Arrays & Hashing**. Es **el más conceptualmente exigente** del bloque. Demuestra el truco más bonito del patrón: un algoritmo que **parece O(n²) pero es O(n)** por análisis amortizado. Cuando lo entiendes, te queda un patrón que reaparece muchas veces.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -126,7 +126,7 @@ class Solution:
 | 3 | SÍ (2 sí) | NO | (skip) | — |
 | 2 | SÍ (1 sí) | NO | (skip) | — |
 
-Resultado: `longest = 4`. ✅
+Resultado: `longest = 4`. [OK]
 
 ### Por qué esto es O(n) y no O(n²)
 
@@ -141,9 +141,9 @@ Total: **2n visitas máximo** → O(n).
 **Análisis:**
 - **Tiempo: O(n)** amortizado.
 - **Espacio: O(n)** — el set.
-- **Veredicto:** ✅ **la respuesta esperada en entrevista**. Cumple O(n) y revela el truco amortizado.
+- **Veredicto:** [OK] **la respuesta esperada en entrevista**. Cumple O(n) y revela el truco amortizado.
 
-> 💡 **Lección de análisis amortizado**: no siempre el peor caso por iteración determina la complejidad total. A veces el "trabajo total" se distribuye desigualmente y el promedio es lineal. Este patrón aparece en otros sitios: stack monotónico, sliding window con dos punteros, etc.
+> **Lección de análisis amortizado**: no siempre el peor caso por iteración determina la complejidad total. A veces el "trabajo total" se distribuye desigualmente y el promedio es lineal. Este patrón aparece en otros sitios: stack monotónico, sliding window con dos punteros, etc.
 
 ---
 
@@ -251,7 +251,7 @@ A veces el trabajo "por iteración" varía pero el **trabajo total** está acota
 - **Two pointers / sliding window**: cada puntero avanza como mucho n veces → O(n).
 - **Este problema**: cada elemento se "toca" en un `while` como mucho 1 vez → O(n).
 
-> 🎯 **Si ves "doble bucle pero cada elemento se procesa una vez"**, sospecha amortización. Es una idea repetida.
+> **Si ves "doble bucle pero cada elemento se procesa una vez"**, sospecha amortización. Es una idea repetida.
 
 ### Iterar sobre `set` vs `list`
 
@@ -283,9 +283,9 @@ Esto es exactamente lo que quieres: las secuencias consecutivas no se "alargan" 
 
 | Solución | Tiempo | Espacio | Cumple O(n) | Veredicto |
 |---|---|---|---|---|
-| 1. Sort + scan | O(n log n) | O(n) | ❌ | Acepta pero no entrevista |
-| 2. **Hash set + ancla** | **O(n)** amort. | O(n) | ✅ | ✅ La canónica |
-| 3. Union-Find | O(n·α(n)) | O(n) | ✅ | Demasiado para este problema |
+| 1. Sort + scan | O(n log n) | O(n) | [NO] | Acepta pero no entrevista |
+| 2. **Hash set + ancla** | **O(n)** amort. | O(n) | [OK] | [OK] La canónica |
+| 3. Union-Find | O(n·α(n)) | O(n) | [OK] | Demasiado para este problema |
 
 ---
 
@@ -311,7 +311,7 @@ Esto es exactamente lo que quieres: las secuencias consecutivas no se "alargan" 
 
 ---
 
-## Cierre del patrón Arrays & Hashing 🎉
+## Cierre del patrón Arrays & Hashing
 
 Has llegado al **último problema del primer patrón del NeetCode 150**. Resumen de los **9 problemas** y la "info clave en el dict":
 
@@ -344,4 +344,4 @@ Has llegado al **último problema del primer patrón del NeetCode 150**. Resumen
 - [ ] Trace mental hecho con caso de duplicados (Bonus 4)
 - [ ] Resuelto en LeetCode con éxito
 - [ ] Hecho 1 vez más a la semana siguiente
-- [ ] **Patrón Arrays & Hashing cerrado** ✅
+- [ ] **Patrón Arrays & Hashing cerrado** [OK]

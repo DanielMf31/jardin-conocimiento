@@ -14,7 +14,7 @@ neetcode_order: 8
 
 # LeetCode 322 — Coin Change
 
-> 🎯 **Octavo problema de DP 1-D**. **Unbounded knapsack**: cuántas monedas mínimas para sumar amount, monedas reusables. Es **el problema más típico** de "DP por valor objetivo".
+> **Octavo problema de DP 1-D**. **Unbounded knapsack**: cuántas monedas mínimas para sumar amount, monedas reusables. Es **el problema más típico** de "DP por valor objetivo".
 
 ## Enunciado
 

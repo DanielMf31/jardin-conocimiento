@@ -14,7 +14,7 @@ neetcode_order: 6
 
 # LeetCode 994 — Rotting Oranges
 
-> 🎯 **Sexto problema del patrón Graphs**. **BFS multi-source**: empezar la BFS desde **todas las fuentes a la vez** (todas las naranjas podridas iniciales). Patrón crucial para "tiempo mínimo para alcanzar todo".
+> **Sexto problema del patrón Graphs**. **BFS multi-source**: empezar la BFS desde **todas las fuentes a la vez** (todas las naranjas podridas iniciales). Patrón crucial para "tiempo mínimo para alcanzar todo".
 
 ## Enunciado
 

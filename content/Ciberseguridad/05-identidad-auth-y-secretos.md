@@ -8,7 +8,7 @@ source: claude-code
 aliases: [auth-y-secretos, identidad-digital, autenticacion-autorizacion]
 ---
 
-# 🔐 Identidad: autenticacion, autorizacion y secretos
+# Identidad: autenticacion, autorizacion y secretos
 
 ## Por que importa este dominio
 
@@ -192,7 +192,7 @@ is_valid = pwd_context.verify("contrasena_introducida", hashed)
 
 ---
 
-## 6. Gestion de secretos 🔑
+## 6. Gestion de secretos
 
 Este es el punto donde mas proyectos fallan, incluyendo proyectos propios. Un secreto es cualquier valor que, si se expone, compromete la seguridad: contrasenas de DB, API keys, claves privadas, tokens de servicio.
 
@@ -320,7 +320,7 @@ gitleaks detect --source . --no-git=false
 
 ---
 
-## Aplícalo / Practica 🧪
+## Aplícalo / Practica
 
 ### En tus proyectos (app web y similares)
 

@@ -14,7 +14,7 @@ neetcode_order: 9
 
 # LeetCode 51 — N-Queens
 
-> 🎯 **Noveno y último problema del patrón Backtracking — el Hard**. Problema clásico de IA/algoritmos. Coloca `n` reinas en un tablero `n×n` sin que se ataquen. Combina backtracking + **múltiples constraints simultáneas** (filas, columnas, diagonales).
+> **Noveno y último problema del patrón Backtracking — el Hard**. Problema clásico de IA/algoritmos. Coloca `n` reinas en un tablero `n×n` sin que se ataquen. Combina backtracking + **múltiples constraints simultáneas** (filas, columnas, diagonales).
 
 ## Enunciado
 
@@ -76,7 +76,7 @@ Truco aritmético clásico. Memorízalo.
 
 ---
 
-## Cierre del patrón Backtracking 🎉
+## Cierre del patrón Backtracking
 
 | # | Problema | Idea distintiva |
 |---|---|---|
@@ -104,4 +104,4 @@ Truco aritmético clásico. Memorízalo.
 - [ ] Leído
 - [ ] Implementado desde cero
 - [ ] Resuelto en LeetCode
-- [ ] **Patrón Backtracking cerrado** ✅
+- [ ] **Patrón Backtracking cerrado** [OK]

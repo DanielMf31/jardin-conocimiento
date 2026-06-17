@@ -14,7 +14,7 @@ neetcode_order: 14
 
 # LeetCode 124 — Binary Tree Maximum Path Sum
 
-> 🎯 **Decimocuarto problema del patrón Trees — primer Hard**. Generalización de [[543-diameter-of-binary-tree]]: la **misma estructura mental** (recursión que devuelve algo + tracker global) pero ahora con valores que pueden ser negativos. Aprenderlo aquí te da el **patrón maestro** de "DP en árbol".
+> **Decimocuarto problema del patrón Trees — primer Hard**. Generalización de [[543-diameter-of-binary-tree]]: la **misma estructura mental** (recursión que devuelve algo + tracker global) pero ahora con valores que pueden ser negativos. Aprenderlo aquí te da el **patrón maestro** de "DP en árbol".
 
 ## Enunciado
 
@@ -71,7 +71,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)**.
 - **Espacio: O(h)**.
-- **Veredicto:** ✅ la canónica.
+- **Veredicto:** [OK] la canónica.
 
 ### Lo que devuelvo vs lo que actualizo (el truco mental)
 

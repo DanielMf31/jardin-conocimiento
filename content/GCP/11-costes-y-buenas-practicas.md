@@ -8,7 +8,7 @@ source: claude-code
 aliases: [GCP costes, FinOps GCP, GCP billing]
 ---
 
-# 💸 Costes y buenas prácticas en GCP
+# Costes y buenas prácticas en GCP
 
 ## ¿Por qué este documento?
 
@@ -18,7 +18,7 @@ Este documento cubre el modelo mental de pricing, las herramientas que GCP da pa
 
 ---
 
-## 1. 🧱 Modelo de pricing: pago por uso
+## 1. Modelo de pricing: pago por uso
 
 GCP factura en varias dimensiones según el producto. Es clave entender **qué contador se activa** en cada servicio.
 
@@ -50,7 +50,7 @@ gcloud compute commitments create mi-commitment \
 
 ---
 
-## 2. 🆓 Free Tier: lo que siempre es gratis
+## 2. Free Tier: lo que siempre es gratis
 
 GCP tiene dos capas de gratuidad:
 
@@ -77,7 +77,7 @@ GCP tiene dos capas de gratuidad:
 
 ---
 
-## 3. 🔔 Presupuestos y alertas de gasto
+## 3. Presupuestos y alertas de gasto
 
 Sin alertas, puedes descubrir el problema en la factura de fin de mes. GCP permite definir **budgets** con notificaciones automáticas.
 
@@ -125,7 +125,7 @@ resource "google_billing_budget" "alerta_proyecto" {
 
 ---
 
-## 4. 🏷️ Labels: imputar costes a contexto
+## 4. Labels: imputar costes a contexto
 
 Un **label** es un par clave-valor que puedes añadir a casi cualquier recurso GCP. Son la base del **FinOps** (gestión financiera de cloud): sin labels, no sabes qué proyecto/equipo/entorno genera el gasto.
 
@@ -166,7 +166,7 @@ ORDER BY coste_usd DESC
 
 ---
 
-## 5. ⚠️ Trampas de coste típicas
+## 5. Trampas de coste típicas
 
 Estas son las sorpresas más frecuentes para equipos que vienen de on-premise o AWS.
 
@@ -275,7 +275,7 @@ gcloud storage buckets update gs://mi-bucket \
 
 ---
 
-## 6. 🏛️ Google Cloud Architecture Framework
+## 6. Google Cloud Architecture Framework
 
 El Architecture Framework de Google es el equivalente al AWS Well-Architected Framework. Define **6 pilares** para evaluar si una arquitectura está bien diseñada:
 
@@ -313,7 +313,7 @@ gcloud recommender recommendations list \
 
 ---
 
-## 7. 🛠️ Herramientas de visibilidad de costes
+## 7. Herramientas de visibilidad de costes
 
 | Herramienta | Para qué sirve |
 |----|----|
@@ -335,7 +335,7 @@ gcloud billing projects link MI_PROYECTO \
 
 ---
 
-## 8. 🎯 Aplícalo / práctica
+## 8. Aplícalo / práctica
 
 Ejercicios concretos para interiorizar este documento:
 

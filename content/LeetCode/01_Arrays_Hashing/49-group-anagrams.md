@@ -14,8 +14,8 @@ neetcode_order: 4
 
 # LeetCode 49 — Group Anagrams
 
-> 🎯 **Cuarto problema del NeetCode 150 en Arrays & Hashing**. Es el primer **Medium** del patrón. Continúa la línea de [[242-valid-anagram]] pero ahora en lugar de comparar **dos** strings, agrupas **N** strings que sean anagramas entre sí. La técnica clave: **clave canónica** (canonical key).
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Cuarto problema del NeetCode 150 en Arrays & Hashing**. Es el primer **Medium** del patrón. Continúa la línea de [[242-valid-anagram]] pero ahora en lugar de comparar **dos** strings, agrupas **N** strings que sean anagramas entre sí. La técnica clave: **clave canónica** (canonical key).
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -65,7 +65,7 @@ class Solution:
 | ¿Solo minúsculas? | Sí en este problema. En entrevista, **preguntar** |
 | Edge case típico | `[""]` → `` (no ``) |
 
-> 💡 La clave del problema: **¿qué define que dos strings sean anagramas?**. Misma multiset de caracteres. Si encuentras una **representación canónica** que dos anagramas comparten y dos no-anagramas no, puedes usarla como clave de un dict.
+> La clave del problema: **¿qué define que dos strings sean anagramas?**. Misma multiset de caracteres. Si encuentras una **representación canónica** que dos anagramas comparten y dos no-anagramas no, puedes usarla como clave de un dict.
 
 ---
 
@@ -92,7 +92,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n² · k log k)** — n strings, comparar con hasta n grupos, cada comparación cuesta O(k log k) por el sort.
 - **Espacio: O(n·k)** — almacenar todos los strings.
-- **Veredicto:** ❌ TLE en LeetCode con n=10^4. La idea es correcta pero la búsqueda lineal entre grupos mata el rendimiento.
+- **Veredicto:** [NO] TLE en LeetCode con n=10^4. La idea es correcta pero la búsqueda lineal entre grupos mata el rendimiento.
 
 ---
 
@@ -115,9 +115,9 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n · k log k)** — n strings, cada uno ordenado en O(k log k).
 - **Espacio: O(n·k)** — claves + valores.
-- **Veredicto:** ✅ **la respuesta esperada en entrevista**. Limpia, idiomática, fácil de explicar.
+- **Veredicto:** [OK] **la respuesta esperada en entrevista**. Limpia, idiomática, fácil de explicar.
 
-> 💡 **`''.join(sorted(s))`**: `sorted("eat")` da `['a', 'e', 't']` (lista). `''.join(...)` la concatena en `"aet"`. Necesitas string (no lista) para usarla como clave del dict (las listas no son hashables).
+> **`''.join(sorted(s))`**: `sorted("eat")` da `['a', 'e', 't']` (lista). `''.join(...)` la concatena en `"aet"`. Necesitas string (no lista) para usarla como clave del dict (las listas no son hashables).
 
 ---
 
@@ -142,9 +142,9 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n · k)** — n strings, cada uno recorrido lineal de longitud k.
 - **Espacio: O(n·k)** — almacenar.
-- **Veredicto:** ✅ **óptima dada la restricción** (alfabeto fijo de 26 letras). Es el siguiente paso natural si el entrevistador te pregunta "¿puedes hacerlo más rápido?".
+- **Veredicto:** [OK] **óptima dada la restricción** (alfabeto fijo de 26 letras). Es el siguiente paso natural si el entrevistador te pregunta "¿puedes hacerlo más rápido?".
 
-> 🎯 **Misma técnica que en [[242-valid-anagram]] Solución 5**: aprovechar que el alfabeto es pequeño y conocido para usar array fijo en lugar de dict. El "salto" aquí es convertir la lista a **tupla** para usarla como clave.
+> **Misma técnica que en [[242-valid-anagram]] Solución 5**: aprovechar que el alfabeto es pequeño y conocido para usar array fijo en lugar de dict. El "salto" aquí es convertir la lista a **tupla** para usarla como clave.
 
 ---
 
@@ -244,9 +244,9 @@ LeetCode espera `List[List[str]]`, así que `list(grupos.values())` cierra el pr
 
 | Solución | Tiempo | Espacio | Veredicto |
 |---|---|---|---|
-| 1. Fuerza bruta (búsqueda lineal entre grupos) | O(n² · k log k) | O(n·k) | ❌ TLE |
-| 2. Dict con clave `sorted(s)` | O(n · k log k) | O(n·k) | ✅ La idiomática |
-| 3. Dict con clave tupla de 26 conteos | **O(n · k)** | O(n·k) | ✅ La óptima |
+| 1. Fuerza bruta (búsqueda lineal entre grupos) | O(n² · k log k) | O(n·k) | [NO] TLE |
+| 2. Dict con clave `sorted(s)` | O(n · k log k) | O(n·k) | [OK] La idiomática |
+| 3. Dict con clave tupla de 26 conteos | **O(n · k)** | O(n·k) | [OK] La óptima |
 
 ---
 
@@ -274,7 +274,7 @@ LeetCode espera `List[List[str]]`, así que `list(grupos.values())` cierra el pr
 
 ## Solución en C++ — contraste con Python
 
-> 📘 Añadido para ver las diferencias de lenguaje. Código compilable en [`49-group-anagrams.cpp`](49-group-anagrams.cpp).
+> Añadido para ver las diferencias de lenguaje. Código compilable en [`49-group-anagrams.cpp`](49-group-anagrams.cpp).
 
 ```cpp
 class Solution {

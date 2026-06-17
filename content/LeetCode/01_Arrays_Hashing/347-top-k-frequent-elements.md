@@ -14,8 +14,8 @@ neetcode_order: 5
 
 # LeetCode 347 — Top K Frequent Elements
 
-> 🎯 **Quinto problema del NeetCode 150 en Arrays & Hashing**. Es el **primer roce con heap (priority queue)**, una estructura que volverás a ver muchísimo. También introduce **bucket sort**, una técnica brillante cuando la "frecuencia" tiene rango acotado.
-> 📚 Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
+> **Quinto problema del NeetCode 150 en Arrays & Hashing**. Es el **primer roce con heap (priority queue)**, una estructura que volverás a ver muchísimo. También introduce **bucket sort**, una técnica brillante cuando la "frecuencia" tiene rango acotado.
+> Mismo formato: solución primero, patrón abstraído, replicar sin mirar.
 
 ## Enunciado
 
@@ -39,7 +39,7 @@ Output: [1]
 - `k` está en el rango `[1, número de elementos únicos]`.
 - **Se garantiza** que la respuesta es única.
 
-> 💡 **Follow-up del enunciado**: tu algoritmo debe correr **mejor que O(n log n)**. Eso descarta el sort directo.
+> **Follow-up del enunciado**: tu algoritmo debe correr **mejor que O(n log n)**. Eso descarta el sort directo.
 
 **Plantilla:**
 ```python
@@ -99,7 +99,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n log k)** — internamente, `most_common(k)` usa un heap de tamaño k.
 - **Espacio: O(n + k)**.
-- **Veredicto:** ✅ pasa, idiomática, pero **demasiado mágica** para entrevista. Mejor implementar el heap a mano (Solución 3) y mencionar esta como atajo.
+- **Veredicto:** [OK] pasa, idiomática, pero **demasiado mágica** para entrevista. Mejor implementar el heap a mano (Solución 3) y mencionar esta como atajo.
 
 ---
 
@@ -125,11 +125,11 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n log k)** — n inserts, cada heappush/heappop sobre heap de tamaño k es O(log k).
 - **Espacio: O(n + k)** — el dict O(n) + el heap O(k).
-- **Veredicto:** ✅ **la respuesta de entrevista**. Demuestra que conoces heaps.
+- **Veredicto:** [OK] **la respuesta de entrevista**. Demuestra que conoces heaps.
 
-> 💡 **`heapq` es min-heap por defecto** en Python. Para max-heap, se negan los valores: `heapq.heappush(heap, -freq)`. Aquí usamos min-heap **a propósito**: queremos echar los menos frecuentes, que están arriba del min-heap.
+> **`heapq` es min-heap por defecto** en Python. Para max-heap, se negan los valores: `heapq.heappush(heap, -freq)`. Aquí usamos min-heap **a propósito**: queremos echar los menos frecuentes, que están arriba del min-heap.
 
-> 📌 **Tuplas en heaps**: `heapq` ordena por el primer elemento de la tupla, luego por el segundo, etc. `(freq, num)` ordena primero por frecuencia.
+> **Tuplas en heaps**: `heapq` ordena por el primer elemento de la tupla, luego por el segundo, etc. `(freq, num)` ordena primero por frecuencia.
 
 ---
 
@@ -159,9 +159,9 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)** — todos los recorridos son lineales en el peor caso.
 - **Espacio: O(n)**.
-- **Veredicto:** ✅ **la óptima teórica**. Si el entrevistador te empuja a "más rápido que O(n log k)", esta es la respuesta. Aprovecha que el rango de frecuencias está acotado por n.
+- **Veredicto:** [OK] **la óptima teórica**. Si el entrevistador te empuja a "más rápido que O(n log k)", esta es la respuesta. Aprovecha que el rango de frecuencias está acotado por n.
 
-> 🎯 **Bucket sort es una técnica clásica**: cuando el espacio de claves es **conocido y acotado**, puedes usar un array indexado por la clave en vez de un sort comparativo. Funciona aquí porque las frecuencias son enteros pequeños.
+> **Bucket sort es una técnica clásica**: cuando el espacio de claves es **conocido y acotado**, puedes usar un array indexado por la clave en vez de un sort comparativo. Funciona aquí porque las frecuencias son enteros pequeños.
 
 ---
 
@@ -258,10 +258,10 @@ for value, count in enumerate(buckets):
 
 | Solución | Tiempo | Espacio | Cumple follow-up | Veredicto |
 |---|---|---|---|---|
-| 1. Sort directo | O(n log n) | O(n) | ❌ | Aceptable, no entrevista |
-| 2. `most_common(k)` | O(n log k) | O(n+k) | ✅ | Pythonic, demasiado mágica |
-| 3. **Counter + min-heap** | O(n log k) | O(n+k) | ✅ | ✅ La canónica entrevista |
-| 4. **Bucket sort** | **O(n)** | O(n) | ✅✅ | ✅ La óptima |
+| 1. Sort directo | O(n log n) | O(n) | [NO] | Aceptable, no entrevista |
+| 2. `most_common(k)` | O(n log k) | O(n+k) | [OK] | Pythonic, demasiado mágica |
+| 3. **Counter + min-heap** | O(n log k) | O(n+k) | [OK] | [OK] La canónica entrevista |
+| 4. **Bucket sort** | **O(n)** | O(n) | [OK][OK] | [OK] La óptima |
 
 ---
 

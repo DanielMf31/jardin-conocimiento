@@ -14,7 +14,7 @@ neetcode_order: 3
 
 # LeetCode 543 — Diameter of Binary Tree
 
-> 🎯 **Tercer problema del patrón Trees**. Introduce el truco **"recursión que devuelve algo PERO actualiza un tracker global"**. Aparece también en LC 124 (path sum), LC 1373 (max BST sum). Aprenderlo aquí lo desbloquea.
+> **Tercer problema del patrón Trees**. Introduce el truco **"recursión que devuelve algo PERO actualiza un tracker global"**. Aparece también en LC 124 (path sum), LC 1373 (max BST sum). Aprenderlo aquí lo desbloquea.
 
 ## Enunciado
 
@@ -59,7 +59,7 @@ class Solution:
 **Análisis:**
 - **Tiempo: O(n)**.
 - **Espacio: O(h)**.
-- **Veredicto:** ✅ la canónica.
+- **Veredicto:** [OK] la canónica.
 
 ### Por qué funciona — separación de "qué retorno" y "qué actualizo"
 
@@ -68,7 +68,7 @@ class Solution:
 
 El diámetro global es el máximo de "diámetro pasando por X" sobre todos los X. Como visitamos todos los nodos, lo capturamos.
 
-> 🎯 **Patrón maestro**: cuando un problema pregunta por algo "global" sobre el árbol pero la recursión natural devuelve algo "local", **separa los dos con un tracker**. Vas a usar este patrón en LC 124 y LC 1373.
+> **Patrón maestro**: cuando un problema pregunta por algo "global" sobre el árbol pero la recursión natural devuelve algo "local", **separa los dos con un tracker**. Vas a usar este patrón en LC 124 y LC 1373.
 
 ---
 

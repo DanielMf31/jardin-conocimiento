@@ -8,7 +8,7 @@ source: claude-code
 aliases: [Vertex AI, GCP ML, IA en GCP]
 ---
 
-# 🤖 IA y ML en GCP (Vertex AI)
+# IA y ML en GCP (Vertex AI)
 
 ## ¿Por qué existe este stack y qué problema resuelve?
 
@@ -20,7 +20,7 @@ El problema que resuelve: llevar un modelo de "notebook de Jupyter en tu ordenad
 
 ---
 
-## 🗺️ Mapa del territorio: tres capas de abstracción
+## Mapa del territorio: tres capas de abstracción
 
 ```
 ┌────────────────────────────────────────────────────────────┐
@@ -39,7 +39,7 @@ Cuanto más abajo vas, más control tienes y más responsabilidad asumes. La ele
 
 ---
 
-## 🧠 Vertex AI — la plataforma completa
+## Vertex AI — la plataforma completa
 
 ### Conceptos clave
 
@@ -180,7 +180,7 @@ AutoML **no te da acceso al modelo subyacente** (es una caja negra de Google). S
 
 ---
 
-## 💎 Gemini API y modelos generativos
+## Gemini API y modelos generativos
 
 ### La jerarquía de modelos Gemini en GCP
 
@@ -241,7 +241,7 @@ gcloud ai tuning-jobs create \
 
 ---
 
-## 📦 APIs de IA preentrenadas (Cloud AI APIs)
+## APIs de IA preentrenadas (Cloud AI APIs)
 
 Son REST APIs que consumes sin saber nada de ML. Google ya entrenó el modelo, tú mandas datos y recibes predicciones.
 
@@ -288,7 +288,7 @@ print(f"Score: {sentiment.score:.2f}, Magnitude: {sentiment.magnitude:.2f}")
 
 ---
 
-## ⚖️ ¿Cuándo usar qué? (árbol de decisión)
+## ¿Cuándo usar qué? (árbol de decisión)
 
 ```
 ¿Tienes datos propios y necesitas un modelo a medida?
@@ -323,7 +323,7 @@ print(f"Score: {sentiment.score:.2f}, Magnitude: {sentiment.magnitude:.2f}")
 
 ---
 
-## 🔗 Intersección con tu área de Ciencia de Datos
+## Intersección con tu área de Ciencia de Datos
 
 Si estudias DS/ML en paralelo, Vertex AI es el lugar donde ese conocimiento aterriza en producción:
 
@@ -345,7 +345,7 @@ with aiplatform.start_run("run-lr-0.01"):
 
 ---
 
-## 💡 Free tier y costes comunes (jun 2026)
+## Free tier y costes comunes (jun 2026)
 
 **Free tier relevante:**
 - Gemini 1.5 Flash: 60 RPM gratis en AI Studio (limitado en Vertex)
@@ -371,7 +371,7 @@ gcloud ai custom-jobs create ... \
 
 ---
 
-## 🛠️ Aplícalo / practica
+## Aplícalo / practica
 
 1. **Nivel 0 (15 min):** Activa la Vision API en un proyecto GCP, sube una foto a GCS y analízala con `curl`. Lee las etiquetas que devuelve.
 
@@ -385,7 +385,7 @@ gcloud ai custom-jobs create ... \
 
 ---
 
-## 🔗 Conexiones
+## Conexiones
 
 - [[MOC_GCP]]
 - [[01-fundamentos-cloud-y-gcp]]

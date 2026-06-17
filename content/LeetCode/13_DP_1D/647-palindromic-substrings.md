@@ -14,7 +14,7 @@ neetcode_order: 6
 
 # LeetCode 647 — Palindromic Substrings
 
-> 🎯 **Sexto problema de DP 1-D**. Variante directa de [[5-longest-palindromic-substring]]: **contar** palíndromos en lugar de devolver el más largo.
+> **Sexto problema de DP 1-D**. Variante directa de [[5-longest-palindromic-substring]]: **contar** palíndromos en lugar de devolver el más largo.
 
 ## Enunciado
 

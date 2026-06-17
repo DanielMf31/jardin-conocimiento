@@ -8,7 +8,7 @@ source: claude-code
 aliases: [cicd avanzado, gitlab cd, gitlab pipelines avanzado]
 ---
 
-# 🚀 CI/CD Avanzado en GitLab
+# CI/CD Avanzado en GitLab
 
 ## Por qué existe esto (el problema que resuelve)
 
@@ -34,7 +34,7 @@ Los temas de este documento son las piezas que hacen ese salto posible y fiable:
 
 ---
 
-## 🗺️ Environments y Deployments
+## Environments y Deployments
 
 ### El concepto
 
@@ -73,7 +73,7 @@ En **Settings → CI/CD → Protected environments** puedes exigir que solo role
 
 ---
 
-## 🧪 Review Apps (entornos efímeros por MR)
+## Review Apps (entornos efímeros por MR)
 
 ### El problema que resuelven
 
@@ -125,7 +125,7 @@ stop-review:
 
 ---
 
-## ⚡ `needs` y DAG (pipelines no secuenciales)
+## `needs` y DAG (pipelines no secuenciales)
 
 ### El problema
 
@@ -191,7 +191,7 @@ deploy-backend:
 
 ---
 
-## 📦 `include` y Templates (reutilizar configuración)
+## `include` y Templates (reutilizar configuración)
 
 ### El problema
 
@@ -273,7 +273,7 @@ build:
 
 ---
 
-## 🌲 Child Pipelines y Multi-Project Pipelines
+## Child Pipelines y Multi-Project Pipelines
 
 ### Child Pipelines (mismo repo, YAML separado)
 
@@ -318,7 +318,7 @@ deploy-infra:
 
 ---
 
-## 🚦 Jobs Manuales como Gates (`when: manual`)
+## Jobs Manuales como Gates (`when: manual`)
 
 ### El concepto
 
@@ -374,7 +374,7 @@ deploy-production:
 
 ---
 
-## ⏰ Pipeline Schedules (Cron en GitLab)
+## Pipeline Schedules (Cron en GitLab)
 
 ### Qué son
 
@@ -412,7 +412,7 @@ La variable `AUDIT_TYPE` se puede pasar desde la configuración del schedule en 
 
 ---
 
-## 🤖 Auto DevOps
+## Auto DevOps
 
 ### Qué es
 
@@ -441,35 +441,35 @@ Se puede activar/desactivar por proyecto: **Settings → CI/CD → Auto DevOps**
 
 ---
 
-## 🔄 Cómo pasar de CI a CD: la ruta práctica
+## Cómo pasar de CI a CD: la ruta práctica
 
 El salto de CI (solo integración) a CD (despliegue real) es incremental. Esta es la secuencia recomendada:
 
 ```
 Etapa 1 — CI sólido
-  ✔ Tests pasan en pipeline
-  ✔ Build de artefacto automatizado
-  ✔ Artefacto guardado (registry, S3, etc.)
+   Tests pasan en pipeline
+   Build de artefacto automatizado
+   Artefacto guardado (registry, S3, etc.)
 
 Etapa 2 — CD a staging automático
-  ✔ Deploy a staging en cada merge a main
-  ✔ Environment "staging" declarado en GitLab
-  ✔ Smoke tests post-deploy (¿la app levanta?)
+   Deploy a staging en cada merge a main
+   Environment "staging" declarado en GitLab
+   Smoke tests post-deploy (¿la app levanta?)
 
 Etapa 3 — Review Apps
-  ✔ Entorno efímero por MR
-  ✔ Job stop-review configurado
+   Entorno efímero por MR
+   Job stop-review configurado
 
 Etapa 4 — CD a producción con gate manual
-  ✔ Job deploy-production con when: manual
-  ✔ Environment "production" protegido
-  ✔ Historial de deployments visible en GitLab
+   Job deploy-production con when: manual
+   Environment "production" protegido
+   Historial de deployments visible en GitLab
 
 Etapa 5 — CD a producción automático (Continuous Deployment)
-  ✔ Confianza total en test suite y smoke tests
-  ✔ Rollback automático configurado
-  ✔ Métricas de producción monitorizadas
-  ✔ Eliminar when: manual
+   Confianza total en test suite y smoke tests
+   Rollback automático configurado
+   Métricas de producción monitorizadas
+   Eliminar when: manual
 ```
 
 **El gate manual es el seguro de aprendizaje**: empieza con él, retíralo cuando el equipo confíe en el pipeline.

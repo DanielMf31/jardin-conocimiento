@@ -14,7 +14,7 @@ neetcode_order: 11
 
 # LeetCode 323 — Number of Connected Components in an Undirected Graph
 
-> 🎯 **Undécimo problema del patrón Graphs**. **Contar componentes conexos**. Dos vías: DFS/BFS sobre el grafo, o Union-Find (más elegante).
+> **Undécimo problema del patrón Graphs**. **Contar componentes conexos**. Dos vías: DFS/BFS sobre el grafo, o Union-Find (más elegante).
 
 ## Enunciado
 

@@ -8,7 +8,7 @@ source: claude-code
 aliases: [Natas README, Natas guia, OverTheWire Natas]
 ---
 
-# 🕸️ OverTheWire Natas — guía y progreso
+# OverTheWire Natas — guía y progreso
 
 Wargame **legal y educativo** de **seguridad web** (0→34). El de **más retorno para ti como dev**:
 cada nivel es una vulnerabilidad web real (las del [[04-seguridad-web-owasp|OWASP Top 10]]) que aprendes
@@ -26,9 +26,9 @@ http://natasN.natas.labs.overthewire.org
 
 > Úsalos así: intenta el nivel tú primero; si te atascas, mira el paso concreto. **No leas la solución entera de golpe.**
 
-> ⚖️ Ético: es un laboratorio autorizado. Lo aprendido es para **proteger** tus propias webs.
+> Ético: es un laboratorio autorizado. Lo aprendido es para **proteger** tus propias webs.
 
-## 📚 Walkthroughs (por bloques temáticos)
+## Walkthroughs (por bloques temáticos)
 **Lo básico — fuente, ficheros, cabeceras, cookies (0→7)**
 - [[Natas/01-nivel-0-a-1]] — secreto en el código fuente HTML
 - [[Natas/02-nivel-1-a-2]] — el clic derecho no es seguridad
@@ -77,14 +77,14 @@ http://natasN.natas.labs.overthewire.org
 - [[Natas/33-nivel-32-a-33]] — Perl: de leer ficheros a RCE
 - [[Natas/34-nivel-33-a-34]] — PHAR deserialization (nivel 34 = final)
 
-> ⚠️ Del **25 en adelante** las técnicas son intrincadas (deserialización, ECB, Perl). Los docs explican
+> Del **25 en adelante** las técnicas son intrincadas (deserialización, ECB, Perl). Los docs explican
 > bien *la técnica*, pero el payload exacto puede necesitar ajuste fino contra el reto en vivo. Trátalos
 > como guía conceptual y verifica jugando.
 
-## 📋 Mi progreso (rellena a mano)
-> ⚠️ Bajo riesgo (es un juego), pero por hábito: **no subas este archivo con contraseñas a un repo público**.
+## Mi progreso (rellena a mano)
+> Bajo riesgo (es un juego), pero por hábito: **no subas este archivo con contraseñas a un repo público**.
 
-| Nivel | Tema                          | ✓   | Contraseña obtenida |
+| Nivel | Tema | | Contraseña obtenida |
 | ----- | ----------------------------- | --- | ------------------- |
 | 0→1   | fuente HTML                   |     |                     |
 | 1→2   | clic derecho                  |     |                     |

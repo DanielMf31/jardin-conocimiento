@@ -14,7 +14,7 @@ neetcode_order: 3
 
 # LeetCode 198 — House Robber
 
-> 🎯 **Tercer problema de DP 1-D**. **El patrón "take or skip"**: para cada elemento, decidir si tomarlo (sumar valor pero saltar el siguiente) o no (continuar). Es la base de muchos DP.
+> **Tercer problema de DP 1-D**. **El patrón "take or skip"**: para cada elemento, decidir si tomarlo (sumar valor pero saltar el siguiente) o no (continuar). Es la base de muchos DP.
 
 ## Enunciado
 

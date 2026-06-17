@@ -8,7 +8,7 @@ source: claude-code
 aliases: [gitlab-jerarquia, gitlab-grupos, gitlab-permisos]
 ---
 
-# 🏗️ Conceptos: grupos, proyectos y permisos
+# Conceptos: grupos, proyectos y permisos
 
 ## ¿Por qué importa entender esto primero?
 
@@ -18,7 +18,7 @@ El problema que resuelve: en un proyecto real, tienes múltiples repositorios (b
 
 ---
 
-## 🗺️ La jerarquía de GitLab
+## La jerarquía de GitLab
 
 ```
 Instancia de GitLab (gitlab.com o tu servidor)
@@ -65,7 +65,7 @@ El namespace evita colisiones de nombres: dos empresas distintas pueden tener un
 
 ---
 
-## 👥 Grupos y subgrupos — cuándo y cómo usarlos
+## Grupos y subgrupos — cuándo y cómo usarlos
 
 Un **grupo** es más que una carpeta. Cuando creas un grupo puedes:
 
@@ -103,7 +103,7 @@ Con esto, un secreto `DB_PASSWORD` definido en el grupo `empresa` llega a todos 
 
 ---
 
-## 🔐 Los 5 roles de GitLab
+## Los 5 roles de GitLab
 
 GitLab usa **RBAC** (Role-Based Access Control — control de acceso basado en roles). Hay 5 roles en orden creciente de privilegio:
 
@@ -111,17 +111,17 @@ GitLab usa **RBAC** (Role-Based Access Control — control de acceso basado en r
 
 | Acción | Guest | Reporter | Developer | Maintainer | Owner |
 |---|:---:|:---:|:---:|:---:|:---:|
-| Ver código e issues | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Clonar repositorio | — | ✓ | ✓ | ✓ | ✓ |
-| Crear issues / comentar | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Crear branches | — | — | ✓ | ✓ | ✓ |
-| Crear merge requests | — | — | ✓ | ✓ | ✓ |
-| Hacer push a branches protegidos | — | — | — | ✓ | ✓ |
-| Mergear MRs | — | — | — | ✓ | ✓ |
-| Editar settings del proyecto | — | — | — | ✓ | ✓ |
-| Gestionar miembros del grupo | — | — | — | — | ✓ |
-| Borrar el proyecto/grupo | — | — | — | — | ✓ |
-| Gestionar runners, tokens de deploy | — | — | — | ✓ | ✓ |
+| Ver código e issues | | | | | |
+| Clonar repositorio | — | | | | |
+| Crear issues / comentar | | | | | |
+| Crear branches | — | — | | | |
+| Crear merge requests | — | — | | | |
+| Hacer push a branches protegidos | — | — | — | | |
+| Mergear MRs | — | — | — | | |
+| Editar settings del proyecto | — | — | — | | |
+| Gestionar miembros del grupo | — | — | — | — | |
+| Borrar el proyecto/grupo | — | — | — | — | |
+| Gestionar runners, tokens de deploy | — | — | — | | |
 
 > **Nota**: en GitLab.com, **Owner** solo existe a nivel de grupo, no de proyecto individual. En proyectos el máximo es Maintainer (salvo el creador del proyecto personal).
 
@@ -147,7 +147,7 @@ Un rol en un proyecto puede ser **mayor** que el heredado del grupo (se usa el m
 
 ---
 
-## 👁️ Niveles de visibilidad
+## Niveles de visibilidad
 
 Tanto grupos como proyectos tienen tres niveles de visibilidad independientes:
 
@@ -165,14 +165,14 @@ Un proyecto **no puede ser más público que su grupo padre**. Si el grupo es Pr
 
 ```
 Grupo: Private
-  ├── Proyecto: Private   ✓
-  ├── Proyecto: Internal  ✗ (GitLab lo bloquea)
-  └── Proyecto: Public    ✗ (GitLab lo bloquea)
+  ├── Proyecto: Private   
+  ├── Proyecto: Internal   (GitLab lo bloquea)
+  └── Proyecto: Public     (GitLab lo bloquea)
 ```
 
 ---
 
-## 🗂️ Cómo organizar tu trabajo: patrones recomendados
+## Cómo organizar tu trabajo: patrones recomendados
 
 ### Patrón 1 — Proyecto personal / hobby
 ```
@@ -211,7 +211,7 @@ Cada subgrupo tiene su propio Maintainer. Los secretos de producción viven en e
 
 ---
 
-## ⚠️ Errores comunes
+## Errores comunes
 
 | Error | Por qué ocurre | Solución |
 |---|---|---|
@@ -223,7 +223,7 @@ Cada subgrupo tiene su propio Maintainer. Los secretos de producción viven en e
 
 ---
 
-## 🛠️ Aplícalo a tus proyectos
+## Aplícalo a tus proyectos
 
 **Para proyecto embebido (PlatformIO / embebido):**
 Si tienes o planeas tener más repos relacionados (firmware, scripts de análisis, documentación técnica), crea un grupo `embebido/` y mete ahí los proyectos. Así puedes compartir variables CI (tokens, URLs de servidor) en un solo lugar.
