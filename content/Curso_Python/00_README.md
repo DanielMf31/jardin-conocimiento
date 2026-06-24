@@ -33,6 +33,8 @@ comparación **C ↔ Python** en cada tema. Termina apuntando a **NeetCode** (al
 | 08 | Clases, dataclasses y archivos | [[Curso_Python/modelo/08-clases-archivos]] |
 | 09 | Puente a NeetCode | [[Curso_Python/modelo/09-puente-neetcode]] |
 
+> **Extra (cultura):** [[Curso_Python/historia-de-python|Historia de Python]] — de Guido y Monty Python al lenguaje nº 1 de la IA.
+
 ## Cómo impartir cada módulo
 1. Enseña la teoría con la **tabla C↔Python** (conecta con lo que ya saben).
 2. Worked-example en vivo: `python3 ejNN_modelo.py` (resultado al instante).

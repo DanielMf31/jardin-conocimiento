@@ -4,7 +4,7 @@ title: Jardín de Conocimiento
 
 Jardín digital de apuntes de **programación, sistemas y ciberseguridad**. Escrito para
 entender de verdad —el esquema y el *porqué* antes que la sintaxis— y todo conectado entre sí
-estilo *Zettelkasten*. **451 notas** y creciendo.
+estilo *Zettelkasten*. **453 notas** y creciendo.
 
 > Material de estudio personal, en mejora continua. Puede contener errores. Hecho con apoyo de
 > IA y revisión propia. Úsalo, compártelo y aprende.

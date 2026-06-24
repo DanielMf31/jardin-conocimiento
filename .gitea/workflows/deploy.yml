@@ -1,0 +1,44 @@
+# Compila el sitio Quartz y, SOLO en main, lo despliega al nginx local.
+#   - push a develop -> compila (te avisa si algo rompe), NO despliega.
+#   - push a main    -> compila Y despliega (copia public/ a ~/gitea/web).
+name: Build & Deploy Quartz
+
+on:
+  push:
+    branches: [main, develop]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    container:
+      image: catthehacker/ubuntu:act-22.04
+      # Monta la carpeta que sirve nginx para poder dejar ahí el sitio.
+      # (Permitido por 'valid_volumes' en la config del act_runner.)
+      volumes:
+        - /home/danielmf31/gitea/web:/deploy
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # historial completo: Quartz usa las fechas de git
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Guard anti-fugas
+        run: python3 tools/check-leaks.py   # falla el build si detecta una fuga
+
+      - name: Build Quartz
+        run: npx quartz build               # genera ./public
+
+      - name: Deploy a nginx (solo main)
+        if: github.ref == 'refs/heads/main'
+        run: |
+          rm -rf /deploy/* /deploy/.[!.]* 2>/dev/null || true
+          cp -a public/. /deploy/
+          echo "Desplegado a ~/gitea/web -> http://localhost:8080"

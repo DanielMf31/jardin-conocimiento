@@ -27,6 +27,8 @@ C es un lenguaje **compilado** y **cercano a la máquina**: tú escribes texto, 
 - Estándares: **C89/C90** (ANSI C), **C99**, **C11**, **C17**. Nosotros usamos **C11** básico.
 - Por qué sigue importando hoy: el **kernel de Linux**, drivers, **sistemas embebidos** (tu terreno: microcontroladores, firmware), bases de datos y hasta otros lenguajes (Python está escrito en C). Si entiendes C, entiendes **cómo funciona la máquina por debajo**.
 
+> Para la historia completa —narrativa, curiosidades y qué se ha construido con C—: [[Curso_C/historia-de-c|Historia de C]].
+
 ## Compilado vs interpretado (clave para el puente a Python)
 - **C (compilado)**: el código fuente `.c` → se **traduce una vez** a un binario nativo → lo ejecutas. Rápido y explícito, pero hay que recompilar al cambiar.
 - **Python (interpretado)**: un intérprete lee y ejecuta el código **al vuelo**, sin paso de compilación. Más cómodo, menos control.

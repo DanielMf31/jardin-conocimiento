@@ -34,6 +34,8 @@ apoyado en la terminal de Linux y como **on-ramp** hacia Python y los problemas 
 | 08 | Structs | [[Curso_C/modelo/08-structs]] |
 | 09 | Lectura/escritura de archivos | [[Curso_C/modelo/09-archivos]] |
 
+> **Extra (cultura):** [[Curso_C/historia-de-c|Historia de C]] — de dónde viene el lenguaje, su evolución a lo largo de los años y las cosas increíbles que se han construido con él.
+
 ## Cómo impartir cada módulo
 1. **Explica la teoría** (schema-first: categoría → patrón → sintaxis) con el `.md` del módulo.
 2. **Worked-example en vivo**: compila con `gcc -std=c11 -Wall` (o `entr` para recompilar al guardar).

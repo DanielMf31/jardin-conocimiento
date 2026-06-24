@@ -64,5 +64,6 @@ Igual que el de C: `modelo/` (teoría + soluciones) y `practica/<modulo>/` con, 
 
 ## Conexiones
 - [[Curso_Python/00_README]] — índice del curso
+- [[Curso_Python/historia-de-python|Historia de Python]] — de dónde viene y por qué explotó
 - [[MOC_NeetCode_150]] — a donde lleva esto
 - [[Curso_Python/modelo/01-variables]] — primer módulo
