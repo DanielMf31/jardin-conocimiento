@@ -15,7 +15,7 @@ jobs:
       # Monta la carpeta que sirve nginx para poder dejar ahí el sitio.
       # (Permitido por 'valid_volumes' en la config del act_runner.)
       volumes:
-        - /home/danielmf31/gitea/web:/deploy
+        - /home/danielmf31/server/configuracion/web:/deploy
     steps:
       - name: Checkout
         uses: actions/checkout@v4
