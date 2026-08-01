@@ -1,0 +1,39 @@
+{
+  "$comment": [
+    "Machine-readable manifest of this project (spec/structure_v1.md §5).",
+    "Agents read it to know which make targets are genuinely implemented: a reviewer must be able to",
+    "tell a legitimate no-op from a target nobody has written yet. Each entry of 'targets' is",
+    "'real' (runs something), 'planned' (a no-op today, will be real) or 'n/a' (does not apply to",
+    "this project and never will).",
+    "Fill 'language' and the targets once ARTIFACT_TECH_STACK.md is approved (gate G2), and keep",
+    "them in step with the Makefile: a target declared 'real' that echoes n/a is a lie a reviewer",
+    "cannot detect."
+  ],
+  "sds_version": "1.0",
+  "name": "Jardin Conocimiento",
+  "slug": "jardin-conocimiento",
+  "created": "2026-08-01",
+  "owner": "DanielMf31",
+  "language": "typescript",
+  "paths": {
+    "src": "content",
+    "tests": "tests",
+    "docs": "docs"
+  },
+  "targets": {
+    "setup": "real",
+    "fmt": "real",
+    "fmt-check": "real",
+    "lint": "n/a",
+    "typecheck": "real",
+    "test-unit": "real",
+    "test-integration": "n/a",
+    "test": "real",
+    "e2e": "n/a",
+    "build": "real",
+    "run": "real",
+    "contracts-check": "n/a",
+    "verify": "real",
+    "clean": "real"
+  }
+}

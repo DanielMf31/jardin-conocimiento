@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "project": "Jardin Conocimiento",
+  "generated_at": "{{YYYY-MM-DDTHH:MM:SSZ}}",
+  "generated_by": "{{COMMAND_THAT_REGENERATES_THIS_FILE}}",
+  "period": {
+    "granularity": "{{day_week_month}}",
+    "start": "2026-08-01",
+    "end": "2026-08-01"
+  },
+  "definitions": {
+    "lead_time": "from issue created to change deployed",
+    "cycle_time": "from issue in-progress to issue done",
+    "throughput": "units reaching done within the period",
+    "first_pass_approval_rate": "reviews approved without a second pass, over all reviews",
+    "rework_rate_after_review": "issues reopened or changed after a review verdict, over issues reviewed"
+  },
+  "delivery": {
+    "lead_time_days": {
+      "median": "{{N}}",
+      "p85": "{{N}}",
+      "samples": "{{N}}"
+    },
+    "cycle_time_hours": {
+      "median": "{{N}}",
+      "p85": "{{N}}",
+      "samples": "{{N}}"
+    },
+    "throughput": {
+      "issues_closed": "{{N}}",
+      "epics_closed": "{{N}}",
+      "milestones_closed": "{{N}}",
+      "per_week": "{{N}}"
+    },
+    "work_in_progress_avg": "{{N}}"
+  },
+  "review_loop": {
+    "first_pass_approval_rate_pct": "{{PCT}}",
+    "rework_rate_after_review_pct": "{{PCT}}",
+    "review_passes_per_issue_median": "{{N}}",
+    "reviews_total": "{{N}}",
+    "reports_rejected_missing_transcripts": "{{N}}",
+    "whitelist_violations": "{{N}}",
+    "contracts_broken_mid_epic": "{{N}}"
+  },
+  "dora": {
+    "deployment_frequency": {
+      "value": "{{N}}",
+      "unit": "deploys_per_week",
+      "band": "{{elite_high_medium_low}}"
+    },
+    "lead_time_for_changes": {
+      "value": "{{N}}",
+      "unit": "hours_commit_to_production",
+      "band": "{{elite_high_medium_low}}"
+    },
+    "change_failure_rate": {
+      "value": "{{PCT}}",
+      "unit": "percent_of_deploys",
+      "band": "{{elite_high_medium_low}}"
+    },
+    "failed_deployment_recovery_time": {
+      "value": "{{N}}",
+      "unit": "hours_to_restore",
+      "band": "{{elite_high_medium_low}}"
+    }
+  },
+  "by_milestone": [
+    {
+      "id": "{{MN}}",
+      "issues_closed": "{{N}}",
+      "cycle_time_hours_median": "{{N}}",
+      "first_pass_approval_rate_pct": "{{PCT}}",
+      "status": "{{todo_in-progress_blocked_review_done}}"
+    }
+  ],
+  "by_actor_kind": [
+    {
+      "kind": "agent",
+      "issues_closed": "{{N}}",
+      "cycle_time_hours_median": "{{N}}",
+      "first_pass_approval_rate_pct": "{{PCT}}"
+    },
+    {
+      "kind": "human",
+      "issues_closed": "{{N}}",
+      "cycle_time_hours_median": "{{N}}",
+      "first_pass_approval_rate_pct": "{{PCT}}"
+    }
+  ],
+  "previous_period": {
+    "start": "2026-08-01",
+    "end": "2026-08-01",
+    "lead_time_days_median": "{{N}}",
+    "cycle_time_hours_median": "{{N}}",
+    "throughput_issues_closed": "{{N}}",
+    "first_pass_approval_rate_pct": "{{PCT}}",
+    "rework_rate_after_review_pct": "{{PCT}}"
+  },
+  "known_gaps": ["{{WHAT_IS_NOT_MEASURED_YET_AND_WHY}}"]
+}

@@ -1,0 +1,5 @@
+# Jardin Conocimiento — per-project exceptions to the documentation mirror.
+#
+# One glob per line, relative to docs/. Anything matched here stays in the repository and never
+# reaches the vault. The shared rules live in config/mirror.rules.json of the meta-repository;
+# this file is only for what is specific to this project.

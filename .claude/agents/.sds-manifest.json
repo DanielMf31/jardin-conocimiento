@@ -1,0 +1,24 @@
+{
+  "sds_version": "1.0",
+  "generated_at": "2026-08-01T16:35:13.349Z",
+  "source": "agents/ of the SDS meta-repository",
+  "project": "jardin-conocimiento",
+  "agents": {
+    "sds-adr-writer.md": "405e5347c2a9e21ad18f85012942886be74ac9a2f8b306527b75b1332b409198",
+    "sds-architect.md": "5b54d7e15100a34e2dfe366c33978afb80e340e69192d2f77f2afb5252c9fdeb",
+    "sds-backlog-planner.md": "5ada42b59d9e8e958b37af2e02dc5f342325a20ee1481bd5c8fa790816f13725",
+    "sds-contract-freezer.md": "fd1219ca8fad6df99d63e6c9e12be46f9f846870562bd71b77101f5728177198",
+    "sds-diagrammer.md": "6344bf336d023ebcf763906b969a4e4c844f7e977b54f914668ba2cf31d7c66d",
+    "sds-domain-analyst.md": "f0fb29e9b9141fcd13305ed4c22439f82a19f75534050970387bd0716f30f4db",
+    "sds-epic-conductor.md": "5fca2a4d5508ab3cc655b6b8fe42c839c101765e81e3e3654639bb8380d8346c",
+    "sds-integrator.md": "e1771c32024cc06ea7dd5acba89624b3658d215bf9f7c65e9723f9d67bd6ceca",
+    "sds-interviewer.md": "7d38fefa01a25d430cd2107414bf28cb0c512378df5028a4fcfb001b07ffa7b2",
+    "sds-issue-writer.md": "2517d9580885370cc7b182f10ca398f7a2c69432866841887e4e9e4cccdf4ae6",
+    "sds-requirements-engineer.md": "48e7ac8c303c4ccd8def013d0ef2dbaaabe81ea24148d5d5c6d8500df9e977ff",
+    "sds-reviewer.md": "dbc42a07718360971ab8138885336f91eeef11781ad7cf44b09fdecb4993fe7a",
+    "sds-scribe.md": "b474d27e54d1988473e34a9adfe6626e15e57f0fc03fac69647e10680d54bf13",
+    "sds-stack-scout.md": "2862d54889fdca3ddf4b4071f2b0ebdfad35b087dc49131e665c73a74330f35b",
+    "sds-structure-warden.md": "345c08de5fc819fc8210cbcc1ef9e7caa86e3684e5be23529b4affaedd589ac9",
+    "sds-worker.md": "76f64dffb498a99bc24b4453cc44c2db505ced8af9d7070cf223963a063de8bc"
+  }
+}
