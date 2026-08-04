@@ -191,5 +191,5 @@ Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, dia
 ## Conexiones
 
 - [[Curso_C/00_README]]
-- [[MOC_Linux]]
+- Linux
 - Módulo siguiente: `[[Curso_C/modelo/02-condicionales]]`

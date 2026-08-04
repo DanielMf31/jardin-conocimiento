@@ -175,6 +175,6 @@ Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, dia
 ## Conexiones
 
 - [[Curso_C/00_README]]
-- [[MOC_Linux]]
+- Linux
 - [[Curso_C/modelo/06-matrices]] — modulo anterior: arrays y strings
 - [[Curso_C/modelo/08-structs]] — modulo siguiente: estructuras

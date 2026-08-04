@@ -244,6 +244,6 @@ Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, dia
 ## Conexiones
 
 - [[Curso_C/00_README]]
-- [[MOC_Linux]]
+- Linux
 - [[Curso_C/modelo/01-variables]] — modulo anterior: variables, tipos y E/S basica
 - [[Curso_C/modelo/03-bucles]] — modulo siguiente: `while`, `for`, `do-while`

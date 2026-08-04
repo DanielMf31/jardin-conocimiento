@@ -53,8 +53,8 @@ bash setup.sh   # instala gcc/make/gdb + entr (auto-recompila), y verifica
 ```
 Linux (terminal, gcc)  →  C (explícito)  →  Python (mismos conceptos, cómodo)  →  Python + NeetCode
 ```
-- Anclado en los primeros apuntes del [[MOC_Linux]] (compilar en terminal).
-- Después: puente **C → Python** (misma lógica, otra sintaxis) → [[MOC_NeetCode_150]].
+- Anclado en los primeros apuntes del Linux (compilar en terminal).
+- Después: puente **C → Python** (misma lógica, otra sintaxis) → NeetCode 150.
 
 ## Conexiones
-- [[MOC_Linux]] · [[MOC_Programacion]] · [[MOC_NeetCode_150]]
+- Linux · Programacion · NeetCode 150

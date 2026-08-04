@@ -76,5 +76,5 @@ Línea a línea:
 
 ## Conexiones
 - [[Curso_C/00_README]] — índice del curso
-- [[MOC_Linux]] — la terminal y `gcc` viven aquí
+- Linux — la terminal y `gcc` viven aquí
 - [[Curso_C/modelo/01-variables]] — primer módulo

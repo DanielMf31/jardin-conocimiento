@@ -20,11 +20,11 @@ Pocos inventos han cambiado tanto el mundo siendo tan invisibles. No tiene masco
 
 ## Parte I — La prehistoria: CPL, BCPL y B (1963–1971)
 
-La historia de C empieza, como la de [[Linux/historia-de-linux|Linux]], en los **Bell Labs** de AT&T, y está entrelazada con Unix desde el primer día. Pero antes de C hubo una pequeña genealogía de lenguajes.
+La historia de C empieza, como la de Linux, en los **Bell Labs** de AT&T, y está entrelazada con Unix desde el primer día. Pero antes de C hubo una pequeña genealogía de lenguajes.
 
 En los primeros 60, en Inglaterra, se diseñó **CPL** (*Combined Programming Language*), un lenguaje ambicioso, potente y tan complejo que casi nadie llegó a implementarlo del todo. Como reacción, **Martin Richards** creó en 1967 una versión destilada y portable: **BCPL** (*Basic CPL*), pensada para escribir compiladores. BCPL era *typeless*: solo conocía una cosa, la "palabra" de máquina.
 
-Cuando **Ken Thompson** empezó a construir Unix en una **PDP-7** rescatada (ver la historia de Unix en [[Linux/historia-de-linux|Historia de Linux]]), quiso un lenguaje de alto nivel para no programar todo en ensamblador. Tomó BCPL, lo recortó hasta que cupiera en la minúscula memoria de la PDP-7, y lo llamó **B** (1969-1970) — probablemente por BCPL, quizá por otras razones que se han perdido en la leyenda. B heredó el problema de BCPL: seguía siendo *typeless*, todo eran palabras. Eso funcionaba en la PDP-7, pero cuando Unix se mudó a la nueva **PDP-11**, que manejaba bytes y distintos tamaños de datos, B se quedó corto: no sabía distinguir un carácter de un entero de un número con decimales.
+Cuando **Ken Thompson** empezó a construir Unix en una **PDP-7** rescatada (ver la historia de Unix en Historia de Linux), quiso un lenguaje de alto nivel para no programar todo en ensamblador. Tomó BCPL, lo recortó hasta que cupiera en la minúscula memoria de la PDP-7, y lo llamó **B** (1969-1970) — probablemente por BCPL, quizá por otras razones que se han perdido en la leyenda. B heredó el problema de BCPL: seguía siendo *typeless*, todo eran palabras. Eso funcionaba en la PDP-7, pero cuando Unix se mudó a la nueva **PDP-11**, que manejaba bytes y distintos tamaños de datos, B se quedó corto: no sabía distinguir un carácter de un entero de un número con decimales.
 
 ---
 
@@ -161,9 +161,9 @@ Si Linux tiene a un Torvalds carismático y combativo, C tiene lo contrario: **D
 
 - [[Curso_C/00_README|Curso de C]] — el itinerario práctico
 - [[Curso_C/modelo/00-que-es-c]] — qué es C y cómo funciona el compilador
-- [[Linux/historia-de-linux|Historia de Linux]] — la historia hermana (C y Unix nacieron juntos)
-- [[Curso_Python/00_README|Curso de Python]] — el puente: C explícito → Python cómodo
-- [[MOC_Programacion]] · [[MOC_CS_Fundamentos]]
+- Historia de Linux — la historia hermana (C y Unix nacieron juntos)
+- Curso de Python — el puente: C explícito → Python cómodo
+- Programacion · CS Fundamentos
 
 ---
 
