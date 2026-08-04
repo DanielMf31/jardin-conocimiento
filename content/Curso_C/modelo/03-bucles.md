@@ -223,21 +223,15 @@ int main(void) {
 
 ## Ejercicios
 
-Los ficheros estan en `practica/03-bucles/`.
+Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, diagrama de flujo, explicación y el código listo para copiar.
 
-| # | Enunciado | Dificultad | Salida de ejemplo |
-|---|---|---|---|
-| 01 | Leer N y mostrar los numeros del 1 al N, uno por linea. | (facil) Verde | `1 2 3 ... N` (uno por linea) |
-| 02 | Leer N y calcular la suma 1+2+...+N. Mostrar el resultado. | (facil) Verde | `Suma de 1 a 5 = 15` |
-| 03 | Leer N y calcular N! (factorial). Usar `long long`. | (facil) Verde | `5! = 120` |
-| 04 | Leer un numero y mostrar su tabla de multiplicar del 1 al 10. | (media) Amarillo | `3 x 1 = 3` ... `3 x 10 = 30` |
-| 05 | Leer N y mostrar los N primeros terminos de Fibonacci. | (media) Amarillo | `0 1 1 2 3 5 8` (N=7) |
-| 06 | Mostrar un triangulo de asteriscos de altura N (leida por teclado). | (dificil) Rojo | Ver ej06 |
-| 07 | Menu do-while con 3 opciones: contar pares 1..N, contar impares 1..N, salir. Pedir N al elegir 1 o 2. | (dificil) Rojo | Ver ej07 |
-
-- Enunciado detallado, esqueleto y solucion en:
-  - `practica/03-bucles/ejNN_practica.c`
-  - `practica/03-bucles/ejNN_modelo.c`
+- [[Curso_C/practica/03-bucles/ej01|Ej 01 — Leer N y mostrar los numeros del 1 al N, uno por linea (verde)]]
+- [[Curso_C/practica/03-bucles/ej02|Ej 02 — Leer N y calcular la suma 1+2+...+N (verde)]]
+- [[Curso_C/practica/03-bucles/ej03|Ej 03 — Leer N y calcular N! (factorial) (verde)]]
+- [[Curso_C/practica/03-bucles/ej04|Ej 04 — Leer un numero y mostrar su tabla de multiplicar del 1 al 10 (amarillo)]]
+- [[Curso_C/practica/03-bucles/ej05|Ej 05 — Leer N y mostrar los N primeros terminos de la serie de Fibonacci (amarillo)]]
+- [[Curso_C/practica/03-bucles/ej06|Ej 06 — Mostrar un triangulo de asteriscos de altura N (rojo)]]
+- [[Curso_C/practica/03-bucles/ej07|Ej 07 — Menu do-while con 3 opciones (rojo)]]
 
 ---
 

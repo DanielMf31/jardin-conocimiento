@@ -1,5 +1,5 @@
 ---
-title: "Curso C — Modulo 08: Structs"
+title: "Modulo 08: Structs en C"
 date: 2026-06-16
 tags: [programacion/c, curso, programacion/c/structs, programacion/tipos-compuestos]
 type: nota
@@ -8,7 +8,7 @@ source: claude-code
 aliases: [structs en C, struct C, typedef struct]
 ---
 
-# Modulo 08 — Structs
+# Modulo 08: Structs en C
 
 ## Idea central
 
@@ -189,123 +189,15 @@ int main(void) {
 
 ## Ejercicios
 
-Los ficheros estan en `practica/08-structs/`. Cada ejercicio tiene un esqueleto `ejNN_practica.c` que debes completar y una solucion `ejNN_modelo.c`.
+Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, diagrama de flujo, explicación y el código listo para copiar.
 
----
-
-### Ejercicio 01 — Punto y coordenadas (facil)
-**Enunciado**: Define un `typedef struct` llamado `Punto` con campos `x` e `y` (ambos `double`). En `main`, crea dos puntos, pidelelos al usuario e imprimelos con formato `(x, y)`.
-**Entrada de ejemplo**:
-```
-1.5 2.0
--3.0 4.5
-```
-**Salida esperada**:
-```
-Punto 1: (1.50, 2.00)
-Punto 2: (-3.00, 4.50)
-```
-Ficheros: `practica/08-structs/ej01_practica.c` / `ej01_modelo.c`
-
----
-
-### Ejercicio 02 — Distancia entre dos puntos (facil)
-**Enunciado**: Ampliar el ejercicio anterior. Escribe una funcion `double distancia(Punto a, Punto b)` que calcule la distancia euclidea. Muestra el resultado con dos decimales.
-**Nota**: compila con `-lm` para `sqrt`.
-**Entrada de ejemplo**:
-```
-0.0 0.0
-3.0 4.0
-```
-**Salida esperada**:
-```
-Distancia: 5.00
-```
-Ficheros: `practica/08-structs/ej02_practica.c` / `ej02_modelo.c`
-
----
-
-### Ejercicio 03 — Persona: mostrar datos (facil)
-**Enunciado**: Define `typedef struct Persona` con `nombre[50]` (char) y `edad` (int). Pide datos al usuario y escribe una funcion `void mostrar_persona(Persona p)` que imprime nombre y edad con formato.
-**Entrada de ejemplo**:
-```
-Ana 28
-```
-**Salida esperada**:
-```
-Nombre: Ana, Edad: 28
-```
-Ficheros: `practica/08-structs/ej03_practica.c` / `ej03_modelo.c`
-
----
-
-### Ejercicio 04 — Rectangulo y area (media)
-**Enunciado**: Define `typedef struct Rectangulo` con `ancho` y `alto` (ambos `double`). Escribe funciones `double area(Rectangulo r)` y `double perimetro(Rectangulo r)`. Lee datos del usuario y muestra area y perimetro.
-**Entrada de ejemplo**:
-```
-5.0 3.0
-```
-**Salida esperada**:
-```
-Area: 15.00
-Perimetro: 16.00
-```
-Ficheros: `practica/08-structs/ej04_practica.c` / `ej04_modelo.c`
-
----
-
-### Ejercicio 05 — Comparar fechas (media)
-**Enunciado**: Define `typedef struct Fecha` con `dia`, `mes`, `anio` (int). Escribe una funcion `int fecha_anterior(Fecha a, Fecha b)` que devuelve 1 si `a` es anterior a `b`, 0 si son iguales, -1 si `a` es posterior. Lee dos fechas e imprime cual es anterior.
-**Entrada de ejemplo**:
-```
-15 6 2025
-20 3 2025
-```
-**Salida esperada**:
-```
-La primera fecha es posterior.
-```
-Ficheros: `practica/08-structs/ej05_practica.c` / `ej05_modelo.c`
-
----
-
-### Ejercicio 06 — Array de alumnos y media (media)
-**Enunciado**: Define `typedef struct Alumno` con `nombre[50]` y `nota` (float). Lee 4 alumnos, muestra la lista y calcula la media de notas. Indica tambien el alumno con la nota mas alta.
-**Entrada de ejemplo**:
-```
-Luis 7.5
-Marta 9.0
-Pedro 6.0
-Sofia 8.5
-```
-**Salida esperada**:
-```
-Lista de alumnos:
-  Luis    : 7.50
-  Marta   : 9.00
-  Pedro   : 6.00
-  Sofia   : 8.50
-Media: 7.75
-Mejor nota: Marta (9.00)
-```
-Ficheros: `practica/08-structs/ej06_practica.c` / `ej06_modelo.c`
-
----
-
-### Ejercicio 07 — Agenda de contactos con busqueda (dificil)
-**Enunciado**: Define `typedef struct Contacto` con `nombre[50]` y `telefono[20]`. Crea un array de 5 contactos con datos hardcodeados (inicializador de llaves). Escribe una funcion `int buscar(Contacto agenda[], int n, char *nombre)` que devuelve el indice del contacto o -1 si no existe. Pide un nombre al usuario, busca y muestra el resultado.
-**Salida esperada (nombre "Elena")**:
-```
-Nombre: Elena
-Telefono: 612345678
-```
-**Salida esperada (nombre "Nadie")**:
-```
-Contacto no encontrado.
-```
-Ficheros: `practica/08-structs/ej07_practica.c` / `ej07_modelo.c`
-
----
+- [[Curso_C/practica/08-structs/ej01|Ej 01 — Define Punto {x, y}, lee dos puntos del usuario e imprimelos con… (verde)]]
+- [[Curso_C/practica/08-structs/ej02|Ej 02 — Funcion distancia(Punto a, Punto b) que calcula la distancia euclidea… (verde)]]
+- [[Curso_C/practica/08-structs/ej03|Ej 03 — Define Persona {nombre[50], edad}, lee datos del usuario e imprimelos… (verde)]]
+- [[Curso_C/practica/08-structs/ej04|Ej 04 — Define Rectangulo {ancho, alto}, calcula area y perimetro con… (amarillo)]]
+- [[Curso_C/practica/08-structs/ej05|Ej 05 — Define Fecha {dia, mes, anio} y compara dos fechas indicando cual es… (amarillo)]]
+- [[Curso_C/practica/08-structs/ej06|Ej 06 — Array de 4 Alumno {nombre, nota}, muestra lista, calcula media e… (amarillo)]]
+- [[Curso_C/practica/08-structs/ej07|Ej 07 — Agenda de 5 contactos hardcodeados (rojo)]]
 
 ## Conexiones
 

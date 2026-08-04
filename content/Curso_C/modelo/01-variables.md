@@ -178,99 +178,15 @@ Hola, Ana. En 2026 tienes 28 años.
 
 ## Ejercicios
 
-Los ficheros están en `practica/01-variables/`. Para cada ejercicio existe un esqueleto (`ejNN_practica.c`) y la solución completa (`ejNN_modelo.c`).
+Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, diagrama de flujo, explicación y el código listo para copiar.
 
----
-
-### Ej01 — Hola con nombre (facil)
-**Enunciado:** Pide al usuario su nombre con `scanf` y saluda con `printf`.
-**Salida esperada:**
-```
-¿Cómo te llamas? Laura
-¡Hola, Laura!
-```
-Ficheros: `practica/01-variables/ej01_practica.c` · `ej01_modelo.c`
-
----
-
-### Ej02 — Suma, resta y producto de dos enteros (facil)
-**Enunciado:** Lee dos enteros `a` y `b`. Muestra su suma, resta y producto.
-**Salida esperada:**
-```
-a = 8, b = 3
-Suma: 11
-Resta: 5
-Producto: 24
-```
-Ficheros: `practica/01-variables/ej02_practica.c` · `ej02_modelo.c`
-
----
-
-### Ej03 — Media de tres notas (facil)
-**Enunciado:** Lee tres notas (float). Calcula y muestra la media con 2 decimales.
-**Salida esperada:**
-```
-Nota 1: 6.5
-Nota 2: 8.0
-Nota 3: 7.0
-Media: 7.17
-```
-Ficheros: `practica/01-variables/ej03_practica.c` · `ej03_modelo.c`
-
----
-
-### Ej04 — Celsius a Fahrenheit (media)
-**Enunciado:** Lee una temperatura en Celsius (float). Convierte a Fahrenheit con la fórmula `F = C * 9/5 + 32`. Muestra ambas con 1 decimal.
-**Salida esperada:**
-```
-Temperatura en Celsius: 100.0
-En Fahrenheit: 212.0
-```
-Ficheros: `practica/01-variables/ej04_practica.c` · `ej04_modelo.c`
-
----
-
-### Ej05 — Área y perímetro de un círculo (media)
-**Enunciado:** Lee el radio (float). Calcula área (`PI * r²`) y perímetro (`2 * PI * r`) usando `const float PI = 3.14159f`. Muestra con 2 decimales.
-**Salida esperada:**
-```
-Radio: 5.0
-Área: 78.54
-Perímetro: 31.42
-```
-Ficheros: `practica/01-variables/ej05_practica.c` · `ej05_modelo.c`
-
----
-
-### Ej06 — Intercambiar dos variables (media)
-**Enunciado:** Lee dos enteros. Intercámbialos usando una variable auxiliar. Muestra los valores antes y después del intercambio.
-**Salida esperada:**
-```
-Antes: a = 10, b = 20
-Después: a = 20, b = 10
-```
-Ficheros: `practica/01-variables/ej06_practica.c` · `ej06_modelo.c`
-
----
-
-### Ej07 — Cociente y resto (dificil)
-**Enunciado:** Lee dos enteros `dividendo` y `divisor`. Muestra cociente y resto (sin usar `/` ni `%` para el resto — calcúlalo como `dividendo - cociente * divisor`). Maneja el caso divisor = 0 con un mensaje de error.
-**Salida esperada (caso normal):**
-```
-Dividendo: 17
-Divisor: 5
-Cociente: 3
-Resto: 2
-```
-**Salida esperada (divisor 0):**
-```
-Dividendo: 8
-Divisor: 0
-Error: división por cero.
-```
-Ficheros: `practica/01-variables/ej07_practica.c` · `ej07_modelo.c`
-
----
+- [[Curso_C/practica/01-variables/ej01|Ej 01 — Pedir nombre al usuario y saludar con printf (verde)]]
+- [[Curso_C/practica/01-variables/ej02|Ej 02 — Leer dos enteros y mostrar suma, resta y producto (verde)]]
+- [[Curso_C/practica/01-variables/ej03|Ej 03 — Leer tres notas (float) y mostrar la media con 2 decimales (verde)]]
+- [[Curso_C/practica/01-variables/ej04|Ej 04 — Leer temperatura en Celsius y convertir a Fahrenheit (amarillo)]]
+- [[Curso_C/practica/01-variables/ej05|Ej 05 — Leer el radio y calcular area y perimetro de un circulo (amarillo)]]
+- [[Curso_C/practica/01-variables/ej06|Ej 06 — Leer dos enteros e intercambiarlos con una variable auxiliar (amarillo)]]
+- [[Curso_C/practica/01-variables/ej07|Ej 07 — Cociente y resto sin usar % para el resto (rojo)]]
 
 ## Conexiones
 

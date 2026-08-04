@@ -162,26 +162,15 @@ Nombre 3: Carla
 
 ## Ejercicios
 
-Los archivos de practica estan en `practica/09-archivos/`. Cada ejercicio tiene un esqueleto (`ejNN_practica.c`) que debes completar y una solucion (`ejNN_modelo.c`) para comparar despues.
+Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, diagrama de flujo, explicación y el código listo para copiar.
 
-| # | Enunciado | Dificultad | Salida esperada (ejemplo) |
-|---|---|---|---|
-| 01 | Escribe un programa que pida 5 frases al usuario y las guarde en `frases.txt`, una por linea. Luego abrelo y muestralas numeradas. | (facil) Facil | `1. Hola mundo` / `2. C es util` … |
-| 02 | Lee el archivo `frases.txt` (creado antes) y cuenta cuantas lineas tiene. Imprime el total. | (facil) Facil | `El archivo tiene 5 lineas.` |
-| 03 | Lee un archivo `numeros.txt` con enteros (uno por linea) y muestra su suma y su media. El archivo puede tener cualquier cantidad de numeros. | (media) Medio | Entrada: `3 7 2` → `Suma: 12  Media: 4.00` |
-| 04 | Copia el contenido de `origen.txt` a `copia.txt` linea a linea. Imprime cuantas lineas copiaste. | (media) Medio | `Copiadas 8 lineas.` |
-| 05 | Lee un archivo de texto y cuenta el numero total de palabras (separadas por espacios/saltos). | (media) Medio | `El archivo tiene 23 palabras.` |
-| 06 | Guarda un array de 5 structs `Producto {nombre[32], precio float}` en `productos.txt` (uno por linea con `fprintf`). Luego leelos con `fscanf` y muestralos. | (dificil) Dificil | `Manzana 1.20` / `Leche 0.85` … |
-| 07 | Abre un archivo de texto en modo append y permite al usuario anadir lineas indefinidamente hasta que escriba `"FIN"`. Al final muestra todo el archivo. | (dificil) Dificil | (las lineas anteriores + las nuevas) |
-
-Referencias de archivos:
-- Ejercicio 01: `practica/09-archivos/ej01_practica.c` / `modelo/09-archivos/ej01_modelo.c` (este modulo usa la carpeta de practica para los .c; la teoria esta aqui)
-- Ejercicio 02: `practica/09-archivos/ej02_practica.c` — `ej02_modelo.c`
-- Ejercicio 03: `practica/09-archivos/ej03_practica.c` — `ej03_modelo.c`
-- Ejercicio 04: `practica/09-archivos/ej04_practica.c` — `ej04_modelo.c`
-- Ejercicio 05: `practica/09-archivos/ej05_practica.c` — `ej05_modelo.c`
-- Ejercicio 06: `practica/09-archivos/ej06_practica.c` — `ej06_modelo.c`
-- Ejercicio 07: `practica/09-archivos/ej07_practica.c` — `ej07_modelo.c`
+- [[Curso_C/practica/09-archivos/ej01|Ej 01 — Pide 5 frases al usuario, guardalas en frases.txt y muestralas… (verde)]]
+- [[Curso_C/practica/09-archivos/ej02|Ej 02 — Lee frases.txt y cuenta cuantas lineas tiene (verde)]]
+- [[Curso_C/practica/09-archivos/ej03|Ej 03 — Lee numeros.txt (enteros, uno por linea) y muestra su suma y media (amarillo)]]
+- [[Curso_C/practica/09-archivos/ej04|Ej 04 — Copia el contenido de origen.txt a copia.txt linea a linea (amarillo)]]
+- [[Curso_C/practica/09-archivos/ej05|Ej 05 — Lee un archivo de texto y cuenta el numero total de palabras (amarillo)]]
+- [[Curso_C/practica/09-archivos/ej06|Ej 06 — Guarda un array de 5 structs Producto {nombre, precio} en… (rojo)]]
+- [[Curso_C/practica/09-archivos/ej07|Ej 07 — Abre un archivo en modo append y permite anadir lineas hasta escribir… (rojo)]]
 
 ## Conexiones
 

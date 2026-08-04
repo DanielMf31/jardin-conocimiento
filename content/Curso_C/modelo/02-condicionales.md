@@ -229,20 +229,15 @@ Es divisible por 3
 
 ## Ejercicios
 
-Los ficheros estan en `practica/02-condicionales/`.
+Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, diagrama de flujo, explicación y el código listo para copiar.
 
-| # | Enunciado | Dificultad | Entrada ejemplo | Salida esperada |
-|---|---|---|---|---|
-| 01 | Par o impar: lee un entero e indica si es par o impar. | verde | `7` | `7 es impar` |
-| 02 | Mayor de dos: lee dos enteros e imprime el mayor (o "son iguales"). | verde | `4 9` | `El mayor es 9` |
-| 03 | Signo de un numero: indica si es positivo, negativo o cero. | verde | `-3` | `Es negativo` |
-| 04 | Nota numerica a letra: lee nota 0-10 (entero) e imprime A(9-10), B(7-8), C(5-6), D(3-4), F(<3). | amarillo | `8` | `Nota: B` |
-| 05 | Calculadora con switch: lee dos numeros reales y un operador (+,-,*,/) e imprime el resultado; avisa si se divide por cero. | amarillo | `10 2 /` | `Resultado: 5.00` |
-| 06 | Ano bisiesto: lee un ano e indica si es bisiesto (divisible por 4, excepto siglos que no sean divisibles por 400). | amarillo | `2000` | `2000 es bisiesto` |
-| 07 | Clasificar en rangos: lee un entero y lo clasifica: <0 negativo, 0 cero, 1-9 un digito, 10-99 dos digitos, >=100 tres o mas digitos. | rojo | `47` | `Dos digitos` |
-
-Ficheros de solucion: `practica/02-condicionales/ejNN_modelo.c`
-Ficheros de practica: `practica/02-condicionales/ejNN_practica.c`
+- [[Curso_C/practica/02-condicionales/ej01|Ej 01 — Lee un entero e indica si es par o impar (verde)]]
+- [[Curso_C/practica/02-condicionales/ej02|Ej 02 — Lee dos enteros e imprime el mayor (verde)]]
+- [[Curso_C/practica/02-condicionales/ej03|Ej 03 — Lee un entero e indica si es positivo, negativo o cero (verde)]]
+- [[Curso_C/practica/02-condicionales/ej04|Ej 04 — Lee una nota entera (0-10) e imprime la letra (amarillo)]]
+- [[Curso_C/practica/02-condicionales/ej05|Ej 05 — Lee dos numeros reales y un operador (amarillo)]]
+- [[Curso_C/practica/02-condicionales/ej06|Ej 06 — Lee un ano e indica si es bisiesto (amarillo)]]
+- [[Curso_C/practica/02-condicionales/ej07|Ej 07 — Lee un entero y clasificalo en rangos (rojo)]]
 
 ---
 

@@ -1,0 +1,70 @@
+name: Deploy to Cloudflare Pages
+
+# Construye el sitio Quartz y lo publica en Cloudflare Pages.
+#
+# El jardin ya tenia un deploy a GitHub Pages (deploy.yml). Este workflow anade el
+# despliegue a Cloudflare Pages: Cloudflare no compila nada, este job produce `public/`
+# con `npx quartz build` y lo sube con wrangler; Pages lo sirve desde su edge. El
+# contenido (content/**) esta versionado en el repo, asi que el build no necesita la boveda.
+#
+# Requiere dos secretos en el repo (Settings -> Secrets and variables -> Actions):
+#   - CLOUDFLARE_API_TOKEN   (token con permiso "Cloudflare Pages: Edit")
+#   - CLOUDFLARE_ACCOUNT_ID  (id de la cuenta de Cloudflare)
+on:
+  push:
+    branches: [main]
+  # Permite lanzar un deploy a mano desde la pestana Actions.
+  workflow_dispatch:
+
+# Dos pushes seguidos no deben competir por entrar en Pages.
+concurrency:
+  group: deploy-cloudflare
+  cancel-in-progress: true
+
+# Minimo privilegio: el job solo lee el repositorio. Quien autoriza el deploy es el
+# token de Cloudflare (secreto de GitHub), no el GITHUB_TOKEN.
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      # fetch-depth: 0 -> Quartz usa las fechas de git de cada nota, necesita el historial.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Node 22 para igualar .node-version y la maquina local.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # Instalacion reproducible desde package-lock.json.
+      - run: npm ci
+
+      # Genera el sitio estatico en public/ (mismo comando que en local).
+      - name: Build Quartz
+        run: npx quartz build
+
+      # Asegura que el proyecto de Pages existe. `pages deploy` NO lo crea en CI
+      # no interactivo (falla con 7003 si no existe); este paso lo crea la primera
+      # vez y tolera el "ya existe" en las siguientes.
+      - name: Ensure the Pages project exists
+        continue-on-error: true
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages project create jardin-conocimiento --production-branch=main
+
+      # Publica public/ en Cloudflare Pages. Las credenciales vienen de los secretos.
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=jardin-conocimiento --branch=main

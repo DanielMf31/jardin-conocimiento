@@ -237,20 +237,15 @@ long factorial(int n) {
 
 ## Ejercicios
 
-Carpeta de práctica: `practica/04-funciones/`
+Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, diagrama de flujo, explicación y el código listo para copiar.
 
-| # | Enunciado | Dificultad | Salida de ejemplo |
-|---|---|---|---|
-| 01 | Escribe `es_par(n)` que devuelve 1 si `n` es par, 0 si no. Pruébala con los números del 1 al 10. | (facil) Fácil | `1: impar   2: par   3: impar ...` |
-| 02 | Escribe `max(a,b)` y `min(a,b)`. Pide dos enteros al usuario e imprime el mayor y el menor. | (facil) Fácil | `Max: 8   Min: 3` |
-| 03 | Escribe `factorial(n)`. Pide un número entre 0 y 12 e imprime su factorial. | (facil) Fácil | `5! = 120` |
-| 04 | Escribe `potencia(base, exp)` (enteros, exp >= 0) sin usar `pow`. Prueba con varios pares. | (media) Medio | `2^10 = 1024` |
-| 05 | Escribe `es_primo(n)` que devuelve 1 si `n` es primo. Imprime todos los primos entre 2 y 50. | (media) Medio | `2 3 5 7 11 13 17 19 23 29 31 37 41 43 47` |
-| 06 | Escribe `imprimir_tabla(n)` que imprime la tabla de multiplicar de `n` (del 1 al 10). Pide `n` al usuario. | (media) Medio | `3 x 1 = 3  ...  3 x 10 = 30` |
-| 07 | Escribe `maximo_array(arr, n)` y `minimo_array(arr, n)`. Lee 8 enteros en un array e imprime el máximo y el mínimo. | (dificil) Difícil | `Max: 99   Min: -4` |
-
-- Esqueleto alumno: `practica/04-funciones/ejNN_practica.c`
-- Solución completa: `practica/04-funciones/ejNN_modelo.c`
+- [[Curso_C/practica/04-funciones/ej01|Ej 01 — Funcion es_par(n) que devuelve 1 si n es par, 0 si no (verde)]]
+- [[Curso_C/practica/04-funciones/ej02|Ej 02 — Funciones max(a,b) y min(a,b) (verde)]]
+- [[Curso_C/practica/04-funciones/ej03|Ej 03 — Funcion factorial(n) (verde)]]
+- [[Curso_C/practica/04-funciones/ej04|Ej 04 — Funcion potencia(base, exp) con enteros, exp >= 0 (amarillo)]]
+- [[Curso_C/practica/04-funciones/ej05|Ej 05 — Funcion es_primo(n) que devuelve 1 si n es primo (amarillo)]]
+- [[Curso_C/practica/04-funciones/ej06|Ej 06 — Funcion imprimir_tabla(n) que imprime la tabla de multiplicar de n (amarillo)]]
+- [[Curso_C/practica/04-funciones/ej07|Ej 07 — Funciones maximo_array y minimo_array (rojo)]]
 
 ---
 

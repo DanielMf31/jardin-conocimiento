@@ -202,148 +202,15 @@ Col 2: 3+6+9 = 18
 
 ## Ejercicios
 
-Los ficheros de práctica están en `practica/06-matrices/`. Cada ejercicio tiene:
-- `ejNN_practica.c` — esqueleto con TODOs para rellenar.
-- `ejNN_modelo.c` — solución completa para comparar **después** de intentarlo.
+Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, diagrama de flujo, explicación y el código listo para copiar.
 
----
-
-### ej01 — Leer e imprimir una matriz (facil)
-
-**Enunciado:** Lee una matriz de enteros de tamaño M×N (M filas, N columnas, ambos introducidos por el usuario, máximo 10×10) e imprímela con formato alineado.
-
-**Entrada de ejemplo:**
-```
-M=2 N=3
-1 2 3
-4 5 6
-```
-**Salida esperada:**
-```
-   1   2   3
-   4   5   6
-```
-→ `practica/06-matrices/ej01_practica.c` / `ej01_modelo.c`
-
----
-
-### ej02 — Suma por filas y columnas (facil)
-
-**Enunciado:** Dado una matriz 3×3 introducida por el usuario, imprime la suma de cada fila y la suma de cada columna.
-
-**Entrada de ejemplo:**
-```
-1 2 3
-4 5 6
-7 8 9
-```
-**Salida esperada:**
-```
-Sumas por fila:   6  15  24
-Sumas por columna: 12  15  18
-```
-→ `practica/06-matrices/ej02_practica.c` / `ej02_modelo.c`
-
----
-
-### ej03 — Suma de dos matrices (facil)
-
-**Enunciado:** Lee dos matrices 3×3 de enteros e imprime su suma elemento a elemento.
-
-**Entrada de ejemplo:**
-```
-Matriz A:  1 0 0 / 0 1 0 / 0 0 1
-Matriz B:  2 3 4 / 5 6 7 / 8 9 0
-```
-**Salida esperada:**
-```
-   3   3   4
-   5   7   7
-   8   9   1
-```
-→ `practica/06-matrices/ej03_practica.c` / `ej03_modelo.c`
-
----
-
-### ej04 — Máximo de la matriz (media)
-
-**Enunciado:** Lee una matriz 4×4 e imprime el valor máximo y su posición (fila, columna).
-
-**Entrada de ejemplo:**
-```
- 3  1  4  1
- 5  9  2  6
- 5  3  5  8
- 9  7  9  3
-```
-**Salida esperada:**
-```
-Maximo: 9 en posicion [1][1]
-```
-*(Si hay empate, se acepta cualquiera de las posiciones.)*
-
-→ `practica/06-matrices/ej04_practica.c` / `ej04_modelo.c`
-
----
-
-### ej05 — Transpuesta (media)
-
-**Enunciado:** Lee una matriz de enteros 3×4 e imprime su transpuesta (que será 4×3).
-
-**Entrada de ejemplo:**
-```
-1 2 3 4
-5 6 7 8
-9 10 11 12
-```
-**Salida esperada:**
-```
-   1   5   9
-   2   6  10
-   3   7  11
-   4   8  12
-```
-→ `practica/06-matrices/ej05_practica.c` / `ej05_modelo.c`
-
----
-
-### ej06 — Suma de la diagonal principal (media)
-
-**Enunciado:** Lee una matriz cuadrada N×N (N introducido por el usuario, máximo 8) y calcula la suma de los elementos de la diagonal principal (donde `i == j`).
-
-**Entrada de ejemplo:**
-```
-N=3
-1 2 3
-4 5 6
-7 8 9
-```
-**Salida esperada:**
-```
-Suma diagonal: 15
-```
-→ `practica/06-matrices/ej06_practica.c` / `ej06_modelo.c`
-
----
-
-### ej07 — Generar matriz identidad (dificil)
-
-**Enunciado:** Dado N introducido por el usuario (máximo 8), genera e imprime la matriz identidad N×N: 1 en la diagonal, 0 en el resto.
-
-**Entrada de ejemplo:**
-```
-N=4
-```
-**Salida esperada:**
-```
-   1   0   0   0
-   0   1   0   0
-   0   0   1   0
-   0   0   0   1
-```
-→ `practica/06-matrices/ej07_practica.c` / `ej07_modelo.c`
-
----
+- [[Curso_C/practica/06-matrices/ej01|Ej 01 — Lee una matriz MxN (max 10x10) e imprimela con formato alineado (verde)]]
+- [[Curso_C/practica/06-matrices/ej02|Ej 02 — Dada una matriz 3x3, imprime la suma de cada fila y cada columna (verde)]]
+- [[Curso_C/practica/06-matrices/ej03|Ej 03 — Lee dos matrices 3x3 e imprime su suma elemento a elemento (verde)]]
+- [[Curso_C/practica/06-matrices/ej04|Ej 04 — Lee una matriz 4x4 e imprime el valor maximo y su posicion (amarillo)]]
+- [[Curso_C/practica/06-matrices/ej05|Ej 05 — Lee una matriz 3x4 e imprime su transpuesta (amarillo)]]
+- [[Curso_C/practica/06-matrices/ej06|Ej 06 — Lee una matriz cuadrada NxN (max 8) y calcula la suma de la diagonal… (amarillo)]]
+- [[Curso_C/practica/06-matrices/ej07|Ej 07 — Dado N (max 8), genera e imprime la matriz identidad NxN (rojo)]]
 
 ## Conexiones
 

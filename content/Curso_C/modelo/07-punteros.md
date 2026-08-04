@@ -162,106 +162,15 @@ Max=9  Min=1
 
 ## Ejercicios
 
-Todos los ejercicios van en `practica/07-punteros/`. Cada uno tiene esqueleto (`ejNN_practica.c`) y solucion (`ejNN_modelo.c`).
+Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, diagrama de flujo, explicación y el código listo para copiar.
 
----
-
-**ej01** — (facil) Imprimir direccion y valor
-Declara una variable `int n = 77`. Usa un puntero para imprimir su direccion (con `%p`) y su valor (con `%d`). Despues modifica el valor a traves del puntero e imprimelo de nuevo.
-Entrada: ninguna.
-Salida esperada (la direccion variara):
-```
-Direccion: 0x7ffd...
-Valor original: 77
-Valor modificado: 100
-```
-Ficheros: `practica/07-punteros/ej01_practica.c` | `practica/07-punteros/ej01_modelo.c`
-
----
-
-**ej02** — (facil) Funcion incrementar por referencia
-Escribe `void incrementar(int *p, int delta)` que suma `delta` al entero apuntado. Llama desde `main` con dos variables distintas y muestra los resultados.
-Entrada: ninguna (valores fijos en main).
-Salida esperada:
-```
-a=10 -> 15
-b=3  -> 8
-```
-Ficheros: `practica/07-punteros/ej02_practica.c` | `practica/07-punteros/ej02_modelo.c`
-
----
-
-**ej03** — (facil) Swap de dos enteros
-Escribe `void swap(int *a, int *b)` que intercambie dos enteros. Demuestra que funciona imprimiendo antes y despues.
-Entrada: ninguna.
-Salida esperada:
-```
-Antes:  a=5 b=20
-Despues: a=20 b=5
-```
-Ficheros: `practica/07-punteros/ej03_practica.c` | `practica/07-punteros/ej03_modelo.c`
-
----
-
-**ej04** — (media) Recorrer array con puntero
-Dado `int arr[] = {3, 1, 4, 1, 5, 9, 2, 6}`, recorre el array usando SOLO un puntero (sin usar `arr[i]`). Imprime cada elemento seguido de su indice (calcula el indice como `p - arr`).
-Entrada: ninguna.
-Salida esperada:
-```
-[0] = 3
-[1] = 1
-[2] = 4
-[3] = 1
-[4] = 5
-[5] = 9
-[6] = 2
-[7] = 6
-```
-Ficheros: `practica/07-punteros/ej04_practica.c` | `practica/07-punteros/ej04_modelo.c`
-
----
-
-**ej05** — (media) Max y min por referencia
-Escribe `void rango(int *arr, int n, int *pmax, int *pmin)` que encuentre el maximo y minimo de un array de n enteros. Usa aritmetica de punteros en el recorrido. Llama desde main con un array de 7 elementos.
-Entrada: ninguna.
-Salida esperada (con `{4, 1, 9, 2, 7, 3, 5}`):
-```
-Max = 9
-Min = 1
-```
-Ficheros: `practica/07-punteros/ej05_practica.c` | `practica/07-punteros/ej05_modelo.c`
-
----
-
-**ej06** — (media) Suma de array con puntero
-Escribe `int suma_array(int *arr, int n)` que devuelva la suma usando un puntero (sin indexacion `[]`). Llama con un array de 6 enteros leidos por teclado.
-Entrada (ejemplo):
-```
-1 2 3 4 5 6
-```
-Salida esperada:
-```
-Suma = 21
-```
-Ficheros: `practica/07-punteros/ej06_practica.c` | `practica/07-punteros/ej06_modelo.c`
-
----
-
-**ej07** — (dificil) Invertir array in-place con punteros
-Escribe `void invertir(int *arr, int n)` que invierta el array sin array auxiliar, usando DOS punteros: uno al inicio y otro al final, avanzando hacia el centro con swap. Muestra el array antes y despues.
-Entrada (ejemplo):
-```
-5
-10 20 30 40 50
-```
-Salida esperada:
-```
-Original:  10 20 30 40 50
-Invertido: 50 40 30 20 10
-```
-Ficheros: `practica/07-punteros/ej07_practica.c` | `practica/07-punteros/ej07_modelo.c`
-
----
+- [[Curso_C/practica/07-punteros/ej01|Ej 01 — Imprimir la direccion y el valor de una variable usando un puntero,… (verde)]]
+- [[Curso_C/practica/07-punteros/ej02|Ej 02 — Funcion incrementar(int *p, int delta) que suma delta al entero… (verde)]]
+- [[Curso_C/practica/07-punteros/ej03|Ej 03 — Funcion swap(int *a, int *b) que intercambia dos enteros por… (verde)]]
+- [[Curso_C/practica/07-punteros/ej04|Ej 04 — Recorrer un array con un puntero (amarillo)]]
+- [[Curso_C/practica/07-punteros/ej05|Ej 05 — Funcion rango(int *arr, int n, int *pmax, int *pmin) que encuentra… (amarillo)]]
+- [[Curso_C/practica/07-punteros/ej06|Ej 06 — Funcion suma_array(int *arr, int n) que devuelve la suma usando… (amarillo)]]
+- [[Curso_C/practica/07-punteros/ej07|Ej 07 — Funcion invertir(int *arr, int n) que invierte el array in-place con… (rojo)]]
 
 ## Conexiones
 

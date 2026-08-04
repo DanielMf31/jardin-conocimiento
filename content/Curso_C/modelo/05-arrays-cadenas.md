@@ -176,20 +176,15 @@ Media: 4.00
 
 ## Ejercicios
 
-Los ficheros estan en `practica/05-arrays-cadenas/`.
+Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, diagrama de flujo, explicación y el código listo para copiar.
 
-| # | Enunciado | Dificultad | Salida esperada (ejemplo) |
-|---|---|---|---|
-| 01 | Leer N enteros (N<=20) y mostrarlos en orden inverso. Entrada: `4` / `3 7 1 5`. | verde | `5 1 7 3` |
-| 02 | Calcular la suma y la media de un array de N enteros. Entrada: `5` / `2 4 6 8 10`. | verde | `Suma: 30  Media: 6.00` |
-| 03 | Encontrar el maximo y el minimo de un array. Entrada: `5` / `4 -2 9 1 0`. | verde | `Max: 9  Min: -2` |
-| 04 | Invertir un array IN-PLACE (sin array auxiliar) y mostrarlo. Entrada: `5` / `1 2 3 4 5`. | amarillo | `5 4 3 2 1` |
-| 05 | Busqueda lineal: leer un array y un valor buscado; indicar si existe y en que posicion (primera ocurrencia). Entrada: `5` / `10 20 30 40 50` / buscar `30`. | amarillo | `Encontrado en posicion 2` |
-| 06 | Contar vocales (a e i o u, mayusculas y minusculas) en una cadena leida con fgets. Entrada: `"Hola Mundo"`. | amarillo | `Vocales: 4` |
-| 07 | Calcular la longitud de una cadena SIN usar strlen (recorriendo hasta `'\0'`). Entrada: `"Programar"`. | rojo | `Longitud: 9` |
-
-- Practica: `practica/05-arrays-cadenas/ejNN_practica.c`
-- Solucion: `practica/05-arrays-cadenas/ejNN_modelo.c`
+- [[Curso_C/practica/05-arrays-cadenas/ej01|Ej 01 — Leer N enteros (N<=20) y mostrarlos en orden inverso (verde)]]
+- [[Curso_C/practica/05-arrays-cadenas/ej02|Ej 02 — Calcular la suma y la media de un array de N enteros (verde)]]
+- [[Curso_C/practica/05-arrays-cadenas/ej03|Ej 03 — Encontrar el maximo y el minimo de un array de N enteros (verde)]]
+- [[Curso_C/practica/05-arrays-cadenas/ej04|Ej 04 — Invertir un array IN-PLACE (sin array auxiliar) y mostrarlo (amarillo)]]
+- [[Curso_C/practica/05-arrays-cadenas/ej05|Ej 05 — Busqueda lineal — leer un array y un valor (amarillo)]]
+- [[Curso_C/practica/05-arrays-cadenas/ej06|Ej 06 — Contar vocales (a e i o u, mayusculas y minusculas) en una cadena… (amarillo)]]
+- [[Curso_C/practica/05-arrays-cadenas/ej07|Ej 07 — Calcular la longitud de una cadena SIN usar strlen, recorriendo hasta… (rojo)]]
 
 ---
 

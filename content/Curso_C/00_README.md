@@ -14,11 +14,11 @@ Curso de **C puro** (no C++), de lo básico a archivos, con **mucho ejercicio**.
 apoyado en la terminal de Linux y como **on-ramp** hacia Python y los problemas de NeetCode.
 
 ## Cómo está organizado
-- **`modelo/`** — la teoría (`.md`) + soluciones: lo que usas TÚ para enseñar.
-- **`practica/<modulo>/`** — por cada ejercicio, dos `.c`:
-  - `ejNN_modelo.c` — resuelto (referencia).
-  - `ejNN_practica.c` — esqueleto con `// TODO` para el alumno.
-- Cada `.c` lleva **cabecera** (módulo, nº, enunciado, dificultad, cómo compilar).
+- **`modelo/`** — la teoría (`.md`) de cada módulo: lo que usas TÚ para enseñar.
+- **`practica/<modulo>/`** — una **nota web por ejercicio** (enunciado, diagrama de flujo,
+  explicación y el código para copiar). El alumno la abre en el navegador y resuelve sin descargar nada.
+- Las notas de práctica se **generan** desde el código del curso (`curso-c/material/`, la fuente de
+  verdad) con `tools/gen_course_exercises.py`; no se editan a mano salvo la explicación.
 
 ## Ruta de los módulos
 | # | Módulo | Doc |
@@ -33,6 +33,8 @@ apoyado en la terminal de Linux y como **on-ramp** hacia Python y los problemas 
 | 07 | Punteros | [[Curso_C/modelo/07-punteros]] |
 | 08 | Structs | [[Curso_C/modelo/08-structs]] |
 | 09 | Lectura/escritura de archivos | [[Curso_C/modelo/09-archivos]] |
+
+> **Práctica:** [[Curso_C/practica/00_README|Ejercicios resueltos]] — una nota por ejercicio, para resolver directamente en el navegador (empezando por el módulo 01).
 
 > **Extra (cultura):** [[Curso_C/historia-de-c|Historia de C]] — de dónde viene el lenguaje, su evolución a lo largo de los años y las cosas increíbles que se han construido con él.
 
