@@ -46,6 +46,12 @@ jobs:
       # Instalacion reproducible desde package-lock.json.
       - run: npm ci
 
+      # Guardian anti-fugas: aborta el deploy si content/ tiene datos personales, claves,
+      # referencias a notas privadas o wikilinks rotos. Debe correr ANTES del build (el workflow
+      # de gitea ya lo hace; este es el deploy principal y no debe ir sin red).
+      - name: Guard anti-fugas
+        run: python3 tools/check-leaks.py
+
       # Genera el sitio estatico en public/ (mismo comando que en local).
       - name: Build Quartz
         run: npx quartz build
