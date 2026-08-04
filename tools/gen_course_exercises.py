@@ -55,7 +55,8 @@ COURSES = {
         "ext": ".c",
         "fence": "c",
         "has_diagrams": True,
-        "diagram_suffix": "_plantuml.png",
+        # Dos diagramas por ejercicio: flujo/actividad (plantuml) y grafo (graphviz).
+        "diagram_suffixes": ["_plantuml.png", "_graphviz.png"],
         # -lm: algunos ejercicios usan math.h (sqrt...). En Linux hace falta enlazar libm;
         # en Dev-C++/MinGW no, pero el flag es inofensivo si no se usa.
         "verify": lambda src, out: ["gcc", "-std=c11", "-Wall", str(src), "-lm", "-o", str(out)],
@@ -72,7 +73,7 @@ COURSES = {
         "ext": ".py",
         "fence": "python",
         "has_diagrams": False,
-        "diagram_suffix": None,
+        "diagram_suffixes": [],
         "verify": lambda src, out: ["python3", "-m", "py_compile", str(src)],
         "teoria_link": "Curso_Python/modelo/{modslug}",
         "indice_link": "Curso_Python/00_README",
@@ -161,7 +162,7 @@ def verify_compiles(course: dict, src: Path) -> tuple[bool, str]:
 
 def note_markdown(course: dict, meta: dict, modslug: str,
                   modelo_src: str, practica_src: str,
-                  diagram_name: str | None, explicacion: str, date: str) -> str:
+                  diagram_names: list, explicacion: str, date: str) -> str:
     key_label = course["label"]
     mod, num = meta["mod_num"], meta["ej_num"]
     dif = meta["dificultad"]
@@ -172,17 +173,19 @@ def note_markdown(course: dict, meta: dict, modslug: str,
     indice = course["indice_link"]
 
     diagram_block = ""
-    if diagram_name:
+    if diagram_names:
         # Ruta ROOT-ABSOLUTA a proposito: los diagramas se llaman igual en cada modulo
         # (ejNN_plantuml.png), y la resolucion "shortest" de Quartz no puede desambiguar
         # un nombre suelto -> lo resolveria mal. La ruta completa desde content/ si es unica.
         # (En el espejo, to_mirror la reescribe a nombre suelto para que Obsidian la resuelva
         #  en la misma carpeta.)
-        src = f"/{course['content_dir']}/practica/{modslug}/{diagram_name}"
-        diagram_block = (
-            f"## Diagrama de flujo\n\n"
-            f"![Diagrama de flujo del ejercicio {num}]({src})\n\n"
-        )
+        parts = []
+        for name in diagram_names:
+            src = f"/{course['content_dir']}/practica/{modslug}/{name}"
+            kind = "grafo" if "graphviz" in name else "actividad"
+            parts.append(f"![Diagrama de flujo ({kind}) del ejercicio {num}]({src})")
+        head = "## Diagramas de flujo" if len(diagram_names) > 1 else "## Diagrama de flujo"
+        diagram_block = f"{head}\n\n" + "\n\n".join(parts) + "\n\n"
 
     # El titulo va entre comillas dobles en el frontmatter YAML: las comillas dobles
     # que traiga el enunciado romperian la cadena, asi que se pasan a comillas simples.
@@ -380,12 +383,14 @@ def main() -> int:
                 failed.append(f"{moddir.name}/ej{num}: {msg.splitlines()[0] if msg else '?'}")
             warn = " (con avisos)" if ok and msg else ""
 
-            diagram_name = None
+            diagram_names = []
             if course["has_diagrams"]:
-                dpng = moddir / "diagramas" / f"ej{num}{course['diagram_suffix']}"
-                if dpng.exists():
-                    diagram_name = f"ej{num}_plantuml.png"
-                    shutil.copy2(dpng, out_moddir / diagram_name)
+                for suf in course["diagram_suffixes"]:
+                    dpng = moddir / "diagramas" / f"ej{num}{suf}"
+                    if dpng.exists():
+                        name = f"ej{num}{suf}"
+                        shutil.copy2(dpng, out_moddir / name)
+                        diagram_names.append(name)
 
             note = out_moddir / f"ej{num}.md"
             # conservar la explicacion ya redactada si el fichero existe
@@ -397,7 +402,7 @@ def main() -> int:
                     explicacion = m.group(1).strip()
 
             md = note_markdown(course, meta, moddir.name, modelo_src, practica_src,
-                               diagram_name, explicacion, date)
+                               diagram_names, explicacion, date)
             note.write_text(md, encoding="utf-8")
             total += 1
             print(f"  [{status}{warn}] {note.relative_to(CONTENT)}  ({meta['dificultad']})")
@@ -406,8 +411,8 @@ def main() -> int:
                 source_rel = f"content/{course['content_dir']}/practica/{moddir.name}/ej{num}.md"
                 emod = esp_practica / moddir.name
                 write_ro(emod / f"ej{num}.md", to_mirror(md, source_rel))
-                if diagram_name:
-                    write_ro(emod / diagram_name, (out_moddir / diagram_name).read_bytes())
+                for name in diagram_names:
+                    write_ro(emod / name, (out_moddir / name).read_bytes())
                 mirrored += 1
 
     idx_text = rebuild_index(course, dest_practica, date)
