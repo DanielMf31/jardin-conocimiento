@@ -173,9 +173,15 @@ def note_markdown(course: dict, meta: dict, modslug: str,
 
     diagram_block = ""
     if diagram_name:
+        # Ruta ROOT-ABSOLUTA a proposito: los diagramas se llaman igual en cada modulo
+        # (ejNN_plantuml.png), y la resolucion "shortest" de Quartz no puede desambiguar
+        # un nombre suelto -> lo resolveria mal. La ruta completa desde content/ si es unica.
+        # (En el espejo, to_mirror la reescribe a nombre suelto para que Obsidian la resuelva
+        #  en la misma carpeta.)
+        src = f"/{course['content_dir']}/practica/{modslug}/{diagram_name}"
         diagram_block = (
             f"## Diagrama de flujo\n\n"
-            f"![Diagrama de flujo del ejercicio {num}]({diagram_name})\n\n"
+            f"![Diagrama de flujo del ejercicio {num}]({src})\n\n"
         )
 
     # El titulo va entre comillas dobles en el frontmatter YAML: las comillas dobles
@@ -270,6 +276,9 @@ def to_mirror(md: str, source_rel: str) -> str:
            f"mirror: true\nmirror_source: {source_rel}")
     banner = ("<!-- FICHERO GENERADO — NO EDITAR. Fuente de verdad: "
               f"jardin-conocimiento/{source_rel} (se regenera desde el curso). -->")
+    # En el jardin las imagenes van con ruta root-absoluta (Quartz); en la boveda el PNG
+    # esta junto a la nota, asi que se deja el nombre suelto para que Obsidian lo resuelva.
+    body = re.sub(r"\]\(/[^)]*/([^/)]+\.png)\)", r"](\1)", body)
     return f"---\n{fm}\n---\n\n{banner}\n\n{body.lstrip()}"
 
 
