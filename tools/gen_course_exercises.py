@@ -329,6 +329,26 @@ copiar. Puedes resolverlo desde el navegador, sin descargar nada.
     return text
 
 
+def mirror_theory(course: dict, espejo: Path) -> int:
+    """Espeja la TEORIA del curso (00_README de curso, historia, modelo/*.md) al espejo de la boveda.
+
+    La practica ya se espeja en el bucle principal; esto anade el resto del doc para que
+    _Espejo/<curso>/ tenga el curso COMPLETO (teoria + practica). Copia de solo lectura (0444) con el
+    mismo convenio (frontmatter espejo + banner) via to_mirror/write_ro.
+    """
+    content_dir = CONTENT / course["content_dir"]
+    esp_root = espejo / course["src_subdir"]
+    # Teoria = los .md de la raiz del curso (00_README, historia-de-*) + modelo/*.md. No practica/.
+    sources = sorted(content_dir.glob("*.md")) + sorted((content_dir / "modelo").glob("*.md"))
+    count = 0
+    for src in sources:
+        rel = src.relative_to(content_dir)                 # p.ej. modelo/01-variables.md
+        source_rel = f"content/{course['content_dir']}/{rel.as_posix()}"
+        write_ro(esp_root / rel, to_mirror(src.read_text(encoding="utf-8"), source_rel))
+        count += 1
+    return count
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Genera notas por ejercicio para un curso del Jardin.")
     ap.add_argument("course", choices=sorted(COURSES), help="clave del curso (c, python, ...)")
@@ -398,7 +418,9 @@ def main() -> int:
             if note.exists():
                 prev = note.read_text(encoding="utf-8")
                 m = re.search(r"<!-- EXPLICACION -->\n(.*?)\n## Para practicar", prev, re.S)
-                if m and m.group(1).strip() and "pendiente" not in m.group(1):
+                # OJO: comprobar la FRASE completa del placeholder, no el substring "pendiente"
+                # (palabras como "independientes" lo contienen y revertirian una explicacion real).
+                if m and m.group(1).strip() and "pendiente de redactar" not in m.group(1):
                     explicacion = m.group(1).strip()
 
             md = note_markdown(course, meta, moddir.name, modelo_src, practica_src,
@@ -421,7 +443,9 @@ def main() -> int:
         write_ro(esp_practica / "00_README.md", to_mirror(idx_text, idx_rel))
     print(f"\nGeneradas {total} notas en {dest_practica.relative_to(REPO)}. Indice regenerado.")
     if espejo is not None:
-        print(f"Espejo (solo lectura): {mirrored} notas en {esp_practica}")
+        print(f"Espejo practica (solo lectura): {mirrored} notas en {esp_practica}")
+        teoria = mirror_theory(course, espejo)
+        print(f"Espejo teoria (solo lectura): {teoria} ficheros (00_README, historia, modelo/)")
     if failed:
         print(f"\n{len(failed)} ejercicio(s) NO compilan (revisa el material fuente):", file=sys.stderr)
         for f in failed:
