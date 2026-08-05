@@ -1,30 +1,34 @@
 ---
-title: "Modulo 05: Arrays y cadenas en C"
+title: "Módulo 05: Arrays y cadenas en C"
 date: 2026-06-16
 tags: [programacion/c, curso, programacion/arrays, programacion/cadenas]
-type: nota
-status: en-progreso
-source: claude-code
 aliases: [arrays en C, cadenas en C, char array, string.h C]
+type: espejo
+status: espejo
+source: mirror-generado
+mirror: true
+mirror_source: curso-c/modelo/05-arrays-cadenas.md
 ---
 
-# Modulo 05: Arrays y cadenas en C
+<!-- FICHERO GENERADO — NO EDITAR. Fuente de verdad: curso-c/modelo/05-arrays-cadenas.md (se regenera con gen_course.py). -->
+
+# Módulo 05: Arrays y cadenas en C
 
 ## Idea central
 
-Sin arrays no puedes almacenar mas de un dato del mismo tipo sin inventar una variable por cada elemento. Un array es un bloque contiguo de memoria donde guardas N valores del mismo tipo y accedes a cada uno por indice. Las cadenas en C son simplemente arrays de `char` con un centinela `'\0'` al final; entender eso elimina el 90 % de los bugs de cadenas.
+Sin arrays no puedes almacenar más de un dato del mismo tipo sin inventar una variable por cada elemento. Un array es un bloque contiguo de memoria donde guardas N valores del mismo tipo y accedes a cada uno por índice. Las cadenas en C son simplemente arrays de `char` con un centinela `'\0'` al final; entender eso elimina el 90 % de los bugs de cadenas.
 
 ---
 
-## Que aprendes
+## Qué aprendes
 
-| Concepto | Para que sirve |
+| Concepto | Para qué sirve |
 |---|---|
-| Declarar e inicializar un array | Guardar una coleccion de valores del mismo tipo |
+| Declarar e inicializar un array | Guardar una colección de valores del mismo tipo |
 | Recorrer con `for` | Leer o modificar cada elemento en orden |
-| Calcular suma, media, max, min | Operaciones estadisticas basicas sobre datos |
-| Invertir un array in-place | Patron swap con dos indices |
-| Busqueda lineal | Encontrar si un valor existe en la coleccion |
+| Calcular suma, media, max, min | Operaciones estadísticas básicas sobre datos |
+| Invertir un array in-place | Patrón swap con dos índices |
+| Búsqueda lineal | Encontrar si un valor existe en la colección |
 | `char[]` terminado en `'\0'` | Representar texto en C sin biblioteca externa |
 | `strlen`, `strcpy` de `string.h` | Medir y copiar cadenas de forma segura |
 | Leer cadenas con `fgets` | Evitar desbordamiento al leer texto del usuario |
@@ -32,11 +36,11 @@ Sin arrays no puedes almacenar mas de un dato del mismo tipo sin inventar una va
 
 ---
 
-## Explicacion
+## Explicación
 
-### Categoria 1: Arrays de enteros
+### Categoría 1: Arrays de enteros
 
-**Patron**: declarar → inicializar → recorrer con indice.
+**Patrón**: declarar → inicializar → recorrer con índice.
 
 ```c
 // Patron basico
@@ -55,13 +59,13 @@ for (int i = 0; i < n; i++) {
 }
 ```
 
-**Regla de oro**: el indice valido va de `0` a `n-1`. Acceder a `a[n]` es comportamiento indefinido (no compila con error, simplemente crashea o da basura).
+**Regla de oro**: el índice válido va de `0` a `n-1`. Acceder a `a[n]` es comportamiento indefinido (no compila con error, simplemente crashea o da basura).
 
 ---
 
-### Categoria 2: Cadenas (`char[]` + `'\0'`)
+### Categoría 2: Cadenas (`char[]` + `'\0'`)
 
-**Patron**: una cadena es un array de `char` cuyo ultimo elemento util es `'\0'` (byte cero, valor ASCII 0).
+**Patrón**: una cadena es un array de `char` cuyo último elemento útil es `'\0'` (byte cero, valor ASCII 0).
 
 ```c
 char saludo[20] = "Hola";   // {'H','o','l','a','\0', ... }
@@ -75,7 +79,7 @@ fgets(nombre, sizeof(nombre), stdin);
 printf("Hola, %s\n", nombre);
 ```
 
-**`string.h` basico**:
+**`string.h` básico**:
 
 ```c
 #include <string.h>
@@ -86,9 +90,9 @@ strcpy(dst, src)    // copia src en dst (dst debe ser suficientemente grande)
 
 ---
 
-### Categoria 3: Trabajar con cadenas sin `strlen`
+### Categoría 3: Trabajar con cadenas sin `strlen`
 
-Recorrer hasta `'\0'` manualmente es la forma de entender como funciona internamente:
+Recorrer hasta `'\0'` manualmente es la forma de entender cómo funciona internamente:
 
 ```c
 int longitud = 0;
@@ -101,7 +105,7 @@ while (s[longitud] != '\0') {
 
 ## Worked example
 
-**Problema**: Dado un array de N enteros leidos por teclado, mostrar el maximo, el minimo y la media.
+**Problema**: Dado un array de N enteros leídos por teclado, mostrar el máximo, el mínimo y la media.
 
 ### Paso 1 — definir el array y leer datos
 
@@ -128,7 +132,7 @@ int main(void) {
     long suma = 0;
 ```
 
-Inicializar con `a[0]` es correcto porque ya sabemos que existe al menos un elemento. Inicializar `max` con `0` o `-1` podria dar resultados erroneos si todos los valores son negativos.
+Inicializar con `a[0]` es correcto porque ya sabemos que existe al menos un elemento. Inicializar `max` con `0` o `-1` podría dar resultados erróneos si todos los valores son negativos.
 
 ### Paso 3 — recorrer y actualizar
 
@@ -151,7 +155,7 @@ Inicializar con `a[0]` es correcto porque ya sabemos que existe al menos un elem
 }
 ```
 
-**Salida de ejemplo** (entrada: 4 numeros: 3 7 1 5):
+**Salida de ejemplo** (entrada: 4 números: 3 7 1 5):
 ```
 Max: 7
 Min: 1
@@ -160,17 +164,17 @@ Media: 4.00
 
 ---
 
-## Errores tipicos en C
+## Errores típicos en C
 
 1. **Olvidar `&` en `scanf` para arrays**: `scanf("%d", a[i])` en lugar de `scanf("%d", &a[i])`. El compilador puede avisarte con `-Wall`.
 
-2. **Indice fuera de rango**: acceder a `a[n]` cuando el array tiene indices `0..n-1`. No da error de compilacion; da comportamiento indefinido en ejecucion.
+2. **Índice fuera de rango**: acceder a `a[n]` cuando el array tiene índices `0..n-1`. No da error de compilación; da comportamiento indefinido en ejecución.
 
 3. **Array no inicializado**: declarar `int a[10];` y leer `a[0]` sin haber escrito nada — contiene basura. Inicializa siempre o rellena antes de leer.
 
-4. **Olvidar el `'\0'` al construir cadenas manualmente**: si rellenas un `char[]` caracter a caracter y no pones `s[len] = '\0'`, `printf` seguira leyendo memoria hasta encontrar un byte cero aleatorio.
+4. **Olvidar el `'\0'` al construir cadenas manualmente**: si rellenas un `char[]` carácter a carácter y no pones `s[len] = '\0'`, `printf` seguirá leyendo memoria hasta encontrar un byte cero aleatorio.
 
-5. **Usar `gets` en lugar de `fgets`**: `gets` no limita la longitud y es un clasico desbordamiento de buffer. Siempre `fgets(buf, sizeof(buf), stdin)`.
+5. **Usar `gets` en lugar de `fgets`**: `gets` no limita la longitud y es un clásico desbordamiento de buffer. Siempre `fgets(buf, sizeof(buf), stdin)`.
 
 ---
 
@@ -192,5 +196,5 @@ Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, dia
 
 - [[Curso_C/00_README]]
 - Linux
-- [[Curso_C/modelo/04-funciones]] — modulo anterior: bucles for/while que usamos para recorrer arrays
-- [[Curso_C/modelo/06-matrices]] — modulo siguiente: pasar arrays a funciones, punteros basicos
+- [[Curso_C/modelo/04-funciones]] — módulo anterior: bucles for/while que usamos para recorrer arrays
+- [[Curso_C/modelo/06-matrices]] — módulo siguiente: pasar arrays a funciones, punteros básicos

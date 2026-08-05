@@ -3,7 +3,7 @@ title: Curso de C — índice y guía para impartirlo
 date: 2026-06-16
 tags: [programacion/c, curso, programacion/fundamentos, meta]
 type: nota
-status: en-progreso
+status: permanente
 source: claude-code
 aliases: [Curso C, Curso de C, MOC Curso C]
 ---
@@ -17,8 +17,9 @@ apoyado en la terminal de Linux y como **on-ramp** hacia Python y los problemas 
 - **`modelo/`** — la teoría (`.md`) de cada módulo: lo que usas TÚ para enseñar.
 - **`practica/<modulo>/`** — una **nota web por ejercicio** (enunciado, diagrama de flujo,
   explicación y el código para copiar). El alumno la abre en el navegador y resuelve sin descargar nada.
-- Las notas de práctica se **generan** desde el código del curso (`curso-c/material/`, la fuente de
-  verdad) con `tools/gen_course_exercises.py`; no se editan a mano salvo la explicación.
+- Las notas de práctica se **generan** desde el repo del curso (`curso-c/practica/`, la fuente de
+  verdad) con `gen_course.py` del framework Ágora, se espejan a la bóveda y de ahí se publican aquí
+  por `contentSync`; no se editan a mano en el jardín (la explicación se edita en el repo del curso).
 
 ## Ruta de los módulos
 | # | Módulo | Doc |
@@ -34,9 +35,9 @@ apoyado en la terminal de Linux y como **on-ramp** hacia Python y los problemas 
 | 08 | Structs | [[Curso_C/modelo/08-structs]] |
 | 09 | Lectura/escritura de archivos | [[Curso_C/modelo/09-archivos]] |
 
-> **Práctica:** [[Curso_C/practica/00_README|Ejercicios resueltos]] — una nota por ejercicio, para resolver directamente en el navegador (empezando por el módulo 01).
+**Práctica:** [[Curso_C/practica/00_README|Ejercicios resueltos]] — una nota por ejercicio, para resolver directamente en el navegador (empezando por el módulo 01).
 
-> **Extra (cultura):** [[Curso_C/historia-de-c|Historia de C]] — de dónde viene el lenguaje, su evolución a lo largo de los años y las cosas increíbles que se han construido con él.
+**Extra (cultura):** [[Curso_C/modelo/historia-de-c|Historia de C]] — de dónde viene el lenguaje, su evolución a lo largo de los años y las cosas increíbles que se han construido con él.
 
 ## Cómo impartir cada módulo
 1. **Explica la teoría** (schema-first: categoría → patrón → sintaxis) con el `.md` del módulo.

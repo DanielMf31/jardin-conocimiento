@@ -2,17 +2,20 @@
 title: Historia de C
 date: 2026-06-17
 tags: [programacion/c, historia, cultura]
-type: nota
-status: permanente
-source: claude-code
 aliases: [historia de c, historia c, historia del lenguaje c]
+type: espejo
+status: espejo
+source: mirror-generado
+mirror: true
+mirror_source: curso-c/modelo/historia-de-c.md
 ---
 
+<!-- FICHERO GENERADO — NO EDITAR. Fuente de verdad: curso-c/modelo/historia-de-c.md (se regenera con gen_course.py). -->
 
 # Historia de C
 
-> *"C is quirky, flawed, and an enormous success."*
-> — Dennis Ritchie
+*"C is quirky, flawed, and an enormous success."*
+— Dennis Ritchie
 
 Pocos inventos han cambiado tanto el mundo siendo tan invisibles. No tiene mascota famosa, ni guerras de licencias épicas, ni un creador que enseñe el dedo corazón en una charla. Y sin embargo, casi todo lo que tocas a diario —el teléfono, el navegador, el router, el coche, el cajero, la sonda que fotografía Marte— tiene, en algún punto de sus cimientos, código escrito en C. Es el lenguaje sobre el que se construyó el suelo que pisan los demás lenguajes. Esta es su historia: la de una herramienta nacida casi por pereza —para no tener que reescribir un sistema operativo una y otra vez— que terminó siendo el idioma común de la informática.
 
@@ -34,7 +37,7 @@ Entre 1971 y 1973, **Dennis Ritchie** transformó B para arreglar precisamente e
 
 El momento decisivo llegó en **1973**: Thompson y Ritchie **reescribieron el núcleo de Unix en C**. Hasta entonces, un sistema operativo era código atado a una máquina concreta; cambiar de hardware significaba reescribirlo casi entero en otro ensamblador. Con Unix escrito en C, bastaba con **escribir un compilador de C para la nueva máquina y recompilar**. Por primera vez, un sistema operativo serio era *portable*. Esa idea —software que viaja entre arquitecturas— es uno de los pilares invisibles de toda la informática moderna, e hizo que tanto Unix como C se extendieran juntos como el fuego.
 
-> **Curiosidad — "portable assembly".** A C se le llama a menudo "ensamblador portable": te da casi el control de bajo nivel del ensamblador (punteros, acceso directo a memoria, operaciones sobre bits) pero con una sintaxis legible que funciona en cualquier máquina. Esa doble naturaleza —cercano al metal *y* portable— es justo lo que lo hizo imbatible para sistemas operativos, drivers y firmware. Y es la razón de que, medio siglo después, sigas aprendiéndolo: entender C es entender cómo piensa la máquina.
+**Curiosidad — "portable assembly".** A C se le llama a menudo "ensamblador portable": te da casi el control de bajo nivel del ensamblador (punteros, acceso directo a memoria, operaciones sobre bits) pero con una sintaxis legible que funciona en cualquier máquina. Esa doble naturaleza —cercano al metal *y* portable— es justo lo que lo hizo imbatible para sistemas operativos, drivers y firmware. Y es la razón de que, medio siglo después, sigas aprendiéndolo: entender C es entender cómo piensa la máquina.
 
 ---
 
@@ -53,7 +56,7 @@ int main(void) {
 }
 ```
 
-> **Curiosidad — el "hello, world".** El programa que imprime *"hello, world"* como primer ejemplo de un lenguaje es una tradición que arranca aquí (apareció en un tutorial interno de Kernighan en Bell Labs hacia 1974 y se consagró en K&R en 1978). Desde entonces, prácticamente todos los lenguajes de programación de la historia empiezan su documentación con un "hola mundo", homenajeando sin saberlo a un manual de C de los años 70.
+**Curiosidad — el "hello, world".** El programa que imprime *"hello, world"* como primer ejemplo de un lenguaje es una tradición que arranca aquí (apareció en un tutorial interno de Kernighan en Bell Labs hacia 1974 y se consagró en K&R en 1978). Desde entonces, prácticamente todos los lenguajes de programación de la historia empiezan su documentación con un "hola mundo", homenajeando sin saberlo a un manual de C de los años 70.
 
 C se expandió pegado a Unix: AT&T repartía Unix casi gratis a las universidades con el código fuente, y con él iba C. Una generación entera de informáticos aprendió a programar sobre máquinas Unix, en C. Cuando esos estudiantes salieron a la industria, llevaron C con ellos a todas partes.
 
@@ -69,7 +72,7 @@ Conforme C se extendía, surgió el problema de siempre: cada compilador añadí
 - **C17 / C18 (2018).** Una versión de mantenimiento: aclara ambigüedades y corrige defectos del C11, **sin funciones nuevas**.
 - **C23 (2024).** Modernización profunda: `true`/`false`/`bool` y `nullptr` como palabras clave, `constexpr`, `typeof`, literales binarios (`0b1010`), separador de dígitos (`1'000'000`), `#embed` (incrustar ficheros), atributos ``, enteros de anchura arbitraria (`_BitInt`)… y la eliminación definitiva de las viejas definiciones de funciones al estilo K&R.
 
-> **Curiosidad — C cambia despacio a propósito.** Entre C89 y C23 hay 34 años y solo cinco revisiones. Esa lentitud no es pereza: es una virtud. Código C escrito en los 90 sigue compilando hoy, y un sistema crítico (un avión, un marcapasos, un kernel) necesita justo eso —estabilidad de décadas— más que features de moda. C envejece como las matemáticas, no como un framework de JavaScript.
+**Curiosidad — C cambia despacio a propósito.** Entre C89 y C23 hay 34 años y solo cinco revisiones. Esa lentitud no es pereza: es una virtud. Código C escrito en los 90 sigue compilando hoy, y un sistema crítico (un avión, un marcapasos, un kernel) necesita justo eso —estabilidad de décadas— más que features de moda. C envejece como las matemáticas, no como un framework de JavaScript.
 
 ---
 
@@ -79,7 +82,7 @@ Mira este fragmento: `for (int i = 0; i < n; i++) { ... }`. Esas llaves, ese `fo
 
 Pero la influencia va más hondo que la sintaxis. C definió el **ABI** (la convención de bajo nivel sobre cómo se llaman las funciones y se pasan datos en memoria) que se ha vuelto el **idioma común entre lenguajes**: cuando Python, Ruby, Rust o cualquier otro quieren hablar con código de otro lenguaje o con el sistema operativo, lo hacen a través de la "interfaz C". C no es solo un lenguaje; es el **punto de encuentro** de todos los demás.
 
-> **Curiosidad — C++ empezó siendo C.** En 1979, también en Bell Labs, **Bjarne Stroustrup** empezó a añadirle clases a C: lo llamó *"C with Classes"*, y en 1983 pasó a llamarse **C++** (el `++` es el operador de incremento de C: "C mejorado"). Sus primeras versiones ni siquiera compilaban a binario directamente: un programa llamado *cfront* traducía C++ a C, y luego se compilaba ese C. El hijo nació hablando el idioma del padre.
+**Curiosidad — C++ empezó siendo C.** En 1979, también en Bell Labs, **Bjarne Stroustrup** empezó a añadirle clases a C: lo llamó *"C with Classes"*, y en 1983 pasó a llamarse **C++** (el `++` es el operador de incremento de C: "C mejorado"). Sus primeras versiones ni siquiera compilaban a binario directamente: un programa llamado *cfront* traducía C++ a C, y luego se compilaba ese C. El hijo nació hablando el idioma del padre.
 
 ---
 
@@ -96,7 +99,7 @@ Si tuvieras que señalar el software que sostiene el mundo, casi todo estaría a
 | **Espacio y embebido** | Software de vuelo de los **rovers de Marte** (Curiosity, Perseverance), aviónica, automoción, **Arduino** y prácticamente todo microcontrolador |
 | **Videojuegos** | **DOOM** (1993) y **Quake** (1996) de id Software, motores que definieron una industria |
 
-> **Curiosidad — C en Marte y reglas para no morir.** Como un fallo en C puede tener consecuencias catastróficas (un puntero mal usado puede estrellar literalmente una sonda), en entornos críticos se programa con cinturones de seguridad: el estándar **MISRA C** (1998) para coches, y las **"Power of Ten" rules** del JPL de la NASA (2006) — un decálogo de C ultra-restringido (sin recursión, sin `malloc` dinámico, sin bucles sin límite fijo…) para que el software que pilota una nave a millones de kilómetros no falle. El mismo lenguaje con el que haces tu "hola mundo" lleva décadas conduciendo robots por otro planeta.
+**Curiosidad — C en Marte y reglas para no morir.** Como un fallo en C puede tener consecuencias catastróficas (un puntero mal usado puede estrellar literalmente una sonda), en entornos críticos se programa con cinturones de seguridad: el estándar **MISRA C** (1998) para coches, y las **"Power of Ten" rules** del JPL de la NASA (2006) — un decálogo de C ultra-restringido (sin recursión, sin `malloc` dinámico, sin bucles sin límite fijo…) para que el software que pilota una nave a millones de kilómetros no falle. El mismo lenguaje con el que haces tu "hola mundo" lleva décadas conduciendo robots por otro planeta.
 
 ---
 
@@ -117,21 +120,21 @@ Si Linux tiene a un Torvalds carismático y combativo, C tiene lo contrario: **D
 - En **1983** recibió, junto a Ken Thompson, el **Premio Turing** (el "Nobel de la informática") por Unix.
 - En **1998** recibió la **National Medal of Technology** de manos del presidente de EE. UU.
 
-> **Curiosidad — el genio a la sombra.** Ritchie murió el **12 de octubre de 2011**, apenas una semana después de **Steve Jobs**. La muerte de Jobs llenó portadas en todo el planeta; la de Ritchie pasó casi inadvertida fuera del mundo técnico. Y sin embargo, como señalaron muchos ingenieros entonces, *buena parte del imperio de Jobs corría sobre los cimientos que Ritchie había puesto*: el kernel de macOS y iOS desciende de Unix y está escrito en C. El hombre cuyo trabajo sostenía el mundo se fue casi sin que el mundo se enterara.
+**Curiosidad — el genio a la sombra.** Ritchie murió el **12 de octubre de 2011**, apenas una semana después de **Steve Jobs**. La muerte de Jobs llenó portadas en todo el planeta; la de Ritchie pasó casi inadvertida fuera del mundo técnico. Y sin embargo, como señalaron muchos ingenieros entonces, *buena parte del imperio de Jobs corría sobre los cimientos que Ritchie había puesto*: el kernel de macOS y iOS desciende de Unix y está escrito en C. El hombre cuyo trabajo sostenía el mundo se fue casi sin que el mundo se enterara.
 
 ---
 
 ## Parte IX — Curiosidades extra
 
-> **Comportamiento indefinido y "demonios nasales".** C tiene un concepto temido: el *undefined behavior* (UB). Si haces algo que el estándar no define (leer fuera de un array, desbordar un entero con signo…), el compilador puede hacer **literalmente cualquier cosa**. En 1992, en un grupo de noticias, alguien bromeó con que el estándar permitiría "hacer que salieran demonios por tu nariz". Desde entonces, *"nasal demons"* es la forma cariñosa con que los programadores de C se refieren al caos del UB.
+**Comportamiento indefinido y "demonios nasales".** C tiene un concepto temido: el *undefined behavior* (UB). Si haces algo que el estándar no define (leer fuera de un array, desbordar un entero con signo…), el compilador puede hacer **literalmente cualquier cosa**. En 1992, en un grupo de noticias, alguien bromeó con que el estándar permitiría "hacer que salieran demonios por tu nariz". Desde entonces, *"nasal demons"* es la forma cariñosa con que los programadores de C se refieren al caos del UB.
 
-> **El concurso de código más feo del mundo.** Desde **1984** existe el **IOCCC** (*International Obfuscated C Code Contest*): un concurso a ver quién escribe el programa en C más ilegible, retorcido y a la vez ingenioso. Hay ganadores que dibujan, que son a la vez código válido y una imagen, o que se ejecutan igual del derecho que del revés. Es a la vez una broma y un homenaje a lo expresivo (y peligroso) que es el lenguaje.
+**El concurso de código más feo del mundo.** Desde **1984** existe el **IOCCC** (*International Obfuscated C Code Contest*): un concurso a ver quién escribe el programa en C más ilegible, retorcido y a la vez ingenioso. Hay ganadores que dibujan, que son a la vez código válido y una imagen, o que se ejecutan igual del derecho que del revés. Es a la vez una broma y un homenaje a lo expresivo (y peligroso) que es el lenguaje.
 
-> **"Reflections on Trusting Trust".** En su discurso del Turing de 1984, **Ken Thompson** describió un ataque legendario: un compilador de C modificado para que, al compilar el programa de *login*, le inyectara en secreto una puerta trasera… y que además se reinyectara a sí mismo al recompilar el propio compilador, sin dejar rastro en el código fuente. La conclusión —"no puedes confiar del todo en código que no escribiste tú entero, hasta el compilador"— sigue siendo una de las ideas más profundas (e inquietantes) de la seguridad informática.
+**"Reflections on Trusting Trust".** En su discurso del Turing de 1984, **Ken Thompson** describió un ataque legendario: un compilador de C modificado para que, al compilar el programa de *login*, le inyectara en secreto una puerta trasera… y que además se reinyectara a sí mismo al recompilar el propio compilador, sin dejar rastro en el código fuente. La conclusión —"no puedes confiar del todo en código que no escribiste tú entero, hasta el compilador"— sigue siendo una de las ideas más profundas (e inquietantes) de la seguridad informática.
 
-> **El `goto fail` que rompió la seguridad de Apple.** En 2014, un fallo en el código C de seguridad (SSL/TLS) de Apple —una simple línea `goto fail;` duplicada por error— dejó vulnerables a millones de dispositivos. Una lección perfecta de por qué en C cada llave y cada línea importan, y de por qué `-Wall` (avisos del compilador) es tu amigo.
+**El `goto fail` que rompió la seguridad de Apple.** En 2014, un fallo en el código C de seguridad (SSL/TLS) de Apple —una simple línea `goto fail;` duplicada por error— dejó vulnerables a millones de dispositivos. Una lección perfecta de por qué en C cada llave y cada línea importan, y de por qué `-Wall` (avisos del compilador) es tu amigo.
 
-> **Por qué se llama C.** No hay misterio profundo: viene **después de B** (el lenguaje de Thompson), que a su vez viene de **BCPL**. Hubo quien bromeó con que el siguiente debería llamarse "D" o "P" (la siguiente letra de BCPL); al final, el sucesor espiritual con clases se llamó **C++**, y sí existe un lenguaje moderno llamado **D**.
+**Por qué se llama C.** No hay misterio profundo: viene **después de B** (el lenguaje de Thompson), que a su vez viene de **BCPL**. Hubo quien bromeó con que el siguiente debería llamarse "D" o "P" (la siguiente letra de BCPL); al final, el sucesor espiritual con clases se llamó **C++**, y sí existe un lenguaje moderno llamado **D**.
 
 ---
 

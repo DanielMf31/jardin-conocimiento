@@ -1,34 +1,38 @@
 ---
-title: "Modulo 09 — Lectura y escritura de archivos en C"
+title: "Módulo 09 — Lectura y escritura de archivos en C"
 date: 2026-06-16
 tags: [programacion/c, curso, programacion/archivos, programacion/io]
-type: nota
-status: en-progreso
-source: claude-code
 aliases: ["archivos C", "fopen fclose", "ficheros C", "file IO C"]
+type: espejo
+status: espejo
+source: mirror-generado
+mirror: true
+mirror_source: curso-c/modelo/09-archivos.md
 ---
 
-# Modulo 09 — Lectura y escritura de archivos en C
+<!-- FICHERO GENERADO — NO EDITAR. Fuente de verdad: curso-c/modelo/09-archivos.md (se regenera con gen_course.py). -->
+
+# Módulo 09 — Lectura y escritura de archivos en C
 
 ## Idea central
 
-Hasta ahora todos los datos vivian en RAM: al terminar el programa, desaparecian. Los archivos resuelven eso: permiten que un programa **persista datos** entre ejecuciones y **comparta informacion** con otros programas. La API de archivos de C es sencilla: abrir → operar → cerrar.
+Hasta ahora todos los datos vivían en RAM: al terminar el programa, desaparecían. Los archivos resuelven eso: permiten que un programa **persista datos** entre ejecuciones y **comparta información** con otros programas. La API de archivos de C es sencilla: abrir → operar → cerrar.
 
-## Que aprendes
+## Qué aprendes
 
-| Concepto | Para que sirve |
+| Concepto | Para qué sirve |
 |---|---|
 | `fopen(ruta, modo)` | Abrir un archivo; devuelve un puntero `FILE *` |
-| Modos `"r"`, `"w"`, `"a"` | Leer / escribir (crea/trunca) / anadir al final |
+| Modos `"r"`, `"w"`, `"a"` | Leer / escribir (crea/trunca) / añadir al final |
 | Comprobar `NULL` | Detectar error al abrir (archivo no existe, sin permisos…) |
 | `fprintf(fp, ...)` | Escribir en archivo con el mismo formato que `printf` |
 | `fscanf(fp, ...)` | Leer datos formateados desde archivo |
-| `fgets(buf, n, fp)` | Leer una linea completa (con espacios) de forma segura |
+| `fgets(buf, n, fp)` | Leer una línea completa (con espacios) de forma segura |
 | `fclose(fp)` | Cerrar el archivo y volcar los buffers a disco |
 
-## Explicacion
+## Explicación
 
-### Patron general (siempre el mismo)
+### Patrón general (siempre el mismo)
 
 ```
 1. Declarar  FILE *fp;
@@ -47,7 +51,7 @@ Hasta ahora todos los datos vivian en RAM: al terminar el programa, desaparecian
 | `"a"` | no | si (solo final) | si | no |
 | `"r+"` | si | si | no | no |
 
-### Sintaxis minima
+### Sintaxis mínima
 
 ```c
 #include <stdio.h>
@@ -62,7 +66,7 @@ fprintf(fp, "Hola, archivo!\n");
 fclose(fp);
 ```
 
-### Leer lineas con fgets
+### Leer líneas con fgets
 
 ```c
 char linea[256];
@@ -77,7 +81,7 @@ fclose(fp);
 
 `fgets` devuelve `NULL` al llegar al final del archivo (EOF), lo que hace el bucle `while` natural.
 
-### Leer numeros con fscanf
+### Leer números con fscanf
 
 ```c
 int n;
@@ -130,13 +134,13 @@ int main(void) {
 }
 ```
 
-**Por que funciona paso a paso**:
+**Por qué funciona paso a paso**:
 1. Abrimos con `"w"` → crea/trunca `nombres.txt`.
-2. `fprintf(fw, "%s\n", nombre)` escribe cada nombre seguido de salto de linea.
-3. `fclose(fw)` vuelca los buffers; sin esto el archivo puede quedar vacio.
+2. `fprintf(fw, "%s\n", nombre)` escribe cada nombre seguido de salto de línea.
+3. `fclose(fw)` vuelca los buffers; sin esto el archivo puede quedar vacío.
 4. Abrimos con `"r"` → el archivo ya tiene datos.
 5. `fgets` lee hasta `\n` o `sizeof(buf)-1` caracteres; al llegar a EOF devuelve `NULL` y el `while` termina.
-6. `strcspn(buf, "\n")` devuelve el indice del primer `\n`; ponerlo a `'\0'` lo elimina.
+6. `strcspn(buf, "\n")` devuelve el índice del primer `\n`; ponerlo a `'\0'` lo elimina.
 
 **Salida ejemplo**:
 ```
@@ -150,15 +154,15 @@ Nombre 3: Carla
 3. Carla
 ```
 
-## Errores tipicos en C
+## Errores típicos en C
 
-| # | Error | Por que falla |
+| # | Error | Por qué falla |
 |---|---|---|
 | 1 | No comprobar `fopen == NULL` | El programa peta con segfault si el archivo no existe |
 | 2 | Olvidar `fclose` | Los datos pueden no llegar a disco (el buffer se descarta) |
-| 3 | Usar `"w"` cuando quieres anadir | Modo `"w"` trunca: pierdes todo el contenido previo |
-| 4 | `fscanf` sin `&` en variables escalares | Lee a direccion invalida → comportamiento indefinido |
-| 5 | `fgets` con buffer demasiado pequeno | Trunca la linea; el `\n` queda en el stream para la siguiente lectura |
+| 3 | Usar `"w"` cuando quieres añadir | Modo `"w"` trunca: pierdes todo el contenido previo |
+| 4 | `fscanf` sin `&` en variables escalares | Lee a dirección inválida → comportamiento indefinido |
+| 5 | `fgets` con buffer demasiado pequeño | Trunca la línea; el `\n` queda en el stream para la siguiente lectura |
 
 ## Ejercicios
 
@@ -176,5 +180,5 @@ Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, dia
 
 - [[Curso_C/00_README]]
 - Linux
-- [[Curso_C/modelo/08-structs]] — modulo anterior: structs que ahora podras persistir en disco
-- *(Modulo 10 por definir)* — siguiente paso
+- [[Curso_C/modelo/08-structs]] — módulo anterior: structs que ahora podrás persistir en disco
+- *(Módulo 10 por definir)* — siguiente paso

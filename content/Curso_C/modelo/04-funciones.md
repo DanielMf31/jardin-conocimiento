@@ -2,11 +2,15 @@
 title: "Módulo 04: Funciones en C"
 date: 2026-06-16
 tags: [programacion/c, curso, programacion/funciones, programacion/modularidad]
-type: nota
-status: en-progreso
-source: claude-code
 aliases: [funciones-c, modulo-04-c, subrutinas-c]
+type: espejo
+status: espejo
+source: mirror-generado
+mirror: true
+mirror_source: curso-c/modelo/04-funciones.md
 ---
+
+<!-- FICHERO GENERADO — NO EDITAR. Fuente de verdad: curso-c/modelo/04-funciones.md (se regenera con gen_course.py). -->
 
 # Módulo 04: Funciones en C
 

@@ -1,37 +1,41 @@
 ---
-title: "Modulo 07: Punteros en C"
+title: "Módulo 07: Punteros en C"
 date: 2026-06-16
 tags: [programacion/c, programacion/c/punteros, curso]
-type: nota
-status: en-progreso
-source: claude-code
-aliases: [punteros C, pointers C, punteros basicos]
+aliases: [punteros C, pointers C, punteros básicos]
+type: espejo
+status: espejo
+source: mirror-generado
+mirror: true
+mirror_source: curso-c/modelo/07-punteros.md
 ---
 
-# Modulo 07: Punteros en C
+<!-- FICHERO GENERADO — NO EDITAR. Fuente de verdad: curso-c/modelo/07-punteros.md (se regenera con gen_course.py). -->
+
+# Módulo 07: Punteros en C
 
 ## Idea central
 
-Un puntero es una variable que guarda una **direccion de memoria**, no un valor directo. Esto permite que una funcion modifique variables del llamador, recorrer arrays de forma eficiente y construir estructuras de datos dinamicas. Sin punteros no hay paso por referencia, no hay arrays dinamicos, no hay C real.
+Un puntero es una variable que guarda una **dirección de memoria**, no un valor directo. Esto permite que una función modifique variables del llamador, recorrer arrays de forma eficiente y construir estructuras de datos dinámicas. Sin punteros no hay paso por referencia, no hay arrays dinámicos, no hay C real.
 
-## Que aprendes
+## Qué aprendes
 
-| Concepto | Para que sirve |
+| Concepto | Para qué sirve |
 |---|---|
-| Operador `&` (direccion) | Obtener la direccion de memoria de una variable |
-| Operador `*` (desreferencia) | Leer o escribir el valor en la direccion guardada |
+| Operador `&` (dirección) | Obtener la dirección de memoria de una variable |
+| Operador `*` (desreferencia) | Leer o escribir el valor en la dirección guardada |
 | Declarar un puntero | `int *p;` — p guarda direcciones de int |
-| Pasar por referencia | Que una funcion modifique la variable del llamador |
-| Relacion puntero-array | El nombre de un array ES un puntero a su primer elemento |
-| Aritmetica de punteros | `p+1` avanza un elemento (no un byte) del tipo apuntado |
+| Pasar por referencia | Que una función modifique la variable del llamador |
+| Relación puntero-array | El nombre de un array ES un puntero a su primer elemento |
+| Aritmética de punteros | `p+1` avanza un elemento (no un byte) del tipo apuntado |
 
 ---
 
-## Explicacion
+## Explicación
 
-### Categoria 1 — Direccion y desreferencia
+### Categoría 1 — Dirección y desreferencia
 
-**Patron conceptual**: cada variable vive en una celda de memoria con una direccion unica. `&x` da esa direccion; `*p` accede al contenido de la celda apuntada.
+**Patrón conceptual**: cada variable vive en una celda de memoria con una dirección única. `&x` da esa dirección; `*p` accede al contenido de la celda apuntada.
 
 ```c
 int x = 42;
@@ -46,9 +50,9 @@ printf("%d\n", x);          // imprime 100
 
 ---
 
-### Categoria 2 — Paso por referencia
+### Categoría 2 — Paso por referencia
 
-**Patron**: para que una funcion modifique una variable del llamador, recibe su direccion (`int *`) y usa `*` para acceder.
+**Patrón**: para que una función modifique una variable del llamador, recibe su dirección (`int *`) y usa `*` para acceder.
 
 ```c
 void doblar(int *n) {
@@ -63,13 +67,13 @@ int main(void) {
 }
 ```
 
-Sin `&` en la llamada y sin `*` en la funcion: la funcion recibe una copia y el original no cambia.
+Sin `&` en la llamada y sin `*` en la función: la función recibe una copia y el original no cambia.
 
 ---
 
-### Categoria 3 — Relacion puntero-array
+### Categoría 3 — Relación puntero-array
 
-**Patron**: `arr` (sin corchetes) es equivalente a `&arr[0]`. Se puede recorrer un array con aritmetica de punteros.
+**Patrón**: `arr` (sin corchetes) es equivalente a `&arr[0]`. Se puede recorrer un array con aritmética de punteros.
 
 ```c
 int arr[4] = {10, 20, 30, 40};
@@ -80,13 +84,13 @@ p++;                   // avanza al siguiente int (4 bytes)
 printf("%d\n", *p);    // 20
 ```
 
-`p + i` es la direccion del elemento i-esimo; `*(p+i)` equivale a `arr[i]`.
+`p + i` es la dirección del elemento i-ésimo; `*(p+i)` equivale a `arr[i]`.
 
 ---
 
 ## Worked example
 
-**Problema**: escribir una funcion `swap` que intercambie dos enteros, y otra `rango` que devuelva el maximo y el minimo de un array por referencia. Mostrar ambos resultados.
+**Problema**: escribir una función `swap` que intercambie dos enteros, y otra `rango` que devuelva el máximo y el mínimo de un array por referencia. Mostrar ambos resultados.
 
 ```c
 #include <stdio.h>
@@ -148,15 +152,15 @@ Max=9  Min=1
 
 ---
 
-## Errores tipicos en C
+## Errores típicos en C
 
-| # | Error | Ejemplo incorrecto | Por que falla |
+| # | Error | Ejemplo incorrecto | Por qué falla |
 |---|---|---|---|
 | 1 | Puntero sin inicializar | `int *p; *p = 5;` | `p` contiene basura; escribe en memoria aleatoria → comportamiento indefinido |
-| 2 | Olvidar `&` al pasar por referencia | `doblar(x)` en vez de `doblar(&x)` | La funcion recibe copia; el original no cambia |
-| 3 | Olvidar `*` al desreferenciar | `*p = p + 1` en vez de `*p = *p + 1` | Suma 1 a la direccion, no al valor; probablemente warning de tipos |
-| 4 | Aritmetica fuera del array | `p = arr + 10` con array de 5 | Puntero fuera de rango; leer `*p` es comportamiento indefinido |
-| 5 | Confundir `p++` con `(*p)++` | `p++` cuando quieres incrementar el valor | `p++` avanza el puntero (cambia a que celda apunta); `(*p)++` incrementa el valor guardado |
+| 2 | Olvidar `&` al pasar por referencia | `doblar(x)` en vez de `doblar(&x)` | La función recibe copia; el original no cambia |
+| 3 | Olvidar `*` al desreferenciar | `*p = p + 1` en vez de `*p = *p + 1` | Suma 1 a la dirección, no al valor; probablemente warning de tipos |
+| 4 | Aritmética fuera del array | `p = arr + 10` con array de 5 | Puntero fuera de rango; leer `*p` es comportamiento indefinido |
+| 5 | Confundir `p++` con `(*p)++` | `p++` cuando quieres incrementar el valor | `p++` avanza el puntero (cambia a qué celda apunta); `(*p)++` incrementa el valor guardado |
 
 ---
 
@@ -176,5 +180,5 @@ Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, dia
 
 - [[Curso_C/00_README]]
 - Linux
-- [[Curso_C/modelo/06-matrices]] — modulo anterior: arrays y strings
-- [[Curso_C/modelo/08-structs]] — modulo siguiente: estructuras
+- [[Curso_C/modelo/06-matrices]] — módulo anterior: arrays y strings
+- [[Curso_C/modelo/08-structs]] — módulo siguiente: estructuras

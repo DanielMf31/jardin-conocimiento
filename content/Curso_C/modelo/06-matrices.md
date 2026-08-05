@@ -2,11 +2,15 @@
 title: "Módulo 06: Matrices (arrays 2D) en C"
 date: 2026-06-16
 tags: [programacion/c, curso, programacion/arrays, programacion/bucles]
-type: nota
-status: en-progreso
-source: claude-code
 aliases: [matrices C, arrays 2D C, array bidimensional C]
+type: espejo
+status: espejo
+source: mirror-generado
+mirror: true
+mirror_source: curso-c/modelo/06-matrices.md
 ---
+
+<!-- FICHERO GENERADO — NO EDITAR. Fuente de verdad: curso-c/modelo/06-matrices.md (se regenera con gen_course.py). -->
 
 # Módulo 06: Matrices (arrays 2D)
 

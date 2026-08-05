@@ -1,40 +1,44 @@
 ---
-title: "Modulo 03: Bucles en C"
+title: "Módulo 03: Bucles en C"
 date: 2026-06-16
 tags: [programacion/c, curso, programacion/control-flujo]
-type: nota
-status: en-progreso
-source: claude-code
 aliases: [bucles-c, while-c, for-c, do-while-c]
+type: espejo
+status: espejo
+source: mirror-generado
+mirror: true
+mirror_source: curso-c/modelo/03-bucles.md
 ---
 
-# Modulo 03: Bucles en C
+<!-- FICHERO GENERADO — NO EDITAR. Fuente de verdad: curso-c/modelo/03-bucles.md (se regenera con gen_course.py). -->
+
+# Módulo 03: Bucles en C
 
 ## Idea central
 
-Un bucle ejecuta un bloque de codigo **repetidamente** mientras se cumpla una condicion. Sin bucles, sumar 1..1000 requeriria 1000 lineas. Con un bucle, tres. Los bucles son el mecanismo principal para procesar colecciones, calcular series y construir menus interactivos.
+Un bucle ejecuta un bloque de código **repetidamente** mientras se cumpla una condición. Sin bucles, sumar 1..1000 requeriría 1000 líneas. Con un bucle, tres. Los bucles son el mecanismo principal para procesar colecciones, calcular series y construir menús interactivos.
 
 ---
 
-## Que aprendes
+## Qué aprendes
 
-| Concepto | Para que sirve |
+| Concepto | Para qué sirve |
 |---|---|
-| `while` | Repetir mientras una condicion sea verdadera (0 o mas iteraciones) |
-| `do-while` | Igual que `while` pero garantiza al menos UNA ejecucion |
-| `for` | Repetir un numero conocido de veces; contador integrado |
+| `while` | Repetir mientras una condición sea verdadera (0 o más iteraciones) |
+| `do-while` | Igual que `while` pero garantiza al menos UNA ejecución |
+| `for` | Repetir un número conocido de veces; contador integrado |
 | `break` | Salir del bucle inmediatamente |
-| `continue` | Saltar el resto de la iteracion actual y pasar a la siguiente |
-| Bucles anidados | Un bucle dentro de otro; para tablas, matrices, triangulos |
+| `continue` | Saltar el resto de la iteración actual y pasar a la siguiente |
+| Bucles anidados | Un bucle dentro de otro; para tablas, matrices, triángulos |
 
 ---
 
-## Explicacion
+## Explicación
 
-### Categoria: bucles con condicion de entrada
+### Categoría: bucles con condición de entrada
 
-**Patron `while`**: comprobar → ejecutar → comprobar → ...
-Si la condicion es falsa desde el inicio, el cuerpo no se ejecuta nunca.
+**Patrón `while`**: comprobar → ejecutar → comprobar → ...
+Si la condición es falsa desde el inicio, el cuerpo no se ejecuta nunca.
 
 ```c
 // Sintaxis
@@ -50,10 +54,10 @@ while (i <= 5) {
 }
 ```
 
-### Categoria: bucles con condicion de salida
+### Categoría: bucles con condición de salida
 
-**Patron `do-while`**: ejecutar → comprobar → ejecutar → ...
-Util para menus: siempre se muestra al menos una vez.
+**Patrón `do-while`**: ejecutar → comprobar → ejecutar → ...
+Útil para menús: siempre se muestra al menos una vez.
 
 ```c
 // Sintaxis
@@ -69,9 +73,9 @@ do {
 } while (n <= 0);
 ```
 
-### Categoria: bucles con contador conocido
+### Categoría: bucles con contador conocido
 
-**Patron `for`**: inicializar; condicion; actualizar — todo en una sola linea.
+**Patrón `for`**: inicializar; condición; actualizar — todo en una sola línea.
 
 ```c
 // Sintaxis
@@ -86,7 +90,7 @@ for (int i = 1; i <= N; i++) {
 }
 ```
 
-### Patron: `break` y `continue`
+### Patrón: `break` y `continue`
 
 ```c
 // break: abandona el bucle al encontrar el primero multiplo de 7
@@ -104,7 +108,7 @@ for (int i = 1; i <= 10; i++) {
 }
 ```
 
-### Patron: bucles anidados
+### Patrón: bucles anidados
 
 El bucle externo controla filas; el interno controla columnas.
 
@@ -121,12 +125,12 @@ for (int fila = 2; fila <= 3; fila++) {
 
 ## Worked example
 
-**Problema**: Calcular si un numero N (leido por teclado) es primo.
+**Problema**: Calcular si un número N (leído por teclado) es primo.
 
 **Razonamiento paso a paso**:
 
-1. Un numero es primo si solo es divisible por 1 y por si mismo.
-2. Basta comprobar divisores desde 2 hasta N-1 (o hasta sqrt(N) para optimizar, pero aqui usamos N-1 para claridad).
+1. Un número es primo si solo es divisible por 1 y por sí mismo.
+2. Basta comprobar divisores desde 2 hasta N-1 (o hasta sqrt(N) para optimizar, pero aquí usamos N-1 para claridad).
 3. Si encontramos un divisor, ya no es primo: usamos `break` para salir antes.
 4. Necesitamos una variable bandera `es_primo` para recordar si hubo divisor.
 
@@ -171,7 +175,7 @@ int main(void) {
 
 ---
 
-## Errores tipicos en C
+## Errores típicos en C
 
 1. **Bucle infinito por no actualizar el contador**
    ```c
@@ -192,7 +196,7 @@ int main(void) {
    do { ... } while (condicion);
    ```
 
-3. **Condicion de bucle con = en lugar de ==**
+3. **Condición de bucle con = en lugar de ==**
    ```c
    // MAL: asignacion, siempre verdadero si x != 0
    while (x = 5) { ... }
@@ -200,7 +204,7 @@ int main(void) {
    while (x == 5) { ... }
    ```
 
-4. **Indice fuera de rango en bucles con arrays (anticipacion)**
+4. **Índice fuera de rango en bucles con arrays (anticipación)**
    ```c
    int arr[5];
    for (int i = 0; i <= 5; i++) {   // i=5 accede fuera del array
@@ -239,5 +243,5 @@ Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, dia
 
 - [[Curso_C/00_README]]
 - Linux
-- [[Curso_C/modelo/02-condicionales]] — modulo anterior: if/else/switch
-- [[Curso_C/modelo/04-funciones]] — modulo siguiente: definir y llamar funciones propias
+- [[Curso_C/modelo/02-condicionales]] — módulo anterior: if/else/switch
+- [[Curso_C/modelo/04-funciones]] — módulo siguiente: definir y llamar funciones propias

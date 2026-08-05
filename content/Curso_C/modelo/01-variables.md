@@ -2,11 +2,15 @@
 title: "Módulo 01 — Variables, tipos y entrada/salida en C"
 date: 2026-06-16
 tags: [programacion/c, curso/c, programacion/fundamentos]
-type: nota
-status: en-progreso
-source: claude-code
 aliases: [variables-c, tipos-c, printf-scanf, modulo-01-c]
+type: espejo
+status: espejo
+source: mirror-generado
+mirror: true
+mirror_source: curso-c/modelo/01-variables.md
 ---
+
+<!-- FICHERO GENERADO — NO EDITAR. Fuente de verdad: curso-c/modelo/01-variables.md (se regenera con gen_course.py). -->
 
 # Módulo 01 — Variables, tipos y entrada/salida en C
 
@@ -56,7 +60,7 @@ double pi = 3.14159265358979;
 char inicial = 'A';
 ```
 
-> **Regla de oro:** inicializa siempre. Una variable sin inicializar contiene basura de memoria.
+**Regla de oro:** inicializa siempre. Una variable sin inicializar contiene basura de memoria.
 
 ### Patrón: printf
 

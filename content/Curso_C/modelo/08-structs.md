@@ -1,18 +1,22 @@
 ---
-title: "Modulo 08: Structs en C"
+title: "Módulo 08: Structs en C"
 date: 2026-06-16
 tags: [programacion/c, curso, programacion/c/structs, programacion/tipos-compuestos]
-type: nota
-status: en-progreso
-source: claude-code
 aliases: [structs en C, struct C, typedef struct]
+type: espejo
+status: espejo
+source: mirror-generado
+mirror: true
+mirror_source: curso-c/modelo/08-structs.md
 ---
 
-# Modulo 08: Structs en C
+<!-- FICHERO GENERADO — NO EDITAR. Fuente de verdad: curso-c/modelo/08-structs.md (se regenera con gen_course.py). -->
+
+# Módulo 08: Structs en C
 
 ## Idea central
 
-Los arrays agrupan valores **del mismo tipo**. Un `struct` agrupa valores de **tipos distintos** bajo un solo nombre. Es la herramienta basica de C para modelar entidades del mundo real (un punto, una persona, una fecha) sin mezclar variables sueltas que se pierden.
+Los arrays agrupan valores **del mismo tipo**. Un `struct` agrupa valores de **tipos distintos** bajo un solo nombre. Es la herramienta básica de C para modelar entidades del mundo real (un punto, una persona, una fecha) sin mezclar variables sueltas que se pierden.
 
 Sin struct:
 ```c
@@ -30,24 +34,24 @@ Alumno grupo[30];   // limpio, manejable
 
 ---
 
-## Que aprendes
+## Qué aprendes
 
-| Concepto | Para que sirve |
+| Concepto | Para qué sirve |
 |---|---|
 | `struct` literal | Definir un tipo compuesto con campos de distinto tipo |
 | Acceso con `.` | Leer o escribir un campo de una variable struct |
 | `typedef struct` | Dar un alias corto para no escribir `struct X` cada vez |
-| Struct como parametro | Pasar una entidad completa a una funcion |
+| Struct como parámetro | Pasar una entidad completa a una función |
 | Array de structs | Manejar colecciones de entidades (tabla de alumnos, etc.) |
 
 ---
 
-## Explicacion
+## Explicación
 
-### Patron 1 — Definir y usar un struct
+### Patrón 1 — Definir y usar un struct
 
-**Categoria**: tipo compuesto en C
-**Patron**: definir la plantilla, declarar variable, acceder con punto
+**Categoría**: tipo compuesto en C
+**Patrón**: definir la plantilla, declarar variable, acceder con punto
 **Sintaxis**:
 
 ```c
@@ -60,7 +64,7 @@ struct NombreTipo var;
 var.campo1 = valor1;
 ```
 
-Ejemplo minimo:
+Ejemplo mínimo:
 
 ```c
 struct Punto {
@@ -76,10 +80,10 @@ printf("(%g, %g)\n", p.x, p.y);
 
 ---
 
-### Patron 2 — typedef para simplificar
+### Patrón 2 — typedef para simplificar
 
-**Categoria**: alias de tipo
-**Patron**: combinar `typedef` con la definicion del struct
+**Categoría**: alias de tipo
+**Patrón**: combinar `typedef` con la definición del struct
 
 ```c
 typedef struct {
@@ -95,10 +99,10 @@ Con `typedef` ya no necesitas escribir `struct Punto` cada vez.
 
 ---
 
-### Patron 3 — Struct como parametro de funcion
+### Patrón 3 — Struct como parámetro de función
 
-**Categoria**: paso por valor vs. por puntero
-**Patron**: pasar el struct completo (copia) o su direccion (`&`)
+**Categoría**: paso por valor vs. por puntero
+**Patrón**: pasar el struct completo (copia) o su dirección (`&`)
 
 ```c
 // Paso por valor — la funcion trabaja sobre una copia
@@ -112,11 +116,11 @@ void cumpleanios(Persona *p) {
 }
 ```
 
-> Regla practica: para structs grandes o cuando necesitas modificar el original, usa puntero (`*`). Para structs pequenos de solo lectura, por valor esta bien.
+**Regla práctica**: para structs grandes o cuando necesitas modificar el original, usa puntero (`*`). Para structs pequeños de solo lectura, por valor está bien.
 
 ---
 
-### Patron 4 — Array de structs
+### Patrón 4 — Array de structs
 
 ```c
 #define N 5
@@ -127,13 +131,13 @@ for (int i = 0; i < N; i++) {
 }
 ```
 
-Acceso: `grupo[i].campo` — primero el indice del array, luego el punto.
+Acceso: `grupo[i].campo` — primero el índice del array, luego el punto.
 
 ---
 
 ## Worked example
 
-**Problema**: Representar dos puntos en 2D y calcular la distancia euclidea entre ellos.
+**Problema**: Representar dos puntos en 2D y calcular la distancia euclídea entre ellos.
 
 ```c
 #include <stdio.h>
@@ -166,24 +170,24 @@ int main(void) {
 ```
 
 **Traza paso a paso**:
-1. `Punto p1 = {0.0, 0.0}` — inicializa los dos campos en orden de declaracion.
+1. `Punto p1 = {0.0, 0.0}` — inicializa los dos campos en orden de declaración.
 2. `distancia(p1, p2)` — C copia los dos structs en los parametros `a` y `b`.
 3. `dx = 0-3 = -3`, `dy = 0-4 = -4`, `sqrt(9+16) = sqrt(25) = 5.0`.
 4. `printf` imprime `5.00`.
 
-> Nota: para compilar con `sqrt` necesitas `-lm`: `gcc -std=c11 -Wall ej.c -lm -o ej`
+**Nota**: para compilar con `sqrt` necesitas `-lm`: `gcc -std=c11 -Wall ej.c -lm -o ej`
 
 ---
 
-## Errores tipicos en C
+## Errores típicos en C
 
-| # | Error | Por que ocurre | Como evitarlo |
+| # | Error | Por qué ocurre | Cómo evitarlo |
 |---|---|---|---|
 | 1 | `scanf("%s", &persona.nombre)` | `nombre` ya es un array = puntero; el `&` extra es incorrecto | Escribe `scanf("%s", persona.nombre)` (sin `&`) |
-| 2 | `struct` sin `;` al final de la definicion | La llave de cierre `}` necesita `;` en C | `} NombreTipo;` o `};` con typedef separado |
+| 2 | `struct` sin `;` al final de la definición | La llave de cierre `}` necesita `;` en C | `} NombreTipo;` o `};` con typedef separado |
 | 3 | Usar `.` con un puntero a struct | `ptr.campo` falla; debes usar `ptr->campo` o `(*ptr).campo` | Recuerda: variable → punto, puntero → flecha |
 | 4 | Campo `char[]` asignado con `=` | `p.nombre = "Ana"` no compila; los arrays no son asignables | Usa `strcpy(p.nombre, "Ana")` de `<string.h>` |
-| 5 | Comparar structs con `==` | C no compara structs campo a campo automaticamente | Escribe una funcion que compare campo por campo |
+| 5 | Comparar structs con `==` | C no compara structs campo a campo automáticamente | Escribe una función que compare campo por campo |
 
 ---
 
@@ -203,5 +207,5 @@ Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, dia
 
 - [[Curso_C/00_README]]
 - Linux
-- [[Curso_C/modelo/07-punteros]] — modulo anterior: arrays y strings
-- [[Curso_C/modelo/09-archivos]] — modulo siguiente: punteros (necesarios para modificar structs en funciones)
+- [[Curso_C/modelo/07-punteros]] — módulo anterior: arrays y strings
+- [[Curso_C/modelo/09-archivos]] — módulo siguiente: punteros (necesarios para modificar structs en funciones)

@@ -1,38 +1,42 @@
 ---
-title: "Modulo 02: Condicionales en C"
+title: "Módulo 02: Condicionales en C"
 date: 2026-06-16
 tags: [programacion/c, programacion/curso-c, curso]
-type: nota
-status: en-progreso
-source: claude-code
 aliases: [condicionales-c, if-else-c, switch-c, ternario-c]
+type: espejo
+status: espejo
+source: mirror-generado
+mirror: true
+mirror_source: curso-c/modelo/02-condicionales.md
 ---
 
-# Modulo 02: Condicionales en C
+<!-- FICHERO GENERADO — NO EDITAR. Fuente de verdad: curso-c/modelo/02-condicionales.md (se regenera con gen_course.py). -->
+
+# Módulo 02: Condicionales en C
 
 ## Idea central
 
-Un programa sin condicionales ejecuta siempre las mismas instrucciones. Los condicionales permiten que el programa **tome decisiones**: ejecutar un bloque de codigo u otro dependiendo de si una condicion es verdadera o falsa. En C, `0` es falso y cualquier valor distinto de `0` es verdadero.
+Un programa sin condicionales ejecuta siempre las mismas instrucciones. Los condicionales permiten que el programa **tome decisiones**: ejecutar un bloque de código u otro dependiendo de si una condición es verdadera o falsa. En C, `0` es falso y cualquier valor distinto de `0` es verdadero.
 
 ---
 
-## Que aprendes
+## Qué aprendes
 
-| Concepto | Para que sirve |
+| Concepto | Para qué sirve |
 |---|---|
-| `if / else if / else` | Elegir entre dos o mas ramas de ejecucion segun una condicion |
+| `if / else if / else` | Elegir entre dos o más ramas de ejecución según una condición |
 | `switch / case` | Elegir entre muchos casos discretos de forma limpia (sin anidamientos) |
 | Operadores relacionales `== != < > <= >=` | Comparar dos valores; producen `1` (verdadero) o `0` (falso) |
-| Operadores logicos `&& \|\| !` | Combinar o negar condiciones |
-| Operador ternario `?:` | Forma compacta de un `if-else` de una sola expresion |
+| Operadores lógicos `&& \|\| !` | Combinar o negar condiciones |
+| Operador ternario `?:` | Forma compacta de un `if-else` de una sola expresión |
 
 ---
 
-## Explicacion
+## Explicación
 
-### Patron 1 — `if / else if / else`
+### Patrón 1 — `if / else if / else`
 
-**Categoria**: decision secuencial; se evaluan las condiciones de arriba hacia abajo y solo se ejecuta el primer bloque cuya condicion sea verdadera.
+**Categoría**: decisión secuencial; se evalúan las condiciones de arriba hacia abajo y solo se ejecuta el primer bloque cuya condición sea verdadera.
 
 **Sintaxis**:
 ```c
@@ -58,13 +62,13 @@ if (x > 0) {
 // Imprime: positivo
 ```
 
-Regla practica: el `else` es opcional, pero si lo omites y ninguna condicion se cumple, no se ejecuta nada. Eso puede ser lo que quieres o puede ser un bug silencioso; piensalo antes.
+Regla práctica: el `else` es opcional, pero si lo omites y ninguna condición se cumple, no se ejecuta nada. Eso puede ser lo que quieres o puede ser un bug silencioso; piénsalo antes.
 
 ---
 
-### Patron 2 — `switch / case`
+### Patrón 2 — `switch / case`
 
-**Categoria**: seleccion por valor entero (o caracter); mas legible que una cadena de `if-else` cuando los casos son discretos y conocidos.
+**Categoría**: selección por valor entero (o carácter); más legible que una cadena de `if-else` cuando los casos son discretos y conocidos.
 
 **Sintaxis**:
 ```c
@@ -81,7 +85,7 @@ switch (expresion_entera) {
 }
 ```
 
-**Importante**: sin `break`, la ejecucion "cae" al siguiente `case` (*fall-through*). A veces es intencional; casi siempre es un error.
+**Importante**: sin `break`, la ejecución "cae" al siguiente `case` (*fall-through*). A veces es intencional; casi siempre es un error.
 
 **Ejemplo corto**:
 ```c
@@ -96,7 +100,7 @@ switch (op) {
 
 ---
 
-### Patron 3 — Operadores relacionales y logicos
+### Patrón 3 — Operadores relacionales y lógicos
 
 | Operador | Significado | Ejemplo (`a=3, b=5`) | Resultado |
 |---|---|---|---|
@@ -106,17 +110,17 @@ switch (op) {
 | `>` | mayor que | `a > b` | `0` |
 | `<=` | menor o igual | `b <= 5` | `1` |
 | `>=` | mayor o igual | `a >= 4` | `0` |
-| `&&` | AND logico | `a > 0 && b > 0` | `1` |
-| `\|\|` | OR logico | `a > 4 \|\| b > 4` | `1` |
-| `!` | NOT logico | `!(a == 3)` | `0` |
+| `&&` | AND lógico | `a > 0 && b > 0` | `1` |
+| `\|\|` | OR lógico | `a > 4 \|\| b > 4` | `1` |
+| `!` | NOT lógico | `!(a == 3)` | `0` |
 
-**Cortocircuito**: en `A && B`, si `A` es falso, `B` nunca se evalua. En `A || B`, si `A` es verdadero, `B` nunca se evalua. Util para evitar divisiones por cero o accesos invalidos.
+**Cortocircuito**: en `A && B`, si `A` es falso, `B` nunca se evalúa. En `A || B`, si `A` es verdadero, `B` nunca se evalúa. Útil para evitar divisiones por cero o accesos inválidos.
 
 ---
 
-### Patron 4 — Operador ternario `?:`
+### Patrón 4 — Operador ternario `?:`
 
-**Categoria**: expresion (no sentencia), produce un valor; util para asignaciones condicionales en una linea.
+**Categoría**: expresión (no sentencia), produce un valor; útil para asignaciones condicionales en una línea.
 
 **Sintaxis**:
 ```c
@@ -130,13 +134,13 @@ char *paridad = (n % 2 == 0) ? "par" : "impar";
 printf("%s\n", paridad);   // par
 ```
 
-Cuando la logica es mas compleja que una asignacion simple, usa `if-else` para mayor claridad.
+Cuando la lógica es más compleja que una asignación simple, usa `if-else` para mayor claridad.
 
 ---
 
 ## Worked example
 
-**Enunciado**: Dado un entero leido por teclado, indica si es par o impar, si es positivo/negativo/cero, y si es divisible por 3.
+**Enunciado**: Dado un entero leído por teclado, indica si es par o impar, si es positivo/negativo/cero, y si es divisible por 3.
 
 **Razonamiento paso a paso**:
 
@@ -194,9 +198,9 @@ Es divisible por 3
 
 ---
 
-## Errores tipicos en C
+## Errores típicos en C
 
-1. **`=` en lugar de `==` en la condicion**
+1. **`=` en lugar de `==` en la condición**
    ```c
    if (x = 5) { ... }   // ASIGNA 5 a x, siempre verdadero
    if (x == 5) { ... }  // CORRECTO: compara
@@ -204,7 +208,7 @@ Es divisible por 3
    Truco: escribe `5 == x` (yoda condition); si pones `=` el compilador da error.
 
 2. **Olvidar `break` en `switch`**
-   Sin `break`, el flujo cae al siguiente `case`. El compilador no avisa por defecto; `-Wall` ayuda poco aqui. Pon siempre `break` salvo que el *fall-through* sea deliberado y lo documentes.
+   Sin `break`, el flujo cae al siguiente `case`. El compilador no avisa por defecto; `-Wall` ayuda poco aquí. Pon siempre `break` salvo que el *fall-through* sea deliberado y lo documentes.
 
 3. **`scanf` sin `&`**
    ```c
@@ -213,7 +217,7 @@ Es divisible por 3
    ```
 
 4. **Comparar floats con `==`**
-   Los numeros de punto flotante tienen error de representacion. Nunca hagas `if (f == 0.0)`; usa `if (fabs(f) < 1e-9)` (requiere `math.h`). En este modulo trabajamos con enteros, pero conviene saberlo.
+   Los números de punto flotante tienen error de representación. Nunca hagas `if (f == 0.0)`; usa `if (fabs(f) < 1e-9)` (requiere `math.h`). En este módulo trabajamos con enteros, pero conviene saberlo.
 
 5. **`else` colgante** (*dangling else*)
    ```c
@@ -223,7 +227,7 @@ Es divisible por 3
    else               // pertenece al segundo if, NO al primero
        printf("a negativo\n");
    ```
-   Usa siempre llaves `{}` para evitar ambiguedad, aunque el cuerpo sea una sola linea.
+   Usa siempre llaves `{}` para evitar ambigüedad, aunque el cuerpo sea una sola línea.
 
 ---
 
@@ -245,5 +249,5 @@ Practica lo de este módulo. Cada enlace abre el ejercicio con su enunciado, dia
 
 - [[Curso_C/00_README]]
 - Linux
-- [[Curso_C/modelo/01-variables]] — modulo anterior: variables, tipos y E/S basica
-- [[Curso_C/modelo/03-bucles]] — modulo siguiente: `while`, `for`, `do-while`
+- [[Curso_C/modelo/01-variables]] — módulo anterior: variables, tipos y E/S básica
+- [[Curso_C/modelo/03-bucles]] — módulo siguiente: `while`, `for`, `do-while`
