@@ -1,3 +1,27 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+// --- Diagramas de flujo de los cursos (Agora) ---------------------------------
+// Las notas generadas etiquetan sus diagramas con alt="Diagrama de flujo ...".
+// 1) Mismo ancho para todas las vistas de un ejercicio: el grafo (graphviz) es
+//    mucho mas grande en pixeles que la actividad, y sin esto sale desproporcionado.
+// 2) Modo oscuro: en vez de generar/duplicar una version oscura, invertimos la
+//    luminancia y rotamos el tono 180 (invert + hue-rotate) para que el fondo
+//    blanco pase a oscuro CONSERVANDO los colores del diagrama. Un solo fichero.
+img[alt^="Diagrama de flujo"] {
+  display: block;
+  width: min(100%, 440px);
+  height: auto;
+  margin: 0.6rem 0;
+}
+
+// El valor va en una variable CSS: el minificador de Quartz "optimiza" invert(1)
+// a invert() (bug suyo) si lo ve directo, pero NO toca el interior de una custom
+// property. Asi el argumento (1 = inversion total) sobrevive.
+:root {
+  --diagram-dark-filter: invert(1) hue-rotate(180deg);
+}
+:root[saved-theme="dark"] img[alt^="Diagrama de flujo"] {
+  filter: var(--diagram-dark-filter);
+}
