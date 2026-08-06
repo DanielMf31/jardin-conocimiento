@@ -1,6 +1,6 @@
 ---
 title: "Curso de C — práctica (ejercicios resueltos)"
-date: 2026-08-05
+date: 2026-08-06
 tags: [programacion/c, curso/c, curso/c/ejercicio, meta]
 aliases: [practica-c, ejercicios-c]
 type: espejo
