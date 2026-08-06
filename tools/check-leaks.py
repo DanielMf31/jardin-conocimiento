@@ -90,8 +90,11 @@ def main():
                         t = re.split(r'\\?\|', m.group(1))[0].split('#')[0].strip().split('/')[-1].lower()
                         if t not in pub:
                             add("WIKILINK ROTO", m.group(1))
-                    for m in PASS32.finditer(line):
-                        add("POSIBLE PASSWORD", m.group(0))
+                    # El data-code del boton Pyodide es base64 del propio codigo de la nota
+                    # (generado), no un secreto: no lo trates como posible password.
+                    if "data-code=" not in line:
+                        for m in PASS32.finditer(line):
+                            add("POSIBLE PASSWORD", m.group(0))
 
     if not findings:
         print("GUARD OK: 0 fugas. content/ listo para publicar.")
