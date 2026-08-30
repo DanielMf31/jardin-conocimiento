@@ -1,4 +1,4 @@
-# 🌱 Jardín de Conocimiento
+# Repositorio Cursos ESIBot
 
 Apuntes de aprendizaje abiertos sobre **Linux, Hyprland, desarrollo de software, fundamentos de
 informática y ciberseguridad**. Pensados para *entender* (esquema y porqué antes que sintaxis) y
